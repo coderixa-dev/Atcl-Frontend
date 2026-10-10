@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Atcl Frontend</title>
+
+  <!-- ======== Bootstrap css Link ======== -->
+  <link rel="stylesheet" href="asset/css/bootstrap.min.css">
+
+  <!-- ======== Google Font Link ======== -->
+  <link rel="stylesheet" href="asset/css/font.css">
+
+  <!-- ======== Font Awesome Link ======== -->
+  <link rel="stylesheet" href="asset/css/all.min.css">
+
+  <!-- ========  Swiper Js Link ======== -->
+  <link rel="stylesheet" href="asset/css/swiper-bundle.min.css">
+
+  <!-- ======== Custom css Link (keep LAST so it can override the libraries) ======== -->
+  <link rel="stylesheet" href="asset/css/style.css">
+</head>
+
+<body>
+
+
+  <!-- ========= Header Section Start ========= -->
+
+  <!-- Top Bar -->
+  <div class="top-bar d-none d-lg-block">
+    <div class="container d-flex justify-content-between align-items-center">
+      <div class="d-flex align-items-center gap-4">
+        <a href="tel:+8800000000000"><i class="fa-solid fa-phone me-2 text-accent"></i>+880 0000-000000</a>
+        <a href="mailto:info@example.com"><i class="fa-solid fa-envelope me-2 text-accent"></i>info@example.com</a>
+        <span><i class="fa-solid fa-location-dot me-2 text-accent"></i>Dhaka, Bangladesh</span>
+      </div>
+      <div class="social-links social-links-sm">
+        <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+        <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+        <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+      </div>
+    </div>
+  </div>
+
+   <!-- Main Header -->
+  <header class="header" id="header">
+    <nav class="navbar navbar-expand-lg">
+      <div class="container position-relative">
+
+        <!-- Logo (replace with real logo later) -->
+        <a class="logo" href="index.html" aria-label="Home">
+          <span class="logo-mark">A</span>
+          <span class="logo-text">ATCL<small>Solutions</small></span>
+        </a>
+
+        <!-- Right side icons (always visible) + mobile toggler -->
+        <div class="header-actions d-flex align-items-center gap-2 order-lg-last">
+          <button class="header-icon-btn" type="button" data-bs-toggle="collapse" data-bs-target="#headerSearch"
+            aria-expanded="false" aria-controls="headerSearch" aria-label="Search">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </button>
+
+          <a href="inquiry.html" class="inquiry-btn" aria-label="Inquiry list">
+            <i class="fa-solid fa-clipboard-list"></i>
+            <span class="count" id="inquiryCount">0</span>
+          </a>
+
+          <a href="request-quotation.html" class="btn btn-accent btn-sm-c d-none d-xxl-inline-block ms-2 text-nowrap">
+            Request a Quote
+          </a>
+
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainMenu"
+            aria-controls="mainMenu" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="fa-solid fa-bars"></i>
+          </button>
+        </div>
+
+        <!-- Menu -->
+        <div class="collapse navbar-collapse justify-content-center" id="mainMenu">
+          <ul class="navbar-nav align-items-lg-center">
+
+            <li class="nav-item">
+              <a class="nav-link active" href="index.html">Home</a>
+            </li>
+
+            <!-- Company dropdown -->
+            <li class="nav-item dropdown">
+              <span class="nav-link">Company</span>
+              <button class="dropdown-caret d-lg-none" type="button" data-bs-toggle="dropdown" aria-expanded="false"
+                aria-label="Open Company menu"><i class="fa-solid fa-chevron-down"></i></button>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="about.html">About Us</a></li>
+                <li><a class="dropdown-item" href="company-profile.html">Company Profile</a></li>
+                <li><a class="dropdown-item" href="mission-vision.html">Mission &amp; Vision</a></li>
+              </ul>
+            </li>
+
+            <!-- Products mega menu -->
+            <li class="nav-item dropdown mega">
+              <a class="nav-link" href="products.html">Products</a>
+              <button class="dropdown-caret d-lg-none" type="button" data-bs-toggle="dropdown" aria-expanded="false"
+                aria-label="Open Products menu"><i class="fa-solid fa-chevron-down"></i></button>
+              <div class="dropdown-menu mega-menu">
+                <div class="row g-4">
+                  <div class="col-lg-3">
+                    <h6 class="mega-title">
+                      <a href="category.html">
+                        <i class="fa-solid fa-flask me-2"></i>Analytical
+                      </a>
+                    </h6>
+
+                    <ul>
+                      <li><a href="products.html">Spectrometers</a></li>
+                      <li><a href="products.html">Chromatography</a></li>
+                      <li><a href="products.html">Lab Balances</a></li>
+                    </ul>
+                  </div>
+                  <div class="col-lg-3">
+
+                    <h6 class="mega-title">
+                      <a href="category.html">
+                      <i class="fa-solid fa-microscope me-2"></i>Life Science
+                      </a>
+                    </h6>
+
+                    <ul>
+                      <li><a href="products.html">Microscopes</a></li>
+                      <li><a href="products.html">Centrifuges</a></li>
+                      <li><a href="products.html">Incubators</a></li>
+                    </ul>
+                  </div>
+                  <div class="col-lg-3">
+                    <h6 class="mega-title">
+                      <a href="category.html">
+                        <i class="fa-solid fa-industry me-2"></i>Industrial
+                      </a>
+                    </h6>
+
+                    <ul>
+                      <li><a href="products.html">Textile Testing</a></li>
+                      <li><a href="products.html">Leather Testing</a></li>
+                      <li><a href="products.html">Survey Equipment</a></li>
+                    </ul>
+                  </div>
+                  <div class="col-lg-3 d-none d-lg-block">
+                    <div class="mega-promo">
+                      <h6>Can't find a product?</h6>
+                      <p>Tell us your requirement and we will send a quotation.</p>
+                      <a href="request-quotation.html" class="btn btn-accent btn-sm-c">Request a Quote</a>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </li>
+
+            <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+            <li class="nav-item"><a class="nav-link" href="brands.html">Brands</a></li>
+            <li class="nav-item"><a class="nav-link" href="news.html">News &amp; Events</a></li>
+            <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+
+            <!-- Shown only on mobile menu -->
+            <li class="nav-item d-lg-none mt-3">
+              <a href="request-quotation.html" class="btn btn-accent w-100">Request a Quote</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Search bar (opens under the header) -->
+    <div class="collapse header-search" id="headerSearch">
+      <div class="container py-3">
+        <form action="products.html" method="get" class="search-box">
+          <input type="search" name="q" class="form-control" placeholder="Search products by name or code..."
+            aria-label="Search products">
+          <button type="submit" aria-label="Search"><i class="fa-solid fa-magnifying-glass"></i></button>
+        </form>
+      </div>
+    </div>
+  </header>
+
+  <!-- ========= Header Section End ========= -->
+
+  <main>
+
+    <!-- ========= Page Banner Start ========= -->
+    <section class="page-banner contact-banner">
+      <div class="container">
+        <span class="sub-title-pill pill-dark mb-3">We'd love to hear from you</span>
+        <h1>Contact <span class="text-accent">Us</span></h1>
+        <p class="banner-text">Have a question, need a product recommendation or want a quotation? Our team is ready to help you.</p>
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Contact</li>
+          </ol>
+        </nav>
+      </div>
+    </section>
+    <!-- ========= Page Banner End ========= -->
+
+    <!-- ========= Quick Info Cards Start ========= -->
+    <section class="cp-info-section">
+      <div class="container">
+        <div class="row g-4">
+
+          <div class="col-md-6 col-lg-3">
+            <div class="cp-card">
+              <span class="cp-icon"><i class="fa-solid fa-location-dot"></i></span>
+              <h5>Visit Us</h5>
+              <p>House 00, Road 00, Gulshan, Dhaka 1212, Bangladesh</p>
+              <a href="#cpMap" class="cp-link">Get directions <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-3">
+            <div class="cp-card">
+              <span class="cp-icon"><i class="fa-solid fa-phone"></i></span>
+              <h5>Call Us</h5>
+              <p>+880 0000-000000<br>+880 0000-000001</p>
+              <a href="tel:+8800000000000" class="cp-link">Call now <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-3">
+            <div class="cp-card">
+              <span class="cp-icon"><i class="fa-solid fa-envelope"></i></span>
+              <h5>Email Us</h5>
+              <p>info@example.com<br>sales@example.com</p>
+              <a href="mailto:info@example.com" class="cp-link">Send email <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-3">
+            <div class="cp-card">
+              <span class="cp-icon"><i class="fa-solid fa-clock"></i></span>
+              <h5>Working Hours</h5>
+              <p>Sun – Thu: 9:00 AM – 6:00 PM<br>Fri &amp; Sat: Closed</p>
+              <span class="cp-link cp-open"><i class="fa-solid fa-circle"></i> We reply within 1 working day</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+    <!-- ========= Quick Info Cards End ========= -->
+
+    <!-- ========= Form + Departments Start ========= -->
+    <section class="section cp-main-section">
+      <div class="container">
+        <div class="row g-4 g-xl-5">
+
+          <!-- Form -->
+          <div class="col-lg-7">
+            <div class="cp-form-card contact-form">
+              <span class="sub-title-pill mb-2">Send a message</span>
+              <h3>Let's talk about your requirement</h3>
+              <p class="cp-form-text">Fill in the form and our team will get back to you with the right product, price and delivery details.</p>
+
+              <form id="contactForm" class="needs-validation" novalidate>
+
+                <!-- Topic chips -->
+                <label class="cp-label">What is this about?</label>
+                <div class="cp-chips">
+                  <input type="radio" class="btn-check" name="cfTopic" id="topic1" value="Product Inquiry" checked>
+                  <label class="cp-chip" for="topic1"><i class="fa-solid fa-box-open"></i>Product Inquiry</label>
+
+                  <input type="radio" class="btn-check" name="cfTopic" id="topic2" value="Request for Quotation">
+                  <label class="cp-chip" for="topic2"><i class="fa-solid fa-file-invoice-dollar"></i>Quotation</label>
+
+                  <input type="radio" class="btn-check" name="cfTopic" id="topic3" value="Technical Support">
+                  <label class="cp-chip" for="topic3"><i class="fa-solid fa-screwdriver-wrench"></i>Support</label>
+
+                  <input type="radio" class="btn-check" name="cfTopic" id="topic4" value="Partnership">
+                  <label class="cp-chip" for="topic4"><i class="fa-solid fa-handshake"></i>Partnership</label>
+                </div>
+
+                <div class="row g-3">
+                  <div class="col-md-6">
+                    <div class="form-floating">
+                      <input type="text" class="form-control" id="cfName" placeholder="Full Name" required>
+                      <label for="cfName">Full Name *</label>
+                      <div class="invalid-feedback">Please enter your name.</div>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="form-floating">
+                      <input type="email" class="form-control" id="cfEmail" placeholder="Email" required>
+                      <label for="cfEmail">Email Address *</label>
+                      <div class="invalid-feedback">Please enter a valid email.</div>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="form-floating">
+                      <input type="tel" class="form-control" id="cfPhone" placeholder="Phone">
+                      <label for="cfPhone">Phone Number</label>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="form-floating">
+                      <input type="text" class="form-control" id="cfCompany" placeholder="Company">
+                      <label for="cfCompany">Company Name</label>
+                    </div>
+                  </div>
+                  <div class="col-12">
+                    <div class="form-floating">
+                      <textarea class="form-control" id="cfMessage" placeholder="Message" required></textarea>
+                      <label for="cfMessage">Your Message *</label>
+                      <div class="invalid-feedback">Please write a short message.</div>
+                    </div>
+                  </div>
+                  <div class="col-12 d-flex flex-wrap align-items-center gap-3">
+                    <button type="submit" class="btn btn-main btn-lg-c">Send Message <i
+                        class="fa-solid fa-paper-plane ms-2"></i></button>
+                    <span id="formSuccess" class="form-success d-none"><i class="fa-solid fa-circle-check me-2"></i>Thank
+                      you! We will contact you soon.</span>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+
+          <!-- Side column -->
+          <div class="col-lg-5">
+
+            <!-- Departments -->
+            <div class="cp-side-card">
+              <h4>Talk to the right team</h4>
+              <ul class="cp-dept-list">
+                <li>
+                  <span class="cp-dept-icon"><i class="fa-solid fa-chart-line"></i></span>
+                  <div>
+                    <strong>Sales &amp; Quotation</strong>
+                    <a href="mailto:sales@example.com">sales@example.com</a>
+                    <a href="tel:+8800000000001">+880 0000-000001</a>
+                  </div>
+                </li>
+                <li>
+                  <span class="cp-dept-icon"><i class="fa-solid fa-headset"></i></span>
+                  <div>
+                    <strong>Technical Support</strong>
+                    <a href="mailto:support@example.com">support@example.com</a>
+                    <a href="tel:+8800000000002">+880 0000-000002</a>
+                  </div>
+                </li>
+                <li>
+                  <span class="cp-dept-icon"><i class="fa-solid fa-user-tie"></i></span>
+                  <div>
+                    <strong>Careers</strong>
+                    <a href="mailto:careers@example.com">careers@example.com</a>
+                  </div>
+                </li>
+              </ul>
+            </div>
+
+            <!-- Quote promo -->
+            <div class="cp-promo">
+              <h4>Need a price quickly?</h4>
+              <p>Select the products you need and send one request for quotation.</p>
+              <a href="request-quotation.html" class="btn btn-light-c">Request a Quote <i
+                  class="fa-solid fa-arrow-right ms-2"></i></a>
+              <div class="social-links mt-4">
+                <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+                <a href="#" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ========= Form + Departments End ========= -->
+
+    <!-- ========= Map Start ========= -->
+    <section class="cp-map-section" id="cpMap">
+      <div class="container">
+        <div class="cp-map">
+          <iframe title="Our office location"
+            src="https://www.google.com/maps?q=Gulshan+2,Dhaka,Bangladesh&output=embed" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+         
+        </div>
+      </div>
+    </section>
+    <!-- ========= Map End ========= -->
+
+    <!-- ========= FAQ Start ========= -->
+    <section class="section">
+      <div class="container">
+        <div class="section-title">
+          <span class="sub-title">FAQ</span>
+          <h2>Frequently Asked <span class="text-accent">Questions</span></h2>
+          <p>Quick answers to the questions we hear most often.</p>
+        </div>
+
+        <div class="row justify-content-center">
+          <div class="col-lg-9">
+            <div class="accordion faq-accordion" id="faqAccordion">
+
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1"
+                    aria-expanded="true" aria-controls="faq1">How quickly will I get a reply?</button>
+                </h2>
+                <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+                  <div class="accordion-body">We reply to every message within one working day. For urgent requirements,
+                    please call our sales team directly.</div>
+                </div>
+              </div>
+
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#faq2" aria-expanded="false" aria-controls="faq2">How do I request a quotation for
+                    multiple products?</button>
+                </h2>
+                <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                  <div class="accordion-body">Add the products you need to your Inquiry List, then submit the Request
+                    for Quotation form. We will send one combined quotation.</div>
+                </div>
+              </div>
+
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#faq3" aria-expanded="false" aria-controls="faq3">Do you provide installation and
+                    after-sales support?</button>
+                </h2>
+                <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                  <div class="accordion-body">Yes. Our technical team handles installation, training, maintenance and
+                    spare parts for the products we supply.</div>
+                </div>
+              </div>
+
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#faq4" aria-expanded="false" aria-controls="faq4">Can I visit your office or
+                    showroom?</button>
+                </h2>
+                <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                  <div class="accordion-body">Of course. Please call or email us first so we can arrange a suitable time
+                    with the right team member.</div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ========= FAQ End ========= -->
+
+  </main>
+
+  <!-- ========= Footer Section Start ========= -->
+  <footer class="footer" id="footer">
+
+    <!-- Main footer -->
+    <div class="container footer-main">
+      <div class="row g-5">
+
+        <!-- Brand -->
+        <div class="col-lg-4 col-md-6">
+          <a class="logo footer-logo" href="index.html" aria-label="Home">
+            <span class="logo-mark">A</span>
+            <span class="logo-text">ATCL<small>Solutions</small></span>
+          </a>
+          <p class="footer-about">A trusted solution provider delivering quality products, technical expertise and
+            reliable after-sales support to industries across Bangladesh.</p>
+          <div class="social-links">
+            <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+            <a href="#" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+          </div>
+        </div>
+
+        <!-- Quick links -->
+        <div class="col-lg-2 col-md-6 col-sm-6">
+          <h5 class="footer-title">Quick Links</h5>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="company-profile.html">Company Profile</a></li>
+            <li><a href="mission-vision.html">Mission &amp; Vision</a></li>
+            <li><a href="brands.html">Brands</a></li>
+            <li><a href="news.html">News &amp; Events</a></li>
+            <li><a href="careers.html">Careers</a></li>
+          </ul>
+        </div>
+
+        <!-- Solutions -->
+        <div class="col-lg-3 col-md-6 col-sm-6">
+          <h5 class="footer-title">Our Solutions</h5>
+          <ul class="footer-links">
+            <li><a href="products.html">Analytical</a></li>
+            <li><a href="products.html">Life Science</a></li>
+            <li><a href="products.html">Industrial</a></li>
+            <li><a href="products.html">Textile Testing</a></li>
+            <li><a href="products.html">Leather Testing</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="request-quotation.html">Request a Quote</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact -->
+        <div class="col-lg-3 col-md-6">
+          <h5 class="footer-title">Contact Us</h5>
+          <ul class="footer-contact">
+            <li>
+              <span class="fc-icon"><i class="fa-solid fa-location-dot"></i></span>
+              <span>House 00, Road 00, Gulshan, Dhaka 1212, Bangladesh</span>
+            </li>
+            <li>
+              <span class="fc-icon"><i class="fa-solid fa-phone"></i></span>
+              <a href="tel:+8800000000000">+880 0000-000000</a>
+            </li>
+            <li>
+              <span class="fc-icon"><i class="fa-solid fa-envelope"></i></span>
+              <a href="mailto:info@example.com">info@example.com</a>
+            </li>
+            <li>
+              <span class="fc-icon"><i class="fa-solid fa-clock"></i></span>
+              <span>Sun – Thu: 9:00 AM – 6:00 PM</span>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+
+      <!-- Bottom bar -->
+      <div class="footer-bottom">
+        <p class="mb-0">&copy; <span id="footerYear">2026</span> ATCL Solutions. All rights reserved.</p>
+        <div class="footer-bottom-links">
+          <a href="privacy-policy.html">Privacy Policy</a>
+          <a href="terms.html">Terms &amp; Conditions</a>
+          <a href="contact.html">Contact</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to top -->
+  <button type="button" class="back-to-top" id="backToTop" aria-label="Back to top">
+    <i class="fa-solid fa-arrow-up"></i>
+  </button>
+  <!-- ========= Footer Section End ========= -->
+
+
+  <!-- ======== Bootstrap js Link ======== -->
+  <script src="asset/js/bootstrap.bundle.min.js"></script>
+
+  <!-- ======== Swiper js Link ======== -->
+  <script src="asset/js/swiper-bundle.min.js"></script>
+
+  <!-- ======== Custom js Link ======== -->
+  <script src="asset/js/script.js"></script>
+
+
+
+
+</body>
+
+</html>

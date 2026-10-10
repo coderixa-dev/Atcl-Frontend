@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Atcl Frontend</title>
+
+  <!-- ======== Bootstrap css Link ======== -->
+  <link rel="stylesheet" href="asset/css/bootstrap.min.css">
+
+  <!-- ======== Google Font Link ======== -->
+  <link rel="stylesheet" href="asset/css/font.css">
+
+  <!-- ======== Font Awesome Link ======== -->
+  <link rel="stylesheet" href="asset/css/all.min.css">
+
+  <!-- ========  Swiper Js Link ======== -->
+  <link rel="stylesheet" href="asset/css/swiper-bundle.min.css">
+
+  <!-- ======== Custom css Link (keep LAST so it can override the libraries) ======== -->
+  <link rel="stylesheet" href="asset/css/style.css">
+</head>
+
+<body>
+
+
+  <!-- ========= Header Section Start ========= -->
+
+  <!-- Top Bar -->
+  <div class="top-bar d-none d-lg-block">
+    <div class="container d-flex justify-content-between align-items-center">
+      <div class="d-flex align-items-center gap-4">
+        <a href="tel:+8800000000000"><i class="fa-solid fa-phone me-2 text-accent"></i>+880 0000-000000</a>
+        <a href="mailto:info@example.com"><i class="fa-solid fa-envelope me-2 text-accent"></i>info@example.com</a>
+        <span><i class="fa-solid fa-location-dot me-2 text-accent"></i>Dhaka, Bangladesh</span>
+      </div>
+      <div class="social-links social-links-sm">
+        <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+        <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+        <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+      </div>
+    </div>
+  </div>
+
+   <!-- Main Header -->
+  <header class="header" id="header">
+    <nav class="navbar navbar-expand-lg">
+      <div class="container position-relative">
+
+        <!-- Logo (replace with real logo later) -->
+        <a class="logo" href="index.html" aria-label="Home">
+          <span class="logo-mark">A</span>
+          <span class="logo-text">ATCL<small>Solutions</small></span>
+        </a>
+
+        <!-- Right side icons (always visible) + mobile toggler -->
+        <div class="header-actions d-flex align-items-center gap-2 order-lg-last">
+          <button class="header-icon-btn" type="button" data-bs-toggle="collapse" data-bs-target="#headerSearch"
+            aria-expanded="false" aria-controls="headerSearch" aria-label="Search">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </button>
+
+          <a href="inquiry.html" class="inquiry-btn" aria-label="Inquiry list">
+            <i class="fa-solid fa-clipboard-list"></i>
+            <span class="count" id="inquiryCount">0</span>
+          </a>
+
+          <a href="request-quotation.html" class="btn btn-accent btn-sm-c d-none d-xxl-inline-block ms-2 text-nowrap">
+            Request a Quote
+          </a>
+
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainMenu"
+            aria-controls="mainMenu" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="fa-solid fa-bars"></i>
+          </button>
+        </div>
+
+        <!-- Menu -->
+        <div class="collapse navbar-collapse justify-content-center" id="mainMenu">
+          <ul class="navbar-nav align-items-lg-center">
+
+            <li class="nav-item">
+              <a class="nav-link active" href="index.html">Home</a>
+            </li>
+
+            <!-- Company dropdown -->
+            <li class="nav-item dropdown">
+              <span class="nav-link">Company</span>
+              <button class="dropdown-caret d-lg-none" type="button" data-bs-toggle="dropdown" aria-expanded="false"
+                aria-label="Open Company menu"><i class="fa-solid fa-chevron-down"></i></button>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="about.html">About Us</a></li>
+                <li><a class="dropdown-item" href="company-profile.html">Company Profile</a></li>
+                <li><a class="dropdown-item" href="mission-vision.html">Mission &amp; Vision</a></li>
+              </ul>
+            </li>
+
+            <!-- Products mega menu -->
+            <li class="nav-item dropdown mega">
+              <a class="nav-link" href="products.html">Products</a>
+              <button class="dropdown-caret d-lg-none" type="button" data-bs-toggle="dropdown" aria-expanded="false"
+                aria-label="Open Products menu"><i class="fa-solid fa-chevron-down"></i></button>
+              <div class="dropdown-menu mega-menu">
+                <div class="row g-4">
+                  <div class="col-lg-3">
+                    <h6 class="mega-title">
+                      <a href="category.html">
+                        <i class="fa-solid fa-flask me-2"></i>Analytical
+                      </a>
+                    </h6>
+
+                    <ul>
+                      <li><a href="products.html">Spectrometers</a></li>
+                      <li><a href="products.html">Chromatography</a></li>
+                      <li><a href="products.html">Lab Balances</a></li>
+                    </ul>
+                  </div>
+                  <div class="col-lg-3">
+
+                    <h6 class="mega-title">
+                      <a href="category.html">
+                      <i class="fa-solid fa-microscope me-2"></i>Life Science
+                      </a>
+                    </h6>
+
+                    <ul>
+                      <li><a href="products.html">Microscopes</a></li>
+                      <li><a href="products.html">Centrifuges</a></li>
+                      <li><a href="products.html">Incubators</a></li>
+                    </ul>
+                  </div>
+                  <div class="col-lg-3">
+                    <h6 class="mega-title">
+                      <a href="category.html">
+                        <i class="fa-solid fa-industry me-2"></i>Industrial
+                      </a>
+                    </h6>
+
+                    <ul>
+                      <li><a href="products.html">Textile Testing</a></li>
+                      <li><a href="products.html">Leather Testing</a></li>
+                      <li><a href="products.html">Survey Equipment</a></li>
+                    </ul>
+                  </div>
+                  <div class="col-lg-3 d-none d-lg-block">
+                    <div class="mega-promo">
+                      <h6>Can't find a product?</h6>
+                      <p>Tell us your requirement and we will send a quotation.</p>
+                      <a href="request-quotation.html" class="btn btn-accent btn-sm-c">Request a Quote</a>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </li>
+
+            <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+            <li class="nav-item"><a class="nav-link" href="brands.html">Brands</a></li>
+            <li class="nav-item"><a class="nav-link" href="news.html">News &amp; Events</a></li>
+            <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+
+            <!-- Shown only on mobile menu -->
+            <li class="nav-item d-lg-none mt-3">
+              <a href="request-quotation.html" class="btn btn-accent w-100">Request a Quote</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Search bar (opens under the header) -->
+    <div class="collapse header-search" id="headerSearch">
+      <div class="container py-3">
+        <form action="products.html" method="get" class="search-box">
+          <input type="search" name="q" class="form-control" placeholder="Search products by name or code..."
+            aria-label="Search products">
+          <button type="submit" aria-label="Search"><i class="fa-solid fa-magnifying-glass"></i></button>
+        </form>
+      </div>
+    </div>
+  </header>
+
+  <!-- ========= Header Section End ========= -->
+
+<main>
+
+   <!-- ========= Page Banner (same style as About page) ========= -->
+    <section class="inner-hero">
+      <div class="container position-relative">
+        <span class="sub-title-pill pill-dark">Corporate Profile</span>
+        <h1>Company <span>Profile</span></h1>
+        <p class="inner-hero-lead">Everything you need to know about ATCL Solutions: who we are, what we do and the standards we work to.</p>
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb mb-0">
+            <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+            <li class="breadcrumb-item"><a href="about.html">Company</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Company Profile</li>
+          </ol>
+        </nav>
+      </div>
+    </section>
+
+    <!-- ========= Intro: headline + ID card + numbers ========= -->
+    <section class="cp-intro">
+      <div class="container">
+        <div class="row align-items-center gy-5 gx-lg-5">
+          <div class="col-lg-7">
+            <span class="cp-eyebrow"><i class="fa-solid fa-building"></i> Corporate Profile 2026</span>
+            <h2>Four decades of <span class="text-accent">engineering trust</span> in every delivery.</h2>
+            <p>ATCL Solutions helps factories, hospitals, laboratories and research centers choose, install and maintain the right equipment, backed by expert people and genuine support.</p>
+            <div class="d-flex flex-wrap gap-3 mt-4">
+              <a href="#" class="btn btn-main btn-lg-c"><i class="fa-solid fa-file-arrow-down me-2"></i>Download Profile (PDF)</a>
+              <a href="contact.html" class="btn btn-accent btn-lg-c">Talk to Us</a>
+            </div>
+          </div>
+          <div class="col-lg-5">
+            <div class="cp-id-card">
+              <div class="cp-id-head">
+                <span class="logo-mark">A</span>
+                <div><strong>ATCL Solutions</strong><small>Industrial &amp; Lab Solutions Provider</small></div>
+              </div>
+              <ul>
+                <li><span>Founded</span><strong>1985</strong></li>
+                <li><span>Headquarters</span><strong>Dhaka, Bangladesh</strong></li>
+                <li><span>Business Type</span><strong>Importer, Distributor &amp; Service</strong></li>
+                <li><span>Certification</span><strong>ISO 9001:2015</strong></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Floating numbers strip -->
+        <div class="cp-stats">
+          <div><h3><span class="counter" data-count="40">0</span>+</h3><p>Years of Experience</p></div>
+          <div><h3><span class="counter" data-count="150">0</span>+</h3><p>Professionals</p></div>
+          <div><h3><span class="counter" data-count="1000">0</span>+</h3><p>Products Supplied</p></div>
+          <div><h3><span class="counter" data-count="8">0</span></h3><p>Solution Divisions</p></div>
+        </div>
+      </div>
+    </section>
+    <!-- ========= Sticky nav + content ========= -->
+    <section class="cp-body">
+      <div class="container">
+        <div class="row gy-5 gx-lg-5">
+
+          <!-- Side navigation -->
+          <aside class="col-lg-3 d-none d-lg-block">
+            <div class="cp-nav" id="cpNav">
+              <span class="cp-nav-title">On this page</span>
+              <a href="#cp-overview" class="active"><b>01</b> Overview</a>
+              <a href="#cp-purpose"><b>02</b> Mission &amp; Vision</a>
+              <a href="#cp-message"><b>03</b> Leadership Message</a>
+              <a href="#cp-divisions"><b>04</b> Our Divisions</a>
+              <a href="#cp-journey"><b>05</b> Our Journey</a>
+              <a href="#cp-quality"><b>06</b> Certifications</a>
+            </div>
+          </aside>
+
+          <div class="col-lg-9">
+
+            <!-- Overview (bento) -->
+            <div class="cp-block" id="cp-overview">
+              <span class="sub-title">Overview</span>
+              <h2>Who we are, <span class="text-accent">in brief</span></h2>
+              <div class="cp-bento">
+                <div class="cp-tile cp-tile-text">
+                  <p class="cp-lead">ATCL Solutions helps factories, hospitals, laboratories and research centers choose, install and maintain the right equipment.</p>
+                  <p>Our eight specialized divisions cover textile, survey, software, leather, analytical, healthcare, life science and project solutions. Each one is led by engineers who understand both the technology and the customer's need.</p>
+                </div>
+                <div class="cp-tile cp-tile-img">
+                  <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=800&q=75" alt="Engineers on an industrial project site" loading="lazy" onerror="this.style.display='none'">
+                  <span class="cp-tag"><i class="fa-solid fa-location-dot me-1"></i>Serving all of Bangladesh</span>
+                </div>
+                <div class="cp-tile cp-tile-fact"><i class="fa-solid fa-users"></i><strong>150+</strong><span>Engineers &amp; specialists</span></div>
+                <div class="cp-tile cp-tile-fact cp-dark"><i class="fa-solid fa-earth-asia"></i><strong>25+</strong><span>Global brand partners</span></div>
+                <div class="cp-tile cp-tile-fact"><i class="fa-solid fa-headset"></i><strong>24/7</strong><span>Technical support line</span></div>
+              </div>
+            </div>
+
+            <!-- Mission / Vision -->
+            <div class="cp-block" id="cp-purpose">
+              <span class="sub-title">Purpose</span>
+              <h2>Mission, vision &amp; <span class="text-accent">values</span></h2>
+              <div class="cp-purpose">
+                <div class="cp-purpose-item">
+                  <span class="cp-num">01</span>
+                  <div><h4>Our Mission</h4><p>To supply reliable, high-quality equipment and expert technical support that help our customers improve productivity, accuracy and safety.</p></div>
+                </div>
+                <div class="cp-purpose-item">
+                  <span class="cp-num">02</span>
+                  <div><h4>Our Vision</h4><p>To be the most trusted solution partner for industry, healthcare and research in Bangladesh, known for integrity and long-term relationships.</p></div>
+                </div>
+              </div>
+              <div class="cp-values">
+                <span><i class="fa-solid fa-handshake-angle"></i>Integrity</span>
+                <span><i class="fa-solid fa-user-check"></i>Customer First</span>
+                <span><i class="fa-solid fa-medal"></i>Quality</span>
+                <span><i class="fa-solid fa-lightbulb"></i>Learning</span>
+                <span><i class="fa-solid fa-people-group"></i>Teamwork</span>
+              </div>
+            </div>
+
+            <!-- Leadership message -->
+            <div class="cp-block" id="cp-message">
+              <div class="cp-message">
+                <div class="cp-message-photo">
+                  <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=600&q=75" alt="Managing Director" loading="lazy" onerror="this.style.display='none'">
+                </div>
+                <div class="cp-message-body">
+                  <i class="fa-solid fa-quote-left"></i>
+                  <p>We never measured success by what we sold. We measured it by how many of our customers' machines are still running well, years after the invoice was paid.</p>
+                  <div><strong>Md. Abdul Karim</strong><span>Managing Director, ATCL Solutions</span></div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Divisions -->
+            <div class="cp-block" id="cp-divisions">
+              <span class="sub-title">What We Do</span>
+              <h2>Eight divisions, <span class="text-accent">one partner</span></h2>
+              <div class="cp-divs">
+                <a href="products.html"><i class="fa-solid fa-shirt"></i>Textile</a>
+                <a href="products.html"><i class="fa-solid fa-ruler-combined"></i>Survey</a>
+                <a href="products.html"><i class="fa-solid fa-laptop-code"></i>Software</a>
+                <a href="products.html"><i class="fa-solid fa-boxes-stacked"></i>Leather</a>
+                <a href="products.html"><i class="fa-solid fa-flask"></i>Analytical</a>
+                <a href="products.html"><i class="fa-solid fa-heart-pulse"></i>Healthcare</a>
+                <a href="products.html"><i class="fa-solid fa-microscope"></i>Life Science</a>
+                <a href="products.html"><i class="fa-solid fa-helmet-safety"></i>Projects</a>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+   <!-- ========= Timeline Start ========= -->
+    <section class="section ab-journey" id="cp-journey">
+      <div class="container">
+        <div class="section-title">
+          <span class="sub-title">Our Journey</span>
+          <h2>Milestones That <span class="text-accent">Shaped Us</span></h2>
+          <p>From a small team to a trusted national solution provider.</p>
+        </div>
+
+        <div class="ab-timeline">
+
+          <div class="ab-tl-item">
+            <div class="ab-tl-card">
+              <span class="ab-tl-year">2016</span>
+              <h5>Company Founded</h5>
+              <p>Started operations in Dhaka with a small team and a focus on laboratory equipment.</p>
+            </div>
+          </div>
+
+          <div class="ab-tl-item">
+            <div class="ab-tl-card">
+              <span class="ab-tl-year">2018</span>
+              <h5>First Global Partnerships</h5>
+              <p>Became an authorized distributor for our first international manufacturers.</p>
+            </div>
+          </div>
+
+          <div class="ab-tl-item">
+            <div class="ab-tl-card">
+              <span class="ab-tl-year">2020</span>
+              <h5>Service &amp; Calibration Centre</h5>
+              <p>Opened a dedicated technical centre for installation, calibration and spare parts.</p>
+            </div>
+          </div>
+
+          <div class="ab-tl-item">
+            <div class="ab-tl-card">
+              <span class="ab-tl-year">2023</span>
+              <h5>500+ Clients Served</h5>
+              <p>Expanded into industrial and testing solutions for textile, leather and survey industries.</p>
+            </div>
+          </div>
+
+          <div class="ab-tl-item">
+            <div class="ab-tl-card">
+              <span class="ab-tl-year">2026</span>
+              <h5>Online Catalog &amp; Inquiry</h5>
+              <p>Launched our new website with a 1,000+ product catalog and online quotation system.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+    <!-- ========= Timeline End ========= -->
+
+    <!-- ========= Certifications ========= -->
+    <section class="section" id="cp-quality">
+      <div class="container">
+        <div class="section-title">
+          <span class="sub-title">Quality &amp; Trust</span>
+          <h2>Certified to <span class="text-accent">deliver</span></h2>
+        </div>
+        <div class="cp-certs">
+          <div><i class="fa-solid fa-award"></i><h5>ISO 9001:2015</h5><p>Quality Management System</p></div>
+          <div><i class="fa-solid fa-handshake"></i><h5>Authorized Partner</h5><p>Official distributor of global brands</p></div>
+          <div><i class="fa-solid fa-shield-halved"></i><h5>Safety &amp; Compliance</h5><p>Recognized safety standards</p></div>
+          <div><i class="fa-solid fa-screwdriver-wrench"></i><h5>Certified Service</h5><p>Factory-trained engineers</p></div>
+        </div>
+
+        <!-- Download CTA -->
+        <div class="cp-cta">
+          <div>
+            <h3>Get the full company profile</h3>
+            <p>A complete PDF with our divisions, brands, certificates and contact details.</p>
+          </div>
+          <a href="#" class="btn btn-accent btn-lg-c"><i class="fa-solid fa-file-arrow-down me-2"></i>Download PDF</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ========= Footer Section Start ========= -->
+  <footer class="footer" id="footer">
+
+    <!-- Main footer -->
+    <div class="container footer-main">
+      <div class="row g-5">
+
+        <!-- Brand -->
+        <div class="col-lg-4 col-md-6">
+          <a class="logo footer-logo" href="index.html" aria-label="Home">
+            <span class="logo-mark">A</span>
+            <span class="logo-text">ATCL<small>Solutions</small></span>
+          </a>
+          <p class="footer-about">A trusted solution provider delivering quality products, technical expertise and
+            reliable after-sales support to industries across Bangladesh.</p>
+          <div class="social-links">
+            <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+            <a href="#" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+          </div>
+        </div>
+
+        <!-- Quick links -->
+        <div class="col-lg-2 col-md-6 col-sm-6">
+          <h5 class="footer-title">Quick Links</h5>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="company-profile.html">Company Profile</a></li>
+            <li><a href="mission-vision.html">Mission &amp; Vision</a></li>
+            <li><a href="brands.html">Brands</a></li>
+            <li><a href="news.html">News &amp; Events</a></li>
+            <li><a href="careers.html">Careers</a></li>
+          </ul>
+        </div>
+
+        <!-- Solutions -->
+        <div class="col-lg-3 col-md-6 col-sm-6">
+          <h5 class="footer-title">Our Solutions</h5>
+          <ul class="footer-links">
+            <li><a href="products.html">Analytical</a></li>
+            <li><a href="products.html">Life Science</a></li>
+            <li><a href="products.html">Industrial</a></li>
+            <li><a href="products.html">Textile Testing</a></li>
+            <li><a href="products.html">Leather Testing</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="request-quotation.html">Request a Quote</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact -->
+        <div class="col-lg-3 col-md-6">
+          <h5 class="footer-title">Contact Us</h5>
+          <ul class="footer-contact">
+            <li>
+              <span class="fc-icon"><i class="fa-solid fa-location-dot"></i></span>
+              <span>House 00, Road 00, Gulshan, Dhaka 1212, Bangladesh</span>
+            </li>
+            <li>
+              <span class="fc-icon"><i class="fa-solid fa-phone"></i></span>
+              <a href="tel:+8800000000000">+880 0000-000000</a>
+            </li>
+            <li>
+              <span class="fc-icon"><i class="fa-solid fa-envelope"></i></span>
+              <a href="mailto:info@example.com">info@example.com</a>
+            </li>
+            <li>
+              <span class="fc-icon"><i class="fa-solid fa-clock"></i></span>
+              <span>Sun – Thu: 9:00 AM – 6:00 PM</span>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+
+      <!-- Bottom bar -->
+      <div class="footer-bottom">
+        <p class="mb-0">&copy; <span id="footerYear">2026</span> ATCL Solutions. All rights reserved.</p>
+        <div class="footer-bottom-links">
+          <a href="privacy-policy.html">Privacy Policy</a>
+          <a href="terms.html">Terms &amp; Conditions</a>
+          <a href="contact.html">Contact</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to top -->
+  <button type="button" class="back-to-top" id="backToTop" aria-label="Back to top">
+    <i class="fa-solid fa-arrow-up"></i>
+  </button>
+  <!-- ========= Footer Section End ========= -->
+
+
+  <!-- ======== Bootstrap js Link ======== -->
+  <script src="asset/js/bootstrap.bundle.min.js"></script>
+
+  <!-- ======== Swiper js Link ======== -->
+  <script src="asset/js/swiper-bundle.min.js"></script>
+
+  <!-- ======== Custom js Link ======== -->
+  <script src="asset/js/script.js"></script>
+
+
+
+
+</body>
+
+</html>

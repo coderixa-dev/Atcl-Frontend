@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Atcl Frontend</title>
+
+  <!-- ======== Bootstrap css Link ======== -->
+  <link rel="stylesheet" href="asset/css/bootstrap.min.css">
+
+  <!-- ======== Google Font Link ======== -->
+  <link rel="stylesheet" href="asset/css/font.css">
+
+  <!-- ======== Font Awesome Link ======== -->
+  <link rel="stylesheet" href="asset/css/all.min.css">
+
+  <!-- ========  Swiper Js Link ======== -->
+  <link rel="stylesheet" href="asset/css/swiper-bundle.min.css">
+
+  <!-- ======== Custom css Link (keep LAST so it can override the libraries) ======== -->
+  <link rel="stylesheet" href="asset/css/style.css">
+</head>
+
+<body>
+
+
+  <!-- ========= Header Section Start ========= -->
+
+  <!-- Top Bar -->
+  <div class="top-bar d-none d-lg-block">
+    <div class="container d-flex justify-content-between align-items-center">
+      <div class="d-flex align-items-center gap-4">
+        <a href="tel:+8800000000000"><i class="fa-solid fa-phone me-2 text-accent"></i>+880 0000-000000</a>
+        <a href="mailto:info@example.com"><i class="fa-solid fa-envelope me-2 text-accent"></i>info@example.com</a>
+        <span><i class="fa-solid fa-location-dot me-2 text-accent"></i>Dhaka, Bangladesh</span>
+      </div>
+      <div class="social-links social-links-sm">
+        <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+        <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+        <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+      </div>
+    </div>
+  </div>
+
+   <!-- Main Header -->
+  <header class="header" id="header">
+    <nav class="navbar navbar-expand-lg">
+      <div class="container position-relative">
+
+        <!-- Logo (replace with real logo later) -->
+        <a class="logo" href="index.html" aria-label="Home">
+          <span class="logo-mark">A</span>
+          <span class="logo-text">ATCL<small>Solutions</small></span>
+        </a>
+
+        <!-- Right side icons (always visible) + mobile toggler -->
+        <div class="header-actions d-flex align-items-center gap-2 order-lg-last">
+          <button class="header-icon-btn" type="button" data-bs-toggle="collapse" data-bs-target="#headerSearch"
+            aria-expanded="false" aria-controls="headerSearch" aria-label="Search">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </button>
+
+          <a href="inquiry.html" class="inquiry-btn" aria-label="Inquiry list">
+            <i class="fa-solid fa-clipboard-list"></i>
+            <span class="count" id="inquiryCount">0</span>
+          </a>
+
+          <a href="request-quotation.html" class="btn btn-accent btn-sm-c d-none d-xxl-inline-block ms-2 text-nowrap">
+            Request a Quote
+          </a>
+
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainMenu"
+            aria-controls="mainMenu" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="fa-solid fa-bars"></i>
+          </button>
+        </div>
+
+        <!-- Menu -->
+        <div class="collapse navbar-collapse justify-content-center" id="mainMenu">
+          <ul class="navbar-nav align-items-lg-center">
+
+            <li class="nav-item">
+              <a class="nav-link active" href="index.html">Home</a>
+            </li>
+
+            <!-- Company dropdown -->
+            <li class="nav-item dropdown">
+              <span class="nav-link">Company</span>
+              <button class="dropdown-caret d-lg-none" type="button" data-bs-toggle="dropdown" aria-expanded="false"
+                aria-label="Open Company menu"><i class="fa-solid fa-chevron-down"></i></button>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="about.html">About Us</a></li>
+                <li><a class="dropdown-item" href="company-profile.html">Company Profile</a></li>
+                <li><a class="dropdown-item" href="mission-vision.html">Mission &amp; Vision</a></li>
+              </ul>
+            </li>
+
+            <!-- Products mega menu -->
+            <li class="nav-item dropdown mega">
+              <a class="nav-link" href="products.html">Products</a>
+              <button class="dropdown-caret d-lg-none" type="button" data-bs-toggle="dropdown" aria-expanded="false"
+                aria-label="Open Products menu"><i class="fa-solid fa-chevron-down"></i></button>
+              <div class="dropdown-menu mega-menu">
+                <div class="row g-4">
+                  <div class="col-lg-3">
+                    <h6 class="mega-title">
+                      <a href="category.html">
+                        <i class="fa-solid fa-flask me-2"></i>Analytical
+                      </a>
+                    </h6>
+
+                    <ul>
+                      <li><a href="products.html">Spectrometers</a></li>
+                      <li><a href="products.html">Chromatography</a></li>
+                      <li><a href="products.html">Lab Balances</a></li>
+                    </ul>
+                  </div>
+                  <div class="col-lg-3">
+
+                    <h6 class="mega-title">
+                      <a href="category.html">
+                      <i class="fa-solid fa-microscope me-2"></i>Life Science
+                      </a>
+                    </h6>
+
+                    <ul>
+                      <li><a href="products.html">Microscopes</a></li>
+                      <li><a href="products.html">Centrifuges</a></li>
+                      <li><a href="products.html">Incubators</a></li>
+                    </ul>
+                  </div>
+                  <div class="col-lg-3">
+                    <h6 class="mega-title">
+                      <a href="category.html">
+                        <i class="fa-solid fa-industry me-2"></i>Industrial
+                      </a>
+                    </h6>
+
+                    <ul>
+                      <li><a href="products.html">Textile Testing</a></li>
+                      <li><a href="products.html">Leather Testing</a></li>
+                      <li><a href="products.html">Survey Equipment</a></li>
+                    </ul>
+                  </div>
+                  <div class="col-lg-3 d-none d-lg-block">
+                    <div class="mega-promo">
+                      <h6>Can't find a product?</h6>
+                      <p>Tell us your requirement and we will send a quotation.</p>
+                      <a href="request-quotation.html" class="btn btn-accent btn-sm-c">Request a Quote</a>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </li>
+
+            <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+            <li class="nav-item"><a class="nav-link" href="brands.html">Brands</a></li>
+            <li class="nav-item"><a class="nav-link" href="news.html">News &amp; Events</a></li>
+            <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+
+            <!-- Shown only on mobile menu -->
+            <li class="nav-item d-lg-none mt-3">
+              <a href="request-quotation.html" class="btn btn-accent w-100">Request a Quote</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Search bar (opens under the header) -->
+    <div class="collapse header-search" id="headerSearch">
+      <div class="container py-3">
+        <form action="products.html" method="get" class="search-box">
+          <input type="search" name="q" class="form-control" placeholder="Search products by name or code..."
+            aria-label="Search products">
+          <button type="submit" aria-label="Search"><i class="fa-solid fa-magnifying-glass"></i></button>
+        </form>
+      </div>
+    </div>
+  </header>
+
+  <!-- ========= Header Section End ========= -->
+
+  <main>
+
+    <!-- Reading progress bar -->
+    <div class="nd-progress" id="ndProgress" aria-hidden="true"></div>
+
+    <!-- ========= Page Banner Start ========= -->
+    <section class="page-banner nd-banner">
+      <div class="container">
+        <span class="sub-title-pill pill-dark mb-3">Company News</span>
+        <h1>We Launched Our New Online Product Catalog &amp; Quotation Portal</h1>
+        <div class="nd-banner-meta">
+          <span><i class="fa-regular fa-calendar"></i>05 Oct 2026</span>
+          <span><i class="fa-regular fa-user"></i>By Admin</span>
+          <span><i class="fa-regular fa-clock"></i>5 min read</span>
+        </div>
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+            <li class="breadcrumb-item"><a href="news.html">News &amp; Events</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Article</li>
+          </ol>
+        </nav>
+      </div>
+    </section>
+    <!-- ========= Page Banner End ========= -->
+
+    <!-- ========= Article Start ========= -->
+    <section class="section nd-section">
+      <div class="container">
+        <div class="row gy-5 gx-lg-5">
+
+          <!-- Article -->
+          <div class="col-lg-8">
+            <article class="nd-article">
+
+              <figure class="nd-hero">
+                <img
+                  src="https://images.unsplash.com/photo-1747999918007-e3442cabb23a?auto=format&fit=crop&w=1200&h=700&q=75"
+                  alt="Worker at multiple computer screens" loading="lazy">
+              </figure>
+
+              <div class="nd-content">
+                <p class="nd-lead">Finding the right equipment should not take days of phone calls and emails. Today we are
+                  proud to launch our new website with a complete online product catalog and a built-in quotation
+                  system.</p>
+
+                <p>For years our customers have relied on our team to help them choose laboratory, industrial and testing
+                  equipment. The new portal brings that same expertise online, so you can explore, compare and request
+                  prices whenever it suits you.</p>
+
+                <h3>What is new on the website</h3>
+                <p>We rebuilt the experience from the ground up, with speed and clarity as our main goals. Everything is
+                  organised so you can reach the product you need in just a few clicks.</p>
+
+                <div class="nd-highlights">
+                  <h5><i class="fa-solid fa-bolt"></i>Key highlights</h5>
+                  <ul>
+                    <li><i class="fa-solid fa-circle-check"></i>A catalog of 1,000+ products with categories, brands and search</li>
+                    <li><i class="fa-solid fa-circle-check"></i>Add products to an inquiry list and send one combined request</li>
+                    <li><i class="fa-solid fa-circle-check"></i>Product brochures and specifications available to download</li>
+                    <li><i class="fa-solid fa-circle-check"></i>Fully responsive design that works on phones and tablets</li>
+                  </ul>
+                </div>
+
+                <h3>How the inquiry system works</h3>
+                <p>Browse the catalog, add the items you are interested in, and submit your details. Our sales team
+                  receives the full list and replies with a clear quotation, usually within one working day.</p>
+
+              
+                  
+
+                <blockquote class="nd-quote">
+                  <i class="fa-solid fa-quote-left"></i>
+                  <p>Our goal is simple: make it easy for every customer to find the right solution and get a fast,
+                    honest answer from real people.</p>
+                  <footer>Imran Hasan <span>Managing Director</span></footer>
+                </blockquote>
+
+                <h3>What happens next</h3>
+                <p>This is only the first step. Over the coming months we will keep adding new products, brands and
+                  resources, along with service request forms and event registration.</p>
+                <p>We would love to hear what you think. If you have suggestions or questions about the new website,
+                  please get in touch with our team.</p>
+              </div>
+
+              <!-- Tags + share -->
+              <div class="nd-footer-bar">
+                <div class="nd-tags">
+                  <span><i class="fa-solid fa-tags"></i>Tags:</span>
+                  <a href="news.html">Website</a>
+                  <a href="news.html">Catalog</a>
+                  <a href="news.html">Quotation</a>
+                </div>
+                <div class="nd-share">
+                  <span>Share:</span>
+                  <a href="#" aria-label="Share on Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                  <a href="#" aria-label="Share on LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                  <a href="#" aria-label="Share on WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+                  <button type="button" id="ndCopy" class="nd-copy" aria-label="Copy link"><i class="fa-solid fa-link"></i><span>Copy link</span></button>
+                </div>
+              </div>
+
+              <!-- Author -->
+              <div class="nd-author">
+                <img
+                  src="https://images.unsplash.com/photo-1699899657680-421c2c2d5064?auto=format&fit=crop&w=200&h=200&q=75"
+                  alt="Sadia Rahman" loading="lazy">
+                <div>
+                  <small>Written by</small>
+                  <h5>Sadia Rahman</h5>
+                  <p>Head of Operations. She leads our customer experience and digital projects.</p>
+                </div>
+              </div>
+
+              <!-- Previous / Next -->
+              <div class="nd-nav">
+                <a href="news-details.html" class="nd-nav-item">
+                  <small><i class="fa-solid fa-arrow-left"></i>Previous article</small>
+                  <strong>ATCL Becomes Authorized Distributor of Optiscan</strong>
+                </a>
+                <a href="news-details.html" class="nd-nav-item nd-nav-next">
+                  <small>Next article<i class="fa-solid fa-arrow-right"></i></small>
+                  <strong>New Service &amp; Calibration Centre Now Open</strong>
+                </a>
+              </div>
+
+            </article>
+          </div>
+
+          <!-- Sidebar -->
+          <aside class="col-lg-4">
+            <div class="nd-sidebar">
+
+             
+                
+
+              <!-- Categories -->
+              <div class="nd-widget">
+                <h5 class="nd-widget-title">Categories</h5>
+                <ul class="nd-cats">
+                  <li><a href="news.html">News <span>12</span></a></li>
+                  <li><a href="news.html">Events <span>8</span></a></li>
+                  <li><a href="news.html">Product Launch <span>6</span></a></li>
+                  <li><a href="news.html">Company <span>4</span></a></li>
+                </ul>
+              </div>
+
+              <!-- Recent posts -->
+              <div class="nd-widget">
+                <h5 class="nd-widget-title">Recent Posts</h5>
+                <ul class="nd-recent">
+                  <li>
+                    <a href="news-details.html" class="nd-recent-img"><img
+                        src="https://images.unsplash.com/photo-1676313414325-2a877a95dd10?auto=format&fit=crop&w=200&h=200&q=75"
+                        alt="" loading="lazy"></a>
+                    <div>
+                      <small>15 Nov 2026</small>
+                      <a href="news-details.html">Annual Lab Technology Expo 2026</a>
+                    </div>
+                  </li>
+                  <li>
+                    <a href="news-details.html" class="nd-recent-img"><img
+                        src="https://images.unsplash.com/photo-1614935151651-0bea6508db6b?auto=format&fit=crop&w=200&h=200&q=75"
+                        alt="" loading="lazy"></a>
+                    <div>
+                      <small>28 Sep 2026</small>
+                      <a href="news-details.html">Next-Generation Chromatography System Now Available</a>
+                    </div>
+                  </li>
+                  <li>
+                    <a href="news-details.html" class="nd-recent-img"><img
+                        src="https://images.unsplash.com/photo-1610891015188-5369212db097?auto=format&fit=crop&w=200&h=200&q=75"
+                        alt="" loading="lazy"></a>
+                    <div>
+                      <small>06 Dec 2026</small>
+                      <a href="news-details.html">Textile Testing Workshop for Quality Teams</a>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+
+              <!-- CTA -->
+              <div class="nd-cta">
+                <span class="nd-cta-icon"><i class="fa-solid fa-file-invoice-dollar"></i></span>
+                <h5>Need a quotation?</h5>
+                <p>Select the products you need and send one request to our team.</p>
+                <a href="request-quotation.html" class="btn btn-light-c">Request a Quote <i
+                    class="fa-solid fa-arrow-right ms-2"></i></a>
+              </div>
+
+            </div>
+          </aside>
+
+        </div>
+      </div>
+    </section>
+    <!-- ========= Article End ========= -->
+
+    <!-- ========= Related Posts Start ========= -->
+    <section class="section nd-related">
+      <div class="container">
+        <div class="section-title">
+          <span class="sub-title">Keep Reading</span>
+          <h2>Related <span class="text-accent">Articles</span></h2>
+        </div>
+
+        <div class="row g-4">
+
+          <div class="col-md-6 col-lg-4">
+            <article class="news-card">
+              <a href="news-details.html" class="news-img">
+                <img src="https://images.unsplash.com/photo-1621905252507-b35492cc74b4?auto=format&fit=crop&w=700&h=480&q=75" alt="Service engineer in a hard hat" loading="lazy">
+                <span class="news-cat">News</span>
+                <span class="news-date"><strong>20</strong>Sep</span>
+              </a>
+              <div class="news-body">
+                <div class="news-meta">
+                  <span><i class="fa-regular fa-user"></i>Admin</span>
+                  <span><i class="fa-regular fa-clock"></i>4 min read</span>
+                </div>
+                <h5><a href="news-details.html">New Service &amp; Calibration Centre Now Open</a></h5>
+                <p>Our dedicated technical centre now offers faster calibration, repair and spare parts support.</p>
+                <a href="news-details.html" class="news-link">Read more <i class="fa-solid fa-arrow-right"></i></a>
+              </div>
+            </article>
+          </div>
+
+          <div class="col-md-6 col-lg-4">
+            <article class="news-card">
+              <a href="news-details.html" class="news-img">
+                <img src="https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&w=700&h=480&q=75" alt="Business handshake" loading="lazy">
+                <span class="news-cat">News</span>
+                <span class="news-date"><strong>02</strong>Oct</span>
+              </a>
+              <div class="news-body">
+                <div class="news-meta">
+                  <span><i class="fa-regular fa-user"></i>Admin</span>
+                  <span><i class="fa-regular fa-clock"></i>4 min read</span>
+                </div>
+                <h5><a href="news-details.html">ATCL Becomes Authorized Distributor of Optiscan</a></h5>
+                <p>A new partnership brings high-resolution chromatography systems and full local support to Bangladeshi laboratories.</p>
+                <a href="news-details.html" class="news-link">Read more <i class="fa-solid fa-arrow-right"></i></a>
+              </div>
+            </article>
+          </div>
+
+          <div class="col-md-6 col-lg-4">
+            <article class="news-card">
+              <a href="news-details.html" class="news-img">
+                <img src="https://images.unsplash.com/photo-1655874837055-7adc909ae602?auto=format&fit=crop&w=700&h=480&q=75" alt="Industrial factory machinery" loading="lazy">
+                <span class="news-cat">News</span>
+                <span class="news-date"><strong>30</strong>Aug</span>
+              </a>
+              <div class="news-body">
+                <div class="news-meta">
+                  <span><i class="fa-regular fa-user"></i>Admin</span>
+                  <span><i class="fa-regular fa-clock"></i>4 min read</span>
+                </div>
+                <h5><a href="news-details.html">Industrial Automation Solutions for Modern Factories</a></h5>
+                <p>How the right automation and measurement tools help factories raise output and cut downtime.</p>
+                <a href="news-details.html" class="news-link">Read more <i class="fa-solid fa-arrow-right"></i></a>
+              </div>
+            </article>
+          </div>
+
+        </div>
+      </div>
+    </section>
+    <!-- ========= Related Posts End ========= -->
+
+  </main>
+
+  <!-- ========= Footer Section Start ========= -->
+  <footer class="footer" id="footer">
+
+    <!-- Main footer -->
+    <div class="container footer-main">
+      <div class="row g-5">
+
+        <!-- Brand -->
+        <div class="col-lg-4 col-md-6">
+          <a class="logo footer-logo" href="index.html" aria-label="Home">
+            <span class="logo-mark">A</span>
+            <span class="logo-text">ATCL<small>Solutions</small></span>
+          </a>
+          <p class="footer-about">A trusted solution provider delivering quality products, technical expertise and
+            reliable after-sales support to industries across Bangladesh.</p>
+          <div class="social-links">
+            <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+            <a href="#" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+          </div>
+        </div>
+
+        <!-- Quick links -->
+        <div class="col-lg-2 col-md-6 col-sm-6">
+          <h5 class="footer-title">Quick Links</h5>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="company-profile.html">Company Profile</a></li>
+            <li><a href="mission-vision.html">Mission &amp; Vision</a></li>
+            <li><a href="brands.html">Brands</a></li>
+            <li><a href="news.html">News &amp; Events</a></li>
+            <li><a href="careers.html">Careers</a></li>
+          </ul>
+        </div>
+
+        <!-- Solutions -->
+        <div class="col-lg-3 col-md-6 col-sm-6">
+          <h5 class="footer-title">Our Solutions</h5>
+          <ul class="footer-links">
+            <li><a href="products.html">Analytical</a></li>
+            <li><a href="products.html">Life Science</a></li>
+            <li><a href="products.html">Industrial</a></li>
+            <li><a href="products.html">Textile Testing</a></li>
+            <li><a href="products.html">Leather Testing</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="request-quotation.html">Request a Quote</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact -->
+        <div class="col-lg-3 col-md-6">
+          <h5 class="footer-title">Contact Us</h5>
+          <ul class="footer-contact">
+            <li>
+              <span class="fc-icon"><i class="fa-solid fa-location-dot"></i></span>
+              <span>House 00, Road 00, Gulshan, Dhaka 1212, Bangladesh</span>
+            </li>
+            <li>
+              <span class="fc-icon"><i class="fa-solid fa-phone"></i></span>
+              <a href="tel:+8800000000000">+880 0000-000000</a>
+            </li>
+            <li>
+              <span class="fc-icon"><i class="fa-solid fa-envelope"></i></span>
+              <a href="mailto:info@example.com">info@example.com</a>
+            </li>
+            <li>
+              <span class="fc-icon"><i class="fa-solid fa-clock"></i></span>
+              <span>Sun – Thu: 9:00 AM – 6:00 PM</span>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+
+      <!-- Bottom bar -->
+      <div class="footer-bottom">
+        <p class="mb-0">&copy; <span id="footerYear">2026</span> ATCL Solutions. All rights reserved.</p>
+        <div class="footer-bottom-links">
+          <a href="privacy-policy.html">Privacy Policy</a>
+          <a href="terms.html">Terms &amp; Conditions</a>
+          <a href="contact.html">Contact</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to top -->
+  <button type="button" class="back-to-top" id="backToTop" aria-label="Back to top">
+    <i class="fa-solid fa-arrow-up"></i>
+  </button>
+  <!-- ========= Footer Section End ========= -->
+
+
+  <!-- ======== Bootstrap js Link ======== -->
+  <script src="asset/js/bootstrap.bundle.min.js"></script>
+
+  <!-- ======== Swiper js Link ======== -->
+  <script src="asset/js/swiper-bundle.min.js"></script>
+
+  <!-- ======== Custom js Link ======== -->
+  <script src="asset/js/script.js"></script>
+
+
+
+
+</body>
+
+</html>

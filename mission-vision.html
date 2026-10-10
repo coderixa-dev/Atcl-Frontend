@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atcl Frontend</title>
+
+    <!-- ======== Bootstrap css Link ======== -->
+    <link rel="stylesheet" href="asset/css/bootstrap.min.css">
+
+    <!-- ======== Google Font Link ======== -->
+    <link rel="stylesheet" href="asset/css/font.css">
+
+    <!-- ======== Font Awesome Link ======== -->
+    <link rel="stylesheet" href="asset/css/all.min.css">
+
+    <!-- ========  Swiper Js Link ======== -->
+    <link rel="stylesheet" href="asset/css/swiper-bundle.min.css">
+
+    <!-- ======== Custom css Link (keep LAST so it can override the libraries) ======== -->
+    <link rel="stylesheet" href="asset/css/style.css">
+</head>
+
+<body>
+
+
+    <!-- ========= Header Section Start ========= -->
+
+    <!-- Top Bar -->
+    <div class="top-bar d-none d-lg-block">
+        <div class="container d-flex justify-content-between align-items-center">
+            <div class="d-flex align-items-center gap-4">
+                <a href="tel:+8800000000000"><i class="fa-solid fa-phone me-2 text-accent"></i>+880 0000-000000</a>
+                <a href="mailto:info@example.com"><i
+                        class="fa-solid fa-envelope me-2 text-accent"></i>info@example.com</a>
+                <span><i class="fa-solid fa-location-dot me-2 text-accent"></i>Dhaka, Bangladesh</span>
+            </div>
+            <div class="social-links social-links-sm">
+                <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+            </div>
+        </div>
+    </div>
+
+     <!-- Main Header -->
+  <header class="header" id="header">
+    <nav class="navbar navbar-expand-lg">
+      <div class="container position-relative">
+
+        <!-- Logo (replace with real logo later) -->
+        <a class="logo" href="index.html" aria-label="Home">
+          <span class="logo-mark">A</span>
+          <span class="logo-text">ATCL<small>Solutions</small></span>
+        </a>
+
+        <!-- Right side icons (always visible) + mobile toggler -->
+        <div class="header-actions d-flex align-items-center gap-2 order-lg-last">
+          <button class="header-icon-btn" type="button" data-bs-toggle="collapse" data-bs-target="#headerSearch"
+            aria-expanded="false" aria-controls="headerSearch" aria-label="Search">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </button>
+
+          <a href="inquiry.html" class="inquiry-btn" aria-label="Inquiry list">
+            <i class="fa-solid fa-clipboard-list"></i>
+            <span class="count" id="inquiryCount">0</span>
+          </a>
+
+          <a href="request-quotation.html" class="btn btn-accent btn-sm-c d-none d-xxl-inline-block ms-2 text-nowrap">
+            Request a Quote
+          </a>
+
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainMenu"
+            aria-controls="mainMenu" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="fa-solid fa-bars"></i>
+          </button>
+        </div>
+
+        <!-- Menu -->
+        <div class="collapse navbar-collapse justify-content-center" id="mainMenu">
+          <ul class="navbar-nav align-items-lg-center">
+
+            <li class="nav-item">
+              <a class="nav-link active" href="index.html">Home</a>
+            </li>
+
+            <!-- Company dropdown -->
+            <li class="nav-item dropdown">
+              <span class="nav-link">Company</span>
+              <button class="dropdown-caret d-lg-none" type="button" data-bs-toggle="dropdown" aria-expanded="false"
+                aria-label="Open Company menu"><i class="fa-solid fa-chevron-down"></i></button>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="about.html">About Us</a></li>
+                <li><a class="dropdown-item" href="company-profile.html">Company Profile</a></li>
+                <li><a class="dropdown-item" href="mission-vision.html">Mission &amp; Vision</a></li>
+              </ul>
+            </li>
+
+            <!-- Products mega menu -->
+            <li class="nav-item dropdown mega">
+              <a class="nav-link" href="products.html">Products</a>
+              <button class="dropdown-caret d-lg-none" type="button" data-bs-toggle="dropdown" aria-expanded="false"
+                aria-label="Open Products menu"><i class="fa-solid fa-chevron-down"></i></button>
+              <div class="dropdown-menu mega-menu">
+                <div class="row g-4">
+                  <div class="col-lg-3">
+                    <h6 class="mega-title">
+                      <a href="category.html">
+                        <i class="fa-solid fa-flask me-2"></i>Analytical
+                      </a>
+                    </h6>
+
+                    <ul>
+                      <li><a href="products.html">Spectrometers</a></li>
+                      <li><a href="products.html">Chromatography</a></li>
+                      <li><a href="products.html">Lab Balances</a></li>
+                    </ul>
+                  </div>
+                  <div class="col-lg-3">
+
+                    <h6 class="mega-title">
+                      <a href="category.html">
+                      <i class="fa-solid fa-microscope me-2"></i>Life Science
+                      </a>
+                    </h6>
+
+                    <ul>
+                      <li><a href="products.html">Microscopes</a></li>
+                      <li><a href="products.html">Centrifuges</a></li>
+                      <li><a href="products.html">Incubators</a></li>
+                    </ul>
+                  </div>
+                  <div class="col-lg-3">
+                    <h6 class="mega-title">
+                      <a href="category.html">
+                        <i class="fa-solid fa-industry me-2"></i>Industrial
+                      </a>
+                    </h6>
+
+                    <ul>
+                      <li><a href="products.html">Textile Testing</a></li>
+                      <li><a href="products.html">Leather Testing</a></li>
+                      <li><a href="products.html">Survey Equipment</a></li>
+                    </ul>
+                  </div>
+                  <div class="col-lg-3 d-none d-lg-block">
+                    <div class="mega-promo">
+                      <h6>Can't find a product?</h6>
+                      <p>Tell us your requirement and we will send a quotation.</p>
+                      <a href="request-quotation.html" class="btn btn-accent btn-sm-c">Request a Quote</a>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </li>
+
+            <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+            <li class="nav-item"><a class="nav-link" href="brands.html">Brands</a></li>
+            <li class="nav-item"><a class="nav-link" href="news.html">News &amp; Events</a></li>
+            <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+
+            <!-- Shown only on mobile menu -->
+            <li class="nav-item d-lg-none mt-3">
+              <a href="request-quotation.html" class="btn btn-accent w-100">Request a Quote</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Search bar (opens under the header) -->
+    <div class="collapse header-search" id="headerSearch">
+      <div class="container py-3">
+        <form action="products.html" method="get" class="search-box">
+          <input type="search" name="q" class="form-control" placeholder="Search products by name or code..."
+            aria-label="Search products">
+          <button type="submit" aria-label="Search"><i class="fa-solid fa-magnifying-glass"></i></button>
+        </form>
+      </div>
+    </div>
+  </header>
+
+    <!-- ========= Header Section End ========= -->
+
+
+   <main>
+
+    <!-- ========= Page Banner (same style as About page) ========= -->
+    <section class="inner-hero">
+      <div class="container position-relative">
+        <span class="sub-title-pill pill-dark">Our Purpose</span>
+        <h1>Mission &amp; <span>Vision</span></h1>
+        <p class="inner-hero-lead">Why we exist, where we are heading and the values that guide every decision we make.</p>
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb mb-0">
+            <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Mission &amp; Vision</li>
+          </ol>
+        </nav>
+      </div>
+    </section>
+
+    <!-- ========= Mission & Vision panels ========= -->
+    <section class="mvp-panels">
+      <div class="container">
+        <div class="row g-4">
+          <div class="col-lg-6" id="mvp-mission">
+            <article class="mvp-panel mvp-panel-dark">
+              <span class="mvp-watermark">01</span>
+              <span class="mvp-panel-icon"><i class="fa-solid fa-bullseye"></i></span>
+              <small>Our Mission</small>
+              <h2>Equip every customer to work <em>faster, safer and more accurately.</em></h2>
+              <p>We supply reliable, high-quality equipment and back it with expert technical support, so our customers can focus on their work, not their machines.</p>
+              <ul>
+                <li><i class="fa-solid fa-check"></i>Genuine products from trusted global brands</li>
+                <li><i class="fa-solid fa-check"></i>Installation, training and after-sales service</li>
+                <li><i class="fa-solid fa-check"></i>Honest advice, even when it means a smaller order</li>
+              </ul>
+            </article>
+          </div>
+          <div class="col-lg-6" id="mvp-vision">
+            <article class="mvp-panel mvp-panel-teal">
+              <span class="mvp-watermark">02</span>
+              <span class="mvp-panel-icon"><i class="fa-solid fa-eye"></i></span>
+              <small>Our Vision</small>
+              <h2>The most trusted solution partner for <em>industry, healthcare and research.</em></h2>
+              <p>We aim to be known across Bangladesh for integrity and long-term relationships, the first call a customer makes when it matters.</p>
+              <ul>
+                <li><i class="fa-solid fa-check"></i>A nationwide service network within every customer's reach</li>
+                <li><i class="fa-solid fa-check"></i>Digital tools that make ordering and support effortless</li>
+                <li><i class="fa-solid fa-check"></i>A team that keeps learning with every new technology</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========= Core values ========= -->
+    <section class="section" id="mvp-values">
+      <div class="container">
+        <div class="section-title">
+          <span class="sub-title">Core Values</span>
+          <h2>The principles we <span class="text-accent">never compromise</span></h2>
+        </div>
+        <div class="row g-4">
+          <div class="col-md-6 col-lg-4"><div class="mvp-value"><b>01</b><i class="fa-solid fa-handshake-angle"></i><h5>Integrity</h5><p>We say what we can deliver, and deliver what we say.</p></div></div>
+          <div class="col-md-6 col-lg-4"><div class="mvp-value"><b>02</b><i class="fa-solid fa-user-check"></i><h5>Customer First</h5><p>Every decision starts with what is best for the customer's work.</p></div></div>
+          <div class="col-md-6 col-lg-4"><div class="mvp-value"><b>03</b><i class="fa-solid fa-medal"></i><h5>Quality</h5><p>Certified processes and genuine products, without shortcuts.</p></div></div>
+          <div class="col-md-6 col-lg-4"><div class="mvp-value"><b>04</b><i class="fa-solid fa-lightbulb"></i><h5>Continuous Learning</h5><p>Our engineers train constantly so you get current expertise.</p></div></div>
+          <div class="col-md-6 col-lg-4"><div class="mvp-value"><b>05</b><i class="fa-solid fa-people-group"></i><h5>Teamwork</h5><p>Sales, service and logistics work as one team for your outcome.</p></div></div>
+          <div class="col-md-6 col-lg-4"><div class="mvp-value"><b>06</b><i class="fa-solid fa-leaf"></i><h5>Responsibility</h5><p>We care about safety, the environment and the community we serve.</p></div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========= Purpose in practice (image + accordion) ========= -->
+    <section class="section bg-light-c">
+      <div class="container">
+        <div class="row align-items-center gy-5 gx-lg-5">
+          <div class="col-lg-5">
+            <div class="mvp-photo">
+              <img src="https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&w=900&q=75" alt="Business handshake" loading="lazy" onerror="this.style.display='none'">
+              <div class="mvp-photo-card"><strong>40+</strong><span>years of keeping our promises</span></div>
+            </div>
+          </div>
+          <div class="col-lg-7">
+            <span class="sub-title">Purpose in Practice</span>
+            <h2>How we turn <span class="text-accent">words into work</span></h2>
+            <div class="accordion mvp-acc" id="mvpAcc">
+              <div class="accordion-item">
+                <h3 class="accordion-header"><button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#acc1" aria-expanded="true" aria-controls="acc1"><i class="fa-solid fa-user-tie"></i>Our commitment to customers</button></h3>
+                <div id="acc1" class="accordion-collapse collapse show" data-bs-parent="#mvpAcc"><div class="accordion-body">Clear quotations, on-time delivery and a named engineer for every installation.</div></div>
+              </div>
+              <div class="accordion-item">
+                <h3 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#acc2" aria-expanded="false" aria-controls="acc2"><i class="fa-solid fa-shield-halved"></i>Our commitment to quality</button></h3>
+                <div id="acc2" class="accordion-collapse collapse" data-bs-parent="#mvpAcc"><div class="accordion-body">ISO 9001:2015 certified processes, genuine spare parts and factory-trained service.</div></div>
+              </div>
+              <div class="accordion-item">
+                <h3 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#acc3" aria-expanded="false" aria-controls="acc3"><i class="fa-solid fa-seedling"></i>Our commitment to our people</button></h3>
+                <div id="acc3" class="accordion-collapse collapse" data-bs-parent="#mvpAcc"><div class="accordion-body">Safe workplaces, ongoing training and real growth paths for every team member.</div></div>
+              </div>
+              <div class="accordion-item">
+                <h3 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#acc4" aria-expanded="false" aria-controls="acc4"><i class="fa-solid fa-earth-asia"></i>Our commitment to society</button></h3>
+                <div id="acc4" class="accordion-collapse collapse" data-bs-parent="#mvpAcc"><div class="accordion-body">Supporting hospitals, schools and research that improve everyday life in Bangladesh.</div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========= CTA ========= -->
+    <section class="section">
+      <div class="container">
+        <div class="mvp-cta">
+          <i class="fa-solid fa-quote-left"></i>
+          <h2>Shared purpose makes the best partnerships.</h2>
+          <p>Tell us what you are working towards and we will show you how we can help.</p>
+          <div class="d-flex flex-wrap justify-content-center gap-3">
+            <a href="contact.html" class="btn btn-accent btn-lg-c">Contact Us</a>
+            <a href="company-profile.html" class="btn btn-glass btn-lg-c">View Company Profile</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+    <!-- ========= Footer Section Start ========= -->
+    <footer class="footer" id="footer">
+
+        <!-- Main footer -->
+        <div class="container footer-main">
+            <div class="row g-5">
+
+                <!-- Brand -->
+                <div class="col-lg-4 col-md-6">
+                    <a class="logo footer-logo" href="index.html" aria-label="Home">
+                        <span class="logo-mark">A</span>
+                        <span class="logo-text">ATCL<small>Solutions</small></span>
+                    </a>
+                    <p class="footer-about">A trusted solution provider delivering quality products, technical expertise
+                        and
+                        reliable after-sales support to industries across Bangladesh.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                        <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+                        <a href="#" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+                    </div>
+                </div>
+
+                <!-- Quick links -->
+                <div class="col-lg-2 col-md-6 col-sm-6">
+                    <h5 class="footer-title">Quick Links</h5>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="company-profile.html">Company Profile</a></li>
+                        <li><a href="mission-vision.html">Mission &amp; Vision</a></li>
+                        <li><a href="brands.html">Brands</a></li>
+                        <li><a href="news.html">News &amp; Events</a></li>
+                        <li><a href="careers.html">Careers</a></li>
+                    </ul>
+                </div>
+
+                <!-- Solutions -->
+                <div class="col-lg-3 col-md-6 col-sm-6">
+                    <h5 class="footer-title">Our Solutions</h5>
+                    <ul class="footer-links">
+                        <li><a href="products.html">Analytical</a></li>
+                        <li><a href="products.html">Life Science</a></li>
+                        <li><a href="products.html">Industrial</a></li>
+                        <li><a href="products.html">Textile Testing</a></li>
+                        <li><a href="products.html">Leather Testing</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="request-quotation.html">Request a Quote</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact -->
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="footer-title">Contact Us</h5>
+                    <ul class="footer-contact">
+                        <li>
+                            <span class="fc-icon"><i class="fa-solid fa-location-dot"></i></span>
+                            <span>House 00, Road 00, Gulshan, Dhaka 1212, Bangladesh</span>
+                        </li>
+                        <li>
+                            <span class="fc-icon"><i class="fa-solid fa-phone"></i></span>
+                            <a href="tel:+8800000000000">+880 0000-000000</a>
+                        </li>
+                        <li>
+                            <span class="fc-icon"><i class="fa-solid fa-envelope"></i></span>
+                            <a href="mailto:info@example.com">info@example.com</a>
+                        </li>
+                        <li>
+                            <span class="fc-icon"><i class="fa-solid fa-clock"></i></span>
+                            <span>Sun – Thu: 9:00 AM – 6:00 PM</span>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <!-- Bottom bar -->
+            <div class="footer-bottom">
+                <p class="mb-0">&copy; <span id="footerYear">2026</span> ATCL Solutions. All rights reserved.</p>
+                <div class="footer-bottom-links">
+                    <a href="privacy-policy.html">Privacy Policy</a>
+                    <a href="terms.html">Terms &amp; Conditions</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to top -->
+    <button type="button" class="back-to-top" id="backToTop" aria-label="Back to top">
+        <i class="fa-solid fa-arrow-up"></i>
+    </button>
+    <!-- ========= Footer Section End ========= -->
+
+
+    <!-- ======== Bootstrap js Link ======== -->
+    <script src="asset/js/bootstrap.bundle.min.js"></script>
+
+    <!-- ======== Swiper js Link ======== -->
+    <script src="asset/js/swiper-bundle.min.js"></script>
+
+    <!-- ======== Custom js Link ======== -->
+    <script src="asset/js/script.js"></script>
+
+
+
+
+</body>
+
+</html>

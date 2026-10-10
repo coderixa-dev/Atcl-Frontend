@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Atcl Frontend</title>
+
+  <!-- ======== Bootstrap css Link ======== -->
+  <link rel="stylesheet" href="asset/css/bootstrap.min.css">
+
+  <!-- ======== Google Font Link ======== -->
+  <link rel="stylesheet" href="asset/css/font.css">
+
+  <!-- ======== Font Awesome Link ======== -->
+  <link rel="stylesheet" href="asset/css/all.min.css">
+
+  <!-- ========  Swiper Js Link ======== -->
+  <link rel="stylesheet" href="asset/css/swiper-bundle.min.css">
+
+  <!-- ======== Custom css Link (keep LAST so it can override the libraries) ======== -->
+  <link rel="stylesheet" href="asset/css/style.css">
+</head>
+
+<body>
+
+
+  <!-- ========= Header Section Start ========= -->
+
+  <!-- Top Bar -->
+  <div class="top-bar d-none d-lg-block">
+    <div class="container d-flex justify-content-between align-items-center">
+      <div class="d-flex align-items-center gap-4">
+        <a href="tel:+8800000000000"><i class="fa-solid fa-phone me-2 text-accent"></i>+880 0000-000000</a>
+        <a href="mailto:info@example.com"><i class="fa-solid fa-envelope me-2 text-accent"></i>info@example.com</a>
+        <span><i class="fa-solid fa-location-dot me-2 text-accent"></i>Dhaka, Bangladesh</span>
+      </div>
+      <div class="social-links social-links-sm">
+        <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+        <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+        <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+      </div>
+    </div>
+  </div>
+
+ <!-- Main Header -->
+  <header class="header" id="header">
+    <nav class="navbar navbar-expand-lg">
+      <div class="container position-relative">
+
+        <!-- Logo (replace with real logo later) -->
+        <a class="logo" href="index.html" aria-label="Home">
+          <span class="logo-mark">A</span>
+          <span class="logo-text">ATCL<small>Solutions</small></span>
+        </a>
+
+        <!-- Right side icons (always visible) + mobile toggler -->
+        <div class="header-actions d-flex align-items-center gap-2 order-lg-last">
+          <button class="header-icon-btn" type="button" data-bs-toggle="collapse" data-bs-target="#headerSearch"
+            aria-expanded="false" aria-controls="headerSearch" aria-label="Search">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </button>
+
+          <a href="inquiry.html" class="inquiry-btn" aria-label="Inquiry list">
+            <i class="fa-solid fa-clipboard-list"></i>
+            <span class="count" id="inquiryCount">0</span>
+          </a>
+
+          <a href="request-quotation.html" class="btn btn-accent btn-sm-c d-none d-xxl-inline-block ms-2 text-nowrap">
+            Request a Quote
+          </a>
+
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainMenu"
+            aria-controls="mainMenu" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="fa-solid fa-bars"></i>
+          </button>
+        </div>
+
+        <!-- Menu -->
+        <div class="collapse navbar-collapse justify-content-center" id="mainMenu">
+          <ul class="navbar-nav align-items-lg-center">
+
+            <li class="nav-item">
+              <a class="nav-link active" href="index.html">Home</a>
+            </li>
+
+            <!-- Company dropdown -->
+            <li class="nav-item dropdown">
+              <span class="nav-link">Company</span>
+              <button class="dropdown-caret d-lg-none" type="button" data-bs-toggle="dropdown" aria-expanded="false"
+                aria-label="Open Company menu"><i class="fa-solid fa-chevron-down"></i></button>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="about.html">About Us</a></li>
+                <li><a class="dropdown-item" href="company-profile.html">Company Profile</a></li>
+                <li><a class="dropdown-item" href="mission-vision.html">Mission &amp; Vision</a></li>
+              </ul>
+            </li>
+
+            <!-- Products mega menu -->
+            <li class="nav-item dropdown mega">
+              <a class="nav-link" href="products.html">Products</a>
+              <button class="dropdown-caret d-lg-none" type="button" data-bs-toggle="dropdown" aria-expanded="false"
+                aria-label="Open Products menu"><i class="fa-solid fa-chevron-down"></i></button>
+              <div class="dropdown-menu mega-menu">
+                <div class="row g-4">
+                  <div class="col-lg-3">
+                    <h6 class="mega-title">
+                      <a href="category.html">
+                        <i class="fa-solid fa-flask me-2"></i>Analytical
+                      </a>
+                    </h6>
+
+                    <ul>
+                      <li><a href="products.html">Spectrometers</a></li>
+                      <li><a href="products.html">Chromatography</a></li>
+                      <li><a href="products.html">Lab Balances</a></li>
+                    </ul>
+                  </div>
+                  <div class="col-lg-3">
+
+                    <h6 class="mega-title">
+                      <a href="category.html">
+                      <i class="fa-solid fa-microscope me-2"></i>Life Science
+                      </a>
+                    </h6>
+
+                    <ul>
+                      <li><a href="products.html">Microscopes</a></li>
+                      <li><a href="products.html">Centrifuges</a></li>
+                      <li><a href="products.html">Incubators</a></li>
+                    </ul>
+                  </div>
+                  <div class="col-lg-3">
+                    <h6 class="mega-title">
+                      <a href="category.html">
+                        <i class="fa-solid fa-industry me-2"></i>Industrial
+                      </a>
+                    </h6>
+
+                    <ul>
+                      <li><a href="products.html">Textile Testing</a></li>
+                      <li><a href="products.html">Leather Testing</a></li>
+                      <li><a href="products.html">Survey Equipment</a></li>
+                    </ul>
+                  </div>
+                  <div class="col-lg-3 d-none d-lg-block">
+                    <div class="mega-promo">
+                      <h6>Can't find a product?</h6>
+                      <p>Tell us your requirement and we will send a quotation.</p>
+                      <a href="request-quotation.html" class="btn btn-accent btn-sm-c">Request a Quote</a>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </li>
+
+            <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+            <li class="nav-item"><a class="nav-link" href="brands.html">Brands</a></li>
+            <li class="nav-item"><a class="nav-link" href="news.html">News &amp; Events</a></li>
+            <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+
+            <!-- Shown only on mobile menu -->
+            <li class="nav-item d-lg-none mt-3">
+              <a href="request-quotation.html" class="btn btn-accent w-100">Request a Quote</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Search bar (opens under the header) -->
+    <div class="collapse header-search" id="headerSearch">
+      <div class="container py-3">
+        <form action="products.html" method="get" class="search-box">
+          <input type="search" name="q" class="form-control" placeholder="Search products by name or code..."
+            aria-label="Search products">
+          <button type="submit" aria-label="Search"><i class="fa-solid fa-magnifying-glass"></i></button>
+        </form>
+      </div>
+    </div>
+  </header>
+  <!-- ========= Header Section End ========= -->
+
+
+  <main>
+
+    <!-- ========= Page Banner Start ========= -->
+    <section class="page-banner nd-banner cd-banner">
+      <div class="container">
+        <span class="sub-title-pill pill-dark mb-3">Sales</span>
+        <h1>Sales Engineer</h1>
+        <div class="nd-banner-meta">
+          <span><i class="fa-regular fa-clock"></i>Full time</span>
+          <span><i class="fa-solid fa-building"></i>Head office, Dhaka</span>
+          <span><i class="fa-regular fa-calendar"></i>Posted 05 Oct 2026</span>
+        </div>
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+            <li class="breadcrumb-item"><a href="careers.html">Careers</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Sales Engineer</li>
+          </ol>
+        </nav>
+      </div>
+    </section>
+    <!-- ========= Page Banner End ========= -->
+
+    <!-- ========= Job Facts Start ========= -->
+    <section class="cd-facts-wrap">
+      <div class="container">
+        <ul class="cd-facts">
+          <li>
+            <span class="cd-fact-icon"><i class="fa-solid fa-location-dot"></i></span>
+            <div><small>Location</small><strong>Dhaka</strong></div>
+          </li>
+          <li>
+            <span class="cd-fact-icon"><i class="fa-solid fa-briefcase"></i></span>
+            <div><small>Experience</small><strong>2 to 4 years</strong></div>
+          </li>
+          <li>
+            <span class="cd-fact-icon"><i class="fa-solid fa-user-group"></i></span>
+            <div><small>Vacancies</small><strong>2 positions</strong></div>
+          </li>
+          <li>
+            <span class="cd-fact-icon"><i class="fa-solid fa-money-bill-wave"></i></span>
+            <div><small>Salary</small><strong>Negotiable</strong></div>
+          </li>
+          <li>
+            <span class="cd-fact-icon"><i class="fa-solid fa-hourglass-half"></i></span>
+            <div><small>Apply by</small><strong>31 Oct 2026</strong></div>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <!-- ========= Job Facts End ========= -->
+
+    <!-- ========= Job Details Start ========= -->
+    <section class="section cd-section">
+      <div class="container">
+        <div class="row gy-5 gx-lg-5">
+
+          <!-- Job content -->
+          <div class="col-lg-8">
+            <div class="cd-content">
+
+              <h2 class="cd-h">About the role</h2>
+              <p class="cd-lead">You will be the link between our customers and our product range. You listen to what a
+                laboratory or factory needs, recommend the right equipment, and see the order through from the first
+                inquiry to a signed quotation.</p>
+              <p>This role suits someone who enjoys technical conversations and building long-term relationships with
+                buyers. You will work closely with our application specialists and service engineers, so every
+                recommendation you make is backed by real product knowledge.</p>
+
+              <h2 class="cd-h">What you will do</h2>
+              <ul class="cd-list">
+                <li><i class="fa-solid fa-circle-check"></i>Handle product inquiries and quotation requests that arrive through the website, phone and email</li>
+                <li><i class="fa-solid fa-circle-check"></i>Visit customers, understand their testing or production needs and suggest suitable equipment</li>
+                <li><i class="fa-solid fa-circle-check"></i>Prepare clear quotations and follow up until the customer decides</li>
+                <li><i class="fa-solid fa-circle-check"></i>Give product demonstrations together with our application team</li>
+                <li><i class="fa-solid fa-circle-check"></i>Keep customer records and the sales pipeline up to date</li>
+                <li><i class="fa-solid fa-circle-check"></i>Share market feedback with the team so we can improve our product range</li>
+              </ul>
+
+              <h2 class="cd-h">What we are looking for</h2>
+              <div class="row g-4">
+                <div class="col-md-6">
+                  <div class="cd-req">
+                    <h5>Required</h5>
+                    <ul>
+                      <li>Bachelor's degree in engineering, science or business</li>
+                      <li>2 to 4 years of B2B or technical sales experience</li>
+                      <li>Clear spoken and written English and Bangla</li>
+                      <li>Willing to travel within Bangladesh when needed</li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="cd-req cd-req-plus">
+                    <h5>An advantage</h5>
+                    <ul>
+                      <li>Experience selling laboratory, textile or industrial equipment</li>
+                      <li>Existing contacts in labs, factories or universities</li>
+                      <li>Comfortable using CRM tools and spreadsheets</li>
+                      <li>Basic knowledge of tendering and import procedures</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <h2 class="cd-h">What you get</h2>
+              <div class="row g-3">
+                <div class="col-sm-6">
+                  <div class="cd-perk"><i class="fa-solid fa-chart-line"></i>
+                    <div><h6>Commission on top of salary</h6><small>Paid on every closed quotation.</small></div>
+                  </div>
+                </div>
+                <div class="col-sm-6">
+                  <div class="cd-perk"><i class="fa-solid fa-graduation-cap"></i>
+                    <div><h6>Training from our brands</h6><small>Product training from our partner manufacturers.</small></div>
+                  </div>
+                </div>
+                <div class="col-sm-6">
+                  <div class="cd-perk"><i class="fa-solid fa-gift"></i>
+                    <div><h6>Two festival bonuses</h6><small>Every year, along with your salary.</small></div>
+                  </div>
+                </div>
+                <div class="col-sm-6">
+                  <div class="cd-perk"><i class="fa-solid fa-heart-pulse"></i>
+                    <div><h6>Health insurance</h6><small>Covers you and your immediate family.</small></div>
+                  </div>
+                </div>
+              </div>
+
+              <h2 class="cd-h">How we hire</h2>
+              <ol class="cd-steps">
+                <li>
+                  <h5>You apply</h5>
+                  <p>Send your CV with the form below. We read every application and reply within 5 working days.</p>
+                </li>
+                <li>
+                  <h5>Phone call</h5>
+                  <p>A short chat with our HR team about your experience and what you are looking for.</p>
+                </li>
+                <li>
+                  <h5>Interview with the sales team</h5>
+                  <p>You meet the Head of Sales and talk through a real customer case.</p>
+                </li>
+                <li>
+                  <h5>Offer</h5>
+                  <p>If it is a match, you receive a written offer and a start date.</p>
+                </li>
+              </ol>
+
+              <!-- Application form -->
+              <div class="cd-apply" id="apply">
+                <h2 class="cd-h mb-1">Apply for Sales Engineer</h2>
+                <p class="cd-apply-sub">Fields marked * are required. Your CV is only seen by our hiring team.</p>
+
+                <form id="careerForm" novalidate>
+                  <div class="row g-3">
+                    <div class="col-md-6">
+                      <label class="form-label" for="cfName">Full name *</label>
+                      <input type="text" class="form-control" id="cfName" name="name" autocomplete="name" required>
+                      <div class="cd-error">Enter your full name.</div>
+                    </div>
+                    <div class="col-md-6">
+                      <label class="form-label" for="cfPhone">Phone *</label>
+                      <input type="tel" class="form-control" id="cfPhone" name="phone" autocomplete="tel" placeholder="01XXXXXXXXX" required>
+                      <div class="cd-error">Enter a valid phone number.</div>
+                    </div>
+                    <div class="col-md-6">
+                      <label class="form-label" for="cfEmail">Email *</label>
+                      <input type="email" class="form-control" id="cfEmail" name="email" autocomplete="email" required>
+                      <div class="cd-error">Enter a valid email address.</div>
+                    </div>
+                    <div class="col-md-6">
+                      <label class="form-label" for="cfExp">Years of experience *</label>
+                      <select class="form-control" id="cfExp" name="experience" required>
+                        <option value="">Select</option>
+                        <option>Less than 2 years</option>
+                        <option>2 to 4 years</option>
+                        <option>5 to 8 years</option>
+                        <option>More than 8 years</option>
+                      </select>
+                      <div class="cd-error">Choose your experience.</div>
+                    </div>
+                    <div class="col-12">
+                      <label class="form-label" for="cfCv">Your CV *</label>
+                      <label class="cd-drop" for="cfCv" id="cdDrop">
+                        <i class="fa-solid fa-cloud-arrow-up"></i>
+                        <span id="cdDropText"><strong>Choose a file</strong> or drag it here<small>PDF, DOC or DOCX, up to 5 MB</small></span>
+                      </label>
+                      <input type="file" class="visually-hidden" id="cfCv" name="cv" accept=".pdf,.doc,.docx" required>
+                      <div class="cd-error" id="cdCvError">Upload your CV as a PDF, DOC or DOCX under 5 MB.</div>
+                    </div>
+                    <div class="col-12">
+                      <label class="form-label" for="cfNote">Anything you want us to know</label>
+                      <textarea class="form-control" id="cfNote" name="note" rows="4" maxlength="800"
+                        placeholder="Tell us about a deal or project you are proud of."></textarea>
+                    </div>
+                    <div class="col-12 d-flex flex-wrap align-items-center gap-3">
+                      <button type="submit" class="btn btn-accent btn-lg-c">Submit application</button>
+                      <span class="cd-form-msg" id="careerMsg" role="status" aria-live="polite"></span>
+                    </div>
+                  </div>
+                </form>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- Sidebar -->
+          <aside class="col-lg-4">
+            <div class="nd-sidebar">
+
+              <div class="nd-widget cd-card">
+                <div class="cd-deadline" id="cdDeadline" data-deadline="2026-10-31">
+                  <strong id="cdDays">--</strong>
+                  <span id="cdDaysLabel">days left to apply</span>
+                </div>
+                <p class="cd-card-date"><i class="fa-regular fa-calendar-check"></i>Applications close on 31 Oct 2026</p>
+                <a href="#apply" class="btn btn-accent w-100">Apply now</a>
+                <a href="mailto:career@example.com?subject=Application%20for%20Sales%20Engineer"
+                  class="btn btn-outline-main w-100 mt-2">Email your CV</a>
+                <button type="button" class="cd-copy" id="cdCopy"><i class="fa-regular fa-copy"></i><span>Copy job link</span></button>
+              </div>
+
+              <div class="nd-widget">
+                <h5 class="nd-widget-title">Other open positions</h5>
+                <ul class="cd-others">
+                  <li>
+                    <a href="career-details.html">
+                      <strong>Service Engineer</strong>
+                      <small>Service &middot; Dhaka &middot; Full time</small>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="career-details.html">
+                      <strong>Application Specialist</strong>
+                      <small>Technical &middot; Dhaka &middot; Full time</small>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="career-details.html">
+                      <strong>Marketing Executive</strong>
+                      <small>Marketing &middot; Dhaka &middot; Full time</small>
+                    </a>
+                  </li>
+                </ul>
+                <a href="careers.html" class="link-arrow mt-3">View all openings <i class="fa-solid fa-arrow-right"></i></a>
+              </div>
+
+            </div>
+          </aside>
+
+        </div>
+      </div>
+    </section>
+    <!-- ========= Job Details End ========= -->
+
+  </main>
+
+  <!-- Mobile apply bar -->
+  <div class="cd-mobile-bar" id="cdMobileBar">
+    <div><strong>Sales Engineer</strong><small id="cdMobileDays">Apply by 31 Oct 2026</small></div>
+    <a href="#apply" class="btn btn-accent btn-sm-c">Apply now</a>
+  </div>
+
+
+  <!-- ========= Footer Section Start ========= -->
+  <footer class="footer" id="footer">
+
+    <!-- Main footer -->
+    <div class="container footer-main">
+      <div class="row g-5">
+
+        <!-- Brand -->
+        <div class="col-lg-4 col-md-6">
+          <a class="logo footer-logo" href="index.html" aria-label="Home">
+            <span class="logo-mark">A</span>
+            <span class="logo-text">ATCL<small>Solutions</small></span>
+          </a>
+          <p class="footer-about">A trusted solution provider delivering quality products, technical expertise and
+            reliable after-sales support to industries across Bangladesh.</p>
+          <div class="social-links">
+            <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+            <a href="#" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+          </div>
+        </div>
+
+        <!-- Quick links -->
+        <div class="col-lg-2 col-md-6 col-sm-6">
+          <h5 class="footer-title">Quick Links</h5>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="company-profile.html">Company Profile</a></li>
+            <li><a href="mission-vision.html">Mission &amp; Vision</a></li>
+            <li><a href="brands.html">Brands</a></li>
+            <li><a href="news.html">News &amp; Events</a></li>
+            <li><a href="careers.html">Careers</a></li>
+          </ul>
+        </div>
+
+        <!-- Solutions -->
+        <div class="col-lg-3 col-md-6 col-sm-6">
+          <h5 class="footer-title">Our Solutions</h5>
+          <ul class="footer-links">
+            <li><a href="products.html">Analytical</a></li>
+            <li><a href="products.html">Life Science</a></li>
+            <li><a href="products.html">Industrial</a></li>
+            <li><a href="products.html">Textile Testing</a></li>
+            <li><a href="products.html">Leather Testing</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="request-quotation.html">Request a Quote</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact -->
+        <div class="col-lg-3 col-md-6">
+          <h5 class="footer-title">Contact Us</h5>
+          <ul class="footer-contact">
+            <li>
+              <span class="fc-icon"><i class="fa-solid fa-location-dot"></i></span>
+              <span>House 00, Road 00, Gulshan, Dhaka 1212, Bangladesh</span>
+            </li>
+            <li>
+              <span class="fc-icon"><i class="fa-solid fa-phone"></i></span>
+              <a href="tel:+8800000000000">+880 0000-000000</a>
+            </li>
+            <li>
+              <span class="fc-icon"><i class="fa-solid fa-envelope"></i></span>
+              <a href="mailto:info@example.com">info@example.com</a>
+            </li>
+            <li>
+              <span class="fc-icon"><i class="fa-solid fa-clock"></i></span>
+              <span>Sun – Thu: 9:00 AM – 6:00 PM</span>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+
+      <!-- Bottom bar -->
+      <div class="footer-bottom">
+        <p class="mb-0">&copy; <span id="footerYear">2026</span> ATCL Solutions. All rights reserved.</p>
+        <div class="footer-bottom-links">
+          <a href="privacy-policy.html">Privacy Policy</a>
+          <a href="terms.html">Terms &amp; Conditions</a>
+          <a href="contact.html">Contact</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to top -->
+  <button type="button" class="back-to-top" id="backToTop" aria-label="Back to top">
+    <i class="fa-solid fa-arrow-up"></i>
+  </button>
+  <!-- ========= Footer Section End ========= -->
+
+
+  <!-- ======== Bootstrap js Link ======== -->
+  <script src="asset/js/bootstrap.bundle.min.js"></script>
+
+  <!-- ======== Swiper js Link ======== -->
+  <script src="asset/js/swiper-bundle.min.js"></script>
+
+  <!-- ======== Custom js Link ======== -->
+  <script src="asset/js/script.js"></script>
+
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Atcl Frontend</title>
+
+  <!-- ======== Bootstrap css Link ======== -->
+  <link rel="stylesheet" href="asset/css/bootstrap.min.css">
+
+  <!-- ======== Google Font Link ======== -->
+  <link rel="stylesheet" href="asset/css/font.css">
+
+  <!-- ======== Font Awesome Link ======== -->
+  <link rel="stylesheet" href="asset/css/all.min.css">
+
+  <!-- ========  Swiper Js Link ======== -->
+  <link rel="stylesheet" href="asset/css/swiper-bundle.min.css">
+
+  <!-- ======== Custom css Link (keep LAST so it can override the libraries) ======== -->
+  <link rel="stylesheet" href="asset/css/style.css">
+</head>
+
+<body>
+
+
+  <!-- ========= Header Section Start ========= -->
+
+  <!-- Top Bar -->
+  <div class="top-bar d-none d-lg-block">
+    <div class="container d-flex justify-content-between align-items-center">
+      <div class="d-flex align-items-center gap-4">
+        <a href="tel:+8800000000000"><i class="fa-solid fa-phone me-2 text-accent"></i>+880 0000-000000</a>
+        <a href="mailto:info@example.com"><i class="fa-solid fa-envelope me-2 text-accent"></i>info@example.com</a>
+        <span><i class="fa-solid fa-location-dot me-2 text-accent"></i>Dhaka, Bangladesh</span>
+      </div>
+      <div class="social-links social-links-sm">
+        <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+        <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+        <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main Header -->
+  <header class="header" id="header">
+    <nav class="navbar navbar-expand-lg">
+      <div class="container position-relative">
+
+        <!-- Logo (replace with real logo later) -->
+        <a class="logo" href="index.html" aria-label="Home">
+          <span class="logo-mark">A</span>
+          <span class="logo-text">ATCL<small>Solutions</small></span>
+        </a>
+
+        <!-- Right side icons (always visible) + mobile toggler -->
+        <div class="header-actions d-flex align-items-center gap-2 order-lg-last">
+          <button class="header-icon-btn" type="button" data-bs-toggle="collapse" data-bs-target="#headerSearch"
+            aria-expanded="false" aria-controls="headerSearch" aria-label="Search">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </button>
+
+          <a href="inquiry.html" class="inquiry-btn" aria-label="Inquiry list">
+            <i class="fa-solid fa-clipboard-list"></i>
+            <span class="count" id="inquiryCount">0</span>
+          </a>
+
+          <a href="request-quotation.html" class="btn btn-accent btn-sm-c d-none d-xxl-inline-block ms-2 text-nowrap">
+            Request a Quote
+          </a>
+
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainMenu"
+            aria-controls="mainMenu" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="fa-solid fa-bars"></i>
+          </button>
+        </div>
+
+        <!-- Menu -->
+        <div class="collapse navbar-collapse justify-content-center" id="mainMenu">
+          <ul class="navbar-nav align-items-lg-center">
+
+            <li class="nav-item">
+              <a class="nav-link active" href="index.html">Home</a>
+            </li>
+
+            <!-- Company dropdown -->
+            <li class="nav-item dropdown">
+              <span class="nav-link">Company</span>
+              <button class="dropdown-caret d-lg-none" type="button" data-bs-toggle="dropdown" aria-expanded="false"
+                aria-label="Open Company menu"><i class="fa-solid fa-chevron-down"></i></button>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="about.html">About Us</a></li>
+                <li><a class="dropdown-item" href="company-profile.html">Company Profile</a></li>
+                <li><a class="dropdown-item" href="mission-vision.html">Mission &amp; Vision</a></li>
+              </ul>
+            </li>
+
+            <!-- Products mega menu -->
+            <li class="nav-item dropdown mega">
+              <a class="nav-link" href="products.html">Products</a>
+              <button class="dropdown-caret d-lg-none" type="button" data-bs-toggle="dropdown" aria-expanded="false"
+                aria-label="Open Products menu"><i class="fa-solid fa-chevron-down"></i></button>
+              <div class="dropdown-menu mega-menu">
+                <div class="row g-4">
+                  <div class="col-lg-3">
+                    <h6 class="mega-title">
+                      <a href="category.html">
+                        <i class="fa-solid fa-flask me-2"></i>Analytical
+                      </a>
+                    </h6>
+
+                    <ul>
+                      <li><a href="products.html">Spectrometers</a></li>
+                      <li><a href="products.html">Chromatography</a></li>
+                      <li><a href="products.html">Lab Balances</a></li>
+                    </ul>
+                  </div>
+                  <div class="col-lg-3">
+
+                    <h6 class="mega-title">
+                      <a href="category.html">
+                      <i class="fa-solid fa-microscope me-2"></i>Life Science
+                      </a>
+                    </h6>
+
+                    <ul>
+                      <li><a href="products.html">Microscopes</a></li>
+                      <li><a href="products.html">Centrifuges</a></li>
+                      <li><a href="products.html">Incubators</a></li>
+                    </ul>
+                  </div>
+                  <div class="col-lg-3">
+                    <h6 class="mega-title">
+                      <a href="category.html">
+                        <i class="fa-solid fa-industry me-2"></i>Industrial
+                      </a>
+                    </h6>
+
+                    <ul>
+                      <li><a href="products.html">Textile Testing</a></li>
+                      <li><a href="products.html">Leather Testing</a></li>
+                      <li><a href="products.html">Survey Equipment</a></li>
+                    </ul>
+                  </div>
+                  <div class="col-lg-3 d-none d-lg-block">
+                    <div class="mega-promo">
+                      <h6>Can't find a product?</h6>
+                      <p>Tell us your requirement and we will send a quotation.</p>
+                      <a href="request-quotation.html" class="btn btn-accent btn-sm-c">Request a Quote</a>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </li>
+
+            <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+            <li class="nav-item"><a class="nav-link" href="brands.html">Brands</a></li>
+            <li class="nav-item"><a class="nav-link" href="news.html">News &amp; Events</a></li>
+            <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+
+            <!-- Shown only on mobile menu -->
+            <li class="nav-item d-lg-none mt-3">
+              <a href="request-quotation.html" class="btn btn-accent w-100">Request a Quote</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Search bar (opens under the header) -->
+    <div class="collapse header-search" id="headerSearch">
+      <div class="container py-3">
+        <form action="products.html" method="get" class="search-box">
+          <input type="search" name="q" class="form-control" placeholder="Search products by name or code..."
+            aria-label="Search products">
+          <button type="submit" aria-label="Search"><i class="fa-solid fa-magnifying-glass"></i></button>
+        </form>
+      </div>
+    </div>
+  </header>
+
+  <!-- ========= Header Section End ========= -->
+
+  <main>
+
+    <!-- ========= Page Banner (same style as About page) ========= -->
+    <section class="inner-hero">
+      <div class="container position-relative">
+        <span class="sub-title-pill pill-dark">What We Offer</span>
+        <h1>Our <span>Services</span></h1>
+        <p class="inner-hero-lead">From installation to long-term care, we keep your equipment accurate, safe and
+          running.</p>
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb mb-0">
+            <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Services</li>
+          </ol>
+        </nav>
+      </div>
+    </section>
+
+    <!-- ========= Services grid ========= -->
+    <section class="section">
+      <div class="container">
+        <div class="section-title">
+          <span class="sub-title">End-to-End Support</span>
+          <h2>Services built around <span class="text-accent">your uptime</span></h2>
+          <p>One team handles the whole equipment lifecycle, so nothing falls between suppliers.</p>
+        </div>
+        <div class="row g-4">
+          <div class="col-md-6 col-lg-4 d-flex">
+            <article class="svc-card">
+              <div class="svc-img"><img
+                  src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=700&q=75"
+                  alt="Engineers installing equipment" loading="lazy" onerror="this.style.display='none'">
+                  </div>
+              <div class="svc-body">
+                <h4>Installation &amp; Commissioning</h4>
+                <p>Site survey, installation and acceptance testing by factory-trained engineers.</p><a
+                  href="contact.html" class="svc-link">Get a quote <i class="fa-solid fa-arrow-right"></i></a>
+              </div>
+            </article>
+          </div>
+          <div class="col-md-6 col-lg-4 d-flex">
+            <article class="svc-card">
+              <div class="svc-img"><img
+                  src="https://images.unsplash.com/photo-1614935151651-0bea6508db6b?auto=format&fit=crop&w=700&q=75"
+                  alt="Laboratory calibration" loading="lazy" onerror="this.style.display='none'"></div>
+              <div class="svc-body">
+                <h4>Calibration &amp; Validation</h4>
+                <p>Traceable calibration with certificates that keep you audit-ready.</p><a href="contact.html"
+                  class="svc-link">Get a quote <i class="fa-solid fa-arrow-right"></i></a>
+              </div>
+            </article>
+          </div>
+          <div class="col-md-6 col-lg-4 d-flex">
+            <article class="svc-card">
+              <div class="svc-img"><img
+                  src="https://images.unsplash.com/photo-1602052577122-f73b9710adba?auto=format&fit=crop&w=700&q=75"
+                  alt="Preventive maintenance" loading="lazy" onerror="this.style.display='none'"></div>
+              <div class="svc-body">
+                <h4>Preventive Maintenance (AMC)</h4>
+                <p>Scheduled visits that catch problems before they stop production.</p><a href="contact.html"
+                  class="svc-link">Get a quote <i class="fa-solid fa-arrow-right"></i></a>
+              </div>
+            </article>
+          </div>
+          <div class="col-md-6 col-lg-4 d-flex">
+            <article class="svc-card">
+              <div class="svc-img"><img
+                  src="https://images.unsplash.com/photo-1528953030358-b0c7de371f1f?auto=format&fit=crop&w=700&q=75"
+                  alt="Repair workshop" loading="lazy" onerror="this.style.display='none'"></div>
+              <div class="svc-body">
+                <h4>Repair &amp; Spare Parts</h4>
+                <p>Fast diagnosis, genuine spare parts and a local parts inventory.</p><a href="contact.html"
+                  class="svc-link">Get a quote <i class="fa-solid fa-arrow-right"></i></a>
+              </div>
+            </article>
+          </div>
+          <div class="col-md-6 col-lg-4 d-flex">
+            <article class="svc-card">
+              <div class="svc-img"><img
+                  src="https://images.unsplash.com/photo-1557804506-669a67965ba0?auto=format&fit=crop&w=700&q=75"
+                  alt="Training session" loading="lazy" onerror="this.style.display='none'"></div>
+              <div class="svc-body">
+                <h4>Training &amp; Workshops</h4>
+                <p>Hands-on operator training so your team gets the most from every instrument.</p><a
+                  href="contact.html" class="svc-link">Get a quote <i class="fa-solid fa-arrow-right"></i></a>
+              </div>
+            </article>
+          </div>
+          <div class="col-md-6 col-lg-4 d-flex">
+            <article class="svc-card">
+              <div class="svc-img"><img
+                  src="https://images.unsplash.com/photo-1747999918007-e3442cabb23a?auto=format&fit=crop&w=700&q=75"
+                  alt="Technical consultancy" loading="lazy" onerror="this.style.display='none'"></div>
+              <div class="svc-body">
+                <h4>Technical Consultancy</h4>
+                <p>Honest advice on selecting, upgrading and planning your lab or plant.</p><a href="contact.html"
+                  class="svc-link">Get a quote <i class="fa-solid fa-arrow-right"></i></a>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========= How we work ========= -->
+    <section class="svc-process">
+      <div class="container">
+        <div class="section-title">
+          <span class="sub-title-pill pill-dark">How We Work</span>
+          <h2 class="text-white">From first call to <span class="text-accent">signed off</span></h2>
+        </div>
+        <div class="svc-steps">
+          <div><b>1</b>
+            <h5>Tell us</h5>
+            <p>Share your equipment and requirement.</p>
+          </div>
+          <div><b>2</b>
+            <h5>We assess</h5>
+            <p>An engineer reviews and sends a clear quotation.</p>
+          </div>
+          <div><b>3</b>
+            <h5>We deliver</h5>
+            <p>Scheduled, documented service on site.</p>
+          </div>
+          <div><b>4</b>
+            <h5>We follow up</h5>
+            <p>Reports, reminders and support after handover.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========= Service plans ========= -->
+    <section class="section">
+      <div class="container">
+        <div class="section-title">
+          <span class="sub-title">Service Plans</span>
+          <h2>Choose the <span class="text-accent">level of care</span></h2>
+          <p>Every plan can be tailored to your equipment list and sites.</p>
+        </div>
+        <div class="row g-4 align-items-stretch">
+          <div class="col-lg-4">
+            <div class="svc-plan">
+              <h4>Essential</h4>
+              <p class="svc-plan-sub">For single instruments</p>
+              <ul>
+                <li><i class="fa-solid fa-check"></i>Annual preventive visit</li>
+                <li><i class="fa-solid fa-check"></i>Service report</li>
+                <li><i class="fa-solid fa-check"></i>Phone &amp; email support</li>
+              </ul>
+              <a href="request-quotation.html" class="btn btn-main w-100">Request a Quote</a>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="svc-plan svc-plan-featured">
+              <span class="svc-badge">Most Popular</span>
+              <h4>Professional</h4>
+              <p class="svc-plan-sub">For labs and production lines</p>
+              <ul>
+                <li><i class="fa-solid fa-check"></i>Quarterly preventive visits</li>
+                <li><i class="fa-solid fa-check"></i>Calibration certificates</li>
+                <li><i class="fa-solid fa-check"></i>Priority response</li>
+                <li><i class="fa-solid fa-check"></i>Discounted spare parts</li>
+              </ul>
+              <a href="request-quotation.html" class="btn btn-accent w-100">Request a Quote</a>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="svc-plan">
+              <h4>Enterprise</h4>
+              <p class="svc-plan-sub">For multi-site operations</p>
+              <ul>
+                <li><i class="fa-solid fa-check"></i>Dedicated service engineer</li>
+                <li><i class="fa-solid fa-check"></i>On-site spare parts stock</li>
+                <li><i class="fa-solid fa-check"></i>24/7 emergency support</li>
+              </ul>
+              <a href="request-quotation.html" class="btn btn-main w-100">Request a Quote</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========= FAQ + CTA ========= -->
+    <section class="section bg-light-c">
+      <div class="container">
+        <div class="row gy-5 gx-lg-5 align-items-start">
+          <div class="col-lg-5">
+            <span class="sub-title">FAQ</span>
+            <h2>Questions we <span class="text-accent">often hear</span></h2>
+            <p>Cannot find your answer? Our service desk replies within one working day.</p>
+            <a href="contact.html" class="btn btn-main btn-lg-c">Contact Service Desk</a>
+          </div>
+          <div class="col-lg-7">
+            <div class="accordion mvp-acc" id="svcFaq">
+              <div class="accordion-item">
+                <h3 class="accordion-header"><button class="accordion-button" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#f1" aria-expanded="true" aria-controls="f1">Do you service equipment you did not
+                    supply?</button></h3>
+                <div id="f1" class="accordion-collapse collapse show" data-bs-parent="#svcFaq">
+                  <div class="accordion-body">Yes, for most major brands. Send us the model and we will confirm.</div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h3 class="accordion-header"><button class="accordion-button collapsed" type="button"
+                    data-bs-toggle="collapse" data-bs-target="#f2" aria-expanded="false" aria-controls="f2">How fast can
+                    an engineer reach us?</button></h3>
+                <div id="f2" class="accordion-collapse collapse" data-bs-parent="#svcFaq">
+                  <div class="accordion-body">Priority customers get a response the same day. Standard requests within
+                    two working days.</div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h3 class="accordion-header"><button class="accordion-button collapsed" type="button"
+                    data-bs-toggle="collapse" data-bs-target="#f3" aria-expanded="false" aria-controls="f3">Are your
+                    calibration certificates traceable?</button></h3>
+                <div id="f3" class="accordion-collapse collapse" data-bs-parent="#svcFaq">
+                  <div class="accordion-body">Yes. Certificates reference traceable standards and are accepted for
+                    audits.</div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h3 class="accordion-header"><button class="accordion-button collapsed" type="button"
+                    data-bs-toggle="collapse" data-bs-target="#f4" aria-expanded="false" aria-controls="f4">Do you keep
+                    spare parts in Bangladesh?</button></h3>
+                <div id="f4" class="accordion-collapse collapse" data-bs-parent="#svcFaq">
+                  <div class="accordion-body">We stock common parts locally and import special items on request.</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ========= Footer Section Start ========= -->
+  <footer class="footer" id="footer">
+
+    <!-- Main footer -->
+    <div class="container footer-main">
+      <div class="row g-5">
+
+        <!-- Brand -->
+        <div class="col-lg-4 col-md-6">
+          <a class="logo footer-logo" href="index.html" aria-label="Home">
+            <span class="logo-mark">A</span>
+            <span class="logo-text">ATCL<small>Solutions</small></span>
+          </a>
+          <p class="footer-about">A trusted solution provider delivering quality products, technical expertise and
+            reliable after-sales support to industries across Bangladesh.</p>
+          <div class="social-links">
+            <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+            <a href="#" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+          </div>
+        </div>
+
+        <!-- Quick links -->
+        <div class="col-lg-2 col-md-6 col-sm-6">
+          <h5 class="footer-title">Quick Links</h5>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="company-profile.html">Company Profile</a></li>
+            <li><a href="mission-vision.html">Mission &amp; Vision</a></li>
+            <li><a href="brands.html">Brands</a></li>
+            <li><a href="news.html">News &amp; Events</a></li>
+            <li><a href="careers.html">Careers</a></li>
+          </ul>
+        </div>
+
+        <!-- Solutions -->
+        <div class="col-lg-3 col-md-6 col-sm-6">
+          <h5 class="footer-title">Our Solutions</h5>
+          <ul class="footer-links">
+            <li><a href="products.html">Analytical</a></li>
+            <li><a href="products.html">Life Science</a></li>
+            <li><a href="products.html">Industrial</a></li>
+            <li><a href="products.html">Textile Testing</a></li>
+            <li><a href="products.html">Leather Testing</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="request-quotation.html">Request a Quote</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact -->
+        <div class="col-lg-3 col-md-6">
+          <h5 class="footer-title">Contact Us</h5>
+          <ul class="footer-contact">
+            <li>
+              <span class="fc-icon"><i class="fa-solid fa-location-dot"></i></span>
+              <span>House 00, Road 00, Gulshan, Dhaka 1212, Bangladesh</span>
+            </li>
+            <li>
+              <span class="fc-icon"><i class="fa-solid fa-phone"></i></span>
+              <a href="tel:+8800000000000">+880 0000-000000</a>
+            </li>
+            <li>
+              <span class="fc-icon"><i class="fa-solid fa-envelope"></i></span>
+              <a href="mailto:info@example.com">info@example.com</a>
+            </li>
+            <li>
+              <span class="fc-icon"><i class="fa-solid fa-clock"></i></span>
+              <span>Sun – Thu: 9:00 AM – 6:00 PM</span>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+
+      <!-- Bottom bar -->
+      <div class="footer-bottom">
+        <p class="mb-0">&copy; <span id="footerYear">2026</span> ATCL Solutions. All rights reserved.</p>
+        <div class="footer-bottom-links">
+          <a href="privacy-policy.html">Privacy Policy</a>
+          <a href="terms.html">Terms &amp; Conditions</a>
+          <a href="contact.html">Contact</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to top -->
+  <button type="button" class="back-to-top" id="backToTop" aria-label="Back to top">
+    <i class="fa-solid fa-arrow-up"></i>
+  </button>
+  <!-- ========= Footer Section End ========= -->
+
+
+  <!-- ======== Bootstrap js Link ======== -->
+  <script src="asset/js/bootstrap.bundle.min.js"></script>
+
+  <!-- ======== Swiper js Link ======== -->
+  <script src="asset/js/swiper-bundle.min.js"></script>
+
+  <!-- ======== Custom js Link ======== -->
+  <script src="asset/js/script.js"></script>
+
+
+
+
+</body>
+
+</html>

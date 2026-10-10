@@ -1,0 +1,707 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atcl Frontend</title>
+
+    <!-- ======== Bootstrap css Link ======== -->
+    <link rel="stylesheet" href="asset/css/bootstrap.min.css">
+
+    <!-- ======== Google Font Link ======== -->
+    <link rel="stylesheet" href="asset/css/font.css">
+
+    <!-- ======== Font Awesome Link ======== -->
+    <link rel="stylesheet" href="asset/css/all.min.css">
+
+    <!-- ========  Swiper Js Link ======== -->
+    <link rel="stylesheet" href="asset/css/swiper-bundle.min.css">
+
+    <!-- ======== Custom css Link (keep LAST so it can override the libraries) ======== -->
+    <link rel="stylesheet" href="asset/css/style.css">
+</head>
+
+<body>
+
+
+    <!-- ========= Header Section Start ========= -->
+
+    <!-- Top Bar -->
+    <div class="top-bar d-none d-lg-block">
+        <div class="container d-flex justify-content-between align-items-center">
+            <div class="d-flex align-items-center gap-4">
+                <a href="tel:+8800000000000"><i class="fa-solid fa-phone me-2 text-accent"></i>+880 0000-000000</a>
+                <a href="mailto:info@example.com"><i
+                        class="fa-solid fa-envelope me-2 text-accent"></i>info@example.com</a>
+                <span><i class="fa-solid fa-location-dot me-2 text-accent"></i>Dhaka, Bangladesh</span>
+            </div>
+            <div class="social-links social-links-sm">
+                <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+            </div>
+        </div>
+    </div>
+
+     <!-- Main Header -->
+  <header class="header" id="header">
+    <nav class="navbar navbar-expand-lg">
+      <div class="container position-relative">
+
+        <!-- Logo (replace with real logo later) -->
+        <a class="logo" href="index.html" aria-label="Home">
+          <span class="logo-mark">A</span>
+          <span class="logo-text">ATCL<small>Solutions</small></span>
+        </a>
+
+        <!-- Right side icons (always visible) + mobile toggler -->
+        <div class="header-actions d-flex align-items-center gap-2 order-lg-last">
+          <button class="header-icon-btn" type="button" data-bs-toggle="collapse" data-bs-target="#headerSearch"
+            aria-expanded="false" aria-controls="headerSearch" aria-label="Search">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </button>
+
+          <a href="inquiry.html" class="inquiry-btn" aria-label="Inquiry list">
+            <i class="fa-solid fa-clipboard-list"></i>
+            <span class="count" id="inquiryCount">0</span>
+          </a>
+
+          <a href="request-quotation.html" class="btn btn-accent btn-sm-c d-none d-xxl-inline-block ms-2 text-nowrap">
+            Request a Quote
+          </a>
+
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainMenu"
+            aria-controls="mainMenu" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="fa-solid fa-bars"></i>
+          </button>
+        </div>
+
+        <!-- Menu -->
+        <div class="collapse navbar-collapse justify-content-center" id="mainMenu">
+          <ul class="navbar-nav align-items-lg-center">
+
+            <li class="nav-item">
+              <a class="nav-link active" href="index.html">Home</a>
+            </li>
+
+            <!-- Company dropdown -->
+            <li class="nav-item dropdown">
+              <span class="nav-link">Company</span>
+              <button class="dropdown-caret d-lg-none" type="button" data-bs-toggle="dropdown" aria-expanded="false"
+                aria-label="Open Company menu"><i class="fa-solid fa-chevron-down"></i></button>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="about.html">About Us</a></li>
+                <li><a class="dropdown-item" href="company-profile.html">Company Profile</a></li>
+                <li><a class="dropdown-item" href="mission-vision.html">Mission &amp; Vision</a></li>
+              </ul>
+            </li>
+
+            <!-- Products mega menu -->
+            <li class="nav-item dropdown mega">
+              <a class="nav-link" href="products.html">Products</a>
+              <button class="dropdown-caret d-lg-none" type="button" data-bs-toggle="dropdown" aria-expanded="false"
+                aria-label="Open Products menu"><i class="fa-solid fa-chevron-down"></i></button>
+              <div class="dropdown-menu mega-menu">
+                <div class="row g-4">
+                  <div class="col-lg-3">
+                    <h6 class="mega-title">
+                      <a href="category.html">
+                        <i class="fa-solid fa-flask me-2"></i>Analytical
+                      </a>
+                    </h6>
+
+                    <ul>
+                      <li><a href="products.html">Spectrometers</a></li>
+                      <li><a href="products.html">Chromatography</a></li>
+                      <li><a href="products.html">Lab Balances</a></li>
+                    </ul>
+                  </div>
+                  <div class="col-lg-3">
+
+                    <h6 class="mega-title">
+                      <a href="category.html">
+                      <i class="fa-solid fa-microscope me-2"></i>Life Science
+                      </a>
+                    </h6>
+
+                    <ul>
+                      <li><a href="products.html">Microscopes</a></li>
+                      <li><a href="products.html">Centrifuges</a></li>
+                      <li><a href="products.html">Incubators</a></li>
+                    </ul>
+                  </div>
+                  <div class="col-lg-3">
+                    <h6 class="mega-title">
+                      <a href="category.html">
+                        <i class="fa-solid fa-industry me-2"></i>Industrial
+                      </a>
+                    </h6>
+
+                    <ul>
+                      <li><a href="products.html">Textile Testing</a></li>
+                      <li><a href="products.html">Leather Testing</a></li>
+                      <li><a href="products.html">Survey Equipment</a></li>
+                    </ul>
+                  </div>
+                  <div class="col-lg-3 d-none d-lg-block">
+                    <div class="mega-promo">
+                      <h6>Can't find a product?</h6>
+                      <p>Tell us your requirement and we will send a quotation.</p>
+                      <a href="request-quotation.html" class="btn btn-accent btn-sm-c">Request a Quote</a>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </li>
+
+            <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+            <li class="nav-item"><a class="nav-link" href="brands.html">Brands</a></li>
+            <li class="nav-item"><a class="nav-link" href="news.html">News &amp; Events</a></li>
+            <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+
+            <!-- Shown only on mobile menu -->
+            <li class="nav-item d-lg-none mt-3">
+              <a href="request-quotation.html" class="btn btn-accent w-100">Request a Quote</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Search bar (opens under the header) -->
+    <div class="collapse header-search" id="headerSearch">
+      <div class="container py-3">
+        <form action="products.html" method="get" class="search-box">
+          <input type="search" name="q" class="form-control" placeholder="Search products by name or code..."
+            aria-label="Search products">
+          <button type="submit" aria-label="Search"><i class="fa-solid fa-magnifying-glass"></i></button>
+        </form>
+      </div>
+    </div>
+  </header>
+    <!-- ========= Header Section End ========= -->
+
+    <main>
+
+        <!-- ========= Page Banner Start ========= -->
+        <section class="page-banner brands-banner">
+            <div class="container">
+                <span class="sub-title-pill pill-dark mb-3">Authorized Partners</span>
+                <h1>Our Brands &amp; <span class="text-accent">Partners</span></h1>
+                <p class="banner-text">We work with trusted global manufacturers to bring world-class products, genuine
+                    spares and
+                    expert service to your doorstep.</p>
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Brands</li>
+                    </ol>
+                </nav>
+            </div>
+        </section>
+        <!-- ========= Page Banner End ========= -->
+
+        <!-- ========= Stats Strip Start ========= -->
+        <section class="br-stats-section">
+            <div class="container">
+                <div class="br-stats">
+                    <div class="br-stat">
+                        <h3><span class="counter" data-count="40">0</span>+</h3>
+                        <p>Global Brands</p>
+                    </div>
+                    <div class="br-stat">
+                        <h3><span class="counter" data-count="15">0</span>+</h3>
+                        <p>Countries</p>
+                    </div>
+                    <div class="br-stat">
+                        <h3><span class="counter" data-count="1000">0</span>+</h3>
+                        <p>Products Supplied</p>
+                    </div>
+                    <div class="br-stat">
+                        <h3><span class="counter" data-count="10">0</span>+</h3>
+                        <p>Years of Partnership</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- ========= Stats Strip End ========= -->
+
+        <!-- ========= Brands Grid Start ========= -->
+        <section class="section br-section">
+            <div class="container">
+
+                <div class="section-title">
+                    <span class="sub-title">Brand Directory</span>
+                    <h2>Find a Brand <span class="text-accent">You Trust</span></h2>
+                    <p>Search by name or pick a category to see the brands we represent.</p>
+                </div>
+
+                <!-- Toolbar: search + category filter -->
+                <div class="br-toolbar">
+                    <div class="br-search">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <input type="search" id="brandSearch" class="form-control" placeholder="Search brands..."
+                            aria-label="Search brands">
+                    </div>
+                    <div class="br-pills" role="group" aria-label="Filter brands by category">
+                        <button type="button" class="brand-pill active" data-filter="all">All</button>
+                        <button type="button" class="brand-pill" data-filter="analytical">Analytical</button>
+                        <button type="button" class="brand-pill" data-filter="life-science">Life Science</button>
+                        <button type="button" class="brand-pill" data-filter="industrial">Industrial</button>
+                        <button type="button" class="brand-pill" data-filter="testing">Testing</button>
+                    </div>
+                </div>
+
+                <div class="row g-4" id="brandGrid">
+
+                    <!-- Brand card (copy this block for every brand) -->
+                    <div class="col-sm-6 col-lg-4 col-xl-3 brand-item" data-name="Nordtek" data-category="analytical">
+                        <article class="brand-card">
+                            <div class="brand-logo"><img
+                                    src="https://placehold.co/300x100/f5f8fc/1d4f84.png?text=Nordtek&font=poppins"
+                                    alt="Nordtek logo" loading="lazy"></div>
+
+                            <div class="brand-body">
+                                <div class="brand-meta">
+                                    <span class="brand-tag">Analytical</span>
+                                    <span class="brand-country"><i class="fa-solid fa-location-dot"></i>Germany</span>
+                                </div>
+                                
+                                <p>Precision spectrometers and lab balances for research and quality control.</p>
+                            </div>
+                            <div class="brand-actions">
+                                <a href="products.html?brand=nordtek" class="btn btn-main btn-sm-c">View Products</a>
+                                <a href="https://example.com" target="_blank" rel="noopener" class="brand-site"
+                                    aria-label="Visit Nordtek website"><i
+                                        class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                            </div>
+                        </article>
+                    </div>
+
+                    <div class="col-sm-6 col-lg-4 col-xl-3 brand-item" data-name="Veritas Lab"
+                        data-category="life-science">
+                        <article class="brand-card">
+                            <div class="brand-logo"><img
+                                    src="https://placehold.co/300x100/f5f8fc/0d9488.png?text=Veritas+Lab&font=poppins"
+                                    alt="Veritas Lab logo" loading="lazy"></div>
+
+                            <div class="brand-body">
+                                <div class="brand-meta">
+                                    <span class="brand-tag">Life Science</span>
+                                    <span class="brand-country"><i class="fa-solid fa-location-dot"></i>USA</span>
+                                </div>
+                               
+                                <p>Microscopes, centrifuges and incubators trusted by clinical laboratories.</p>
+                            </div>
+                            <div class="brand-actions">
+                                <a href="products.html?brand=veritas-lab" class="btn btn-main btn-sm-c">View
+                                    Products</a>
+                                <a href="https://example.com" target="_blank" rel="noopener" class="brand-site"
+                                    aria-label="Visit Veritas Lab website"><i
+                                        class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                            </div>
+                        </article>
+                    </div>
+
+                    <div class="col-sm-6 col-lg-4 col-xl-3 brand-item" data-name="Optiscan" data-category="analytical">
+                        <article class="brand-card">
+                            <div class="brand-logo"><img
+                                    src="https://placehold.co/300x100/f5f8fc/7c3aed.png?text=Optiscan&font=poppins"
+                                    alt="Optiscan logo" loading="lazy"></div>
+                            <div class="brand-body">
+                                <div class="brand-meta">
+                                    <span class="brand-tag">Analytical</span>
+                                    <span class="brand-country"><i class="fa-solid fa-location-dot"></i>Japan</span>
+                                </div>
+                               
+                                <p>High-resolution chromatography systems for accurate, repeatable results.</p>
+                            </div>
+                            <div class="brand-actions">
+                                <a href="products.html?brand=optiscan" class="btn btn-main btn-sm-c">View Products</a>
+                                <a href="https://example.com" target="_blank" rel="noopener" class="brand-site"
+                                    aria-label="Visit Optiscan website"><i
+                                        class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                            </div>
+                        </article>
+                    </div>
+
+                    <div class="col-sm-6 col-lg-4 col-xl-3 brand-item" data-name="Texmaster" data-category="testing">
+                        <article class="brand-card">
+                            <div class="brand-logo"><img
+                                    src="https://placehold.co/300x100/f5f8fc/db2777.png?text=Texmaster&font=poppins"
+                                    alt="Texmaster logo" loading="lazy"></div>
+                            <div class="brand-body">
+                                <div class="brand-meta">
+                                    <span class="brand-tag">Testing</span>
+                                    <span class="brand-country"><i class="fa-solid fa-location-dot"></i>UK</span>
+                                </div>
+                              
+                                <p>Textile and fabric testing instruments for colour fastness and strength.</p>
+                            </div>
+                            <div class="brand-actions">
+                                <a href="products.html?brand=texmaster" class="btn btn-main btn-sm-c">View Products</a>
+                                <a href="https://example.com" target="_blank" rel="noopener" class="brand-site"
+                                    aria-label="Visit Texmaster website"><i
+                                        class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                            </div>
+                        </article>
+                    </div>
+
+                    <div class="col-sm-6 col-lg-4 col-xl-3 brand-item" data-name="Bioverse"
+                        data-category="life-science">
+                        <article class="brand-card">
+                            <div class="brand-logo"><img
+                                    src="https://placehold.co/300x100/f5f8fc/16a34a.png?text=Bioverse&font=poppins"
+                                    alt="Bioverse logo" loading="lazy"></div>
+                            <div class="brand-body">
+                                <div class="brand-meta">
+                                    <span class="brand-tag">Life Science</span>
+                                    <span class="brand-country"><i
+                                            class="fa-solid fa-location-dot"></i>Switzerland</span>
+                                </div>
+                               
+                                <p>Cell culture and biosafety equipment for research and pharma labs.</p>
+                            </div>
+                            <div class="brand-actions">
+                                <a href="products.html?brand=bioverse" class="btn btn-main btn-sm-c">View Products</a>
+                                <a href="https://example.com" target="_blank" rel="noopener" class="brand-site"
+                                    aria-label="Visit Bioverse website"><i
+                                        class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                            </div>
+                        </article>
+                    </div>
+
+                    <div class="col-sm-6 col-lg-4 col-xl-3 brand-item" data-name="Ironforge" data-category="industrial">
+                        <article class="brand-card">
+                            <div class="brand-logo"><img
+                                    src="https://placehold.co/300x100/f5f8fc/ea580c.png?text=Ironforge&font=poppins"
+                                    alt="Ironforge logo" loading="lazy"></div>
+                            <div class="brand-body">
+                                <div class="brand-meta">
+                                    <span class="brand-tag">Industrial</span>
+                                    <span class="brand-country"><i class="fa-solid fa-location-dot"></i>Italy</span>
+                                </div>
+                              
+                                <p>Heavy-duty industrial machinery and automation for production lines.</p>
+                            </div>
+                            <div class="brand-actions">
+                                <a href="products.html?brand=ironforge" class="btn btn-main btn-sm-c">View Products</a>
+                                <a href="https://example.com" target="_blank" rel="noopener" class="brand-site"
+                                    aria-label="Visit Ironforge website"><i
+                                        class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                            </div>
+                        </article>
+                    </div>
+
+                    <div class="col-sm-6 col-lg-4 col-xl-3 brand-item" data-name="Leathertech" data-category="testing">
+                        <article class="brand-card">
+                            <div class="brand-logo"><img
+                                    src="https://placehold.co/300x100/f5f8fc/92400e.png?text=Leathertech&font=poppins"
+                                    alt="Leathertech logo" loading="lazy"></div>
+                            <div class="brand-body">
+                                <div class="brand-meta">
+                                    <span class="brand-tag">Testing</span>
+                                    <span class="brand-country"><i class="fa-solid fa-location-dot"></i>Italy</span>
+                                </div>
+                               
+                                <p>Leather and footwear testing equipment that meets international standards.</p>
+                            </div>
+                            <div class="brand-actions">
+                                <a href="products.html?brand=leathertech" class="btn btn-main btn-sm-c">View
+                                    Products</a>
+                                <a href="https://example.com" target="_blank" rel="noopener" class="brand-site"
+                                    aria-label="Visit Leathertech website"><i
+                                        class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                            </div>
+                        </article>
+                    </div>
+
+                    <div class="col-sm-6 col-lg-4 col-xl-3 brand-item" data-name="Surveyor Pro"
+                        data-category="industrial">
+                        <article class="brand-card">
+                            <div class="brand-logo"><img
+                                    src="https://placehold.co/300x100/f5f8fc/0284c7.png?text=Surveyor+Pro&font=poppins"
+                                    alt="Surveyor Pro logo" loading="lazy"></div>
+                            <div class="brand-body">
+                                <div class="brand-meta">
+                                    <span class="brand-tag">Industrial</span>
+                                    <span class="brand-country"><i class="fa-solid fa-location-dot"></i>USA</span>
+                                </div>
+                                
+                                <p>Total stations, GPS and survey tools for construction and mapping.</p>
+                            </div>
+                            <div class="brand-actions">
+                                <a href="products.html?brand=surveyor-pro" class="btn btn-main btn-sm-c">View
+                                    Products</a>
+                                <a href="https://example.com" target="_blank" rel="noopener" class="brand-site"
+                                    aria-label="Visit Surveyor Pro website"><i
+                                        class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                            </div>
+                        </article>
+                    </div>
+
+                    <div class="col-sm-6 col-lg-4 col-xl-3 brand-item" data-name="Spectra One"
+                        data-category="analytical">
+                        <article class="brand-card">
+                            <div class="brand-logo"><img
+                                    src="https://placehold.co/300x100/f5f8fc/4f46e5.png?text=Spectra+One&font=poppins"
+                                    alt="Spectra One logo" loading="lazy"></div>
+                            <div class="brand-body">
+                                <div class="brand-meta">
+                                    <span class="brand-tag">Analytical</span>
+                                    <span class="brand-country"><i class="fa-solid fa-location-dot"></i>China</span>
+                                </div>
+                                
+                                <p>Cost-effective UV-Vis and AAS instruments for everyday laboratory work.</p>
+                            </div>
+                            <div class="brand-actions">
+                                <a href="products.html?brand=spectra-one" class="btn btn-main btn-sm-c">View
+                                    Products</a>
+                                <a href="https://example.com" target="_blank" rel="noopener" class="brand-site"
+                                    aria-label="Visit Spectra One website"><i
+                                        class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                            </div>
+                        </article>
+                    </div>
+
+                    <div class="col-sm-6 col-lg-4 col-xl-3 brand-item" data-name="Medilink"
+                        data-category="life-science">
+                        <article class="brand-card">
+                            <div class="brand-logo"><img
+                                    src="https://placehold.co/300x100/f5f8fc/dc2626.png?text=Medilink&font=poppins"
+                                    alt="Medilink logo" loading="lazy"></div>
+                            <div class="brand-body">
+                                <div class="brand-meta">
+                                    <span class="brand-tag">Life Science</span>
+                                    <span class="brand-country"><i class="fa-solid fa-location-dot"></i>South
+                                        Korea</span>
+                                </div>
+                                
+                                <p>Diagnostic and sample-preparation equipment for hospitals and labs.</p>
+                            </div>
+                            <div class="brand-actions">
+                                <a href="products.html?brand=medilink" class="btn btn-main btn-sm-c">View Products</a>
+                                <a href="https://example.com" target="_blank" rel="noopener" class="brand-site"
+                                    aria-label="Visit Medilink website"><i
+                                        class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                            </div>
+                        </article>
+                    </div>
+
+                    <div class="col-sm-6 col-lg-4 col-xl-3 brand-item" data-name="Powergrid" data-category="industrial">
+                        <article class="brand-card">
+                            <div class="brand-logo"><img
+                                    src="https://placehold.co/300x100/f5f8fc/ca8a04.png?text=Powergrid&font=poppins"
+                                    alt="Powergrid logo" loading="lazy"></div>
+                            <div class="brand-body">
+                                <div class="brand-meta">
+                                    <span class="brand-tag">Industrial</span>
+                                    <span class="brand-country"><i class="fa-solid fa-location-dot"></i>Germany</span>
+                                </div>
+                                
+                                <p>Power quality, measurement and control solutions for factories.</p>
+                            </div>
+                            <div class="brand-actions">
+                                <a href="products.html?brand=powergrid" class="btn btn-main btn-sm-c">View Products</a>
+                                <a href="https://example.com" target="_blank" rel="noopener" class="brand-site"
+                                    aria-label="Visit Powergrid website"><i
+                                        class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                            </div>
+                        </article>
+                    </div>
+
+                    <div class="col-sm-6 col-lg-4 col-xl-3 brand-item" data-name="Qualitest" data-category="testing">
+                        <article class="brand-card">
+                            <div class="brand-logo"><img
+                                    src="https://placehold.co/300x100/f5f8fc/0f766e.png?text=Qualitest&font=poppins"
+                                    alt="Qualitest logo" loading="lazy"></div>
+                            <div class="brand-body">
+                                <div class="brand-meta">
+                                    <span class="brand-tag">Testing</span>
+                                    <span class="brand-country"><i class="fa-solid fa-location-dot"></i>India</span>
+                                </div>
+                               
+                                <p>Material and packaging testing machines for quality assurance teams.</p>
+                            </div>
+                            <div class="brand-actions">
+                                <a href="products.html?brand=qualitest" class="btn btn-main btn-sm-c">View Products</a>
+                                <a href="https://example.com" target="_blank" rel="noopener" class="brand-site"
+                                    aria-label="Visit Qualitest website"><i
+                                        class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                            </div>
+                        </article>
+                    </div>
+
+                </div>
+
+                <!-- Empty state (shown by JS when nothing matches) -->
+                <div class="br-empty d-none" id="brandEmpty">
+                    <i class="fa-regular fa-face-frown"></i>
+                    <h5>No brands found</h5>
+                    <p>Try a different name or choose another category.</p>
+                </div>
+
+            </div>
+        </section>
+        <!-- ========= Brands Grid End ========= -->
+
+        <!-- ========= Why Partner Start ========= -->
+        <section class="section br-why">
+            <div class="container">
+                <div class="section-title">
+                    <span class="sub-title">Why Our Partners Trust Us</span>
+                    <h2>More Than a <span class="text-accent">Distributor</span></h2>
+                </div>
+                <div class="row g-4">
+                    <div class="col-md-4">
+                        <div class="br-why-card">
+                            <span class="cp-icon"><i class="fa-solid fa-certificate"></i></span>
+                            <h5>Authorized Distributor</h5>
+                            <p>Every product is 100% genuine, supplied with manufacturer warranty and documentation.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="br-why-card">
+                            <span class="cp-icon"><i class="fa-solid fa-user-gear"></i></span>
+                            <h5>Certified Service Engineers</h5>
+                            <p>Factory-trained engineers handle installation, calibration and preventive maintenance.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="br-why-card">
+                            <span class="cp-icon"><i class="fa-solid fa-boxes-stacked"></i></span>
+                            <h5>Local Stock &amp; Spares</h5>
+                            <p>Genuine spare parts and consumables are kept in stock to minimise your downtime.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Become a partner -->
+                <div class="br-partner-cta">
+                    <div>
+                        <h4>Are you a manufacturer looking for a partner in Bangladesh?</h4>
+                        <p>Let's talk about representing your brand with local sales and service support.</p>
+                    </div>
+                    <a href="contact.html" class="btn btn-accent btn-lg-c">Become a Partner <i
+                            class="fa-solid fa-arrow-right ms-2"></i></a>
+                </div>
+            </div>
+        </section>
+        <!-- ========= Why Partner End ========= -->
+
+    </main>
+
+    <!-- ========= Footer Section Start ========= -->
+    <footer class="footer" id="footer">
+
+        <!-- Main footer -->
+        <div class="container footer-main">
+            <div class="row g-5">
+
+                <!-- Brand -->
+                <div class="col-lg-4 col-md-6">
+                    <a class="logo footer-logo" href="index.html" aria-label="Home">
+                        <span class="logo-mark">A</span>
+                        <span class="logo-text">ATCL<small>Solutions</small></span>
+                    </a>
+                    <p class="footer-about">A trusted solution provider delivering quality products, technical expertise
+                        and
+                        reliable after-sales support to industries across Bangladesh.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                        <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+                        <a href="#" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+                    </div>
+                </div>
+
+                <!-- Quick links -->
+                <div class="col-lg-2 col-md-6 col-sm-6">
+                    <h5 class="footer-title">Quick Links</h5>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="company-profile.html">Company Profile</a></li>
+                        <li><a href="mission-vision.html">Mission &amp; Vision</a></li>
+                        <li><a href="brands.html">Brands</a></li>
+                        <li><a href="news.html">News &amp; Events</a></li>
+                        <li><a href="careers.html">Careers</a></li>
+                    </ul>
+                </div>
+
+                <!-- Solutions -->
+                <div class="col-lg-3 col-md-6 col-sm-6">
+                    <h5 class="footer-title">Our Solutions</h5>
+                    <ul class="footer-links">
+                        <li><a href="products.html">Analytical</a></li>
+                        <li><a href="products.html">Life Science</a></li>
+                        <li><a href="products.html">Industrial</a></li>
+                        <li><a href="products.html">Textile Testing</a></li>
+                        <li><a href="products.html">Leather Testing</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="request-quotation.html">Request a Quote</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact -->
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="footer-title">Contact Us</h5>
+                    <ul class="footer-contact">
+                        <li>
+                            <span class="fc-icon"><i class="fa-solid fa-location-dot"></i></span>
+                            <span>House 00, Road 00, Gulshan, Dhaka 1212, Bangladesh</span>
+                        </li>
+                        <li>
+                            <span class="fc-icon"><i class="fa-solid fa-phone"></i></span>
+                            <a href="tel:+8800000000000">+880 0000-000000</a>
+                        </li>
+                        <li>
+                            <span class="fc-icon"><i class="fa-solid fa-envelope"></i></span>
+                            <a href="mailto:info@example.com">info@example.com</a>
+                        </li>
+                        <li>
+                            <span class="fc-icon"><i class="fa-solid fa-clock"></i></span>
+                            <span>Sun – Thu: 9:00 AM – 6:00 PM</span>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <!-- Bottom bar -->
+            <div class="footer-bottom">
+                <p class="mb-0">&copy; <span id="footerYear">2026</span> ATCL Solutions. All rights reserved.</p>
+                <div class="footer-bottom-links">
+                    <a href="privacy-policy.html">Privacy Policy</a>
+                    <a href="terms.html">Terms &amp; Conditions</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to top -->
+    <button type="button" class="back-to-top" id="backToTop" aria-label="Back to top">
+        <i class="fa-solid fa-arrow-up"></i>
+    </button>
+    <!-- ========= Footer Section End ========= -->
+
+
+    <!-- ======== Bootstrap js Link ======== -->
+    <script src="asset/js/bootstrap.bundle.min.js"></script>
+
+    <!-- ======== Swiper js Link ======== -->
+    <script src="asset/js/swiper-bundle.min.js"></script>
+
+    <!-- ======== Custom js Link ======== -->
+    <script src="asset/js/script.js"></script>
+
+
+
+
+</body>
+
+</html>

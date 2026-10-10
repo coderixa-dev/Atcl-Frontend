@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atcl Frontend</title>
+
+    <!-- ======== Bootstrap css Link ======== -->
+    <link rel="stylesheet" href="asset/css/bootstrap.min.css">
+
+    <!-- ======== Google Font Link ======== -->
+    <link rel="stylesheet" href="asset/css/font.css">
+
+    <!-- ======== Font Awesome Link ======== -->
+    <link rel="stylesheet" href="asset/css/all.min.css">
+
+    <!-- ========  Swiper Js Link ======== -->
+    <link rel="stylesheet" href="asset/css/swiper-bundle.min.css">
+
+    <!-- ======== Custom css Link (keep LAST so it can override the libraries) ======== -->
+    <link rel="stylesheet" href="asset/css/style.css">
+</head>
+
+<body>
+
+
+    <!-- ========= Header Section Start ========= -->
+
+    <!-- Top Bar -->
+    <div class="top-bar d-none d-lg-block">
+        <div class="container d-flex justify-content-between align-items-center">
+            <div class="d-flex align-items-center gap-4">
+                <a href="tel:+8800000000000"><i class="fa-solid fa-phone me-2 text-accent"></i>+880 0000-000000</a>
+                <a href="mailto:info@example.com"><i
+                        class="fa-solid fa-envelope me-2 text-accent"></i>info@example.com</a>
+                <span><i class="fa-solid fa-location-dot me-2 text-accent"></i>Dhaka, Bangladesh</span>
+            </div>
+            <div class="social-links social-links-sm">
+                <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+            </div>
+        </div>
+    </div>
+
+   <!-- Main Header -->
+  <header class="header" id="header">
+    <nav class="navbar navbar-expand-lg">
+      <div class="container position-relative">
+
+        <!-- Logo (replace with real logo later) -->
+        <a class="logo" href="index.html" aria-label="Home">
+          <span class="logo-mark">A</span>
+          <span class="logo-text">ATCL<small>Solutions</small></span>
+        </a>
+
+        <!-- Right side icons (always visible) + mobile toggler -->
+        <div class="header-actions d-flex align-items-center gap-2 order-lg-last">
+          <button class="header-icon-btn" type="button" data-bs-toggle="collapse" data-bs-target="#headerSearch"
+            aria-expanded="false" aria-controls="headerSearch" aria-label="Search">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </button>
+
+          <a href="inquiry.html" class="inquiry-btn" aria-label="Inquiry list">
+            <i class="fa-solid fa-clipboard-list"></i>
+            <span class="count" id="inquiryCount">0</span>
+          </a>
+
+          <a href="request-quotation.html" class="btn btn-accent btn-sm-c d-none d-xxl-inline-block ms-2 text-nowrap">
+            Request a Quote
+          </a>
+
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainMenu"
+            aria-controls="mainMenu" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="fa-solid fa-bars"></i>
+          </button>
+        </div>
+
+        <!-- Menu -->
+        <div class="collapse navbar-collapse justify-content-center" id="mainMenu">
+          <ul class="navbar-nav align-items-lg-center">
+
+            <li class="nav-item">
+              <a class="nav-link active" href="index.html">Home</a>
+            </li>
+
+            <!-- Company dropdown -->
+            <li class="nav-item dropdown">
+              <span class="nav-link">Company</span>
+              <button class="dropdown-caret d-lg-none" type="button" data-bs-toggle="dropdown" aria-expanded="false"
+                aria-label="Open Company menu"><i class="fa-solid fa-chevron-down"></i></button>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="about.html">About Us</a></li>
+                <li><a class="dropdown-item" href="company-profile.html">Company Profile</a></li>
+                <li><a class="dropdown-item" href="mission-vision.html">Mission &amp; Vision</a></li>
+              </ul>
+            </li>
+
+            <!-- Products mega menu -->
+            <li class="nav-item dropdown mega">
+              <a class="nav-link" href="products.html">Products</a>
+              <button class="dropdown-caret d-lg-none" type="button" data-bs-toggle="dropdown" aria-expanded="false"
+                aria-label="Open Products menu"><i class="fa-solid fa-chevron-down"></i></button>
+              <div class="dropdown-menu mega-menu">
+                <div class="row g-4">
+                  <div class="col-lg-3">
+                    <h6 class="mega-title">
+                      <a href="category.html">
+                        <i class="fa-solid fa-flask me-2"></i>Analytical
+                      </a>
+                    </h6>
+
+                    <ul>
+                      <li><a href="products.html">Spectrometers</a></li>
+                      <li><a href="products.html">Chromatography</a></li>
+                      <li><a href="products.html">Lab Balances</a></li>
+                    </ul>
+                  </div>
+                  <div class="col-lg-3">
+
+                    <h6 class="mega-title">
+                      <a href="category.html">
+                      <i class="fa-solid fa-microscope me-2"></i>Life Science
+                      </a>
+                    </h6>
+
+                    <ul>
+                      <li><a href="products.html">Microscopes</a></li>
+                      <li><a href="products.html">Centrifuges</a></li>
+                      <li><a href="products.html">Incubators</a></li>
+                    </ul>
+                  </div>
+                  <div class="col-lg-3">
+                    <h6 class="mega-title">
+                      <a href="category.html">
+                        <i class="fa-solid fa-industry me-2"></i>Industrial
+                      </a>
+                    </h6>
+
+                    <ul>
+                      <li><a href="products.html">Textile Testing</a></li>
+                      <li><a href="products.html">Leather Testing</a></li>
+                      <li><a href="products.html">Survey Equipment</a></li>
+                    </ul>
+                  </div>
+                  <div class="col-lg-3 d-none d-lg-block">
+                    <div class="mega-promo">
+                      <h6>Can't find a product?</h6>
+                      <p>Tell us your requirement and we will send a quotation.</p>
+                      <a href="request-quotation.html" class="btn btn-accent btn-sm-c">Request a Quote</a>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </li>
+
+            <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+            <li class="nav-item"><a class="nav-link" href="brands.html">Brands</a></li>
+            <li class="nav-item"><a class="nav-link" href="news.html">News &amp; Events</a></li>
+            <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+
+            <!-- Shown only on mobile menu -->
+            <li class="nav-item d-lg-none mt-3">
+              <a href="request-quotation.html" class="btn btn-accent w-100">Request a Quote</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Search bar (opens under the header) -->
+    <div class="collapse header-search" id="headerSearch">
+      <div class="container py-3">
+        <form action="products.html" method="get" class="search-box">
+          <input type="search" name="q" class="form-control" placeholder="Search products by name or code..."
+            aria-label="Search products">
+          <button type="submit" aria-label="Search"><i class="fa-solid fa-magnifying-glass"></i></button>
+        </form>
+      </div>
+    </div>
+  </header>
+
+    <!-- ========= Header Section End ========= -->
+
+    <main>
+
+        <!-- ========= Page Banner Start ========= -->
+        <section class="page-banner nd-banner cr-banner">
+            <div class="container">
+                <span class="sub-title-pill pill-dark mb-3">Careers</span>
+                <h1>Build your career with us</h1>
+                <p class="cr-banner-text">Join the team that helps laboratories and factories across Bangladesh find the
+                    right equipment.</p>
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Careers</li>
+                    </ol>
+                </nav>
+            </div>
+        </section>
+        <!-- ========= Page Banner End ========= -->
+
+        <!-- ========= Search Bar Start ========= -->
+        <section class="cr-search-wrap">
+            <div class="container">
+                <form class="cr-search" id="crSearch" role="search" onsubmit="return false">
+                    <div class="cr-field cr-field-grow">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <label class="visually-hidden" for="crKeyword">Search jobs</label>
+                        <input type="search" id="crKeyword" placeholder="Search by job title or keyword"
+                            autocomplete="off">
+                    </div>
+                    <div class="cr-field">
+                        <i class="fa-solid fa-briefcase"></i>
+                        <label class="visually-hidden" for="crType">Job type</label>
+                        <select id="crType">
+                            <option value="">All job types</option>
+                            <option>Full time</option>
+                            <option>Internship</option>
+                        </select>
+                    </div>
+                    <div class="cr-field">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <label class="visually-hidden" for="crLocation">Location</label>
+                        <select id="crLocation">
+                            <option value="">All locations</option>
+                            <option>Dhaka</option>
+                            <option>Chattogram</option>
+                        </select>
+                    </div>
+                </form>
+            </div>
+        </section>
+        <!-- ========= Search Bar End ========= -->
+
+        <!-- ========= Open Positions Start ========= -->
+        <section class="section cr-section">
+            <div class="container">
+
+                <div class="cr-head">
+                    <div>
+                        <h2 class="mb-1">Open positions</h2>
+                        <p class="cr-count mb-0" id="crCount" aria-live="polite">Showing 8 of 8 positions</p>
+                    </div>
+                    <div class="cr-chips" id="crChips" role="group" aria-label="Filter by department">
+                        <button type="button" class="cr-chip active" data-dept="">All <span>8</span></button>
+                        <button type="button" class="cr-chip" data-dept="Sales">Sales <span>3</span></button>
+                        <button type="button" class="cr-chip" data-dept="Service">Service <span>1</span></button>
+                        <button type="button" class="cr-chip" data-dept="Technical">Technical <span>1</span></button>
+                        <button type="button" class="cr-chip" data-dept="Marketing">Marketing <span>1</span></button>
+                        <button type="button" class="cr-chip" data-dept="Operations">Operations <span>2</span></button>
+                    </div>
+                </div>
+
+                <div class="row g-4" id="crGrid">
+
+                    <div class="col-md-6 col-xl-4 cr-item" data-dept="Sales" data-type="Full time"
+                        data-location="Dhaka">
+                        <a href="career-details.html" class="cr-card" data-deadline="2026-10-31">
+                            <div class="cr-card-top">
+                                <span class="cr-dept">Sales</span>
+                                <span class="cr-days"></span>
+                            </div>
+                            <h3>Sales Engineer <span class="job-new">New</span></h3>
+                            <p>Recommend the right equipment to labs and factories and follow each inquiry through to a
+                                signed quotation.</p>
+                            <ul class="cr-meta">
+                                <li><i class="fa-solid fa-location-dot"></i>Dhaka</li>
+                                <li><i class="fa-regular fa-clock"></i>Full time</li>
+                                <li><i class="fa-solid fa-briefcase"></i>2 to 4 years</li>
+                            </ul>
+                            <span class="cr-more">View details <i class="fa-solid fa-arrow-right"></i></span>
+                        </a>
+                    </div>
+
+                    <div class="col-md-6 col-xl-4 cr-item" data-dept="Service" data-type="Full time"
+                        data-location="Dhaka">
+                        <a href="career-details.html" class="cr-card" data-deadline="2026-11-05">
+                            <div class="cr-card-top">
+                                <span class="cr-dept">Service</span>
+                                <span class="cr-days"></span>
+                            </div>
+                            <h3>Service Engineer <span class="job-new">New</span></h3>
+                            <p>Install, calibrate and maintain analytical and testing instruments at customer sites.</p>
+                            <ul class="cr-meta">
+                                <li><i class="fa-solid fa-location-dot"></i>Dhaka</li>
+                                <li><i class="fa-regular fa-clock"></i>Full time</li>
+                                <li><i class="fa-solid fa-briefcase"></i>1 to 3 years</li>
+                            </ul>
+                            <span class="cr-more">View details <i class="fa-solid fa-arrow-right"></i></span>
+                        </a>
+                    </div>
+
+                    <div class="col-md-6 col-xl-4 cr-item" data-dept="Technical" data-type="Full time"
+                        data-location="Dhaka">
+                        <a href="career-details.html" class="cr-card" data-deadline="2026-11-10">
+                            <div class="cr-card-top">
+                                <span class="cr-dept">Technical</span>
+                                <span class="cr-days"></span>
+                            </div>
+                            <h3>Application Specialist</h3>
+                            <p>Run product demonstrations and train customers to get the best results from their
+                                equipment.</p>
+                            <ul class="cr-meta">
+                                <li><i class="fa-solid fa-location-dot"></i>Dhaka</li>
+                                <li><i class="fa-regular fa-clock"></i>Full time</li>
+                                <li><i class="fa-solid fa-briefcase"></i>3 to 5 years</li>
+                            </ul>
+                            <span class="cr-more">View details <i class="fa-solid fa-arrow-right"></i></span>
+                        </a>
+                    </div>
+
+                    <div class="col-md-6 col-xl-4 cr-item" data-dept="Marketing" data-type="Full time"
+                        data-location="Dhaka">
+                        <a href="career-details.html" class="cr-card" data-deadline="2026-11-15">
+                            <div class="cr-card-top">
+                                <span class="cr-dept">Marketing</span>
+                                <span class="cr-days"></span>
+                            </div>
+                            <h3>Marketing Executive</h3>
+                            <p>Plan campaigns, keep our product catalog and news up to date, and organise events and
+                                exhibitions.</p>
+                            <ul class="cr-meta">
+                                <li><i class="fa-solid fa-location-dot"></i>Dhaka</li>
+                                <li><i class="fa-regular fa-clock"></i>Full time</li>
+                                <li><i class="fa-solid fa-briefcase"></i>1 to 3 years</li>
+                            </ul>
+                            <span class="cr-more">View details <i class="fa-solid fa-arrow-right"></i></span>
+                        </a>
+                    </div>
+
+                    <div class="col-md-6 col-xl-4 cr-item" data-dept="Sales" data-type="Full time"
+                        data-location="Chattogram">
+                        <a href="career-details.html" class="cr-card" data-deadline="2026-11-20">
+                            <div class="cr-card-top">
+                                <span class="cr-dept">Sales</span>
+                                <span class="cr-days"></span>
+                            </div>
+                            <h3>Key Account Manager</h3>
+                            <p>Own our relationships with large textile, leather and pharmaceutical customers in the
+                                Chattogram region.</p>
+                            <ul class="cr-meta">
+                                <li><i class="fa-solid fa-location-dot"></i>Chattogram</li>
+                                <li><i class="fa-regular fa-clock"></i>Full time</li>
+                                <li><i class="fa-solid fa-briefcase"></i>5+ years</li>
+                            </ul>
+                            <span class="cr-more">View details <i class="fa-solid fa-arrow-right"></i></span>
+                        </a>
+                    </div>
+
+                    <div class="col-md-6 col-xl-4 cr-item" data-dept="Operations" data-type="Full time"
+                        data-location="Dhaka">
+                        <a href="career-details.html" class="cr-card" data-deadline="2026-11-12">
+                            <div class="cr-card-top">
+                                <span class="cr-dept">Operations</span>
+                                <span class="cr-days"></span>
+                            </div>
+                            <h3>Accounts Executive</h3>
+                            <p>Manage invoicing, payments and import documentation so every order is billed and
+                                delivered on time.</p>
+                            <ul class="cr-meta">
+                                <li><i class="fa-solid fa-location-dot"></i>Dhaka</li>
+                                <li><i class="fa-regular fa-clock"></i>Full time</li>
+                                <li><i class="fa-solid fa-briefcase"></i>2 to 4 years</li>
+                            </ul>
+                            <span class="cr-more">View details <i class="fa-solid fa-arrow-right"></i></span>
+                        </a>
+                    </div>
+
+                    <div class="col-md-6 col-xl-4 cr-item" data-dept="Operations" data-type="Full time"
+                        data-location="Dhaka">
+                        <a href="career-details.html" class="cr-card" data-deadline="2026-11-18">
+                            <div class="cr-card-top">
+                                <span class="cr-dept">Operations</span>
+                                <span class="cr-days"></span>
+                            </div>
+                            <h3>Logistics Officer</h3>
+                            <p>Coordinate shipments, customs clearance and warehouse stock for our imported equipment.
+                            </p>
+                            <ul class="cr-meta">
+                                <li><i class="fa-solid fa-location-dot"></i>Dhaka</li>
+                                <li><i class="fa-regular fa-clock"></i>Full time</li>
+                                <li><i class="fa-solid fa-briefcase"></i>2 to 4 years</li>
+                            </ul>
+                            <span class="cr-more">View details <i class="fa-solid fa-arrow-right"></i></span>
+                        </a>
+                    </div>
+
+                    <div class="col-md-6 col-xl-4 cr-item" data-dept="Sales" data-type="Internship"
+                        data-location="Dhaka">
+                        <a href="career-details.html" class="cr-card" data-deadline="2026-11-25">
+                            <div class="cr-card-top">
+                                <span class="cr-dept">Sales</span>
+                                <span class="cr-days"></span>
+                            </div>
+                            <h3>Sales Intern</h3>
+                            <p>Learn the equipment business alongside our sales team. Open to final-year and recent
+                                graduates.</p>
+                            <ul class="cr-meta">
+                                <li><i class="fa-solid fa-location-dot"></i>Dhaka</li>
+                                <li><i class="fa-regular fa-clock"></i>Internship</li>
+                                <li><i class="fa-solid fa-briefcase"></i>Fresh graduates</li>
+                            </ul>
+                            <span class="cr-more">View details <i class="fa-solid fa-arrow-right"></i></span>
+                        </a>
+                    </div>
+
+                </div>
+
+                <!-- Empty state -->
+                <div class="cr-empty" id="crEmpty" hidden>
+                    <i class="fa-regular fa-folder-open"></i>
+                    <h4>No positions match your search</h4>
+                    <p>Try a different keyword, or clear the filters to see every opening.</p>
+                    <button type="button" class="btn btn-main btn-sm-c" id="crReset">Clear filters</button>
+                </div>
+
+            </div>
+        </section>
+        <!-- ========= Open Positions End ========= -->
+
+        <!-- ========= Why Join Start ========= -->
+        <section class="section cr-why">
+            <div class="container">
+                <div class="row align-items-center gy-4 gx-lg-5">
+                    <div class="col-lg-4">
+                        <h2>What it is like to work here</h2>
+                        <p class="mb-0">We are a small, hands-on team. You get real responsibility early, and the
+                            support to do the job well.</p>
+                    </div>
+                    <div class="col-lg-8">
+                        <div class="row g-3">
+                            <div class="col-sm-6">
+                                <div class="cr-perk"><i class="fa-solid fa-graduation-cap"></i>
+                                    <div>
+                                        <h6>Learn from the makers</h6><small>Product training from our partner
+                                            manufacturers.</small>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="cr-perk"><i class="fa-solid fa-arrow-trend-up"></i>
+                                    <div>
+                                        <h6>Room to grow</h6><small>Clear paths from junior roles to team lead.</small>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="cr-perk"><i class="fa-solid fa-heart-pulse"></i>
+                                    <div>
+                                        <h6>Health insurance</h6><small>Cover for you and your immediate family.</small>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="cr-perk"><i class="fa-solid fa-gift"></i>
+                                    <div>
+                                        <h6>Festival bonuses</h6><small>Two bonuses every year, on top of
+                                            salary.</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- ========= Why Join End ========= -->
+
+        <!-- ========= CV CTA Start ========= -->
+        <section class="cr-cta-wrap">
+            <div class="container">
+                <div class="cr-cta">
+                    <div>
+                        <h3>Cannot find a role that fits?</h3>
+                        <p class="mb-0">Send us your CV and tell us what you do best. We keep every application on file
+                            and contact you when a matching role opens.</p>
+                    </div>
+                    <a href="mailto:career@example.com?subject=General%20application"
+                        class="btn btn-accent btn-lg-c text-nowrap">Email your CV</a>
+                </div>
+            </div>
+        </section>
+        <!-- ========= CV CTA End ========= -->
+
+    </main>
+
+    <!-- ========= Footer Section Start ========= -->
+    <footer class="footer" id="footer">
+
+        <!-- Main footer -->
+        <div class="container footer-main">
+            <div class="row g-5">
+
+                <!-- Brand -->
+                <div class="col-lg-4 col-md-6">
+                    <a class="logo footer-logo" href="index.html" aria-label="Home">
+                        <span class="logo-mark">A</span>
+                        <span class="logo-text">ATCL<small>Solutions</small></span>
+                    </a>
+                    <p class="footer-about">A trusted solution provider delivering quality products, technical expertise
+                        and
+                        reliable after-sales support to industries across Bangladesh.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                        <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+                        <a href="#" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+                    </div>
+                </div>
+
+                <!-- Quick links -->
+                <div class="col-lg-2 col-md-6 col-sm-6">
+                    <h5 class="footer-title">Quick Links</h5>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="company-profile.html">Company Profile</a></li>
+                        <li><a href="mission-vision.html">Mission &amp; Vision</a></li>
+                        <li><a href="brands.html">Brands</a></li>
+                        <li><a href="news.html">News &amp; Events</a></li>
+                        <li><a href="careers.html">Careers</a></li>
+                    </ul>
+                </div>
+
+                <!-- Solutions -->
+                <div class="col-lg-3 col-md-6 col-sm-6">
+                    <h5 class="footer-title">Our Solutions</h5>
+                    <ul class="footer-links">
+                        <li><a href="products.html">Analytical</a></li>
+                        <li><a href="products.html">Life Science</a></li>
+                        <li><a href="products.html">Industrial</a></li>
+                        <li><a href="products.html">Textile Testing</a></li>
+                        <li><a href="products.html">Leather Testing</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="request-quotation.html">Request a Quote</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact -->
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="footer-title">Contact Us</h5>
+                    <ul class="footer-contact">
+                        <li>
+                            <span class="fc-icon"><i class="fa-solid fa-location-dot"></i></span>
+                            <span>House 00, Road 00, Gulshan, Dhaka 1212, Bangladesh</span>
+                        </li>
+                        <li>
+                            <span class="fc-icon"><i class="fa-solid fa-phone"></i></span>
+                            <a href="tel:+8800000000000">+880 0000-000000</a>
+                        </li>
+                        <li>
+                            <span class="fc-icon"><i class="fa-solid fa-envelope"></i></span>
+                            <a href="mailto:info@example.com">info@example.com</a>
+                        </li>
+                        <li>
+                            <span class="fc-icon"><i class="fa-solid fa-clock"></i></span>
+                            <span>Sun – Thu: 9:00 AM – 6:00 PM</span>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <!-- Bottom bar -->
+            <div class="footer-bottom">
+                <p class="mb-0">&copy; <span id="footerYear">2026</span> ATCL Solutions. All rights reserved.</p>
+                <div class="footer-bottom-links">
+                    <a href="privacy-policy.html">Privacy Policy</a>
+                    <a href="terms.html">Terms &amp; Conditions</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to top -->
+    <button type="button" class="back-to-top" id="backToTop" aria-label="Back to top">
+        <i class="fa-solid fa-arrow-up"></i>
+    </button>
+    <!-- ========= Footer Section End ========= -->
+
+
+    <!-- ======== Bootstrap js Link ======== -->
+    <script src="asset/js/bootstrap.bundle.min.js"></script>
+
+    <!-- ======== Swiper js Link ======== -->
+    <script src="asset/js/swiper-bundle.min.js"></script>
+
+    <!-- ======== Custom js Link ======== -->
+    <script src="asset/js/script.js"></script>
+
+
+
+
+</body>
+
+</html>
