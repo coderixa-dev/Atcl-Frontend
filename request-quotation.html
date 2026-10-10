@@ -43,7 +43,7 @@
     </div>
   </div>
 
-   <!-- Main Header -->
+  <!-- Main Header -->
   <header class="header" id="header">
     <nav class="navbar navbar-expand-lg">
       <div class="container position-relative">
@@ -120,7 +120,7 @@
 
                     <h6 class="mega-title">
                       <a href="category.html">
-                      <i class="fa-solid fa-microscope me-2"></i>Life Science
+                        <i class="fa-solid fa-microscope me-2"></i>Life Science
                       </a>
                     </h6>
 
@@ -183,279 +183,127 @@
 
   <!-- ========= Header Section End ========= -->
 
-  <main>
+ <main>
 
-    <!-- ========= Page Banner Start ========= -->
-    <section class="page-banner contact-banner">
-      <div class="container">
-        <span class="sub-title-pill pill-dark mb-3">We'd love to hear from you</span>
-        <h1>Contact <span class="text-accent">Us</span></h1>
-        <p class="banner-text">Have a question, need a product recommendation or want a quotation? Our team is ready to help you.</p>
+   <!-- ========= Page Banner ========= -->
+    <section class="inner-hero">
+      <div class="container position-relative">
+        <span class="sub-title-pill pill-dark">Request a Quote</span>
+        <h1>Get a <span>Custom</span> Quotation</h1>
+        <p class="inner-hero-lead">Tell us what you need. Our team will send you a detailed price offer within 24 hours.</p>
         <nav aria-label="breadcrumb">
-          <ol class="breadcrumb">
+          <ol class="breadcrumb mb-0">
             <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-            <li class="breadcrumb-item active" aria-current="page">Contact</li>
+            <li class="breadcrumb-item active" aria-current="page">Request Quotation</li>
           </ol>
         </nav>
       </div>
     </section>
-    <!-- ========= Page Banner End ========= -->
 
-    <!-- ========= Quick Info Cards Start ========= -->
-    <section class="cp-info-section">
+    <!-- ========= Request Quotation ========= -->
+    <section class="rq-main">
       <div class="container">
-        <div class="row g-4">
-
-          <div class="col-md-6 col-lg-3">
-            <div class="cp-card">
-              <span class="cp-icon"><i class="fa-solid fa-location-dot"></i></span>
-              <h5>Visit Us</h5>
-              <p>House 00, Road 00, Gulshan, Dhaka 1212, Bangladesh</p>
-              <a href="#cpMap" class="cp-link">Get directions <i class="fa-solid fa-arrow-right"></i></a>
-            </div>
-          </div>
-
-          <div class="col-md-6 col-lg-3">
-            <div class="cp-card">
-              <span class="cp-icon"><i class="fa-solid fa-phone"></i></span>
-              <h5>Call Us</h5>
-              <p>+880 0000-000000<br>+880 0000-000001</p>
-              <a href="tel:+8800000000000" class="cp-link">Call now <i class="fa-solid fa-arrow-right"></i></a>
-            </div>
-          </div>
-
-          <div class="col-md-6 col-lg-3">
-            <div class="cp-card">
-              <span class="cp-icon"><i class="fa-solid fa-envelope"></i></span>
-              <h5>Email Us</h5>
-              <p>info@example.com<br>sales@example.com</p>
-              <a href="mailto:info@example.com" class="cp-link">Send email <i class="fa-solid fa-arrow-right"></i></a>
-            </div>
-          </div>
-
-          <div class="col-md-6 col-lg-3">
-            <div class="cp-card">
-              <span class="cp-icon"><i class="fa-solid fa-clock"></i></span>
-              <h5>Working Hours</h5>
-              <p>Sun – Thu: 9:00 AM – 6:00 PM<br>Fri &amp; Sat: Closed</p>
-              <span class="cp-link cp-open"><i class="fa-solid fa-circle"></i> We reply within 1 working day</span>
-            </div>
-          </div>
-
-        </div>
-      </div>
-    </section>
-    <!-- ========= Quick Info Cards End ========= -->
-
-    <!-- ========= Form + Departments Start ========= -->
-    <section class="section cp-main-section">
-      <div class="container">
-        <div class="row g-4 g-xl-5">
+        <div class="row gy-4 gx-lg-5">
 
           <!-- Form -->
-          <div class="col-lg-7">
-            <div class="cp-form-card contact-form">
-              <span class="sub-title-pill mb-2">Send a message</span>
-              <h3>Let's talk about your requirement</h3>
-              <p class="cp-form-text">Fill in the form and our team will get back to you with the right product, price and delivery details.</p>
+          <div class="col-lg-8">
+            <form id="rqForm" novalidate>
 
-              <form id="contactForm" class="needs-validation" novalidate>
-
-                <!-- Topic chips -->
-                <label class="cp-label">What is this about?</label>
-                <div class="cp-chips">
-                  <input type="radio" class="btn-check" name="cfTopic" id="topic1" value="Product Inquiry" checked>
-                  <label class="cp-chip" for="topic1"><i class="fa-solid fa-box-open"></i>Product Inquiry</label>
-
-                  <input type="radio" class="btn-check" name="cfTopic" id="topic2" value="Request for Quotation">
-                  <label class="cp-chip" for="topic2"><i class="fa-solid fa-file-invoice-dollar"></i>Quotation</label>
-
-                  <input type="radio" class="btn-check" name="cfTopic" id="topic3" value="Technical Support">
-                  <label class="cp-chip" for="topic3"><i class="fa-solid fa-screwdriver-wrench"></i>Support</label>
-
-                  <input type="radio" class="btn-check" name="cfTopic" id="topic4" value="Partnership">
-                  <label class="cp-chip" for="topic4"><i class="fa-solid fa-handshake"></i>Partnership</label>
-                </div>
-
+              <!-- 1 Contact -->
+              <div class="rq-card">
+                <h2 class="rq-title"><span>1</span>Your details</h2>
                 <div class="row g-3">
+                  <div class="col-md-6"><label class="form-label" for="rqName">Full name *</label><input type="text" class="form-control" id="rqName" placeholder="Your name" required></div>
+                  <div class="col-md-6"><label class="form-label" for="rqCompany">Company / Organization *</label><input type="text" class="form-control" id="rqCompany" placeholder="Company name" required></div>
+                  <div class="col-md-6"><label class="form-label" for="rqEmail">Email *</label><input type="email" class="form-control" id="rqEmail" placeholder="you@company.com" required></div>
+                  <div class="col-md-6"><label class="form-label" for="rqPhone">Phone *</label><input type="tel" class="form-control" id="rqPhone" placeholder="+880 1XXX-XXXXXX" required></div>
+                </div>
+              </div>
+
+              <!-- 2 Requirement -->
+              <div class="rq-card">
+                <h2 class="rq-title"><span>2</span>What do you need?</h2>
+                <label class="form-label">Interested in</label>
+                <div class="rq-chips" id="rqTypes">
+                  <label><input type="checkbox" value="Products"><span><i class="fa-solid fa-box"></i>Products</span></label>
+                  <label><input type="checkbox" value="Installation"><span><i class="fa-solid fa-screwdriver-wrench"></i>Installation</span></label>
+                  <label><input type="checkbox" value="Training"><span><i class="fa-solid fa-chalkboard-user"></i>Training</span></label>
+                  <label><input type="checkbox" value="Maintenance"><span><i class="fa-solid fa-gears"></i>Maintenance</span></label>
+                  <label><input type="checkbox" value="Consultation"><span><i class="fa-solid fa-headset"></i>Consultation</span></label>
+                </div>
+                <div class="row g-3 mt-1">
                   <div class="col-md-6">
-                    <div class="form-floating">
-                      <input type="text" class="form-control" id="cfName" placeholder="Full Name" required>
-                      <label for="cfName">Full Name *</label>
-                      <div class="invalid-feedback">Please enter your name.</div>
-                    </div>
+                    <label class="form-label" for="rqBudget">Estimated budget</label>
+                    <select class="form-select form-control" id="rqBudget">
+                      <option value="">Select a range</option>
+                      <option>Below ৳ 5 Lakh</option><option>৳ 5 – 20 Lakh</option><option>৳ 20 – 50 Lakh</option><option>Above ৳ 50 Lakh</option><option>Not decided yet</option>
+                    </select>
                   </div>
                   <div class="col-md-6">
-                    <div class="form-floating">
-                      <input type="email" class="form-control" id="cfEmail" placeholder="Email" required>
-                      <label for="cfEmail">Email Address *</label>
-                      <div class="invalid-feedback">Please enter a valid email.</div>
-                    </div>
-                  </div>
-                  <div class="col-md-6">
-                    <div class="form-floating">
-                      <input type="tel" class="form-control" id="cfPhone" placeholder="Phone">
-                      <label for="cfPhone">Phone Number</label>
-                    </div>
-                  </div>
-                  <div class="col-md-6">
-                    <div class="form-floating">
-                      <input type="text" class="form-control" id="cfCompany" placeholder="Company">
-                      <label for="cfCompany">Company Name</label>
-                    </div>
+                    <label class="form-label" for="rqTime">Expected timeline</label>
+                    <select class="form-select form-control" id="rqTime">
+                      <option value="">Select timeline</option>
+                      <option>Immediately</option><option>Within 1 month</option><option>1 – 3 months</option><option>Just exploring</option>
+                    </select>
                   </div>
                   <div class="col-12">
-                    <div class="form-floating">
-                      <textarea class="form-control" id="cfMessage" placeholder="Message" required></textarea>
-                      <label for="cfMessage">Your Message *</label>
-                      <div class="invalid-feedback">Please write a short message.</div>
-                    </div>
+                    <label class="form-label" for="rqMsg">Project details *</label>
+                    <textarea class="form-control" id="rqMsg" placeholder="Describe your requirement, quantity, delivery location..." required></textarea>
                   </div>
-                  <div class="col-12 d-flex flex-wrap align-items-center gap-3">
-                    <button type="submit" class="btn btn-main btn-lg-c">Send Message <i
-                        class="fa-solid fa-paper-plane ms-2"></i></button>
-                    <span id="formSuccess" class="form-success d-none"><i class="fa-solid fa-circle-check me-2"></i>Thank
-                      you! We will contact you soon.</span>
+                  <div class="col-12">
+                    <label class="form-label">Attachment (optional)</label>
+                    <label class="rq-drop" for="rqFile">
+                      <i class="fa-solid fa-cloud-arrow-up"></i>
+                      <strong id="rqFileName">Click to upload a file</strong>
+                      <small>PDF, DOC, XLS or image &middot; max 5 MB</small>
+                      <input type="file" id="rqFile" hidden accept=".pdf,.doc,.docx,.xls,.xlsx,.png,.jpg,.jpeg">
+                    </label>
                   </div>
                 </div>
-              </form>
+              </div>
+
+              <div class="rq-submit">
+                <label class="rq-agree"><input type="checkbox" id="rqAgree" required> I agree to be contacted about this quotation.</label>
+                <button type="submit" class="btn btn-main btn-lg-c"><i class="fa-regular fa-paper-plane me-2"></i>Send Request</button>
+              </div>
+            </form>
+
+            <div class="rq-card rq-success" id="rqSuccess" hidden>
+              <div class="rq-success-icon"><i class="fa-solid fa-check"></i></div>
+              <h3>Request received!</h3>
+              <p>Thank you. Your reference number is <strong id="rqRef"></strong>. Our team will email you the quotation within 24 hours.</p>
+              <a href="products.html" class="btn btn-accent btn-lg-c">Continue browsing</a>
             </div>
           </div>
 
-          <!-- Side column -->
-          <div class="col-lg-5">
-
-            <!-- Departments -->
-            <div class="cp-side-card">
-              <h4>Talk to the right team</h4>
-              <ul class="cp-dept-list">
-                <li>
-                  <span class="cp-dept-icon"><i class="fa-solid fa-chart-line"></i></span>
-                  <div>
-                    <strong>Sales &amp; Quotation</strong>
-                    <a href="mailto:sales@example.com">sales@example.com</a>
-                    <a href="tel:+8800000000001">+880 0000-000001</a>
-                  </div>
-                </li>
-                <li>
-                  <span class="cp-dept-icon"><i class="fa-solid fa-headset"></i></span>
-                  <div>
-                    <strong>Technical Support</strong>
-                    <a href="mailto:support@example.com">support@example.com</a>
-                    <a href="tel:+8800000000002">+880 0000-000002</a>
-                  </div>
-                </li>
-                <li>
-                  <span class="cp-dept-icon"><i class="fa-solid fa-user-tie"></i></span>
-                  <div>
-                    <strong>Careers</strong>
-                    <a href="mailto:careers@example.com">careers@example.com</a>
-                  </div>
-                </li>
-              </ul>
-            </div>
-
-            <!-- Quote promo -->
-            <div class="cp-promo">
-              <h4>Need a price quickly?</h4>
-              <p>Select the products you need and send one request for quotation.</p>
-              <a href="request-quotation.html" class="btn btn-light-c">Request a Quote <i
-                  class="fa-solid fa-arrow-right ms-2"></i></a>
-              <div class="social-links mt-4">
-                <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
-                <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
-                <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
-                <a href="#" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+          <!-- Side -->
+          <div class="col-lg-4">
+            <aside class="rq-side">
+              <div class="rq-card">
+                <h3 class="rq-side-title">Your products <span class="iq-badge" id="rqCount">0</span></h3>
+                <ul class="rq-prod" id="rqProd"></ul>
+                <p class="rq-prod-empty" id="rqProdEmpty" hidden>No products selected yet. <a href="products.html">Browse products</a></p>
+                <a href="inquiry.html" class="rq-edit"><i class="fa-regular fa-pen-to-square"></i> Edit inquiry list</a>
               </div>
-            </div>
 
+              <div class="rq-card rq-why">
+                <h3 class="rq-side-title">Why ATCL?</h3>
+                <ul>
+                  <li><i class="fa-solid fa-bolt"></i>Reply within 24 hours</li>
+                  <li><i class="fa-solid fa-certificate"></i>Genuine brands &amp; warranty</li>
+                  <li><i class="fa-solid fa-truck-fast"></i>Delivery &amp; installation support</li>
+                </ul>
+                <div class="rq-call"><i class="fa-solid fa-phone"></i><div><small>Need help? Call us</small><strong>+880 0000-000000</strong></div></div>
+              </div>
+            </aside>
           </div>
+
         </div>
       </div>
     </section>
-    <!-- ========= Form + Departments End ========= -->
 
-    <!-- ========= Map Start ========= -->
-    <section class="cp-map-section" id="cpMap">
-      <div class="container">
-        <div class="cp-map">
-          <iframe title="Our office location"
-            src="https://www.google.com/maps?q=Gulshan+2,Dhaka,Bangladesh&output=embed" loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
-         
-        </div>
-      </div>
-    </section>
-    <!-- ========= Map End ========= -->
+    </main>
 
-    <!-- ========= FAQ Start ========= -->
-    <section class="section">
-      <div class="container">
-        <div class="section-title">
-          <span class="sub-title">FAQ</span>
-          <h2>Frequently Asked <span class="text-accent">Questions</span></h2>
-          <p>Quick answers to the questions we hear most often.</p>
-        </div>
-
-        <div class="row justify-content-center">
-          <div class="col-lg-9">
-            <div class="accordion faq-accordion" id="faqAccordion">
-
-              <div class="accordion-item">
-                <h2 class="accordion-header">
-                  <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1"
-                    aria-expanded="true" aria-controls="faq1">How quickly will I get a reply?</button>
-                </h2>
-                <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
-                  <div class="accordion-body">We reply to every message within one working day. For urgent requirements,
-                    please call our sales team directly.</div>
-                </div>
-              </div>
-
-              <div class="accordion-item">
-                <h2 class="accordion-header">
-                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#faq2" aria-expanded="false" aria-controls="faq2">How do I request a quotation for
-                    multiple products?</button>
-                </h2>
-                <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-                  <div class="accordion-body">Add the products you need to your Inquiry List, then submit the Request
-                    for Quotation form. We will send one combined quotation.</div>
-                </div>
-              </div>
-
-              <div class="accordion-item">
-                <h2 class="accordion-header">
-                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#faq3" aria-expanded="false" aria-controls="faq3">Do you provide installation and
-                    after-sales support?</button>
-                </h2>
-                <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-                  <div class="accordion-body">Yes. Our technical team handles installation, training, maintenance and
-                    spare parts for the products we supply.</div>
-                </div>
-              </div>
-
-              <div class="accordion-item">
-                <h2 class="accordion-header">
-                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#faq4" aria-expanded="false" aria-controls="faq4">Can I visit your office or
-                    showroom?</button>
-                </h2>
-                <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-                  <div class="accordion-body">Of course. Please call or email us first so we can arrange a suitable time
-                    with the right team member.</div>
-                </div>
-              </div>
-
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- ========= FAQ End ========= -->
-
-  </main>
 
   <!-- ========= Footer Section Start ========= -->
   <footer class="footer" id="footer">
