@@ -102,7 +102,7 @@
 
                         <!-- Products mega menu -->
                         <li class="nav-item dropdown mega">
-                            <a class="nav-link" href="products.html">Products</a>
+                            <a class="nav-link" href="#">Products</a>
                             <button class="dropdown-caret d-lg-none" type="button" data-bs-toggle="dropdown"
                                 aria-expanded="false" aria-label="Open Products menu"><i
                                     class="fa-solid fa-chevron-down"></i></button>
@@ -274,11 +274,27 @@
 
 
                             <div class="pd-actions">
+
+                                <!-- Qty -->
+                                <div class="pd-qty" role="group" aria-label="Quantity">
+                                    <button type="button" class="pd-qty-btn" data-qty="-1"
+                                        aria-label="Decrease quantity">
+                                        <i class="fa-solid fa-minus"></i>
+                                    </button>
+                                    <input type="number" id="pdQty" class="pd-qty-input" value="1" min="1" max="999"
+                                        inputmode="numeric" aria-label="Quantity">
+                                    <button type="button" class="pd-qty-btn" data-qty="1"
+                                        aria-label="Increase quantity">
+                                        <i class="fa-solid fa-plus"></i>
+                                    </button>
+                                </div>
+
                                 <button type="button" class="btn btn-main btn-lg-c cat-add pd-add"
                                     data-name="Total Station KTS-442UT"><i class="fa-solid fa-plus"></i><span>Add to
                                         Inquiry</span></button>
                                 <a href="request-quotation.html" class="btn btn-accent btn-lg-c">Request a Quote</a>
                             </div>
+
                             <a href="#" class="pd-brochure"><i class="fa-solid fa-file-pdf"></i>Download brochure
                                 (PDF)</a>
 

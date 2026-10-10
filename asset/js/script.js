@@ -592,6 +592,10 @@ if (backToTop) {
 (function () {
   var KEY = 'inquiryItems';
   function read() { try { return JSON.parse(localStorage.getItem(KEY) || '[]'); } catch (e) { return []; } }
+  function qtyOf() {
+    var q = document.getElementById('pdQty');
+    return q ? (parseInt(q.value, 10) || 1) : 1;
+  }
   function mark(btn, on) {
     btn.classList.toggle('added', on);
     btn.querySelector('i').className = on ? 'fa-solid fa-check' : 'fa-solid fa-plus';
@@ -602,7 +606,7 @@ if (backToTop) {
     mark(btn, list.indexOf(btn.dataset.name) > -1);
     btn.addEventListener('click', function () {
       var items = read(), i = items.findIndex(function (x) { return (x.name || x) === btn.dataset.name; });
-      if (i > -1) items.splice(i, 1); else items.push({ name: btn.dataset.name });
+      if (i > -1) items.splice(i, 1); else items.push({ name: btn.dataset.name, qty: qtyOf() });
       try { localStorage.setItem(KEY, JSON.stringify(items)); } catch (e) { }
       mark(btn, i === -1);
       if (typeof updateInquiryCount === 'function') updateInquiryCount();
@@ -703,45 +707,8 @@ if (backToTop) {
     });
   });
 
-  /* Add to Inquiry */
-  function read() { try { return JSON.parse(localStorage.getItem(KEY) || '[]'); } catch (e) { return []; } }
-  function mark(btn, on) {
-    btn.classList.toggle('added', on);
-    btn.querySelector('i').className = on ? 'fa-solid fa-check' : 'fa-solid fa-plus';
-    btn.querySelector('span').textContent = on ? 'Added' : 'Add to Inquiry';
-  }
-
 })();
 
-
-
-
-// Product details: gallery, zoom, Add to Inquiry 
-
-
-
-(function () {
-  var main = document.getElementById('pdMain'), stage = document.getElementById('pdStage');
-  document.querySelectorAll('.pd-thumb').forEach(function (t) {
-    t.addEventListener('click', function () {
-      main.style.display = ''; main.src = t.dataset.src;
-      document.querySelectorAll('.pd-thumb').forEach(function (x) { x.classList.toggle('active', x === t); });
-    });
-  });
-  stage.addEventListener('mousemove', function (e) {
-    var r = stage.getBoundingClientRect();
-    main.style.transformOrigin = ((e.clientX - r.left) / r.width * 100) + '% ' + ((e.clientY - r.top) / r.height * 100) + '%';
-  });
-
-  var KEY = 'inquiryItems';
-  function read() { try { return JSON.parse(localStorage.getItem(KEY) || '[]'); } catch (e) { return []; } }
-  function mark(btn, on) {
-    btn.classList.toggle('added', on);
-    btn.querySelector('i').className = on ? 'fa-solid fa-check' : 'fa-solid fa-plus';
-    btn.querySelector('span').textContent = on ? 'Added' : 'Add to Inquiry';
-  }
-
-})();
 
 
 
@@ -778,4 +745,137 @@ if (backToTop) {
     if (e.key === 'ArrowLeft') show(current() - 1);
     if (e.key === 'ArrowRight') show(current() + 1);
   });
+})();
+
+/* ===== Product details: Qty stepper ===== */
+(function () {
+  var input = document.getElementById('pdQty');
+  if (!input) return;
+  var MIN = 1, MAX = 999;
+
+  function clamp(v) {
+    v = parseInt(v, 10);
+    if (isNaN(v) || v < MIN) v = MIN;
+    if (v > MAX) v = MAX;
+    return v;
+  }
+
+  function sync() {
+    var v = clamp(input.value);
+    input.value = v;
+    var btn = document.querySelector('.pd-add.added');
+    if (!btn) return;
+    var items;
+    try { items = JSON.parse(localStorage.getItem('inquiryItems') || '[]'); } catch (e) { return; }
+    items.forEach(function (x) { if (x.name === btn.dataset.name) x.qty = v; });
+    try { localStorage.setItem('inquiryItems', JSON.stringify(items)); } catch (e) { }
+  }
+
+  document.querySelectorAll('.pd-qty-btn').forEach(function (b) {
+    b.addEventListener('click', function () {
+      input.value = clamp((parseInt(input.value, 10) || MIN) + parseInt(b.dataset.qty, 10));
+      sync();
+    });
+  });
+
+  input.addEventListener('change', sync);
+  input.addEventListener('keydown', function (e) {
+    if (['e', 'E', '+', '-', '.'].indexOf(e.key) > -1) e.preventDefault();
+  });
+})();
+
+
+/* ===== Inquiry page ===== */
+(function () {
+  var list = document.getElementById('iqList');
+  if (!list) return;                         // only on inquiry.html
+
+  var KEY = 'inquiryItems', MAX = 999;
+  var content = document.getElementById('iqContent'), empty = document.getElementById('iqEmpty');
+  var countEl = document.getElementById('iqCount'), totItems = document.getElementById('iqTotalItems'), totQty = document.getElementById('iqTotalQty');
+
+  function read() {
+    try {
+      return JSON.parse(localStorage.getItem(KEY) || '[]').map(function (x) {
+        return typeof x === 'string' ? { name: x, qty: 1 } : { name: x.name, qty: Math.max(1, parseInt(x.qty, 10) || 1) };
+      });
+    } catch (e) { return []; }
+  }
+  function save(items) {
+    try { localStorage.setItem(KEY, JSON.stringify(items)); } catch (e) { }
+    if (typeof updateInquiryCount === 'function') updateInquiryCount();
+  }
+  function esc(s) { var d = document.createElement('div'); d.textContent = s; return d.innerHTML; }
+  function clamp(v) { v = parseInt(v, 10); return isNaN(v) || v < 1 ? 1 : Math.min(v, MAX); }
+
+  function totals(items) {
+    countEl.textContent = items.length;
+    totItems.textContent = items.length;
+    totQty.textContent = items.reduce(function (s, x) { return s + x.qty; }, 0);
+  }
+
+  function render() {
+    var items = read();
+    content.hidden = !items.length;
+    empty.hidden = items.length > 0;
+    list.innerHTML = items.map(function (x, i) {
+      return '<li class="iq-item" data-i="' + i + '">' +
+        '<span class="iq-thumb"><i class="fa-solid fa-cube"></i></span>' +
+        '<div><h3 class="iq-name">' + esc(x.name) + '</h3><span class="iq-meta">Quotation on request</span></div>' +
+        '<div class="iq-qty"><button type="button" data-act="dec" aria-label="Decrease"><i class="fa-solid fa-minus"></i></button>' +
+        '<input type="number" min="1" max="' + MAX + '" value="' + x.qty + '" aria-label="Quantity">' +
+        '<button type="button" data-act="inc" aria-label="Increase"><i class="fa-solid fa-plus"></i></button></div>' +
+        '<button type="button" class="iq-remove" data-act="rm" aria-label="Remove"><i class="fa-regular fa-trash-can"></i></button></li>';
+    }).join('');
+    totals(items);
+  }
+
+  function setQty(i, v) {
+    var items = read(); if (!items[i]) return;
+    items[i].qty = clamp(v); save(items); totals(items);
+    return items[i].qty;
+  }
+
+  list.addEventListener('click', function (e) {
+    var b = e.target.closest('[data-act]'); if (!b) return;
+    var li = b.closest('.iq-item'), i = +li.dataset.i, input = li.querySelector('input');
+    if (b.dataset.act === 'rm') {
+      li.classList.add('removing');
+      setTimeout(function () { var items = read(); items.splice(i, 1); save(items); render(); }, 250);
+    } else {
+      input.value = setQty(i, clamp(input.value) + (b.dataset.act === 'inc' ? 1 : -1));
+    }
+  });
+  list.addEventListener('change', function (e) {
+    if (e.target.tagName !== 'INPUT') return;
+    var li = e.target.closest('.iq-item');
+    e.target.value = setQty(+li.dataset.i, e.target.value);
+  });
+  list.addEventListener('keydown', function (e) {
+    if (e.target.tagName === 'INPUT' && ['e', 'E', '+', '-', '.'].indexOf(e.key) > -1) e.preventDefault();
+  });
+
+  document.getElementById('iqClear').addEventListener('click', function () {
+    if (confirm('Remove all products from your inquiry list?')) { save([]); render(); }
+  });
+
+  // form
+  var form = document.getElementById('iqForm'), ok = document.getElementById('iqSuccess');
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    var bad = false;
+    form.querySelectorAll('[required]').forEach(function (f) {
+      var v = f.value.trim(), invalid = !v || (f.type === 'email' && !/^\S+@\S+\.\S+$/.test(v));
+      f.classList.toggle('invalid', invalid); if (invalid) bad = true;
+    });
+    if (bad) return;
+    // TODO: send { fields, items: read() } to backend
+    form.hidden = true; ok.hidden = false;
+    document.querySelector('.iq-side-sub').hidden = true;
+    save([]);
+    document.querySelectorAll('.cat-add.added').forEach(function (b) { b.classList.remove('added'); });
+  });
+  form.addEventListener('input', function (e) { e.target.classList.remove('invalid'); });
+
+  render();
 })();
