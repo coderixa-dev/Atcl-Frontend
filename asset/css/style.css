@@ -9835,6 +9835,10 @@ News Details Page
     .container {
         max-width: 1170px
     }
+
+     .footer-links li {
+        font-size: 15px;
+    }
 }
 
 /* ========= Tablet Device ========== */
@@ -9860,6 +9864,15 @@ News Details Page
     .page-banner {
         padding: 70px 0 50px;
     }
+
+    .footer a:hover {
+        color: var(--accent-color);
+        padding-left: 2px;
+    }
+
+   
+
+
 }
 
 /* ========= Mobile Device ========== */
