@@ -3087,7 +3087,7 @@ Style Section (page-specific styles go below)
 
     .footer-bottom {
         flex-direction: column;
-        padding-bottom: 80px;
+        padding-bottom: 25px;
         /* keeps links clear of the back-to-top button */
         text-align: center;
     }
@@ -3495,7 +3495,7 @@ a.cp-link:hover i {
 
 @media (max-width: 767.98px) {
     .cp-info-section {
-        margin-top: -60px;
+        margin-top: 60px;
     }
 
     .cp-form-card h3 {
@@ -3916,7 +3916,7 @@ Brands Page
 
 @media (max-width: 767.98px) {
     .br-stats-section {
-        margin-top: -56px;
+        display: none;
     }
 
     .br-stat h3 {
@@ -5092,7 +5092,7 @@ About Page
 .inner-hero h1 {
     margin: 1rem 0 .75rem;
     color: #fff;
-    font-size: clamp(2rem, 4.5vw, 3rem);
+    font-size: clamp(1.8rem, 4.5vw, 3rem);
 }
 
 .inner-hero h1 span {
@@ -6197,7 +6197,7 @@ News & Events Page
 
 @media (max-width: 767.98px) {
     .nw-featured-section {
-        margin-top: -56px;
+        margin-top: 60px;
     }
 
     .nw-featured-body h2 {
@@ -7969,9 +7969,11 @@ News Details Page
 }
 
 .cat-partners {
-    display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    gap: 14px;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.cat-bar {
+    top: 72px;
 }
 
 .cat-partners span {
@@ -9863,6 +9865,20 @@ News Details Page
         --section-space: 50px;
     }
 
+    html {
+        overflow-x: clip;
+
+        scroll-behavior: smooth;
+        scroll-padding-top: var(--header-height);
+    }
+
+    body {
+
+        overflow-x: hidden;
+        overflow-x: clip;
+
+    }
+
     .section-title {
         margin-bottom: 2rem;
     }
@@ -9929,11 +9945,43 @@ News Details Page
 
     .header {
         position: sticky;
-        top: 10px;
+        top: 0px;
         z-index: 999;
         background: var(--white-color);
         transition: var(--transition);
     }
+
+    /* @media (max-width: 575px) { ... } er bhitore, .cat-iso er niche add koro */
+    .cat-partners {
+        gap: 10px;
+    }
+
+    .cat-partners span {
+        font-size: .9rem;
+        padding: 1.1rem .25rem;
+        letter-spacing: 0;
+    }
+
+    .section-title h2 {
+        font-size: 1.8rem;
+    }
+
+    .nw-pill {
+        padding: 9px 22px;
+        font-size: .80rem;
+        font-weight: 500;
+        color: var(--text-color);
+        cursor: pointer;
+        background: var(--bg-light);
+        border: 1px solid var(--border-color);
+        border-radius: var(--radius-pill);
+        transition: var(--transition);
+    }
+
+    .nw-pills::-webkit-scrollbar,
+.br-pills::-webkit-scrollbar {
+    height: 3px;                  /* ← bar er mota-pata (height) */
+}
 
 
 }
