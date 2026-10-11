@@ -9831,6 +9831,10 @@ News Details Page
     :root {
         --section-space: 80px;
     }
+
+    .container {
+        max-width: 1170px
+    }
 }
 
 /* ========= Tablet Device ========== */
@@ -9979,9 +9983,10 @@ News Details Page
     }
 
     .nw-pills::-webkit-scrollbar,
-.br-pills::-webkit-scrollbar {
-    height: 3px;                  /* ← bar er mota-pata (height) */
-}
+    .br-pills::-webkit-scrollbar {
+        height: 3px;
+        /* ← bar er mota-pata (height) */
+    }
 
 
 }
