@@ -224,6 +224,10 @@ p:last-child {
     font-weight: 500;
 }
 
+.logo img{
+    width: 55px;
+    height: 55px;
+}
 
 /* ---------------------------------------
 4. Layout (sections, headings, backgrounds)
@@ -647,6 +651,14 @@ textarea.form-control {
 .header .dropdown-item:hover {
     color: var(--accent-dark);
     background: var(--bg-light);
+}
+
+
+.header .dropdown-item.active,
+.header .dropdown-item:active {
+    color: var(--accent-dark);
+    background: var(--bg-light);
+    font-weight: 500;
 }
 
 /* Inquiry basket icon + count */
