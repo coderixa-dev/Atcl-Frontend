@@ -9465,6 +9465,27 @@ News Details Page
     margin-bottom: 24px;
 }
 
+/* More Info link row (brochure + more info) */
+.pd-links { display: flex; flex-wrap: wrap; align-items: center; gap: 14px 22px; margin-top: 1.1rem; }
+.pd-links .pd-brochure { margin-top: 0; }
+
+.pd-more {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 9px 20px;
+    font-size: .95rem;
+    font-weight: 500;
+    color: var(--primary-color);
+    background: #fff;
+    border: 1.5px solid var(--border-color);
+    border-radius: var(--radius-pill);
+    transition: var(--transition);
+}
+.pd-more i { font-size: .8rem; transition: transform .3s ease; }
+.pd-more:hover { color: #fff; background: var(--primary-color); border-color: var(--primary-color); }
+.pd-more:hover i { transform: translate(3px, -3px); }
+
 /* mobile */
 @media (max-width: 767px) {
     .iq-card {
