@@ -879,3 +879,46 @@ if (backToTop) {
 
   render();
 })();
+
+
+
+/* ===== Active menu link (auto, based on current page) ===== */
+(function () {
+  var menu = document.getElementById('mainMenu');
+  if (!menu) return;
+
+  var page = (location.pathname.split('/').pop() || 'index.html').toLowerCase();
+
+  // sub pages → the menu page they belong to
+  var parent = {
+    'product-details.html': 'products.html',
+    'news-details.html': 'news.html',
+    'brand-details.html': 'brands.html',
+    'service-details.html': 'services.html',
+    'career.html': 'about.html',
+    'careers.html': 'about.html',
+    'career-details.html': 'about.html'
+  };
+  var target = parent[page] || page;
+
+  menu.querySelectorAll('.active').forEach(function (el) { el.classList.remove('active'); });
+
+  var links = menu.querySelectorAll('a[href]');
+  for (var i = 0; i < links.length; i++) {
+    var href = (links[i].getAttribute('href') || '').split('#')[0].split('?')[0].toLowerCase();
+    if (!href || href !== target) continue;
+
+    var a = links[i];
+    var item = a.closest('.nav-item');
+    if (!item) continue;
+    var top = item.querySelector(':scope > .nav-link');
+
+    if (a.classList.contains('nav-link')) {
+      a.classList.add('active');                      // Home, Services, Brands...
+    } else {
+      if (a.classList.contains('dropdown-item')) a.classList.add('active');
+      if (top) top.classList.add('active');           // Company / Products parent
+    }
+    break;
+  }
+})();
