@@ -5799,6 +5799,37 @@ News & Events Page
     transform: scale(1.06);
 }
 
+/* Featured post: photo sits inside the frame image */
+.nw-featured-img {
+    --fr-top: 14.8%;
+    --fr-right: 10.8%;
+    --fr-bottom: 14.8%;
+    --fr-left: 11%;
+
+    aspect-ratio: 527 / 404;
+    min-height: 0;
+    background: var(--primary-dark);
+}
+
+.nw-featured-img img.nw-photo {
+    inset: var(--fr-top) var(--fr-right) var(--fr-bottom) var(--fr-left);
+    width: calc(100% - var(--fr-left) - var(--fr-right));
+    height: calc(100% - var(--fr-top) - var(--fr-bottom));
+    z-index: 10;
+}
+
+.nw-featured-img img.nw-frame {
+    z-index: 2;
+    object-fit: fill;
+    pointer-events: none;
+}
+
+.nw-featured:hover .nw-featured-img img.nw-frame { transform: none; }
+
+@media (max-width: 993px) {
+    .nw-featured-img { min-height: 0; }
+}
+
 .nw-featured-body {
     display: flex;
     flex-direction: column;
@@ -6257,6 +6288,9 @@ News & Events Page
 News Details Page
 (also uses .news-card, .news-img, .news-meta, .news-link from the News page)
 --------------------------------------- */
+
+
+
 
 /* Reading progress bar */
 .nd-progress {
