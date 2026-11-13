@@ -1,0 +1,770 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Service Details | ATCL</title>
+
+    <!-- ======== Bootstrap css Link ======== -->
+    <link rel="stylesheet" href="asset/css/bootstrap.min.css">
+    <!-- ======== Google Font Link ======== -->
+    <link rel="stylesheet" href="asset/css/font.css">
+    <!-- ======== Font Awesome Link ======== -->
+    <link rel="stylesheet" href="asset/css/all.min.css">
+    <!-- ========  Swiper Js Link ======== -->
+    <link rel="stylesheet" href="asset/css/swiper-bundle.min.css">
+    <!-- ======== Custom css Link (keep LAST so it can override the libraries) ======== -->
+    <link rel="stylesheet" href="asset/css/style.css">
+
+    <!-- Page-only styles (you can move these to style.css later) -->
+    <style>
+        .page-banner {
+            padding: 70px 0;
+            background: linear-gradient(135deg, #0b2a3a 0%, #12485a 100%);
+            color: #fff;
+        }
+
+        .page-banner h1 {
+            color: #fff;
+            font-size: clamp(1.7rem, 3.5vw, 2.6rem);
+            margin-bottom: 12px;
+        }
+
+        .page-banner .breadcrumb {
+            margin: 0;
+            font-size: .95rem;
+        }
+
+        .page-banner .breadcrumb a {
+            color: #cfe9e3;
+            text-decoration: none;
+        }
+
+        .page-banner .breadcrumb-item.active,
+        .page-banner .breadcrumb-item+.breadcrumb-item::before {
+            color: #fff;
+        }
+
+        .sd-hero-img {
+            width: 100%;
+            aspect-ratio: 16 / 9;
+            object-fit: cover;
+            border-radius: 16px;
+            margin-bottom: 28px;
+        }
+
+        .sd-main h2 {
+            margin-bottom: 14px;
+        }
+
+        .sd-main h4 {
+            margin: 28px 0 14px;
+        }
+
+        .sd-main p {
+            line-height: 1.8;
+        }
+
+        .sd-points {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 12px 24px;
+        }
+
+        .sd-points li {
+            display: flex;
+            gap: 10px;
+            align-items: flex-start;
+        }
+
+        .sd-points i {
+            color: var(--accent, #12a38a);
+            margin-top: 5px;
+        }
+
+        .sd-steps {
+            counter-reset: step;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .sd-steps li {
+            counter-increment: step;
+            position: relative;
+            padding: 0 0 18px 52px;
+        }
+
+        .sd-steps li::before {
+            content: counter(step);
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            background: var(--accent, #12a38a);
+            color: #fff;
+            display: grid;
+            place-items: center;
+            font-weight: 600;
+        }
+
+        .sd-steps li::after {
+            content: "";
+            position: absolute;
+            left: 17px;
+            top: 40px;
+            bottom: 4px;
+            width: 2px;
+            background: #dfe8e6;
+        }
+
+        .sd-steps li:last-child::after {
+            display: none;
+        }
+
+        .sd-steps strong {
+            display: block;
+        }
+
+        .sd-side {
+            position: sticky;
+            top: 100px;
+        }
+
+        .sd-box {
+            background: #fff;
+            border: 1px solid #e4ecea;
+            border-radius: 16px;
+            padding: 24px;
+            margin-bottom: 24px;
+        }
+
+        .sd-box h5 {
+            margin-bottom: 14px;
+        }
+
+        .sd-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .sd-list a {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 10px;
+            padding: 11px 0;
+            border-bottom: 1px solid #edf2f1;
+            color: inherit;
+            text-decoration: none;
+        }
+
+        .sd-list li:last-child a {
+            border-bottom: 0;
+        }
+
+        .sd-list a:hover,
+        .sd-list a.active {
+            color: var(--accent, #12a38a);
+            font-weight: 600;
+        }
+
+        .sd-cta {
+            background: #0b2a3a;
+            color: #fff;
+            border: 0;
+        }
+
+        .sd-cta h5,
+        .sd-cta p {
+            color: #fff;
+        }
+
+        .sd-cta .sd-phone {
+            display: block;
+            margin-top: 14px;
+            color: #fff;
+            font-weight: 600;
+            text-decoration: none;
+        }
+
+        .sd-prevnext {
+            display: flex;
+            justify-content: space-between;
+            gap: 16px;
+            margin-top: 40px;
+            padding-top: 24px;
+            border-top: 1px solid #e4ecea;
+        }
+
+        .sd-prevnext a {
+            text-decoration: none;
+            color: inherit;
+            max-width: 48%;
+        }
+
+        .sd-prevnext small {
+            display: block;
+            color: #6b7b78;
+        }
+
+        .sd-prevnext strong:hover {
+            color: var(--accent, #12a38a);
+        }
+
+        .sd-prevnext .next {
+            text-align: right;
+            margin-left: auto;
+        }
+
+        @media (max-width: 991px) {
+            .sd-side {
+                position: static;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- ========= Header Section Start ========= -->
+
+    <!-- Top Bar -->
+    <div class="top-bar d-none d-lg-block">
+        <div class="container d-flex justify-content-between align-items-center">
+            <div class="d-flex align-items-center gap-4">
+                <a href="tel:01819556755"><i class="fa-solid fa-phone me-2 text-accent"></i>01819556755</a>
+                <a href="mailto:atc@dhaka.net"><i class="fa-solid fa-envelope me-2 text-accent"></i>atc@dhaka.net</a>
+                <span><i class="fa-solid fa-location-dot me-2 text-accent"></i>Dhaka, Bangladesh</span>
+            </div>
+            <div class="social-links social-links-sm">
+                <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Header -->
+    <header class="header" id="header">
+        <nav class="navbar navbar-expand-lg">
+            <div class="container position-relative">
+
+                <a class="logo" href="index.html" aria-label="Home">
+                    <img src="asset/images/atcl_logo.jpeg" alt="">
+                    <span class="logo-text">ATCL</span>
+                </a>
+
+                <div class="header-actions d-flex align-items-center gap-2 order-lg-last">
+                    <button class="header-icon-btn" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#headerSearch" aria-expanded="false" aria-controls="headerSearch"
+                        aria-label="Search">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </button>
+
+                    <a href="inquiry.html" class="inquiry-btn" aria-label="Inquiry list">
+                        <i class="fa-solid fa-clipboard-list"></i>
+                        <span class="count" id="inquiryCount">0</span>
+                    </a>
+
+                    <a href="request-quotation.html"
+                        class="btn btn-accent btn-sm-c d-none d-xxl-inline-block ms-2 text-nowrap">
+                        Request a Quote
+                    </a>
+
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainMenu"
+                        aria-controls="mainMenu" aria-expanded="false" aria-label="Toggle navigation">
+                        <i class="fa-solid fa-bars"></i>
+                    </button>
+                </div>
+
+                <!-- Menu -->
+                <div class="collapse navbar-collapse justify-content-center" id="mainMenu">
+                    <ul class="navbar-nav align-items-lg-center">
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Home</a>
+                        </li>
+
+                        <li class="nav-item dropdown">
+                            <span class="nav-link">Company</span>
+                            <button class="dropdown-caret d-lg-none" type="button" data-bs-toggle="dropdown"
+                                aria-expanded="false" aria-label="Open Company menu"><i
+                                    class="fa-solid fa-chevron-down"></i></button>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="about.html">About Us</a></li>
+                                <li><a class="dropdown-item" href="mission-vision.html">Mission &amp; Vision</a></li>
+                            </ul>
+                        </li>
+
+                        <!-- Products mega menu -->
+                        <li class="nav-item dropdown mega">
+                            <a class="nav-link" href="#">Products</a>
+                            <button class="dropdown-caret d-lg-none" type="button" data-bs-toggle="dropdown"
+                                aria-expanded="false" aria-label="Open Products menu"><i
+                                    class="fa-solid fa-chevron-down"></i></button>
+                            <div class="dropdown-menu mega-menu">
+                                <div class="row g-4">
+
+                                    <div class="col-lg-3">
+                                        <div class="mb-3">
+                                            <div class="d-flex align-items-center mb-1">
+                                                <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=80&auto=format&fit=crop&q=60"
+                                                    alt="Survey" class="rounded me-2"
+                                                    style="width: 38px; height: 38px; object-fit: cover;">
+                                                <a href="category.html"
+                                                    class="fw-bold text-dark text-decoration-none small text-uppercase">ALL
+                                                    SURVEY EQUIPMENT</a>
+                                            </div>
+                                        </div>
+                                        <div class="mb-3">
+                                            <div class="d-flex align-items-center mb-1">
+                                                <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=80&auto=format&fit=crop&q=60"
+                                                    alt="Heavy Machinery" class="rounded me-2"
+                                                    style="width: 38px; height: 38px; object-fit: cover;">
+                                                <a href="category.html"
+                                                    class="fw-bold text-dark text-decoration-none small text-uppercase">MECHANICAL
+                                                    &amp; HEAVY MACHINERY</a>
+                                            </div>
+                                        </div>
+                                        <div class="mb-3">
+                                            <div class="d-flex align-items-center mb-1">
+                                                <img src="https://images.unsplash.com/photo-1616401784845-180882ba9ba8?w=80&auto=format&fit=crop&q=60"
+                                                    alt="CNC" class="rounded me-2"
+                                                    style="width: 38px; height: 38px; object-fit: cover;">
+                                                <a href="category.html"
+                                                    class="fw-bold text-dark text-decoration-none small text-uppercase">CNC-BASED
+                                                    MACHINERY</a>
+                                            </div>
+                                        </div>
+                                        <div class="mb-2">
+                                            <div class="d-flex align-items-center mb-1">
+                                                <img src="https://images.unsplash.com/photo-1509391366360-2e959784a276?w=80&auto=format&fit=crop&q=60"
+                                                    alt="Electrical" class="rounded me-2"
+                                                    style="width: 38px; height: 38px; object-fit: cover;">
+                                                <a href="category.html"
+                                                    class="fw-bold text-dark text-decoration-none small text-uppercase">ELECTRICAL
+                                                    &amp; ELECTRONICS</a>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-lg-3">
+                                        <div class="mb-3">
+                                            <div class="d-flex align-items-center mb-1">
+                                                <img src="https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=80&auto=format&fit=crop&q=60"
+                                                    alt="AI Robotics" class="rounded me-2"
+                                                    style="width: 38px; height: 38px; object-fit: cover;">
+                                                <a href="category.html"
+                                                    class="fw-bold text-dark text-decoration-none small text-uppercase">AI,
+                                                    IOT &amp; ROBOTICS</a>
+                                            </div>
+                                        </div>
+                                        <div class="mb-3">
+                                            <div class="d-flex align-items-center mb-1">
+                                                <img src="https://images.unsplash.com/photo-1508514177221-188b1cf16e9d?w=80&auto=format&fit=crop&q=60"
+                                                    alt="Energy" class="rounded me-2"
+                                                    style="width: 38px; height: 38px; object-fit: cover;">
+                                                <a href="category.html"
+                                                    class="fw-bold text-dark text-decoration-none small text-uppercase">ENERGY
+                                                    &amp; ENVIRONMENTAL</a>
+                                            </div>
+                                        </div>
+                                        <div class="mb-3">
+                                            <div class="d-flex align-items-center mb-1">
+                                                <img src="https://images.unsplash.com/photo-1562408590-e32931084e23?w=80&auto=format&fit=crop&q=60"
+                                                    alt="Measurement" class="rounded me-2"
+                                                    style="width: 38px; height: 38px; object-fit: cover;">
+                                                <a href="category.html"
+                                                    class="fw-bold text-dark text-decoration-none small text-uppercase">TEST
+                                                    &amp; MEASUREMENT</a>
+                                            </div>
+                                        </div>
+                                        <div class="mb-2">
+                                            <div class="d-flex align-items-center mb-1">
+                                                <img src="https://images.unsplash.com/photo-1533776504084-745b43b9f04b?w=80&auto=format&fit=crop&q=60"
+                                                    alt="Chemical" class="rounded me-2"
+                                                    style="width: 38px; height: 38px; object-fit: cover;">
+                                                <a href="category.html"
+                                                    class="fw-bold text-dark text-decoration-none small text-uppercase">FOOD
+                                                    &amp; CHEMICAL ENG.</a>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-lg-3">
+                                        <div class="mb-3">
+                                            <div class="d-flex align-items-center mb-1">
+                                                <img src="https://images.unsplash.com/photo-1558244661-d248897f7bc4?w=80&auto=format&fit=crop&q=60"
+                                                    alt="Textile" class="rounded me-2"
+                                                    style="width: 38px; height: 38px; object-fit: cover;">
+                                                <a href="category.html"
+                                                    class="fw-bold text-dark text-decoration-none small text-uppercase">TEXTILE
+                                                    ENGINEERING</a>
+                                            </div>
+                                        </div>
+                                        <div class="mb-3">
+                                            <div class="d-flex align-items-center mb-1">
+                                                <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=80&auto=format&fit=crop&q=60"
+                                                    alt="Communication" class="rounded me-2"
+                                                    style="width: 38px; height: 38px; object-fit: cover;">
+                                                <a href="category.html"
+                                                    class="fw-bold text-dark text-decoration-none small text-uppercase">COMMUNICATION
+                                                    ENG.</a>
+                                            </div>
+                                        </div>
+                                        <div class="mb-3">
+                                            <div class="d-flex align-items-center mb-1">
+                                                <img src="https://images.unsplash.com/photo-1511919884226-fd3cad34687c?w=80&auto=format&fit=crop&q=60"
+                                                    alt="Automobile" class="rounded me-2"
+                                                    style="width: 38px; height: 38px; object-fit: cover;">
+                                                <a href="category.html"
+                                                    class="fw-bold text-dark text-decoration-none small text-uppercase">AUTOMOBILE
+                                                    ENGINEERING</a>
+                                            </div>
+                                        </div>
+                                        <div class="mb-2">
+                                            <div class="d-flex align-items-center mb-1">
+                                                <img src="https://images.unsplash.com/photo-1444703686981-a3abbc4d4fe3?w=80&auto=format&fit=crop&q=60"
+                                                    alt="ICT" class="rounded me-2"
+                                                    style="width: 38px; height: 38px; object-fit: cover;">
+                                                <a href="category.html"
+                                                    class="fw-bold text-dark text-decoration-none small text-uppercase">ICT
+                                                    EQUIPMENT</a>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-lg-3 d-none d-lg-block">
+                                        <div class="mega-promo">
+                                            <h6>Can't find a product?</h6>
+                                            <p>Tell us your requirement and we will send a quotation.</p>
+                                            <a href="request-quotation.html" class="btn btn-accent btn-sm-c">Request a
+                                                Quote</a>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </li>
+
+                        <li class="nav-item"><a class="nav-link active" href="services.html">Services</a></li>
+                        <li class="nav-item"><a class="nav-link" href="brands.html">Brands</a></li>
+                        <li class="nav-item"><a class="nav-link" href="news.html">News &amp; Events</a></li>
+                        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+
+                        <li class="nav-item d-lg-none mt-3">
+                            <a href="request-quotation.html" class="btn btn-accent w-100">Request a Quote</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Search bar -->
+        <div class="collapse header-search" id="headerSearch">
+            <div class="container py-3">
+                <form action="products.html" method="get" class="search-box">
+                    <input type="search" name="q" class="form-control" placeholder="Search products by name or code..."
+                        aria-label="Search products">
+                    <button type="submit" aria-label="Search"><i class="fa-solid fa-magnifying-glass"></i></button>
+                </form>
+            </div>
+        </div>
+    </header>
+
+    <!-- ========= Header Section End ========= -->
+
+    <main>
+
+        <!-- ========= Page Banner ========= -->
+        <section class="page-banner">
+            <div class="container">
+                <h1 id="bannerTitle">Service Details</h1>
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                        <li class="breadcrumb-item"><a href="index.html#solutions">Services</a></li>
+                        <li class="breadcrumb-item active" aria-current="page" id="crumbTitle">Details</li>
+                    </ol>
+                </nav>
+            </div>
+        </section>
+
+        <!-- ========= Service Detail Section ========= -->
+        <section class="section">
+            <div class="container">
+                <div class="row g-5" id="serviceDetail">
+                    <!-- Filled by JavaScript below -->
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ========= Footer Section Start ========= -->
+    <footer class="footer" id="footer">
+        <div class="container footer-main">
+            <div class="row g-5">
+
+                <div class="col-lg-4 col-md-6">
+                    <a class="logo" href="index.html" aria-label="Home">
+                        <img src="asset/images/atcl_logo.jpeg" alt="">
+                        <span class="logo-text text-white">ATCL</span>
+                    </a>
+                    <p class="footer-about">A trusted solution provider delivering quality products, technical expertise
+                        and
+                        reliable after-sales support to industries across Bangladesh.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                        <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+                        <a href="#" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+                    </div>
+                </div>
+
+                <div class="col-lg-2 col-md-6 col-sm-6">
+                    <h5 class="footer-title">Quick Links</h5>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="mission-vision.html">Mission &amp; Vision</a></li>
+                        <li><a href="brands.html">Brands</a></li>
+                        <li><a href="news.html">News &amp; Events</a></li>
+                        <li><a href="careers.html">Careers</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-3 col-md-6 col-sm-6">
+                    <h5 class="footer-title">Our Solutions</h5>
+                    <ul class="footer-links">
+                        <li><a href="products.html">Analytical</a></li>
+                        <li><a href="products.html">Life Science</a></li>
+                        <li><a href="products.html">Industrial</a></li>
+                        <li><a href="products.html">Textile Testing</a></li>
+                        <li><a href="products.html">Leather Testing</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="request-quotation.html">Request a Quote</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="footer-title">Contact Us</h5>
+                    <ul class="footer-contact">
+                        <li>
+                            <span class="fc-icon"><i class="fa-solid fa-location-dot"></i></span>
+                            <span>12-A, 12th Floor, Center Point, Concord Tower, Tejkunipara, Farmgate 1215</span>
+                        </li>
+                        <li>
+                            <span class="fc-icon"><i class="fa-solid fa-phone"></i></span>
+                            <a href="tel:01819556755">01819556755</a>
+                        </li>
+                        <li>
+                            <span class="fc-icon"><i class="fa-solid fa-envelope"></i></span>
+                            <a href="mailto:atc@dhaka.net">atc@dhaka.net</a>
+                        </li>
+                        <li>
+                            <span class="fc-icon"><i class="fa-solid fa-clock"></i></span>
+                            <span>Sun – Thu: 9:00 AM – 6:00 PM</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p class="mb-0">&copy; <span id="footerYear">2026</span> ATCL Solutions. All rights reserved.</p>
+                <div class="footer-bottom-links">
+                    <a href="privacy-policy.html">Privacy Policy</a>
+                    <a href="terms.html">Terms &amp; Conditions</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to top -->
+    <button type="button" class="back-to-top" id="backToTop" aria-label="Back to top">
+        <i class="fa-solid fa-arrow-up"></i>
+    </button>
+    <!-- ========= Footer Section End ========= -->
+
+    <!-- ======== Bootstrap js Link ======== -->
+    <script src="asset/js/bootstrap.bundle.min.js"></script>
+    <!-- ======== Swiper js Link ======== -->
+    <script src="asset/js/swiper-bundle.min.js"></script>
+    <!-- ======== Custom js Link ======== -->
+    <script src="asset/js/script.js"></script>
+
+    <!-- ======== Service data + page renderer ======== -->
+    <script>
+        // All services live here. Add or edit a service by changing this object.
+        const SERVICES = {
+            "lab-establishment": {
+                title: "Lab Establishment / Project Consultancy",
+                image: "https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=1200&q=75",
+                intro: "Site survey, installation and acceptance testing by factory-trained engineers.",
+                description: "We plan and set up complete laboratories and industrial projects, from the first site visit to the final handover. Our engineers work with your team to choose the right equipment, design the layout and make sure everything meets your standards.",
+                points: ["Site survey and layout planning", "Equipment selection and specification", "Utility and safety requirements", "Installation and commissioning", "Acceptance testing and handover", "Project documentation"],
+                steps: [
+                    ["Requirement study", "We listen to your goals, budget and timeline."],
+                    ["Planning and design", "We prepare the layout, equipment list and utility plan."],
+                    ["Supply and installation", "Factory-trained engineers install and test every unit."],
+                    ["Handover", "We hand over with documentation and operator briefing."]
+                ]
+            },
+            "sales-technical-support": {
+                title: "Sales with Technical Support",
+                image: "https://images.unsplash.com/photo-1614935151651-0bea6508db6b?auto=format&fit=crop&w=1200&q=75",
+                intro: "Expert guidance from product selection to purchase, with traceable calibration certificates that keep you audit-ready.",
+                description: "Our sales specialists are also technically trained, so you get honest advice on the right instrument for your application. Every product we supply is genuine, from authorized brands, and comes with the documents you need for audits.",
+                points: ["Product consultation", "Genuine, authorized brands", "Quotation within 24 hours", "Calibration certificates", "Technical datasheets and compliance papers", "Comparison of alternatives"],
+                steps: [
+                    ["Tell us your need", "Share your application, samples or standards."],
+                    ["Get a recommendation", "We suggest suitable models with clear pros and cons."],
+                    ["Receive your quotation", "A detailed offer reaches you within 24 hours."],
+                    ["Order and certify", "We deliver with calibration and quality certificates."]
+                ]
+            },
+            "delivery-installation": {
+                title: "Quick Delivery & Installation",
+                image: "https://images.unsplash.com/photo-1602052577122-f73b9710adba?auto=format&fit=crop&w=1200&q=75",
+                intro: "Fast, careful delivery and scheduled installation so your equipment is ready to work without delay.",
+                description: "We handle logistics, customs coordination and on-site setup. Our team schedules installation visits around your operations, tests the equipment and confirms it runs to specification before we leave.",
+                points: ["Safe handling and transport", "Scheduled installation visits", "On-site setup and testing", "Performance verification", "Installation report", "Minimal downtime"],
+                steps: [
+                    ["Delivery planning", "We confirm dates, site access and requirements."],
+                    ["Safe delivery", "Equipment arrives packed and inspected."],
+                    ["Installation", "Engineers install, connect and calibrate."],
+                    ["Verification", "We test performance and sign off with you."]
+                ]
+            },
+            "training": {
+                title: "Comprehensive Training",
+                image: "https://images.unsplash.com/photo-1528953030358-b0c7de371f1f?auto=format&fit=crop&w=1200&q=75",
+                intro: "Hands-on operator training so your team gets the most from every instrument.",
+                description: "Good equipment needs skilled people. We train your operators and technicians on daily use, safe handling, routine care and basic troubleshooting, on site or at our facility.",
+                points: ["Operator and technician training", "Safe operation practices", "Routine maintenance basics", "Basic troubleshooting", "Training materials and manuals", "Refresher sessions"],
+                steps: [
+                    ["Assess skill level", "We learn who needs training and on what."],
+                    ["Practical sessions", "Hands-on training on your own equipment."],
+                    ["Evaluation", "We check understanding with real tasks."],
+                    ["Follow-up", "Refresher support when your team needs it."]
+                ]
+            },
+            "after-sales-support": {
+                title: "After Sales Support",
+                image: "https://images.unsplash.com/photo-1557804506-669a67965ba0?auto=format&fit=crop&w=1200&q=75",
+                intro: "Fast diagnosis, genuine spare parts and a local parts inventory.",
+                description: "Our relationship does not end at delivery. Our service team provides preventive maintenance, repairs and genuine spare parts so problems are caught before they stop production.",
+                points: ["Preventive maintenance visits", "Fast fault diagnosis", "Genuine spare parts", "Local parts inventory", "Warranty support", "Annual service contracts"],
+                steps: [
+                    ["Report an issue", "Call or message our support team."],
+                    ["Diagnosis", "Engineers identify the cause quickly."],
+                    ["Repair", "We fix it with genuine parts."],
+                    ["Prevention", "We recommend a maintenance plan to avoid repeats."]
+                ]
+            },
+            "online-technical-support": {
+                title: "24-Hours Online Technical Support",
+                image: "https://images.unsplash.com/photo-1747999918007-e3442cabb23a?auto=format&fit=crop&w=1200&q=75",
+                intro: "Honest advice and remote help whenever you need it, selecting, upgrading and planning your lab or plant.",
+                description: "Our technical team is reachable online around the clock. Whether you need help with settings, an error message or a plan for upgrading your lab, we respond quickly and explain clearly.",
+                points: ["Round-the-clock online access", "Remote troubleshooting", "Guidance on settings and methods", "Upgrade and expansion advice", "Quick response times", "Escalation to on-site engineers"],
+                steps: [
+                    ["Contact us", "Reach us by phone, email or message at any hour."],
+                    ["Remote check", "We guide you through diagnosis step by step."],
+                    ["Resolution", "Most issues are solved online."],
+                    ["Escalation", "If needed, an engineer visits your site."]
+                ]
+            }
+        };
+
+        (function () {
+            const params = new URLSearchParams(window.location.search);
+            const id = params.get("id");
+            const s = SERVICES[id];
+            const box = document.getElementById("serviceDetail");
+            const ids = Object.keys(SERVICES);
+
+            // Not found: show a friendly message
+            if (!s) {
+                document.title = "Service not found | ATCL";
+                document.getElementById("bannerTitle").textContent = "Service not found";
+                document.getElementById("crumbTitle").textContent = "Not found";
+                box.innerHTML = `
+          <div class="col-12 text-center py-5">
+            <h3>We could not find that service</h3>
+            <p>Please choose a service from our list.</p>
+            <a href="index.html#solutions" class="btn btn-main btn-lg-c">View all services</a>
+          </div>`;
+                return;
+            }
+
+            document.title = s.title + " | ATCL";
+            document.getElementById("bannerTitle").textContent = s.title;
+            document.getElementById("crumbTitle").textContent = s.title;
+
+            const i = ids.indexOf(id);
+            const prevId = ids[(i - 1 + ids.length) % ids.length];
+            const nextId = ids[(i + 1) % ids.length];
+
+            const points = s.points.map(p => `<li><i class="fa-solid fa-circle-check"></i><span>${p}</span></li>`).join("");
+            const steps = s.steps.map(st => `<li><strong>${st[0]}</strong><span>${st[1]}</span></li>`).join("");
+            const others = ids.map(k =>
+                `<li><a href="service-details.html?id=${k}" class="${k === id ? "active" : ""}"><span>${SERVICES[k].title}</span><i class="fa-solid fa-chevron-right small"></i></a></li>`
+            ).join("");
+
+            box.innerHTML = `
+        <div class="col-lg-8">
+          <div class="sd-main">
+            <img src="${s.image}" alt="${s.title}" class="sd-hero-img" onerror="this.style.display='none'">
+            <h2>${s.title}</h2>
+            <p class="lead">${s.intro}</p>
+            <p>${s.description}</p>
+
+            <h4>What is included</h4>
+            <ul class="sd-points">${points}</ul>
+
+            <h4>How it works</h4>
+            <ol class="sd-steps">${steps}</ol>
+
+            <div class="sd-prevnext">
+              <a href="service-details.html?id=${prevId}">
+                <small><i class="fa-solid fa-arrow-left me-1"></i>Previous</small>
+                <strong>${SERVICES[prevId].title}</strong>
+              </a>
+              <a href="service-details.html?id=${nextId}" class="next">
+                <small>Next<i class="fa-solid fa-arrow-right ms-1"></i></small>
+                <strong>${SERVICES[nextId].title}</strong>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4">
+          <aside class="sd-side">
+            <div class="sd-box">
+              <h5>All services</h5>
+              <ul class="sd-list">${others}</ul>
+            </div>
+            <div class="sd-box sd-cta">
+              <h5>Need this service?</h5>
+              <p>Tell us your requirement and we will reply with a quotation.</p>
+              <a href="request-quotation.html" class="btn btn-accent w-100">Request a Quote</a>
+              <a href="tel:01819556755" class="sd-phone"><i class="fa-solid fa-phone me-2"></i>01819556755</a>
+            </div>
+          </aside>
+        </div>`;
+        })();
+    </script>
+
+</body>
+
+</html>
