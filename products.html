@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Atcl Frontend</title>
+  <link rel="shortcut icon" href="./asset/images/atcl_logo.jpeg" type="image/x-icon">
+
 
     <!-- ======== Bootstrap css Link ======== -->
     <link rel="stylesheet" href="asset/css/bootstrap.min.css">
@@ -32,8 +34,7 @@
         <div class="container d-flex justify-content-between align-items-center">
             <div class="d-flex align-items-center gap-4">
                 <a href="tel:01819556755"><i class="fa-solid fa-phone me-2 text-accent"></i>01819556755</a>
-                <a href="mailto:atc@dhaka.net"><i
-                        class="fa-solid fa-envelope me-2 text-accent"></i>atc@dhaka.net</a>
+                <a href="mailto:atc@dhaka.net"><i class="fa-solid fa-envelope me-2 text-accent"></i>atc@dhaka.net</a>
                 <span><i class="fa-solid fa-location-dot me-2 text-accent"></i>Dhaka, Bangladesh</span>
             </div>
             <div class="social-links social-links-sm">
@@ -44,267 +45,281 @@
         </div>
     </div>
 
-   <!-- Main Header -->
-  <header class="header" id="header">
-    <nav class="navbar navbar-expand-lg">
-      <div class="container position-relative">
+    <!-- Main Header -->
+    <header class="header" id="header">
+        <nav class="navbar navbar-expand-lg">
+            <div class="container position-relative">
 
-        <!-- Logo (replace with real logo later) -->
-        <a class="logo" href="index.html" aria-label="Home">
-          <img src="asset/images/atcl_logo.jpeg" alt="">
-          <span class="logo-text">ATCL</span>
-        </a>
+                <!-- Logo (replace with real logo later) -->
+                <a class="logo" href="index.html" aria-label="Home">
+                    <img src="asset/images/atcl_logo.jpeg" alt="">
+                    <span class="logo-text">ATCL</span>
+                </a>
 
-        <!-- Right side icons (always visible) + mobile toggler -->
-        <div class="header-actions d-flex align-items-center gap-2 order-lg-last">
-          <button class="header-icon-btn" type="button" data-bs-toggle="collapse" data-bs-target="#headerSearch"
-            aria-expanded="false" aria-controls="headerSearch" aria-label="Search">
-            <i class="fa-solid fa-magnifying-glass"></i>
-          </button>
+                <!-- Right side icons (always visible) + mobile toggler -->
+                <div class="header-actions d-flex align-items-center gap-2 order-lg-last">
+                    <button class="header-icon-btn" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#headerSearch" aria-expanded="false" aria-controls="headerSearch"
+                        aria-label="Search">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </button>
 
-          <a href="inquiry.html" class="inquiry-btn" aria-label="Inquiry list">
-            <i class="fa-solid fa-clipboard-list"></i>
-            <span class="count" id="inquiryCount">0</span>
-          </a>
+                    <a href="inquiry.html" class="inquiry-btn" aria-label="Inquiry list">
+                        <i class="fa-solid fa-clipboard-list"></i>
+                        <span class="count" id="inquiryCount">0</span>
+                    </a>
 
-          <a href="request-quotation.html" class="btn btn-accent btn-sm-c d-none d-xxl-inline-block ms-2 text-nowrap">
-            Request a Quote
-          </a>
+                    <a href="request-quotation.html"
+                        class="btn btn-accent btn-sm-c d-none d-xxl-inline-block ms-2 text-nowrap">
+                        Request a Quote
+                    </a>
 
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainMenu"
-            aria-controls="mainMenu" aria-expanded="false" aria-label="Toggle navigation">
-            <i class="fa-solid fa-bars"></i>
-          </button>
-        </div>
-
-        <!-- Menu -->
-        <div class="collapse navbar-collapse justify-content-center" id="mainMenu">
-          <ul class="navbar-nav align-items-lg-center">
-
-            <li class="nav-item">
-              <a class="nav-link active" href="index.html">Home</a>
-            </li>
-
-            <!-- Company dropdown -->
-            <li class="nav-item dropdown">
-              <span class="nav-link">Company</span>
-              <button class="dropdown-caret d-lg-none" type="button" data-bs-toggle="dropdown" aria-expanded="false"
-                aria-label="Open Company menu"><i class="fa-solid fa-chevron-down"></i></button>
-              <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="about.html">About Us</a></li>
-
-                <li><a class="dropdown-item" href="mission-vision.html">Mission &amp; Vision</a></li>
-              </ul>
-            </li>
-
-            <!-- Products mega menu -->
-            <li class="nav-item dropdown mega">
-              <a class="nav-link" href="#">Products</a>
-              <button class="dropdown-caret d-lg-none" type="button" data-bs-toggle="dropdown" aria-expanded="false"
-                aria-label="Open Products menu"><i class="fa-solid fa-chevron-down"></i></button>
-              <div class="dropdown-menu mega-menu">
-                <div class="row g-4">
-
-                  <!-- Column 1 -->
-                  <div class="col-lg-3">
-
-                    <!-- Category 1 -->
-                    <div class="mb-3">
-                      <div class="d-flex align-items-center mb-1">
-                        <img
-                          src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=80&auto=format&fit=crop&q=60"
-                          alt="Survey" class="rounded me-2" style="width: 38px; height: 38px; object-fit: cover;">
-                        <a href="category.html" class="fw-bold text-dark text-decoration-none small text-uppercase">ALL
-                          SURVEY EQUIPMENT</a>
-                      </div>
-                      
-                    </div>
-
-                    <!-- Category 2 -->
-                    <div class="mb-3">
-                      <div class="d-flex align-items-center mb-1">
-                        <img
-                          src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=80&auto=format&fit=crop&q=60"
-                          alt="Heavy Machinery" class="rounded me-2"
-                          style="width: 38px; height: 38px; object-fit: cover;">
-                        <a href="category.html"
-                          class="fw-bold text-dark text-decoration-none small text-uppercase">MECHANICAL & HEAVY
-                          MACHINERY</a>
-                      </div>
-                      
-                    </div>
-
-                    <!-- Category 3 -->
-                    <div class="mb-3">
-                      <div class="d-flex align-items-center mb-1">
-                        <img
-                          src="https://images.unsplash.com/photo-1616401784845-180882ba9ba8?w=80&auto=format&fit=crop&q=60"
-                          alt="CNC" class="rounded me-2" style="width: 38px; height: 38px; object-fit: cover;">
-                        <a href="category.html"
-                          class="fw-bold text-dark text-decoration-none small text-uppercase">CNC-BASED MACHINERY</a>
-                      </div>
-                      
-                    </div>
-
-                    <!-- Category 4 -->
-                    <div class="mb-2">
-                      <div class="d-flex align-items-center mb-1">
-                        <img
-                          src="https://images.unsplash.com/photo-1509391366360-2e959784a276?w=80&auto=format&fit=crop&q=60"
-                          alt="Electrical" class="rounded me-2" style="width: 38px; height: 38px; object-fit: cover;">
-                        <a href="category.html"
-                          class="fw-bold text-dark text-decoration-none small text-uppercase">ELECTRICAL &
-                          ELECTRONICS</a>
-                      </div>
-                     
-                    </div>
-
-                  </div>
-
-                  <!-- Column 2 -->
-                  <div class="col-lg-3">
-
-                    <!-- Category 5 -->
-                    <div class="mb-3">
-                      <div class="d-flex align-items-center mb-1">
-                        <img
-                          src="https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=80&auto=format&fit=crop&q=60"
-                          alt="AI Robotics" class="rounded me-2" style="width: 38px; height: 38px; object-fit: cover;">
-                        <a href="category.html" class="fw-bold text-dark text-decoration-none small text-uppercase">AI,
-                          IOT & ROBOTICS</a>
-                      </div>
-                      
-                    </div>
-
-                    <!-- Category 6 -->
-                    <div class="mb-3">
-                      <div class="d-flex align-items-center mb-1">
-                        <img
-                          src="https://images.unsplash.com/photo-1508514177221-188b1cf16e9d?w=80&auto=format&fit=crop&q=60"
-                          alt="Energy" class="rounded me-2" style="width: 38px; height: 38px; object-fit: cover;">
-                        <a href="category.html"
-                          class="fw-bold text-dark text-decoration-none small text-uppercase">ENERGY & ENVIRONMENTAL</a>
-                      </div>
-                      
-                    </div>
-
-                    <!-- Category 7 -->
-                    <div class="mb-3">
-                      <div class="d-flex align-items-center mb-1">
-                        <img
-                          src="https://images.unsplash.com/photo-1562408590-e32931084e23?w=80&auto=format&fit=crop&q=60"
-                          alt="Measurement" class="rounded me-2" style="width: 38px; height: 38px; object-fit: cover;">
-                        <a href="category.html" class="fw-bold text-dark text-decoration-none small text-uppercase">TEST
-                          & MEASUREMENT</a>
-                      </div>
-                     
-                    </div>
-
-                    <!-- Category 8 -->
-                    <div class="mb-2">
-                      <div class="d-flex align-items-center mb-1">
-                        <img
-                          src="https://images.unsplash.com/photo-1533776504084-745b43b9f04b?w=80&auto=format&fit=crop&q=60"
-                          alt="Chemical" class="rounded me-2" style="width: 38px; height: 38px; object-fit: cover;">
-                        <a href="category.html" class="fw-bold text-dark text-decoration-none small text-uppercase">FOOD
-                          & CHEMICAL ENG.</a>
-                      </div>
-                     
-                    </div>
-
-                  </div>
-
-                  <!-- Column 3 -->
-                  <div class="col-lg-3">
-
-                    <!-- Category 9 -->
-                    <div class="mb-3">
-                      <div class="d-flex align-items-center mb-1">
-                        <img
-                          src="https://images.unsplash.com/photo-1558244661-d248897f7bc4?w=80&auto=format&fit=crop&q=60"
-                          alt="Textile" class="rounded me-2" style="width: 38px; height: 38px; object-fit: cover;">
-                        <a href="category.html"
-                          class="fw-bold text-dark text-decoration-none small text-uppercase">TEXTILE ENGINEERING</a>
-                      </div>
-                     
-                    </div>
-
-                    <!-- Category 10 -->
-                    <div class="mb-3">
-                      <div class="d-flex align-items-center mb-1">
-                        <img
-                          src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=80&auto=format&fit=crop&q=60"
-                          alt="Communication" class="rounded me-2"
-                          style="width: 38px; height: 38px; object-fit: cover;">
-                        <a href="category.html"
-                          class="fw-bold text-dark text-decoration-none small text-uppercase">COMMUNICATION ENG.</a>
-                      </div>
-                      
-                    </div>
-
-                    <!-- Category 11 -->
-                    <div class="mb-3">
-                      <div class="d-flex align-items-center mb-1">
-                        <img
-                          src="https://images.unsplash.com/photo-1511919884226-fd3cad34687c?w=80&auto=format&fit=crop&q=60"
-                          alt="Automobile" class="rounded me-2" style="width: 38px; height: 38px; object-fit: cover;">
-                        <a href="category.html"
-                          class="fw-bold text-dark text-decoration-none small text-uppercase">AUTOMOBILE ENGINEERING</a>
-                      </div>
-                      
-                    </div>
-
-                    <!-- Category 12 -->
-                    <div class="mb-2">
-                      <div class="d-flex align-items-center mb-1">
-                        <img
-                          src="https://images.unsplash.com/photo-1444703686981-a3abbc4d4fe3?w=80&auto=format&fit=crop&q=60"
-                          alt="Aerospace" class="rounded me-2" style="width: 38px; height: 38px; object-fit: cover;">
-                        <a href="category.html"
-                          class="fw-bold text-dark text-decoration-none small text-uppercase">AEROSPACE &
-                          AERONAUTICAL</a>
-                      </div>
-                      
-                    </div>
-
-                  </div>
-
-                   <div class="col-lg-3 d-none d-lg-block">
-                    <div class="mega-promo">
-                      <h6>Can't find a product?</h6>
-                      <p>Tell us your requirement and we will send a quotation.</p>
-                      <a href="request-quotation.html" class="btn btn-accent btn-sm-c">Request a Quote</a>
-                    </div>
-
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainMenu"
+                        aria-controls="mainMenu" aria-expanded="false" aria-label="Toggle navigation">
+                        <i class="fa-solid fa-bars"></i>
+                    </button>
                 </div>
-              </div>
-            </li>
 
-            <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
-            <li class="nav-item"><a class="nav-link" href="brands.html">Brands</a></li>
-            <li class="nav-item"><a class="nav-link" href="news.html">News &amp; Events</a></li>
-            <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                <!-- Menu -->
+                <div class="collapse navbar-collapse justify-content-center" id="mainMenu">
+                    <ul class="navbar-nav align-items-lg-center">
 
-            <!-- Shown only on mobile menu -->
-            <li class="nav-item d-lg-none mt-3">
-              <a href="request-quotation.html" class="btn btn-accent w-100">Request a Quote</a>
-            </li>
-          </ul>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="index.html">Home</a>
+                        </li>
+
+                        <!-- Company dropdown -->
+                        <li class="nav-item dropdown">
+                            <span class="nav-link">Company</span>
+                            <button class="dropdown-caret d-lg-none" type="button" data-bs-toggle="dropdown"
+                                aria-expanded="false" aria-label="Open Company menu"><i
+                                    class="fa-solid fa-chevron-down"></i></button>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="about.html">About Us</a></li>
+
+                                <li><a class="dropdown-item" href="mission-vision.html">Mission &amp; Vision</a></li>
+                            </ul>
+                        </li>
+
+                        <!-- Products mega menu -->
+                        <li class="nav-item dropdown mega">
+                            <a class="nav-link" href="#">Products</a>
+                            <button class="dropdown-caret d-lg-none" type="button" data-bs-toggle="dropdown"
+                                aria-expanded="false" aria-label="Open Products menu"><i
+                                    class="fa-solid fa-chevron-down"></i></button>
+                            <div class="dropdown-menu mega-menu">
+                                <div class="row g-4">
+
+                                    <!-- Column 1 -->
+                                    <div class="col-lg-3">
+
+                                        <!-- Category 1 -->
+                                        <div class="mb-3">
+                                            <div class="d-flex align-items-center mb-1">
+                                                <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=80&auto=format&fit=crop&q=60"
+                                                    alt="Survey" class="rounded me-2"
+                                                    style="width: 38px; height: 38px; object-fit: cover;">
+                                                <a href="category.html"
+                                                    class="fw-bold text-dark text-decoration-none small text-uppercase">ALL
+                                                    SURVEY EQUIPMENT</a>
+                                            </div>
+
+                                        </div>
+
+                                        <!-- Category 2 -->
+                                        <div class="mb-3">
+                                            <div class="d-flex align-items-center mb-1">
+                                                <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=80&auto=format&fit=crop&q=60"
+                                                    alt="Heavy Machinery" class="rounded me-2"
+                                                    style="width: 38px; height: 38px; object-fit: cover;">
+                                                <a href="category.html"
+                                                    class="fw-bold text-dark text-decoration-none small text-uppercase">MECHANICAL
+                                                    & HEAVY
+                                                    MACHINERY</a>
+                                            </div>
+
+                                        </div>
+
+                                        <!-- Category 3 -->
+                                        <div class="mb-3">
+                                            <div class="d-flex align-items-center mb-1">
+                                                <img src="https://images.unsplash.com/photo-1616401784845-180882ba9ba8?w=80&auto=format&fit=crop&q=60"
+                                                    alt="CNC" class="rounded me-2"
+                                                    style="width: 38px; height: 38px; object-fit: cover;">
+                                                <a href="category.html"
+                                                    class="fw-bold text-dark text-decoration-none small text-uppercase">CNC-BASED
+                                                    MACHINERY</a>
+                                            </div>
+
+                                        </div>
+
+                                        <!-- Category 4 -->
+                                        <div class="mb-2">
+                                            <div class="d-flex align-items-center mb-1">
+                                                <img src="https://images.unsplash.com/photo-1509391366360-2e959784a276?w=80&auto=format&fit=crop&q=60"
+                                                    alt="Electrical" class="rounded me-2"
+                                                    style="width: 38px; height: 38px; object-fit: cover;">
+                                                <a href="category.html"
+                                                    class="fw-bold text-dark text-decoration-none small text-uppercase">ELECTRICAL
+                                                    &
+                                                    ELECTRONICS</a>
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+
+                                    <!-- Column 2 -->
+                                    <div class="col-lg-3">
+
+                                        <!-- Category 5 -->
+                                        <div class="mb-3">
+                                            <div class="d-flex align-items-center mb-1">
+                                                <img src="https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=80&auto=format&fit=crop&q=60"
+                                                    alt="AI Robotics" class="rounded me-2"
+                                                    style="width: 38px; height: 38px; object-fit: cover;">
+                                                <a href="category.html"
+                                                    class="fw-bold text-dark text-decoration-none small text-uppercase">AI,
+                                                    IOT & ROBOTICS</a>
+                                            </div>
+
+                                        </div>
+
+                                        <!-- Category 6 -->
+                                        <div class="mb-3">
+                                            <div class="d-flex align-items-center mb-1">
+                                                <img src="https://images.unsplash.com/photo-1508514177221-188b1cf16e9d?w=80&auto=format&fit=crop&q=60"
+                                                    alt="Energy" class="rounded me-2"
+                                                    style="width: 38px; height: 38px; object-fit: cover;">
+                                                <a href="category.html"
+                                                    class="fw-bold text-dark text-decoration-none small text-uppercase">ENERGY
+                                                    & ENVIRONMENTAL</a>
+                                            </div>
+
+                                        </div>
+
+                                        <!-- Category 7 -->
+                                        <div class="mb-3">
+                                            <div class="d-flex align-items-center mb-1">
+                                                <img src="https://images.unsplash.com/photo-1562408590-e32931084e23?w=80&auto=format&fit=crop&q=60"
+                                                    alt="Measurement" class="rounded me-2"
+                                                    style="width: 38px; height: 38px; object-fit: cover;">
+                                                <a href="category.html"
+                                                    class="fw-bold text-dark text-decoration-none small text-uppercase">TEST
+                                                    & MEASUREMENT</a>
+                                            </div>
+
+                                        </div>
+
+                                        <!-- Category 8 -->
+                                        <div class="mb-2">
+                                            <div class="d-flex align-items-center mb-1">
+                                                <img src="https://images.unsplash.com/photo-1533776504084-745b43b9f04b?w=80&auto=format&fit=crop&q=60"
+                                                    alt="Chemical" class="rounded me-2"
+                                                    style="width: 38px; height: 38px; object-fit: cover;">
+                                                <a href="category.html"
+                                                    class="fw-bold text-dark text-decoration-none small text-uppercase">FOOD
+                                                    & CHEMICAL ENG.</a>
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+
+                                    <!-- Column 3 -->
+                                    <div class="col-lg-3">
+
+                                        <!-- Category 9 -->
+                                        <div class="mb-3">
+                                            <div class="d-flex align-items-center mb-1">
+                                                <img src="https://images.unsplash.com/photo-1558244661-d248897f7bc4?w=80&auto=format&fit=crop&q=60"
+                                                    alt="Textile" class="rounded me-2"
+                                                    style="width: 38px; height: 38px; object-fit: cover;">
+                                                <a href="category.html"
+                                                    class="fw-bold text-dark text-decoration-none small text-uppercase">TEXTILE
+                                                    ENGINEERING</a>
+                                            </div>
+
+                                        </div>
+
+                                        <!-- Category 10 -->
+                                        <div class="mb-3">
+                                            <div class="d-flex align-items-center mb-1">
+                                                <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=80&auto=format&fit=crop&q=60"
+                                                    alt="Communication" class="rounded me-2"
+                                                    style="width: 38px; height: 38px; object-fit: cover;">
+                                                <a href="category.html"
+                                                    class="fw-bold text-dark text-decoration-none small text-uppercase">COMMUNICATION
+                                                    ENG.</a>
+                                            </div>
+
+                                        </div>
+
+                                        <!-- Category 11 -->
+                                        <div class="mb-3">
+                                            <div class="d-flex align-items-center mb-1">
+                                                <img src="https://images.unsplash.com/photo-1511919884226-fd3cad34687c?w=80&auto=format&fit=crop&q=60"
+                                                    alt="Automobile" class="rounded me-2"
+                                                    style="width: 38px; height: 38px; object-fit: cover;">
+                                                <a href="category.html"
+                                                    class="fw-bold text-dark text-decoration-none small text-uppercase">AUTOMOBILE
+                                                    ENGINEERING</a>
+                                            </div>
+
+                                        </div>
+
+                                        <!-- Category 12 -->
+                                        <div class="mb-2">
+                                            <div class="d-flex align-items-center mb-1">
+                                                <img src="https://images.unsplash.com/photo-1444703686981-a3abbc4d4fe3?w=80&auto=format&fit=crop&q=60"
+                                                    alt="Aerospace" class="rounded me-2"
+                                                    style="width: 38px; height: 38px; object-fit: cover;">
+                                                <a href="category.html"
+                                                    class="fw-bold text-dark text-decoration-none small text-uppercase">ICT
+                                                    EQUIPMENT</a>
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+
+                                    <div class="col-lg-3 d-none d-lg-block">
+                                        <div class="mega-promo">
+                                            <h6>Can't find a product?</h6>
+                                            <p>Tell us your requirement and we will send a quotation.</p>
+                                            <a href="request-quotation.html" class="btn btn-accent btn-sm-c">Request a
+                                                Quote</a>
+                                        </div>
+
+                                    </div>
+                                </div>
+                        </li>
+
+                        <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+                        <li class="nav-item"><a class="nav-link" href="brands.html">Brands</a></li>
+                        <li class="nav-item"><a class="nav-link" href="news.html">News &amp; Events</a></li>
+                        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+
+                        <!-- Shown only on mobile menu -->
+                        <li class="nav-item d-lg-none mt-3">
+                            <a href="request-quotation.html" class="btn btn-accent w-100">Request a Quote</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Search bar (opens under the header) -->
+        <div class="collapse header-search" id="headerSearch">
+            <div class="container py-3">
+                <form action="products.html" method="get" class="search-box">
+                    <input type="search" name="q" class="form-control" placeholder="Search products by name or code..."
+                        aria-label="Search products">
+                    <button type="submit" aria-label="Search"><i class="fa-solid fa-magnifying-glass"></i></button>
+                </form>
+            </div>
         </div>
-      </div>
-    </nav>
-
-    <!-- Search bar (opens under the header) -->
-    <div class="collapse header-search" id="headerSearch">
-      <div class="container py-3">
-        <form action="products.html" method="get" class="search-box">
-          <input type="search" name="q" class="form-control" placeholder="Search products by name or code..."
-            aria-label="Search products">
-          <button type="submit" aria-label="Search"><i class="fa-solid fa-magnifying-glass"></i></button>
-        </form>
-      </div>
-    </div>
-  </header>
+    </header>
 
     <!-- ========= Header Section End ========= -->
 
@@ -350,9 +365,8 @@
                                         <div class="pl-subs">
                                             <div class="pl-node">
                                                 <div class="pl-row"><button type="button" class="pl-cat"
-                                                        data-cat="land-survey"><span>Land
-                                                            Survey</span><em>13</em></button><button type="button"
-                                                        class="pl-toggle" aria-label="Expand Land Survey"><i
+                                                        data-cat="land-survey"><span>Surveying</span><em>13</em></button><button type="button"
+                                                        class="pl-toggle" aria-label="Expand Surveying"><i
                                                             class="fa-solid fa-chevron-down"></i></button></div>
                                                 <div class="pl-kids"><button type="button" class="pl-cat pl-child"
                                                         data-cat="theodolites"><span>Theodolites</span><em>2</em></button><button
@@ -366,9 +380,8 @@
                                             </div>
                                             <div class="pl-node">
                                                 <div class="pl-row"><button type="button" class="pl-cat"
-                                                        data-cat="laser-scanning"><span>Laser
-                                                            Scanning</span><em>4</em></button><button type="button"
-                                                        class="pl-toggle" aria-label="Expand Laser Scanning"><i
+                                                        data-cat="laser-scanning"><span>Civil  Engineering</span><em>4</em></button><button type="button"
+                                                        class="pl-toggle" aria-label="Expand Civil  Engineering"><i
                                                             class="fa-solid fa-chevron-down"></i></button></div>
                                                 <div class="pl-kids"><button type="button" class="pl-cat pl-child"
                                                         data-cat="terrestrial"><span>Terrestrial
@@ -378,9 +391,8 @@
                                             </div>
                                             <div class="pl-node">
                                                 <div class="pl-row"><button type="button" class="pl-cat"
-                                                        data-cat="gis"><span>GIS Data
-                                                            Collection</span><em>2</em></button><button type="button"
-                                                        class="pl-toggle" aria-label="Expand GIS Data Collection"><i
+                                                        data-cat="gis"><span>Hydrography</span><em>2</em></button><button type="button"
+                                                        class="pl-toggle" aria-label="Expand Hydrography"><i
                                                             class="fa-solid fa-chevron-down"></i></button></div>
                                                 <div class="pl-kids"><button type="button" class="pl-cat pl-child"
                                                         data-cat="gis-gnss"><span>GNSS
@@ -388,9 +400,8 @@
                                             </div>
                                             <div class="pl-node">
                                                 <div class="pl-row"><button type="button" class="pl-cat"
-                                                        data-cat="mobile-mapping"><span>Mobile
-                                                            Mapping</span><em>2</em></button><button type="button"
-                                                        class="pl-toggle" aria-label="Expand Mobile Mapping"><i
+                                                        data-cat="mobile-mapping"><span>Accessories</span><em>2</em></button><button type="button"
+                                                        class="pl-toggle" aria-label="Expand Accessories"><i
                                                             class="fa-solid fa-chevron-down"></i></button></div>
                                                 <div class="pl-kids"><button type="button" class="pl-cat pl-child"
                                                         data-cat="mm-systems"><span>Mapping
@@ -399,8 +410,8 @@
                                         </div><span class="pl-group">Other</span>
                                         <div class="pl-node">
                                             <div class="pl-row"><button type="button" class="pl-cat"
-                                                    data-cat="accessories"><span>Accessories</span><em>6</em></button><button
-                                                    type="button" class="pl-toggle" aria-label="Expand Accessories"><i
+                                                    data-cat="Total Station "><span>Total Station </span><em>6</em></button><button
+                                                    type="button" class="pl-toggle" aria-label="Expand Total Station "><i
                                                         class="fa-solid fa-chevron-down"></i></button></div>
                                             <div class="pl-kids"><button type="button" class="pl-cat pl-child"
                                                     data-cat="tripods"><span>Tripods</span><em>2</em></button><button
@@ -413,17 +424,15 @@
                                         </div>
                                         <div class="pl-node">
                                             <div class="pl-row"><button type="button" class="pl-cat"
-                                                    data-cat="field-controller"><span>Field
-                                                        Controller</span><em>3</em></button></div>
+                                                    data-cat="field-controller"><span> GNSS/RTK GPS </span><em>3</em></button></div>
                                         </div>
                                         <div class="pl-node">
                                             <div class="pl-row"><button type="button" class="pl-cat"
-                                                    data-cat="handheld"><span>Handheld Data
-                                                        Collector</span><em>2</em></button></div>
+                                                    data-cat="handheld"><span>Levels</span><em>2</em></button></div>
                                         </div>
                                         <div class="pl-node">
                                             <div class="pl-row"><button type="button" class="pl-cat"
-                                                    data-cat="software"><span>Software</span><em>4</em></button><button
+                                                    data-cat="software"><span>Layout Navigator</span><em>4</em></button><button
                                                     type="button" class="pl-toggle" aria-label="Expand Software"><i
                                                         class="fa-solid fa-chevron-down"></i></button></div>
                                             <div class="pl-kids"><button type="button" class="pl-cat pl-child"
@@ -437,15 +446,15 @@
                                 <div class="pl-box">
                                     <h6><i class="fa-solid fa-tags"></i>Brands</h6>
                                     <div class="pl-brands"><label class="pl-brand"><input type="checkbox"
-                                                value="Kolida"><span>Kolida</span></label><label class="pl-brand"><input
-                                                type="checkbox" value="Spectra"><span>Spectra</span></label><label
+                                                value="Topcon"><span>Topcon</span></label><label class="pl-brand"><input
+                                                type="checkbox" value="Sokkia"><span>Sokkia</span></label><label
                                             class="pl-brand"><input type="checkbox"
-                                                value="Nikon"><span>Nikon</span></label><label class="pl-brand"><input
+                                                value="Kolida"><span>Kolida</span></label><label class="pl-brand"><input
                                                 type="checkbox" value="Myzox"><span>Myzox</span></label><label
                                             class="pl-brand"><input type="checkbox"
-                                                value="Koizumi"><span>Koizumi</span></label><label
-                                            class="pl-brand"><input type="checkbox"
-                                                value="Trimble"><span>Trimble</span></label></div>
+                                                value="Garmin"><span>Garmin</span></label><label class="pl-brand"><input
+                                                type="checkbox" value="CEE Hydrosystem"><span>CEE
+                                                Hydrosystem</span></label></div>
                                 </div>
                                 <button type="button" class="btn btn-main w-100 d-lg-none" data-bs-dismiss="offcanvas"
                                     data-bs-target="#filterPanel">Show Results</button>
@@ -490,14 +499,14 @@
 
                         <div class="row g-4" id="plGrid">
                             <div class="col-6 col-xl-4 pl-item" data-name="Conventional Theodolite KT-02/05, KT-02L/05L"
-                                data-brand="Kolida" data-cat="land-survey" data-sub="theodolites">
+                                data-brand="Topcon" data-cat="land-survey" data-sub="theodolites">
                                 <article class="cat-prod">
                                     <a class="cat-prod-img" href="product-details.html"
                                         aria-label="View product details"><img
                                             src="https://images.unsplash.com/photo-1628158088936-68ccaaa400dc?auto=format&fit=crop&w=700&q=75"
                                             alt="Conventional Theodolite KT-02/05, KT-02L/05L" loading="lazy"
                                             onerror="this.style.display='none'"><span
-                                            class="cat-brand">Kolida</span></a>
+                                            class="cat-brand">Topcon</span></a>
                                     <div class="cat-prod-body">
                                         <h5><a href="product-details.html">Conventional Theodolite KT-02/05,
                                                 KT-02L/05L</a></h5>
@@ -508,14 +517,14 @@
                                 </article>
                             </div>
                             <div class="col-6 col-xl-4 pl-item" data-name="Digital Theodolite DT Series"
-                                data-brand="Kolida" data-cat="land-survey" data-sub="theodolites">
+                                data-brand="Topcon" data-cat="land-survey" data-sub="theodolites">
                                 <article class="cat-prod">
                                     <a class="cat-prod-img" href="product-details.html"
                                         aria-label="View product details"><img
                                             src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=700&q=75"
                                             alt="Digital Theodolite DT Series" loading="lazy"
                                             onerror="this.style.display='none'"><span
-                                            class="cat-brand">Kolida</span></a>
+                                            class="cat-brand">Topcon</span></a>
                                     <div class="cat-prod-body">
                                         <h5><a href="product-details.html">Digital Theodolite DT Series</a></h5>
                                         <button type="button" class="cat-add"
@@ -525,14 +534,14 @@
                                 </article>
                             </div>
                             <div class="col-6 col-xl-4 pl-item" data-name="Auto Level KL-A30 / KL / DSZ Series"
-                                data-brand="Kolida" data-cat="land-survey" data-sub="levels">
+                                data-brand="Topcon" data-cat="land-survey" data-sub="levels">
                                 <article class="cat-prod">
                                     <a class="cat-prod-img" href="product-details.html"
                                         aria-label="View product details"><img
                                             src="https://images.unsplash.com/photo-1621905252507-b35492cc74b4?auto=format&fit=crop&w=700&q=75"
                                             alt="Auto Level KL-A30 / KL / DSZ Series" loading="lazy"
                                             onerror="this.style.display='none'"><span
-                                            class="cat-brand">Kolida</span></a>
+                                            class="cat-brand">Topcon</span></a>
                                     <div class="cat-prod-body">
                                         <h5><a href="product-details.html">Auto Level KL-A30 / KL / DSZ Series</a></h5>
                                         <button type="button" class="cat-add"
@@ -542,14 +551,14 @@
                                 </article>
                             </div>
                             <div class="col-6 col-xl-4 pl-item" data-name="Digital Level KL-15 / KL-07"
-                                data-brand="Kolida" data-cat="land-survey" data-sub="levels">
+                                data-brand="Topcon" data-cat="land-survey" data-sub="levels">
                                 <article class="cat-prod">
                                     <a class="cat-prod-img" href="product-details.html"
                                         aria-label="View product details"><img
                                             src="https://images.unsplash.com/photo-1747999918007-e3442cabb23a?auto=format&fit=crop&w=700&q=75"
                                             alt="Digital Level KL-15 / KL-07" loading="lazy"
                                             onerror="this.style.display='none'"><span
-                                            class="cat-brand">Kolida</span></a>
+                                            class="cat-brand">Topcon</span></a>
                                     <div class="cat-prod-body">
                                         <h5><a href="product-details.html">Digital Level KL-15 / KL-07</a></h5>
                                         <button type="button" class="cat-add" data-name="Digital Level KL-15 / KL-07"><i
@@ -557,14 +566,15 @@
                                     </div>
                                 </article>
                             </div>
-                            <div class="col-6 col-xl-4 pl-item" data-name="Automatic Level AP-8" data-brand="Nikon"
+                            <div class="col-6 col-xl-4 pl-item" data-name="Automatic Level AP-8" data-brand="Kolida"
                                 data-cat="land-survey" data-sub="levels">
                                 <article class="cat-prod">
                                     <a class="cat-prod-img" href="product-details.html"
                                         aria-label="View product details"><img
                                             src="https://images.unsplash.com/photo-1614935151651-0bea6508db6b?auto=format&fit=crop&w=700&q=75"
                                             alt="Automatic Level AP-8" loading="lazy"
-                                            onerror="this.style.display='none'"><span class="cat-brand">Nikon</span></a>
+                                            onerror="this.style.display='none'"><span
+                                            class="cat-brand">Kolida</span></a>
                                     <div class="cat-prod-body">
                                         <h5><a href="product-details.html">Automatic Level AP-8</a></h5>
                                         <button type="button" class="cat-add" data-name="Automatic Level AP-8"><i
@@ -572,7 +582,7 @@
                                     </div>
                                 </article>
                             </div>
-                            <div class="col-6 col-xl-4 pl-item" data-name="Total Station KTS-442UT" data-brand="Kolida"
+                            <div class="col-6 col-xl-4 pl-item" data-name="Total Station KTS-442UT" data-brand="Topcon"
                                 data-cat="land-survey" data-sub="total-stations">
                                 <article class="cat-prod">
                                     <a class="cat-prod-img" href="product-details.html"
@@ -580,7 +590,7 @@
                                             src="https://images.unsplash.com/photo-1602052577122-f73b9710adba?auto=format&fit=crop&w=700&q=75"
                                             alt="Total Station KTS-442UT" loading="lazy"
                                             onerror="this.style.display='none'"><span
-                                            class="cat-brand">Kolida</span></a>
+                                            class="cat-brand">Topcon</span></a>
                                     <div class="cat-prod-body">
                                         <h5><a href="product-details.html">Total Station KTS-442UT</a></h5>
                                         <button type="button" class="cat-add" data-name="Total Station KTS-442UT"><i
@@ -588,31 +598,33 @@
                                     </div>
                                 </article>
                             </div>
-                            <div class="col-6 col-xl-4 pl-item" data-name="Robotic Total Station Trimble S5"
-                                data-brand="Trimble" data-cat="land-survey" data-sub="total-stations">
+                            <div class="col-6 col-xl-4 pl-item" data-name="Robotic Total Station CEE Hydrosystem S5"
+                                data-brand="CEE Hydrosystem" data-cat="land-survey" data-sub="total-stations">
                                 <article class="cat-prod">
                                     <a class="cat-prod-img" href="product-details.html"
                                         aria-label="View product details"><img
                                             src="https://images.unsplash.com/photo-1628158088936-68ccaaa400dc?auto=format&fit=crop&w=700&q=75"
-                                            alt="Robotic Total Station Trimble S5" loading="lazy"
-                                            onerror="this.style.display='none'"><span
-                                            class="cat-brand">Trimble</span></a>
+                                            alt="Robotic Total Station CEE Hydrosystem S5" loading="lazy"
+                                            onerror="this.style.display='none'"><span class="cat-brand">CEE
+                                            Hydrosystem</span></a>
                                     <div class="cat-prod-body">
-                                        <h5><a href="product-details.html">Robotic Total Station Trimble S5</a></h5>
+                                        <h5><a href="product-details.html">Robotic Total Station CEE Hydrosystem S5</a>
+                                        </h5>
                                         <button type="button" class="cat-add"
-                                            data-name="Robotic Total Station Trimble S5"><i
+                                            data-name="Robotic Total Station CEE Hydrosystem S5"><i
                                                 class="fa-solid fa-plus"></i><span>Add to Inquiry</span></button>
                                     </div>
                                 </article>
                             </div>
-                            <div class="col-6 col-xl-4 pl-item" data-name="Total Station Nivo 5.C" data-brand="Nikon"
+                            <div class="col-6 col-xl-4 pl-item" data-name="Total Station Nivo 5.C" data-brand="Kolida"
                                 data-cat="land-survey" data-sub="total-stations">
                                 <article class="cat-prod">
                                     <a class="cat-prod-img" href="product-details.html"
                                         aria-label="View product details"><img
                                             src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=700&q=75"
                                             alt="Total Station Nivo 5.C" loading="lazy"
-                                            onerror="this.style.display='none'"><span class="cat-brand">Nikon</span></a>
+                                            onerror="this.style.display='none'"><span
+                                            class="cat-brand">Kolida</span></a>
                                     <div class="cat-prod-body">
                                         <h5><a href="product-details.html">Total Station Nivo 5.C</a></h5>
                                         <button type="button" class="cat-add" data-name="Total Station Nivo 5.C"><i
@@ -620,7 +632,7 @@
                                     </div>
                                 </article>
                             </div>
-                            <div class="col-6 col-xl-4 pl-item" data-name="Total Station FOCUS 35" data-brand="Spectra"
+                            <div class="col-6 col-xl-4 pl-item" data-name="Total Station FOCUS 35" data-brand="Sokkia"
                                 data-cat="land-survey" data-sub="total-stations">
                                 <article class="cat-prod">
                                     <a class="cat-prod-img" href="product-details.html"
@@ -628,7 +640,7 @@
                                             src="https://images.unsplash.com/photo-1621905252507-b35492cc74b4?auto=format&fit=crop&w=700&q=75"
                                             alt="Total Station FOCUS 35" loading="lazy"
                                             onerror="this.style.display='none'"><span
-                                            class="cat-brand">Spectra</span></a>
+                                            class="cat-brand">Sokkia</span></a>
                                     <div class="cat-prod-body">
                                         <h5><a href="product-details.html">Total Station FOCUS 35</a></h5>
                                         <button type="button" class="cat-add" data-name="Total Station FOCUS 35"><i
@@ -636,57 +648,60 @@
                                     </div>
                                 </article>
                             </div>
-                            <div class="col-6 col-xl-4 pl-item" data-name="Modular GNSS Receiver Trimble R750"
-                                data-brand="Trimble" data-cat="land-survey" data-sub="gnss">
+                            <div class="col-6 col-xl-4 pl-item" data-name="Modular GNSS Receiver CEE Hydrosystem R750"
+                                data-brand="CEE Hydrosystem" data-cat="land-survey" data-sub="gnss">
                                 <article class="cat-prod">
                                     <a class="cat-prod-img" href="product-details.html"
                                         aria-label="View product details"><img
                                             src="https://images.unsplash.com/photo-1747999918007-e3442cabb23a?auto=format&fit=crop&w=700&q=75"
-                                            alt="Modular GNSS Receiver Trimble R750" loading="lazy"
-                                            onerror="this.style.display='none'"><span
-                                            class="cat-brand">Trimble</span></a>
+                                            alt="Modular GNSS Receiver CEE Hydrosystem R750" loading="lazy"
+                                            onerror="this.style.display='none'"><span class="cat-brand">CEE
+                                            Hydrosystem</span></a>
                                     <div class="cat-prod-body">
-                                        <h5><a href="product-details.html">Modular GNSS Receiver Trimble R750</a></h5>
+                                        <h5><a href="product-details.html">Modular GNSS Receiver CEE Hydrosystem
+                                                R750</a></h5>
                                         <button type="button" class="cat-add"
-                                            data-name="Modular GNSS Receiver Trimble R750"><i
+                                            data-name="Modular GNSS Receiver CEE Hydrosystem R750"><i
                                                 class="fa-solid fa-plus"></i><span>Add to Inquiry</span></button>
                                     </div>
                                 </article>
                             </div>
-                            <div class="col-6 col-xl-4 pl-item" data-name="Modular GNSS System Trimble R9s"
-                                data-brand="Trimble" data-cat="land-survey" data-sub="gnss">
+                            <div class="col-6 col-xl-4 pl-item" data-name="Modular GNSS System CEE Hydrosystem R9s"
+                                data-brand="CEE Hydrosystem" data-cat="land-survey" data-sub="gnss">
                                 <article class="cat-prod">
                                     <a class="cat-prod-img" href="product-details.html"
                                         aria-label="View product details"><img
                                             src="https://images.unsplash.com/photo-1614935151651-0bea6508db6b?auto=format&fit=crop&w=700&q=75"
-                                            alt="Modular GNSS System Trimble R9s" loading="lazy"
-                                            onerror="this.style.display='none'"><span
-                                            class="cat-brand">Trimble</span></a>
+                                            alt="Modular GNSS System CEE Hydrosystem R9s" loading="lazy"
+                                            onerror="this.style.display='none'"><span class="cat-brand">CEE
+                                            Hydrosystem</span></a>
                                     <div class="cat-prod-body">
-                                        <h5><a href="product-details.html">Modular GNSS System Trimble R9s</a></h5>
+                                        <h5><a href="product-details.html">Modular GNSS System CEE Hydrosystem R9s</a>
+                                        </h5>
                                         <button type="button" class="cat-add"
-                                            data-name="Modular GNSS System Trimble R9s"><i
+                                            data-name="Modular GNSS System CEE Hydrosystem R9s"><i
                                                 class="fa-solid fa-plus"></i><span>Add to Inquiry</span></button>
                                     </div>
                                 </article>
                             </div>
-                            <div class="col-6 col-xl-4 pl-item" data-name="GNSS Receiver Trimble R12i"
-                                data-brand="Trimble" data-cat="land-survey" data-sub="gnss">
+                            <div class="col-6 col-xl-4 pl-item" data-name="GNSS Receiver CEE Hydrosystem R12i"
+                                data-brand="CEE Hydrosystem" data-cat="land-survey" data-sub="gnss">
                                 <article class="cat-prod">
                                     <a class="cat-prod-img" href="product-details.html"
                                         aria-label="View product details"><img
                                             src="https://images.unsplash.com/photo-1602052577122-f73b9710adba?auto=format&fit=crop&w=700&q=75"
-                                            alt="GNSS Receiver Trimble R12i" loading="lazy"
-                                            onerror="this.style.display='none'"><span
-                                            class="cat-brand">Trimble</span></a>
+                                            alt="GNSS Receiver CEE Hydrosystem R12i" loading="lazy"
+                                            onerror="this.style.display='none'"><span class="cat-brand">CEE
+                                            Hydrosystem</span></a>
                                     <div class="cat-prod-body">
-                                        <h5><a href="product-details.html">GNSS Receiver Trimble R12i</a></h5>
-                                        <button type="button" class="cat-add" data-name="GNSS Receiver Trimble R12i"><i
+                                        <h5><a href="product-details.html">GNSS Receiver CEE Hydrosystem R12i</a></h5>
+                                        <button type="button" class="cat-add"
+                                            data-name="GNSS Receiver CEE Hydrosystem R12i"><i
                                                 class="fa-solid fa-plus"></i><span>Add to Inquiry</span></button>
                                     </div>
                                 </article>
                             </div>
-                            <div class="col-6 col-xl-4 pl-item" data-name="GNSS Receiver SP85" data-brand="Spectra"
+                            <div class="col-6 col-xl-4 pl-item" data-name="GNSS Receiver SP85" data-brand="Sokkia"
                                 data-cat="land-survey" data-sub="gnss">
                                 <article class="cat-prod">
                                     <a class="cat-prod-img" href="product-details.html"
@@ -694,7 +709,7 @@
                                             src="https://images.unsplash.com/photo-1628158088936-68ccaaa400dc?auto=format&fit=crop&w=700&q=75"
                                             alt="GNSS Receiver SP85" loading="lazy"
                                             onerror="this.style.display='none'"><span
-                                            class="cat-brand">Spectra</span></a>
+                                            class="cat-brand">Sokkia</span></a>
                                     <div class="cat-prod-body">
                                         <h5><a href="product-details.html">GNSS Receiver SP85</a></h5>
                                         <button type="button" class="cat-add" data-name="GNSS Receiver SP85"><i
@@ -702,135 +717,143 @@
                                     </div>
                                 </article>
                             </div>
-                            <div class="col-6 col-xl-4 pl-item" data-name="Trimble TX8 Laser Scanner"
-                                data-brand="Trimble" data-cat="laser-scanning" data-sub="terrestrial">
+                            <div class="col-6 col-xl-4 pl-item" data-name="CEE Hydrosystem TX8 Laser Scanner"
+                                data-brand="CEE Hydrosystem" data-cat="laser-scanning" data-sub="terrestrial">
                                 <article class="cat-prod">
                                     <a class="cat-prod-img" href="product-details.html"
                                         aria-label="View product details"><img
                                             src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=700&q=75"
-                                            alt="Trimble TX8 Laser Scanner" loading="lazy"
-                                            onerror="this.style.display='none'"><span
-                                            class="cat-brand">Trimble</span></a>
+                                            alt="CEE Hydrosystem TX8 Laser Scanner" loading="lazy"
+                                            onerror="this.style.display='none'"><span class="cat-brand">CEE
+                                            Hydrosystem</span></a>
                                     <div class="cat-prod-body">
-                                        <h5><a href="product-details.html">Trimble TX8 Laser Scanner</a></h5>
-                                        <button type="button" class="cat-add" data-name="Trimble TX8 Laser Scanner"><i
+                                        <h5><a href="product-details.html">CEE Hydrosystem TX8 Laser Scanner</a></h5>
+                                        <button type="button" class="cat-add"
+                                            data-name="CEE Hydrosystem TX8 Laser Scanner"><i
                                                 class="fa-solid fa-plus"></i><span>Add to Inquiry</span></button>
                                     </div>
                                 </article>
                             </div>
-                            <div class="col-6 col-xl-4 pl-item" data-name="Trimble X7 Laser Scanner"
-                                data-brand="Trimble" data-cat="laser-scanning" data-sub="terrestrial">
+                            <div class="col-6 col-xl-4 pl-item" data-name="CEE Hydrosystem X7 Laser Scanner"
+                                data-brand="CEE Hydrosystem" data-cat="laser-scanning" data-sub="terrestrial">
                                 <article class="cat-prod">
                                     <a class="cat-prod-img" href="product-details.html"
                                         aria-label="View product details"><img
                                             src="https://images.unsplash.com/photo-1621905252507-b35492cc74b4?auto=format&fit=crop&w=700&q=75"
-                                            alt="Trimble X7 Laser Scanner" loading="lazy"
-                                            onerror="this.style.display='none'"><span
-                                            class="cat-brand">Trimble</span></a>
+                                            alt="CEE Hydrosystem X7 Laser Scanner" loading="lazy"
+                                            onerror="this.style.display='none'"><span class="cat-brand">CEE
+                                            Hydrosystem</span></a>
                                     <div class="cat-prod-body">
-                                        <h5><a href="product-details.html">Trimble X7 Laser Scanner</a></h5>
-                                        <button type="button" class="cat-add" data-name="Trimble X7 Laser Scanner"><i
+                                        <h5><a href="product-details.html">CEE Hydrosystem X7 Laser Scanner</a></h5>
+                                        <button type="button" class="cat-add"
+                                            data-name="CEE Hydrosystem X7 Laser Scanner"><i
                                                 class="fa-solid fa-plus"></i><span>Add to Inquiry</span></button>
                                     </div>
                                 </article>
                             </div>
-                            <div class="col-6 col-xl-4 pl-item" data-name="Trimble SX10 Scanning Total Station"
-                                data-brand="Trimble" data-cat="laser-scanning" data-sub="scanning-ts">
+                            <div class="col-6 col-xl-4 pl-item" data-name="CEE Hydrosystem SX10 Scanning Total Station"
+                                data-brand="CEE Hydrosystem" data-cat="laser-scanning" data-sub="scanning-ts">
                                 <article class="cat-prod">
                                     <a class="cat-prod-img" href="product-details.html"
                                         aria-label="View product details"><img
                                             src="https://images.unsplash.com/photo-1747999918007-e3442cabb23a?auto=format&fit=crop&w=700&q=75"
-                                            alt="Trimble SX10 Scanning Total Station" loading="lazy"
-                                            onerror="this.style.display='none'"><span
-                                            class="cat-brand">Trimble</span></a>
+                                            alt="CEE Hydrosystem SX10 Scanning Total Station" loading="lazy"
+                                            onerror="this.style.display='none'"><span class="cat-brand">CEE
+                                            Hydrosystem</span></a>
                                     <div class="cat-prod-body">
-                                        <h5><a href="product-details.html">Trimble SX10 Scanning Total Station</a></h5>
+                                        <h5><a href="product-details.html">CEE Hydrosystem SX10 Scanning Total
+                                                Station</a></h5>
                                         <button type="button" class="cat-add"
-                                            data-name="Trimble SX10 Scanning Total Station"><i
+                                            data-name="CEE Hydrosystem SX10 Scanning Total Station"><i
                                                 class="fa-solid fa-plus"></i><span>Add to Inquiry</span></button>
                                     </div>
                                 </article>
                             </div>
-                            <div class="col-6 col-xl-4 pl-item" data-name="Trimble SX12 Scanning Total Station"
-                                data-brand="Trimble" data-cat="laser-scanning" data-sub="scanning-ts">
+                            <div class="col-6 col-xl-4 pl-item" data-name="CEE Hydrosystem SX12 Scanning Total Station"
+                                data-brand="CEE Hydrosystem" data-cat="laser-scanning" data-sub="scanning-ts">
                                 <article class="cat-prod">
                                     <a class="cat-prod-img" href="product-details.html"
                                         aria-label="View product details"><img
                                             src="https://images.unsplash.com/photo-1614935151651-0bea6508db6b?auto=format&fit=crop&w=700&q=75"
-                                            alt="Trimble SX12 Scanning Total Station" loading="lazy"
-                                            onerror="this.style.display='none'"><span
-                                            class="cat-brand">Trimble</span></a>
+                                            alt="CEE Hydrosystem SX12 Scanning Total Station" loading="lazy"
+                                            onerror="this.style.display='none'"><span class="cat-brand">CEE
+                                            Hydrosystem</span></a>
                                     <div class="cat-prod-body">
-                                        <h5><a href="product-details.html">Trimble SX12 Scanning Total Station</a></h5>
+                                        <h5><a href="product-details.html">CEE Hydrosystem SX12 Scanning Total
+                                                Station</a></h5>
                                         <button type="button" class="cat-add"
-                                            data-name="Trimble SX12 Scanning Total Station"><i
+                                            data-name="CEE Hydrosystem SX12 Scanning Total Station"><i
                                                 class="fa-solid fa-plus"></i><span>Add to Inquiry</span></button>
                                     </div>
                                 </article>
                             </div>
-                            <div class="col-6 col-xl-4 pl-item" data-name="Trimble Catalyst GNSS System DA2"
-                                data-brand="Trimble" data-cat="gis" data-sub="gis-gnss">
+                            <div class="col-6 col-xl-4 pl-item" data-name="CEE Hydrosystem Catalyst GNSS System DA2"
+                                data-brand="CEE Hydrosystem" data-cat="gis" data-sub="gis-gnss">
                                 <article class="cat-prod">
                                     <a class="cat-prod-img" href="product-details.html"
                                         aria-label="View product details"><img
                                             src="https://images.unsplash.com/photo-1602052577122-f73b9710adba?auto=format&fit=crop&w=700&q=75"
-                                            alt="Trimble Catalyst GNSS System DA2" loading="lazy"
-                                            onerror="this.style.display='none'"><span
-                                            class="cat-brand">Trimble</span></a>
+                                            alt="CEE Hydrosystem Catalyst GNSS System DA2" loading="lazy"
+                                            onerror="this.style.display='none'"><span class="cat-brand">CEE
+                                            Hydrosystem</span></a>
                                     <div class="cat-prod-body">
-                                        <h5><a href="product-details.html">Trimble Catalyst GNSS System DA2</a></h5>
+                                        <h5><a href="product-details.html">CEE Hydrosystem Catalyst GNSS System DA2</a>
+                                        </h5>
                                         <button type="button" class="cat-add"
-                                            data-name="Trimble Catalyst GNSS System DA2"><i
+                                            data-name="CEE Hydrosystem Catalyst GNSS System DA2"><i
                                                 class="fa-solid fa-plus"></i><span>Add to Inquiry</span></button>
                                     </div>
                                 </article>
                             </div>
-                            <div class="col-6 col-xl-4 pl-item" data-name="Trimble R2 GNSS Receiver"
-                                data-brand="Trimble" data-cat="gis" data-sub="gis-gnss">
+                            <div class="col-6 col-xl-4 pl-item" data-name="CEE Hydrosystem R2 GNSS Receiver"
+                                data-brand="CEE Hydrosystem" data-cat="gis" data-sub="gis-gnss">
                                 <article class="cat-prod">
                                     <a class="cat-prod-img" href="product-details.html"
                                         aria-label="View product details"><img
                                             src="https://images.unsplash.com/photo-1628158088936-68ccaaa400dc?auto=format&fit=crop&w=700&q=75"
-                                            alt="Trimble R2 GNSS Receiver" loading="lazy"
-                                            onerror="this.style.display='none'"><span
-                                            class="cat-brand">Trimble</span></a>
+                                            alt="CEE Hydrosystem R2 GNSS Receiver" loading="lazy"
+                                            onerror="this.style.display='none'"><span class="cat-brand">CEE
+                                            Hydrosystem</span></a>
                                     <div class="cat-prod-body">
-                                        <h5><a href="product-details.html">Trimble R2 GNSS Receiver</a></h5>
-                                        <button type="button" class="cat-add" data-name="Trimble R2 GNSS Receiver"><i
+                                        <h5><a href="product-details.html">CEE Hydrosystem R2 GNSS Receiver</a></h5>
+                                        <button type="button" class="cat-add"
+                                            data-name="CEE Hydrosystem R2 GNSS Receiver"><i
                                                 class="fa-solid fa-plus"></i><span>Add to Inquiry</span></button>
                                     </div>
                                 </article>
                             </div>
-                            <div class="col-6 col-xl-4 pl-item" data-name="Mobile Mapping System Trimble MX50"
-                                data-brand="Trimble" data-cat="mobile-mapping" data-sub="mm-systems">
+                            <div class="col-6 col-xl-4 pl-item" data-name="Accessories System CEE Hydrosystem MX50"
+                                data-brand="CEE Hydrosystem" data-cat="mobile-mapping" data-sub="mm-systems">
                                 <article class="cat-prod">
                                     <a class="cat-prod-img" href="product-details.html"
                                         aria-label="View product details"><img
                                             src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=700&q=75"
-                                            alt="Mobile Mapping System Trimble MX50" loading="lazy"
-                                            onerror="this.style.display='none'"><span
-                                            class="cat-brand">Trimble</span></a>
+                                            alt="Accessories System CEE Hydrosystem MX50" loading="lazy"
+                                            onerror="this.style.display='none'"><span class="cat-brand">CEE
+                                            Hydrosystem</span></a>
                                     <div class="cat-prod-body">
-                                        <h5><a href="product-details.html">Mobile Mapping System Trimble MX50</a></h5>
+                                        <h5><a href="product-details.html">Accessories System CEE Hydrosystem MX50</a>
+                                        </h5>
                                         <button type="button" class="cat-add"
-                                            data-name="Mobile Mapping System Trimble MX50"><i
+                                            data-name="Accessories System CEE Hydrosystem MX50"><i
                                                 class="fa-solid fa-plus"></i><span>Add to Inquiry</span></button>
                                     </div>
                                 </article>
                             </div>
-                            <div class="col-6 col-xl-4 pl-item" data-name="Mobile Mapping System Trimble MX7"
-                                data-brand="Trimble" data-cat="mobile-mapping" data-sub="mm-systems">
+                            <div class="col-6 col-xl-4 pl-item" data-name="Accessories System CEE Hydrosystem MX7"
+                                data-brand="CEE Hydrosystem" data-cat="mobile-mapping" data-sub="mm-systems">
                                 <article class="cat-prod">
                                     <a class="cat-prod-img" href="product-details.html"
                                         aria-label="View product details"><img
                                             src="https://images.unsplash.com/photo-1621905252507-b35492cc74b4?auto=format&fit=crop&w=700&q=75"
-                                            alt="Mobile Mapping System Trimble MX7" loading="lazy"
-                                            onerror="this.style.display='none'"><span
-                                            class="cat-brand">Trimble</span></a>
+                                            alt="Accessories System CEE Hydrosystem MX7" loading="lazy"
+                                            onerror="this.style.display='none'"><span class="cat-brand">CEE
+                                            Hydrosystem</span></a>
                                     <div class="cat-prod-body">
-                                        <h5><a href="product-details.html">Mobile Mapping System Trimble MX7</a></h5>
+                                        <h5><a href="product-details.html">Accessories System CEE Hydrosystem MX7</a>
+                                        </h5>
                                         <button type="button" class="cat-add"
-                                            data-name="Mobile Mapping System Trimble MX7"><i
+                                            data-name="Accessories System CEE Hydrosystem MX7"><i
                                                 class="fa-solid fa-plus"></i><span>Add to Inquiry</span></button>
                                     </div>
                                 </article>
@@ -865,7 +888,7 @@
                                     </div>
                                 </article>
                             </div>
-                            <div class="col-6 col-xl-4 pl-item" data-name="Single Prism Set" data-brand="Koizumi"
+                            <div class="col-6 col-xl-4 pl-item" data-name="Single Prism Set" data-brand="Garmin"
                                 data-cat="accessories" data-sub="prisms">
                                 <article class="cat-prod">
                                     <a class="cat-prod-img" href="product-details.html"
@@ -873,7 +896,7 @@
                                             src="https://images.unsplash.com/photo-1602052577122-f73b9710adba?auto=format&fit=crop&w=700&q=75"
                                             alt="Single Prism Set" loading="lazy"
                                             onerror="this.style.display='none'"><span
-                                            class="cat-brand">Koizumi</span></a>
+                                            class="cat-brand">Garmin</span></a>
                                     <div class="cat-prod-body">
                                         <h5><a href="product-details.html">Single Prism Set</a></h5>
                                         <button type="button" class="cat-add" data-name="Single Prism Set"><i
@@ -881,14 +904,14 @@
                                     </div>
                                 </article>
                             </div>
-                            <div class="col-6 col-xl-4 pl-item" data-name="360° Prism" data-brand="Spectra"
+                            <div class="col-6 col-xl-4 pl-item" data-name="360° Prism" data-brand="Sokkia"
                                 data-cat="accessories" data-sub="prisms">
                                 <article class="cat-prod">
                                     <a class="cat-prod-img" href="product-details.html"
                                         aria-label="View product details"><img
                                             src="https://images.unsplash.com/photo-1628158088936-68ccaaa400dc?auto=format&fit=crop&w=700&q=75"
                                             alt="360° Prism" loading="lazy" onerror="this.style.display='none'"><span
-                                            class="cat-brand">Spectra</span></a>
+                                            class="cat-brand">Sokkia</span></a>
                                     <div class="cat-prod-body">
                                         <h5><a href="product-details.html">360° Prism</a></h5>
                                         <button type="button" class="cat-add" data-name="360° Prism"><i
@@ -911,15 +934,14 @@
                                     </div>
                                 </article>
                             </div>
-                            <div class="col-6 col-xl-4 pl-item" data-name="Tribrach Adapter" data-brand="Koizumi"
+                            <div class="col-6 col-xl-4 pl-item" data-name="Tribrach Adapter" data-brand="Myzox"
                                 data-cat="accessories" data-sub="adapters">
                                 <article class="cat-prod">
                                     <a class="cat-prod-img" href="product-details.html"
                                         aria-label="View product details"><img
                                             src="https://images.unsplash.com/photo-1621905252507-b35492cc74b4?auto=format&fit=crop&w=700&q=75"
                                             alt="Tribrach Adapter" loading="lazy"
-                                            onerror="this.style.display='none'"><span
-                                            class="cat-brand">Koizumi</span></a>
+                                            onerror="this.style.display='none'"><span class="cat-brand">Myzox</span></a>
                                     <div class="cat-prod-body">
                                         <h5><a href="product-details.html">Tribrach Adapter</a></h5>
                                         <button type="button" class="cat-add" data-name="Tribrach Adapter"><i
@@ -927,48 +949,49 @@
                                     </div>
                                 </article>
                             </div>
-                            <div class="col-6 col-xl-4 pl-item" data-name="Trimble TSC7 Field Controller"
-                                data-brand="Trimble" data-cat="field-controller" data-sub="fc">
+                            <div class="col-6 col-xl-4 pl-item" data-name="CEE Hydrosystem TSC7 Field Controller"
+                                data-brand="CEE Hydrosystem" data-cat="field-controller" data-sub="fc">
                                 <article class="cat-prod">
                                     <a class="cat-prod-img" href="product-details.html"
                                         aria-label="View product details"><img
                                             src="https://images.unsplash.com/photo-1747999918007-e3442cabb23a?auto=format&fit=crop&w=700&q=75"
-                                            alt="Trimble TSC7 Field Controller" loading="lazy"
-                                            onerror="this.style.display='none'"><span
-                                            class="cat-brand">Trimble</span></a>
+                                            alt="CEE Hydrosystem TSC7 Field Controller" loading="lazy"
+                                            onerror="this.style.display='none'"><span class="cat-brand">CEE
+                                            Hydrosystem</span></a>
                                     <div class="cat-prod-body">
-                                        <h5><a href="product-details.html">Trimble TSC7 Field Controller</a></h5>
+                                        <h5><a href="product-details.html">CEE Hydrosystem TSC7 Field Controller</a>
+                                        </h5>
                                         <button type="button" class="cat-add"
-                                            data-name="Trimble TSC7 Field Controller"><i
+                                            data-name="CEE Hydrosystem TSC7 Field Controller"><i
                                                 class="fa-solid fa-plus"></i><span>Add to Inquiry</span></button>
                                     </div>
                                 </article>
                             </div>
-                            <div class="col-6 col-xl-4 pl-item" data-name="Trimble T10 Tablet" data-brand="Trimble"
-                                data-cat="field-controller" data-sub="fc">
+                            <div class="col-6 col-xl-4 pl-item" data-name="CEE Hydrosystem T10 Tablet"
+                                data-brand="CEE Hydrosystem" data-cat="field-controller" data-sub="fc">
                                 <article class="cat-prod">
                                     <a class="cat-prod-img" href="product-details.html"
                                         aria-label="View product details"><img
                                             src="https://images.unsplash.com/photo-1614935151651-0bea6508db6b?auto=format&fit=crop&w=700&q=75"
-                                            alt="Trimble T10 Tablet" loading="lazy"
-                                            onerror="this.style.display='none'"><span
-                                            class="cat-brand">Trimble</span></a>
+                                            alt="CEE Hydrosystem T10 Tablet" loading="lazy"
+                                            onerror="this.style.display='none'"><span class="cat-brand">CEE
+                                            Hydrosystem</span></a>
                                     <div class="cat-prod-body">
-                                        <h5><a href="product-details.html">Trimble T10 Tablet</a></h5>
-                                        <button type="button" class="cat-add" data-name="Trimble T10 Tablet"><i
+                                        <h5><a href="product-details.html">CEE Hydrosystem T10 Tablet</a></h5>
+                                        <button type="button" class="cat-add" data-name="CEE Hydrosystem T10 Tablet"><i
                                                 class="fa-solid fa-plus"></i><span>Add to Inquiry</span></button>
                                     </div>
                                 </article>
                             </div>
                             <div class="col-6 col-xl-4 pl-item" data-name="Ranger 7 Field Controller"
-                                data-brand="Spectra" data-cat="field-controller" data-sub="fc">
+                                data-brand="Sokkia" data-cat="field-controller" data-sub="fc">
                                 <article class="cat-prod">
                                     <a class="cat-prod-img" href="product-details.html"
                                         aria-label="View product details"><img
                                             src="https://images.unsplash.com/photo-1602052577122-f73b9710adba?auto=format&fit=crop&w=700&q=75"
                                             alt="Ranger 7 Field Controller" loading="lazy"
                                             onerror="this.style.display='none'"><span
-                                            class="cat-brand">Spectra</span></a>
+                                            class="cat-brand">Sokkia</span></a>
                                     <div class="cat-prod-body">
                                         <h5><a href="product-details.html">Ranger 7 Field Controller</a></h5>
                                         <button type="button" class="cat-add" data-name="Ranger 7 Field Controller"><i
@@ -976,98 +999,101 @@
                                     </div>
                                 </article>
                             </div>
-                            <div class="col-6 col-xl-4 pl-item" data-name="Trimble TDC100 Handheld" data-brand="Trimble"
-                                data-cat="handheld" data-sub="hh">
+                            <div class="col-6 col-xl-4 pl-item" data-name="CEE Hydrosystem TDC100 Handheld"
+                                data-brand="CEE Hydrosystem" data-cat="handheld" data-sub="hh">
                                 <article class="cat-prod">
                                     <a class="cat-prod-img" href="product-details.html"
                                         aria-label="View product details"><img
                                             src="https://images.unsplash.com/photo-1628158088936-68ccaaa400dc?auto=format&fit=crop&w=700&q=75"
-                                            alt="Trimble TDC100 Handheld" loading="lazy"
-                                            onerror="this.style.display='none'"><span
-                                            class="cat-brand">Trimble</span></a>
+                                            alt="CEE Hydrosystem TDC100 Handheld" loading="lazy"
+                                            onerror="this.style.display='none'"><span class="cat-brand">CEE
+                                            Hydrosystem</span></a>
                                     <div class="cat-prod-body">
-                                        <h5><a href="product-details.html">Trimble TDC100 Handheld</a></h5>
-                                        <button type="button" class="cat-add" data-name="Trimble TDC100 Handheld"><i
+                                        <h5><a href="product-details.html">CEE Hydrosystem TDC100 Handheld</a></h5>
+                                        <button type="button" class="cat-add"
+                                            data-name="CEE Hydrosystem TDC100 Handheld"><i
                                                 class="fa-solid fa-plus"></i><span>Add to Inquiry</span></button>
                                     </div>
                                 </article>
                             </div>
-                            <div class="col-6 col-xl-4 pl-item" data-name="Trimble TDC600 Handheld" data-brand="Trimble"
-                                data-cat="handheld" data-sub="hh">
+                            <div class="col-6 col-xl-4 pl-item" data-name="CEE Hydrosystem TDC600 Handheld"
+                                data-brand="CEE Hydrosystem" data-cat="handheld" data-sub="hh">
                                 <article class="cat-prod">
                                     <a class="cat-prod-img" href="product-details.html"
                                         aria-label="View product details"><img
                                             src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=700&q=75"
-                                            alt="Trimble TDC600 Handheld" loading="lazy"
-                                            onerror="this.style.display='none'"><span
-                                            class="cat-brand">Trimble</span></a>
+                                            alt="CEE Hydrosystem TDC600 Handheld" loading="lazy"
+                                            onerror="this.style.display='none'"><span class="cat-brand">CEE
+                                            Hydrosystem</span></a>
                                     <div class="cat-prod-body">
-                                        <h5><a href="product-details.html">Trimble TDC600 Handheld</a></h5>
-                                        <button type="button" class="cat-add" data-name="Trimble TDC600 Handheld"><i
+                                        <h5><a href="product-details.html">CEE Hydrosystem TDC600 Handheld</a></h5>
+                                        <button type="button" class="cat-add"
+                                            data-name="CEE Hydrosystem TDC600 Handheld"><i
                                                 class="fa-solid fa-plus"></i><span>Add to Inquiry</span></button>
                                     </div>
                                 </article>
                             </div>
-                            <div class="col-6 col-xl-4 pl-item" data-name="Trimble Business Center" data-brand="Trimble"
-                                data-cat="software" data-sub="office-sw">
+                            <div class="col-6 col-xl-4 pl-item" data-name="CEE Hydrosystem Business Center"
+                                data-brand="CEE Hydrosystem" data-cat="software" data-sub="office-sw">
                                 <article class="cat-prod">
                                     <a class="cat-prod-img" href="product-details.html"
                                         aria-label="View product details"><img
                                             src="https://images.unsplash.com/photo-1621905252507-b35492cc74b4?auto=format&fit=crop&w=700&q=75"
-                                            alt="Trimble Business Center" loading="lazy"
-                                            onerror="this.style.display='none'"><span
-                                            class="cat-brand">Trimble</span></a>
+                                            alt="CEE Hydrosystem Business Center" loading="lazy"
+                                            onerror="this.style.display='none'"><span class="cat-brand">CEE
+                                            Hydrosystem</span></a>
                                     <div class="cat-prod-body">
-                                        <h5><a href="product-details.html">Trimble Business Center</a></h5>
-                                        <button type="button" class="cat-add" data-name="Trimble Business Center"><i
+                                        <h5><a href="product-details.html">CEE Hydrosystem Business Center</a></h5>
+                                        <button type="button" class="cat-add"
+                                            data-name="CEE Hydrosystem Business Center"><i
                                                 class="fa-solid fa-plus"></i><span>Add to Inquiry</span></button>
                                     </div>
                                 </article>
                             </div>
-                            <div class="col-6 col-xl-4 pl-item" data-name="Trimble RealWorks" data-brand="Trimble"
-                                data-cat="software" data-sub="office-sw">
+                            <div class="col-6 col-xl-4 pl-item" data-name="CEE Hydrosystem RealWorks"
+                                data-brand="CEE Hydrosystem" data-cat="software" data-sub="office-sw">
                                 <article class="cat-prod">
                                     <a class="cat-prod-img" href="product-details.html"
                                         aria-label="View product details"><img
                                             src="https://images.unsplash.com/photo-1747999918007-e3442cabb23a?auto=format&fit=crop&w=700&q=75"
-                                            alt="Trimble RealWorks" loading="lazy"
-                                            onerror="this.style.display='none'"><span
-                                            class="cat-brand">Trimble</span></a>
+                                            alt="CEE Hydrosystem RealWorks" loading="lazy"
+                                            onerror="this.style.display='none'"><span class="cat-brand">CEE
+                                            Hydrosystem</span></a>
                                     <div class="cat-prod-body">
-                                        <h5><a href="product-details.html">Trimble RealWorks</a></h5>
-                                        <button type="button" class="cat-add" data-name="Trimble RealWorks"><i
+                                        <h5><a href="product-details.html">CEE Hydrosystem RealWorks</a></h5>
+                                        <button type="button" class="cat-add" data-name="CEE Hydrosystem RealWorks"><i
                                                 class="fa-solid fa-plus"></i><span>Add to Inquiry</span></button>
                                     </div>
                                 </article>
                             </div>
-                            <div class="col-6 col-xl-4 pl-item" data-name="Spectra Survey Office" data-brand="Spectra"
+                            <div class="col-6 col-xl-4 pl-item" data-name="Sokkia Survey Office" data-brand="Sokkia"
                                 data-cat="software" data-sub="office-sw">
                                 <article class="cat-prod">
                                     <a class="cat-prod-img" href="product-details.html"
                                         aria-label="View product details"><img
                                             src="https://images.unsplash.com/photo-1614935151651-0bea6508db6b?auto=format&fit=crop&w=700&q=75"
-                                            alt="Spectra Survey Office" loading="lazy"
+                                            alt="Sokkia Survey Office" loading="lazy"
                                             onerror="this.style.display='none'"><span
-                                            class="cat-brand">Spectra</span></a>
+                                            class="cat-brand">Sokkia</span></a>
                                     <div class="cat-prod-body">
-                                        <h5><a href="product-details.html">Spectra Survey Office</a></h5>
-                                        <button type="button" class="cat-add" data-name="Spectra Survey Office"><i
+                                        <h5><a href="product-details.html">Sokkia Survey Office</a></h5>
+                                        <button type="button" class="cat-add" data-name="Sokkia Survey Office"><i
                                                 class="fa-solid fa-plus"></i><span>Add to Inquiry</span></button>
                                     </div>
                                 </article>
                             </div>
-                            <div class="col-6 col-xl-4 pl-item" data-name="Trimble Access" data-brand="Trimble"
-                                data-cat="software" data-sub="field-sw">
+                            <div class="col-6 col-xl-4 pl-item" data-name="CEE Hydrosystem Access"
+                                data-brand="CEE Hydrosystem" data-cat="software" data-sub="field-sw">
                                 <article class="cat-prod">
                                     <a class="cat-prod-img" href="product-details.html"
                                         aria-label="View product details"><img
                                             src="https://images.unsplash.com/photo-1602052577122-f73b9710adba?auto=format&fit=crop&w=700&q=75"
-                                            alt="Trimble Access" loading="lazy"
-                                            onerror="this.style.display='none'"><span
-                                            class="cat-brand">Trimble</span></a>
+                                            alt="CEE Hydrosystem Access" loading="lazy"
+                                            onerror="this.style.display='none'"><span class="cat-brand">CEE
+                                            Hydrosystem</span></a>
                                     <div class="cat-prod-body">
-                                        <h5><a href="product-details.html">Trimble Access</a></h5>
-                                        <button type="button" class="cat-add" data-name="Trimble Access"><i
+                                        <h5><a href="product-details.html">CEE Hydrosystem Access</a></h5>
+                                        <button type="button" class="cat-add" data-name="CEE Hydrosystem Access"><i
                                                 class="fa-solid fa-plus"></i><span>Add to Inquiry</span></button>
                                     </div>
                                 </article>
@@ -1112,7 +1138,7 @@
 
                 <!-- Brand -->
                 <div class="col-lg-4 col-md-6">
-                   <a class="logo" href="index.html" aria-label="Home">
+                    <a class="logo" href="index.html" aria-label="Home">
                         <img src="asset/images/atcl_logo.jpeg" alt="">
                         <span class="logo-text text-white">ATCL</span>
                     </a>
@@ -1133,7 +1159,7 @@
                     <ul class="footer-links">
                         <li><a href="index.html">Home</a></li>
                         <li><a href="about.html">About Us</a></li>
-                        
+
                         <li><a href="mission-vision.html">Mission &amp; Vision</a></li>
                         <li><a href="brands.html">Brands</a></li>
                         <li><a href="news.html">News &amp; Events</a></li>
