@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign In - ATCL B2B Industrial Platform</title>
+    <!-- Bootstrap 5.3 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --atcl-dark: #07111e;
+            --atcl-primary: #0a192f;
+            --atcl-accent: #0066cc;
+            --atcl-accent-hover: #0052a3;
+            --atcl-bg: #f8fafc;
+        }
+
+        body {
+            background-color: var(--atcl-bg);
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .login-card {
+            background: #ffffff;
+            border-radius: 16px;
+            box-shadow: 0 20px 40px -15px rgba(10, 25, 47, 0.08), 0 0 1px 1px rgba(0, 0, 0, 0.04);
+            overflow: hidden;
+            max-width: 960px;
+            width: 100%;
+            border: none;
+        }
+
+        .login-sidebar {
+            background: linear-gradient(145deg, var(--atcl-dark), var(--atcl-primary));
+            color: #fff;
+            padding: 48px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Subtle Background Industrial Grid Effect */
+        .login-sidebar::before {
+            content: "";
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background-image: radial-gradient(rgba(255, 255, 255, 0.1) 1px, transparent 1px);
+            background-size: 24px 24px;
+            opacity: 0.4;
+        }
+
+        .sidebar-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .login-form-wrapper {
+            padding: 48px;
+        }
+
+        .brand-logo {
+            font-size: 22px;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+            color: #fff;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+        }
+
+        .form-label {
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: #334155;
+            margin-bottom: 6px;
+        }
+
+        .input-group-text {
+            background-color: #f1f5f9;
+            border-color: #e2e8f0;
+            color: #64748b;
+            border-right: none;
+        }
+
+        .form-control {
+            background-color: #f1f5f9;
+            border-color: #e2e8f0;
+            font-size: 0.95rem;
+            padding: 12px 14px;
+            color: #1e293b;
+            border-left: none;
+        }
+
+        .form-control:focus {
+            background-color: #fff;
+            border-color: var(--atcl-accent);
+            box-shadow: 0 0 0 4px rgba(0, 102, 204, 0.1);
+        }
+
+        .input-group:focus-within .input-group-text {
+            background-color: #fff;
+            border-color: var(--atcl-accent);
+            color: var(--atcl-accent);
+        }
+
+        .btn-atcl {
+            background-color: var(--atcl-accent);
+            color: #fff;
+            font-weight: 600;
+            padding: 12px;
+            border-radius: 8px;
+            font-size: 0.95rem;
+            transition: all 0.2s ease-in-out;
+            border: none;
+        }
+
+        .btn-atcl:hover {
+            background-color: var(--atcl-accent-hover);
+            transform: translateY(-1px);
+            box-shadow: 0 4px 12px rgba(0, 102, 204, 0.2);
+            color: #fff;
+        }
+
+        .form-check-input:checked {
+            background-color: var(--atcl-accent);
+            border-color: var(--atcl-accent);
+        }
+
+        @media (max-width: 768px) {
+            .login-form-wrapper {
+                padding: 32px 24px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-xl-11">
+                <div class="login-card row g-0">
+                    
+                    <!-- Left Sidebar (Corporate Branding) -->
+                    <div class="col-lg-5 login-sidebar d-none d-lg-flex">
+                        <div class="sidebar-content">
+                            <a href="#" class="brand-logo">
+                                <i class="fa-solid fa-industry fa-lg me-2 text-primary-emphasis"></i>ATCL B2B
+                            </a>
+                            <div class="mt-5">
+                                <span class="badge bg-primary bg-opacity-25 text-info px-3 py-2 rounded-pill mb-3 small fw-semibold">Industrial Portal</span>
+                                <h2 class="fw-bold text-white mb-3 lh-sm">Engineering Excellence & Smart Solutions.</h2>
+                                <p class="text-white-50 small lh-base">Access heavy equipment catalogs, manage industrial RFQs, and track supply chain orders securely.</p>
+                            </div>
+                        </div>
+                        <div class="sidebar-content text-white-50 small">
+                            &copy; {{ date('Y') }} ATCL Industrial Ltd. All rights reserved.
+                        </div>
+                    </div>
+
+                    <!-- Right Form Section -->
+                    <div class="col-lg-7 login-form-wrapper d-flex flex-column justify-content-center">
+                        <div class="mb-4">
+                            <h3 class="fw-bold text-dark mb-1">Welcome Back</h3>
+                            <p class="text-muted small">Please enter your corporate credentials to access the dashboard.</p>
+                        </div>
+
+                        <!-- Standard Form (Laravel Route compatible) -->
+                        <form method="POST" action="#">
+                            <!-- @csrf -->
+
+                            <div class="mb-3">
+                                <label for="email" class="form-label">Corporate Email</label>
+                                <div class="input-group">
+                                    <span class="input-group-text"><i class="fa-solid fa-envelope"></i></span>
+                                    <input type="email" class="form-control" id="email" name="email" placeholder="name@industrial.com" required autofocus>
+                                </div>
+                            </div>
+
+                            <div class="mb-3">
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <label for="password" class="form-label">Password</label>
+                                    <a href="#" class="small text-decoration-none text-primary fw-semibold">Forgot Password?</a>
+                                </div>
+                                <div class="input-group">
+                                    <span class="input-group-text"><i class="fa-solid fa-lock"></i></span>
+                                    <input type="password" class="form-control" id="password" name="password" placeholder="••••••••" required>
+                                    <button class="btn btn-outline-secondary bg-light border-start-0 text-muted" type="button" id="togglePassword" style="border-color: #e2e8f0;">
+                                        <i class="fa-solid fa-eye-slash" id="eyeIcon"></i>
+                                    </button>
+                                </div>
+                            </div>
+
+                            <div class="mb-4 d-flex justify-content-between align-items-center">
+                                <div class="form-check">
+                                    <input type="checkbox" class="form-check-input" id="remember" name="remember">
+                                    <label class="form-check-label small text-muted" for="remember">Remember this device</label>
+                                </div>
+                            </div>
+
+                            <div class="d-grid mb-4">
+                                <button type="submit" class="btn btn-atcl shadow-sm">Sign In to Dashboard</button>
+                            </div>
+
+                            <div class="text-center">
+                                <p class="small text-muted mb-0">Need a corporate procurement account? <a href="#" class="text-primary text-decoration-none fw-semibold">Submit an Inquiry</a></p>
+                            </div>
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS & Show/Hide Password Script -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        const togglePassword = document.getElementById('togglePassword');
+        const passwordInput = document.getElementById('password');
+        const eyeIcon = document.getElementById('eyeIcon');
+
+        togglePassword.addEventListener('click', function () {
+            const type = passwordInput.getAttribute('type') === 'password' ? 'text' : 'password';
+            passwordInput.setAttribute('type', type);
+            
+            if (type === 'text') {
+                eyeIcon.classList.remove('fa-eye-slash');
+                eyeIcon.classList.add('fa-eye');
+            } else {
+                eyeIcon.classList.remove('fa-eye');
+                eyeIcon.classList.add('fa-eye-slash');
+            }
+        });
+    </script>
+</body>
+</html>
