@@ -347,7 +347,7 @@
             <div class="container">
                 <div class="row gy-4 gx-xl-5">
 
-                    <!-- Sidebar (off-canvas on mobile) -->
+                 <!-- Sidebar (off-canvas on mobile) -->
                     <div class="col-lg-3">
                         <aside class="pl-side offcanvas-lg offcanvas-start" tabindex="-1" id="filterPanel"
                             aria-labelledby="filterTitle">
@@ -357,120 +357,178 @@
                                     data-bs-target="#filterPanel" aria-label="Close"></button>
                             </div>
                             <div class="offcanvas-body d-block p-lg-0">
+
+                                <!-- Categories -->
                                 <div class="pl-box">
                                     <h6><i class="fa-solid fa-layer-group"></i>Categories</h6>
-                                    <div class="pl-cats"><button type="button" class="pl-cat active"
-                                            data-cat="all"><span>All Products</span><em>36</em></button><span
-                                            class="pl-group">Instruments</span>
+                                    <div class="pl-cats">
+                                        <button type="button" class="pl-cat active" data-cat="all"><span>All
+                                                Products</span><em>12</em></button>
+
+                                        <span class="pl-group">Instruments</span>
                                         <div class="pl-subs">
+
+                                            <!-- Surveying -->
                                             <div class="pl-node">
-                                                <div class="pl-row"><button type="button" class="pl-cat"
-                                                        data-cat="land-survey"><span>Surveying</span><em>13</em></button><button
-                                                        type="button" class="pl-toggle" aria-label="Expand Surveying"><i
-                                                            class="fa-solid fa-chevron-down"></i></button></div>
-                                                <div class="pl-kids"><button type="button" class="pl-cat pl-child"
-                                                        data-cat="theodolites"><span>Theodolites</span><em>2</em></button><button
-                                                        type="button" class="pl-cat pl-child"
-                                                        data-cat="levels"><span>Levels</span><em>3</em></button><button
-                                                        type="button" class="pl-cat pl-child"
+                                                <div class="pl-row">
+                                                    <button type="button" class="pl-cat"
+                                                        data-cat="land-survey"><span>Surveying</span><em>11</em></button>
+                                                    <button type="button" class="pl-toggle"
+                                                        aria-label="Expand Surveying"><i
+                                                            class="fa-solid fa-chevron-down"></i></button>
+                                                </div>
+                                                <div class="pl-kids">
+                                                    <button type="button" class="pl-cat pl-child"
+                                                        data-cat="theodolites"><span>Theodolites</span><em>0</em></button>
+                                                    <button type="button" class="pl-cat pl-child"
+                                                        data-cat="levels"><span>Levels</span><em>4</em></button>
+                                                    <button type="button" class="pl-cat pl-child"
                                                         data-cat="total-stations"><span>Total
-                                                            Stations</span><em>4</em></button><button type="button"
-                                                        class="pl-cat pl-child" data-cat="gnss"><span>GNSS
-                                                            Receivers</span><em>4</em></button></div>
+                                                            Stations</span><em>3</em></button>
+                                                    <button type="button" class="pl-cat pl-child"
+                                                        data-cat="gnss"><span>GNSS Receivers</span><em>4</em></button>
+                                                </div>
                                             </div>
+
+                                            <!-- Civil Engineering -->
                                             <div class="pl-node">
-                                                <div class="pl-row"><button type="button" class="pl-cat"
+                                                <div class="pl-row">
+                                                    <button type="button" class="pl-cat"
                                                         data-cat="laser-scanning"><span>Civil
-                                                            Engineering</span><em>4</em></button><button type="button"
-                                                        class="pl-toggle" aria-label="Expand Civil  Engineering"><i
-                                                            class="fa-solid fa-chevron-down"></i></button></div>
-                                                <div class="pl-kids"><button type="button" class="pl-cat pl-child"
+                                                            Engineering</span><em>1</em></button>
+                                                    <button type="button" class="pl-toggle"
+                                                        aria-label="Expand Civil Engineering"><i
+                                                            class="fa-solid fa-chevron-down"></i></button>
+                                                </div>
+                                                <div class="pl-kids">
+                                                    <button type="button" class="pl-cat pl-child"
                                                         data-cat="terrestrial"><span>Terrestrial
-                                                            Scanners</span><em>2</em></button><button type="button"
-                                                        class="pl-cat pl-child" data-cat="scanning-ts"><span>Scanning
-                                                            Total Stations</span><em>2</em></button></div>
+                                                            Scanners</span><em>0</em></button>
+                                                    <button type="button" class="pl-cat pl-child"
+                                                        data-cat="scanning-ts"><span>Scanning Total
+                                                            Stations</span><em>1</em></button>
+                                                </div>
                                             </div>
+
+                                            <!-- Hydrography -->
                                             <div class="pl-node">
-                                                <div class="pl-row"><button type="button" class="pl-cat"
-                                                        data-cat="gis"><span>Hydrography</span><em>2</em></button><button
-                                                        type="button" class="pl-toggle"
+                                                <div class="pl-row">
+                                                    <button type="button" class="pl-cat"
+                                                        data-cat="gis"><span>Hydrography</span><em>0</em></button>
+                                                    <button type="button" class="pl-toggle"
                                                         aria-label="Expand Hydrography"><i
-                                                            class="fa-solid fa-chevron-down"></i></button></div>
-                                                <div class="pl-kids"><button type="button" class="pl-cat pl-child"
+                                                            class="fa-solid fa-chevron-down"></i></button>
+                                                </div>
+                                                <div class="pl-kids">
+                                                    <button type="button" class="pl-cat pl-child"
                                                         data-cat="gis-gnss"><span>GNSS
-                                                            Receivers</span><em>2</em></button></div>
+                                                            Receivers</span><em>0</em></button>
+                                                </div>
                                             </div>
+
+                                            <!-- Accessories -->
                                             <div class="pl-node">
-                                                <div class="pl-row"><button type="button" class="pl-cat"
-                                                        data-cat="mobile-mapping"><span>Accessories</span><em>2</em></button><button
-                                                        type="button" class="pl-toggle"
+                                                <div class="pl-row">
+                                                    <button type="button" class="pl-cat"
+                                                        data-cat="mobile-mapping"><span>Accessories</span><em>0</em></button>
+                                                    <button type="button" class="pl-toggle"
                                                         aria-label="Expand Accessories"><i
-                                                            class="fa-solid fa-chevron-down"></i></button></div>
-                                                <div class="pl-kids"><button type="button" class="pl-cat pl-child"
+                                                            class="fa-solid fa-chevron-down"></i></button>
+                                                </div>
+                                                <div class="pl-kids">
+                                                    <button type="button" class="pl-cat pl-child"
                                                         data-cat="mm-systems"><span>Mapping
-                                                            Systems</span><em>2</em></button></div>
+                                                            Systems</span><em>0</em></button>
+                                                </div>
                                             </div>
-                                        </div><span class="pl-group">Other</span>
+
+                                        </div>
+
+                                        <span class="pl-group">Other</span>
+
+                                        <!-- Total Station -->
                                         <div class="pl-node">
-                                            <div class="pl-row"><button type="button" class="pl-cat"
-                                                    data-cat="Total Station "><span>Total Station
-                                                    </span><em>6</em></button><button type="button" class="pl-toggle"
-                                                    aria-label="Expand Total Station "><i
-                                                        class="fa-solid fa-chevron-down"></i></button></div>
-                                            <div class="pl-kids"><button type="button" class="pl-cat pl-child"
-                                                    data-cat="Sokkia B20 / B30A / B40A Auto Levelss"><span>Sokkia B20 /
-                                                        B30A / B40A Auto Levelss</span><em>2</em></button><button
-                                                    type="button" class="pl-cat pl-child"
+                                            <div class="pl-row">
+                                                <button type="button" class="pl-cat" data-cat="Total Station"><span>Total
+                                                        Station</span><em>0</em></button>
+                                                <button type="button" class="pl-toggle"
+                                                    aria-label="Expand Total Station"><i
+                                                        class="fa-solid fa-chevron-down"></i></button>
+                                            </div>
+                                            <div class="pl-kids">
+                                                <button type="button" class="pl-cat pl-child"
+                                                    data-cat="Sokkia B20 / B30A / B40A Auto Levels"><span>Sokkia B20 /
+                                                        B30A / B40A Auto Levels</span><em>0</em></button>
+                                                <button type="button" class="pl-cat pl-child"
                                                     data-cat="Sokkia SDL30 / SDL50 Digital Levels"><span>Sokkia SDL30 /
-                                                        SDL50 Digital Levels</span><em>2</em></button><button
-                                                    type="button" class="pl-cat pl-child"
+                                                        SDL50 Digital Levels</span><em>0</em></button>
+                                                <button type="button" class="pl-cat pl-child"
                                                     data-cat="Topcon DL-502 / 503 Electronic Digital Levels"><span>Poles
                                                         &amp; Topcon DL-502 / 503 Electronic Digital
-                                                        Level</span><em>1</em></button><button type="button"
-                                                    class="pl-cat pl-child"
+                                                        Level</span><em>0</em></button>
+                                                <button type="button" class="pl-cat pl-child"
                                                     data-cat="Topcon DL-501 Electronic Digital Levels"><span>Topcon
-                                                        DL-501 Electronic Digital Levels</span><em>1</em></button></div>
+                                                        DL-501 Electronic Digital Levels</span><em>0</em></button>
+                                            </div>
                                         </div>
+
+                                        <!-- GNSS/RTK GPS -->
                                         <div class="pl-node">
-                                            <div class="pl-row"><button type="button" class="pl-cat"
-                                                    data-cat="field-controller"><span> GNSS/RTK GPS
-                                                    </span><em>3</em></button></div>
+                                            <div class="pl-row">
+                                                <button type="button" class="pl-cat"
+                                                    data-cat="field-controller"><span>GNSS/RTK
+                                                        GPS</span><em>0</em></button>
+                                            </div>
                                         </div>
+
+                                        <!-- Levels -->
                                         <div class="pl-node">
-                                            <div class="pl-row"><button type="button" class="pl-cat"
-                                                    data-cat="handheld"><span>Levels</span><em>2</em></button></div>
+                                            <div class="pl-row">
+                                                <button type="button" class="pl-cat"
+                                                    data-cat="handheld"><span>Levels</span><em>0</em></button>
+                                            </div>
                                         </div>
+
+                                        <!-- Layout Navigator -->
                                         <div class="pl-node">
-                                            <div class="pl-row"><button type="button" class="pl-cat"
+                                            <div class="pl-row">
+                                                <button type="button" class="pl-cat"
                                                     data-cat="software"><span>Layout
-                                                        Navigator</span><em>4</em></button><button type="button"
-                                                    class="pl-toggle" aria-label="Expand Software"><i
-                                                        class="fa-solid fa-chevron-down"></i></button></div>
-                                            <div class="pl-kids"><button type="button" class="pl-cat pl-child"
+                                                        Navigator</span><em>0</em></button>
+                                                <button type="button" class="pl-toggle"
+                                                    aria-label="Expand Layout Navigator"><i
+                                                        class="fa-solid fa-chevron-down"></i></button>
+                                            </div>
+                                            <div class="pl-kids">
+                                                <button type="button" class="pl-cat pl-child"
                                                     data-cat="office-sw"><span>Office
-                                                        Software</span><em>3</em></button><button type="button"
-                                                    class="pl-cat pl-child" data-cat="field-sw"><span>Field
-                                                        Software</span><em>1</em></button></div>
+                                                        Software</span><em>0</em></button>
+                                                <button type="button" class="pl-cat pl-child"
+                                                    data-cat="field-sw"><span>Field Software</span><em>0</em></button>
+                                            </div>
                                         </div>
+
                                     </div>
                                 </div>
+
+                                <!-- Brands (counts are added by JS, do not add <em> here) -->
                                 <div class="pl-box">
                                     <h6><i class="fa-solid fa-tags"></i>Brands</h6>
-                                    <div class="pl-brands"><label class="pl-brand"><input type="checkbox"
-                                                value="Topcon"><span>Topcon</span></label><label class="pl-brand"><input
-                                                type="checkbox" value="Sokkia"><span>Sokkia</span></label><label
-                                            class="pl-brand"><input type="checkbox"
-                                                value="Kolida"><span>Kolida</span></label><label class="pl-brand"><input
-                                                type="checkbox" value="Myzox"><span>Myzox</span></label><label
-                                            class="pl-brand"><input type="checkbox"
-                                                value="Garmin"><span>Garmin</span></label><label class="pl-brand"><input
-                                                type="checkbox" value="CEE Hydrosystem"><span>CEE
-                                                Hydrosystem</span></label></div>
+                                    <div class="pl-brands">
+                                        <label class="pl-brand"><input type="checkbox" value="Topcon"><span>Topcon</span></label>
+                                        <label class="pl-brand"><input type="checkbox" value="Sokkia"><span>Sokkia</span></label>
+                                        <label class="pl-brand"><input type="checkbox" value="Kolida"><span>Kolida</span></label>
+                                        <label class="pl-brand"><input type="checkbox" value="Myzox"><span>Myzox</span></label>
+                                        <label class="pl-brand"><input type="checkbox" value="Garmin"><span>Garmin</span></label>
+                                        <label class="pl-brand"><input type="checkbox" value="CEE Hydrosystem"><span>CEE Hydrosystem</span></label>
+                                    </div>
                                 </div>
+
                                 <button type="button" class="btn btn-main w-100 d-lg-none" data-bs-dismiss="offcanvas"
                                     data-bs-target="#filterPanel">Show Results</button>
                                 <button type="button" class="pl-reset" id="plReset"><i
                                         class="fa-solid fa-rotate-left"></i>Reset all filters</button>
+
                                 <div class="pl-help d-none d-lg-block">
                                     <i class="fa-solid fa-headset"></i>
                                     <h6>Need help choosing?</h6>
@@ -480,7 +538,7 @@
                             </div>
                         </aside>
                     </div>
-
+                    
                     <!-- Products -->
                     <div class="col-lg-9">
                         <div class="pl-toolbar">
@@ -506,50 +564,54 @@
                             </div>
                         </div>
 
-                        <div class="pl-chips" id="plChips"></div>
-
+                        <!-- Replace everything INSIDE <div class="row g-4" id="plGrid"> ... </div> with these 12 cards -->
                         <div class="row g-4" id="plGrid">
+
+                            <!-- 1 -->
                             <div class="col-6 col-xl-4 pl-item"
-                                data-name="Sokkia  iM-50 series intelligence Measurement Total Station, KT-02L/05L"
-                                data-brand="Topcon" data-cat="land-survey" data-sub="theodolites">
+                                data-name="Sokkia iM-50 series intelligence Measurement Total Station"
+                                data-brand="Sokkia" data-cat="land-survey" data-sub="total-stations">
                                 <article class="cat-prod">
                                     <a class="cat-prod-img" href="product-details.html"
                                         aria-label="View product details"><img
                                             src="https://surveyinstrumentbd.com/wp-content/uploads/2025/10/Untitled-design-21.png"
-                                            alt="Sokkia  iM-50 series intelligence Measurement Total Station"
+                                            alt="Sokkia iM-50 series intelligence Measurement Total Station"
                                             loading="lazy" onerror="this.style.display='none'"><span
                                             class="cat-brand">Sokkia</span></a>
                                     <div class="cat-prod-body">
                                         <h5><a href="product-details.html">Sokkia iM-50 series intelligence Measurement
-                                                Total
-                                                Station</a></h5>
+                                                Total Station</a></h5>
                                         <button type="button" class="cat-add"
-                                            data-name="Sokkia  iM-50 series intelligence Measurement Total Station"><i
+                                            data-name="Sokkia iM-50 series intelligence Measurement Total Station"><i
                                                 class="fa-solid fa-plus"></i><span>Add to Inquiry</span></button>
                                     </div>
                                 </article>
                             </div>
-                            <div class="col-6 col-xl-4 pl-item" data-name="Digital Theodolite DT Series"
-                                data-brand="Topcon" data-cat="land-survey" data-sub="theodolites">
+
+                            <!-- 2 -->
+                            <div class="col-6 col-xl-4 pl-item"
+                                data-name="Sokkia FX-200 series Functional X-ellence Total Station" data-brand="Sokkia"
+                                data-cat="land-survey" data-sub="total-stations">
                                 <article class="cat-prod">
                                     <a class="cat-prod-img" href="product-details.html"
                                         aria-label="View product details"><img
                                             src="https://surveyinstrumentbd.com/wp-content/uploads/2025/10/Untitled-design-17.png"
-                                            alt="Sokkia FX-200 series Functional X-ellence Total Station
-" loading="lazy" onerror="this.style.display='none'"><span class="cat-brand">Sokkia</span></a>
+                                            alt="Sokkia FX-200 series Functional X-ellence Total Station" loading="lazy"
+                                            onerror="this.style.display='none'"><span
+                                            class="cat-brand">Sokkia</span></a>
                                     <div class="cat-prod-body">
                                         <h5><a href="product-details.html">Sokkia FX-200 series Functional X-ellence
-                                                Total
-                                                Station
-                                            </a></h5>
-                                        <button type="button" class="cat-add" data-name="Sokkia FX-200 series Functional X-ellence Total Station
-"><i class="fa-solid fa-plus"></i><span>Add to Inquiry</span></button>
+                                                Total Station</a></h5>
+                                        <button type="button" class="cat-add"
+                                            data-name="Sokkia FX-200 series Functional X-ellence Total Station"><i
+                                                class="fa-solid fa-plus"></i><span>Add to Inquiry</span></button>
                                     </div>
                                 </article>
                             </div>
-                            <div class="col-6 col-xl-4 pl-item"
-                                data-name="Sokkia FX-200 series Functional X-ellence Total Station / KL / DSZ Series"
-                                data-brand="Topcon" data-cat="land-survey" data-sub="levels">
+
+                            <!-- 3 -->
+                            <div class="col-6 col-xl-4 pl-item" data-name="Topcon GTL-1200 Laser Scanner Total Station"
+                                data-brand="Topcon" data-cat="laser-scanning" data-sub="scanning-ts">
                                 <article class="cat-prod">
                                     <a class="cat-prod-img" href="product-details.html"
                                         aria-label="View product details"><img
@@ -566,27 +628,30 @@
                                     </div>
                                 </article>
                             </div>
-                            <div class="col-6 col-xl-4 pl-item"
-                                data-name="Topcon OS-200 Series – Onboard  Total Station / KL-07" data-brand="Topcon"
-                                data-cat="land-survey" data-sub="levels">
+
+                            <!-- 4 -->
+                            <div class="col-6 col-xl-4 pl-item" data-name="Topcon OS-200 Series – Onboard Total Station"
+                                data-brand="Topcon" data-cat="land-survey" data-sub="total-stations">
                                 <article class="cat-prod">
                                     <a class="cat-prod-img" href="product-details.html"
                                         aria-label="View product details"><img
                                             src="https://surveyinstrumentbd.com/wp-content/uploads/2025/10/Untitled-design-9-265x331.png"
-                                            alt="Topcon OS-200 Series – Onboard  Total Station" loading="lazy"
+                                            alt="Topcon OS-200 Series – Onboard Total Station" loading="lazy"
                                             onerror="this.style.display='none'"><span
                                             class="cat-brand">Topcon</span></a>
                                     <div class="cat-prod-body">
                                         <h5><a href="product-details.html">Topcon OS-200 Series – Onboard Total
                                                 Station</a></h5>
                                         <button type="button" class="cat-add"
-                                            data-name="Topcon OS-200 Series – Onboard  Total Station"><i
+                                            data-name="Topcon OS-200 Series – Onboard Total Station"><i
                                                 class="fa-solid fa-plus"></i><span>Add to Inquiry</span></button>
                                     </div>
                                 </article>
                             </div>
-                            <div class="col-6 col-xl-4 pl-item" data-name="Automatic Level AP-8" data-brand="Kolida"
-                                data-cat="land-survey" data-sub="levels">
+
+                            <!-- 5 (brand badge kept as Sokkia: please confirm the real brand) -->
+                            <div class="col-6 col-xl-4 pl-item" data-name="GNSS Receiver and Steering Controller"
+                                data-brand="Sokkia" data-cat="land-survey" data-sub="gnss">
                                 <article class="cat-prod">
                                     <a class="cat-prod-img" href="product-details.html"
                                         aria-label="View product details"><img
@@ -603,15 +668,17 @@
                                     </div>
                                 </article>
                             </div>
-                            <div class="col-6 col-xl-4 pl-item" data-name="Topcon GTL-1200 Laser Scanner Total Station"
-                                data-brand="Topcon" data-cat="land-survey" data-sub="total-stations">
+
+                            <!-- 6 (HiPer HR is a Topcon product, badge fixed) -->
+                            <div class="col-6 col-xl-4 pl-item" data-name="HiPer HR Multi-Purpose GNSS Receiver"
+                                data-brand="Topcon" data-cat="land-survey" data-sub="gnss">
                                 <article class="cat-prod">
                                     <a class="cat-prod-img" href="product-details.html"
                                         aria-label="View product details"><img
                                             src="https://surveyinstrumentbd.com/wp-content/uploads/2025/10/11-29-265x331.png"
                                             alt="HiPer HR Multi-Purpose GNSS Receiver" loading="lazy"
                                             onerror="this.style.display='none'"><span
-                                            class="cat-brand">Sokkia</span></a>
+                                            class="cat-brand">Topcon</span></a>
                                     <div class="cat-prod-body">
                                         <h5><a href="product-details.html">HiPer HR Multi-Purpose GNSS Receiver</a></h5>
                                         <button type="button" class="cat-add"
@@ -620,8 +687,10 @@
                                     </div>
                                 </article>
                             </div>
-                            <div class="col-6 col-xl-4 pl-item" data-name="Robotic Total Station CEE Hydrosystem S5"
-                                data-brand="CEE Hydrosystem" data-cat="land-survey" data-sub="total-stations">
+
+                            <!-- 7 -->
+                            <div class="col-6 col-xl-4 pl-item" data-name="TOPCON GNSS Antennas" data-brand="Topcon"
+                                data-cat="land-survey" data-sub="gnss">
                                 <article class="cat-prod">
                                     <a class="cat-prod-img" href="product-details.html"
                                         aria-label="View product details"><img
@@ -636,8 +705,10 @@
                                     </div>
                                 </article>
                             </div>
-                            <div class="col-6 col-xl-4 pl-item" data-name="Total Station Nivo 5.C" data-brand="Kolida"
-                                data-cat="land-survey" data-sub="total-stations">
+
+                            <!-- 8 -->
+                            <div class="col-6 col-xl-4 pl-item" data-name="Topcon MR-2 Modular GNSS Receiver"
+                                data-brand="Topcon" data-cat="land-survey" data-sub="gnss">
                                 <article class="cat-prod">
                                     <a class="cat-prod-img" href="product-details.html"
                                         aria-label="View product details"><img
@@ -653,64 +724,83 @@
                                     </div>
                                 </article>
                             </div>
-                            <div class="col-6 col-xl-4 pl-item" data-name="Total Station FOCUS 35" data-brand="Sokkia"
-                                data-cat="land-survey" data-sub="total-stations">
-                               <article class="cat-prod">
-                            <a class="cat-prod-img" href="product-details.html" aria-label="View product details"><img
-                                    src="https://surveyinstrumentbd.com/wp-content/uploads/2025/10/Your-paragraph-text-26.png"
-                                    alt="Sokkia B20 / B30A / B40A Auto Levels" loading="lazy"
-                                    onerror="this.style.display='none'"><span class="cat-brand">Sokkia</span></a>
-                            <div class="cat-prod-body">
-                                <h5><a href="product-details.html">Sokkia B20 / B30A / B40A Auto Levels</a></h5>
-                                <button type="button" class="cat-add"
-                                    data-name="Sokkia B20 / B30A / B40A Auto Levels"><i
-                                        class="fa-solid fa-plus"></i><span>Add to Inquiry</span></button>
-                            </div>
-                        </article>
-                            </div>
-                            <div class="col-6 col-xl-4 pl-item" data-name="Modular GNSS Receiver CEE Hydrosystem R750"
-                                data-brand="CEE Hydrosystem" data-cat="land-survey" data-sub="gnss">
+
+                            <!-- 9 -->
+                            <div class="col-6 col-xl-4 pl-item" data-name="Sokkia B20 / B30A / B40A Auto Levels"
+                                data-brand="Sokkia" data-cat="land-survey" data-sub="levels">
                                 <article class="cat-prod">
-                            <a class="cat-prod-img" href="product-details.html" aria-label="View product details"><img
-                                    src="https://surveyinstrumentbd.com/wp-content/uploads/2025/10/Your-paragraph-text-23-265x331.png"
-                                    alt="Sokkia SDL30 / SDL50 Digital Level" loading="lazy"
-                                    onerror="this.style.display='none'"><span class="cat-brand">Sokkia</span></a>
-                            <div class="cat-prod-body">
-                                <h5><a href="product-details.html">Sokkia SDL30 / SDL50 Digital Level</a></h5>
-                                <button type="button" class="cat-add" data-name="Sokkia SDL30 / SDL50 Digital Level"><i
-                                        class="fa-solid fa-plus"></i><span>Add to Inquiry</span></button>
+                                    <a class="cat-prod-img" href="product-details.html"
+                                        aria-label="View product details"><img
+                                            src="https://surveyinstrumentbd.com/wp-content/uploads/2025/10/Your-paragraph-text-26.png"
+                                            alt="Sokkia B20 / B30A / B40A Auto Levels" loading="lazy"
+                                            onerror="this.style.display='none'"><span
+                                            class="cat-brand">Sokkia</span></a>
+                                    <div class="cat-prod-body">
+                                        <h5><a href="product-details.html">Sokkia B20 / B30A / B40A Auto Levels</a></h5>
+                                        <button type="button" class="cat-add"
+                                            data-name="Sokkia B20 / B30A / B40A Auto Levels"><i
+                                                class="fa-solid fa-plus"></i><span>Add to Inquiry</span></button>
+                                    </div>
+                                </article>
                             </div>
-                        </article>
+
+                            <!-- 10 -->
+                            <div class="col-6 col-xl-4 pl-item" data-name="Sokkia SDL30 / SDL50 Digital Level"
+                                data-brand="Sokkia" data-cat="land-survey" data-sub="levels">
+                                <article class="cat-prod">
+                                    <a class="cat-prod-img" href="product-details.html"
+                                        aria-label="View product details"><img
+                                            src="https://surveyinstrumentbd.com/wp-content/uploads/2025/10/Your-paragraph-text-23-265x331.png"
+                                            alt="Sokkia SDL30 / SDL50 Digital Level" loading="lazy"
+                                            onerror="this.style.display='none'"><span
+                                            class="cat-brand">Sokkia</span></a>
+                                    <div class="cat-prod-body">
+                                        <h5><a href="product-details.html">Sokkia SDL30 / SDL50 Digital Level</a></h5>
+                                        <button type="button" class="cat-add"
+                                            data-name="Sokkia SDL30 / SDL50 Digital Level"><i
+                                                class="fa-solid fa-plus"></i><span>Add to Inquiry</span></button>
+                                    </div>
+                                </article>
                             </div>
-                            <div class="col-6 col-xl-4 pl-item" data-name="Modular GNSS System CEE Hydrosystem R9s"
-                                data-brand="CEE Hydrosystem" data-cat="land-survey" data-sub="gnss">
-                               <article class="cat-prod">
-                            <a class="cat-prod-img" href="product-details.html" aria-label="View product details"><img
-                                    src="https://surveyinstrumentbd.com/wp-content/uploads/2025/10/Untitled-design-27-265x331.png"
-                                    alt="Topcon DL-502 / 503 Electronic Digital Level" loading="lazy"
-                                    onerror="this.style.display='none'"><span class="cat-brand">Topcon</span></a>
-                            <div class="cat-prod-body">
-                                <h5><a href="product-details.html">Topcon DL-502 / 503 Electronic Digital Level</a></h5>
-                                <button type="button" class="cat-add"
-                                    data-name="Topcon DL-502 / 503 Electronic Digital Level"><i
-                                        class="fa-solid fa-plus"></i><span>Add to Inquiry</span></button>
+
+                            <!-- 11 -->
+                            <div class="col-6 col-xl-4 pl-item" data-name="Topcon DL-502 / 503 Electronic Digital Level"
+                                data-brand="Topcon" data-cat="land-survey" data-sub="levels">
+                                <article class="cat-prod">
+                                    <a class="cat-prod-img" href="product-details.html"
+                                        aria-label="View product details"><img
+                                            src="https://surveyinstrumentbd.com/wp-content/uploads/2025/10/Untitled-design-27-265x331.png"
+                                            alt="Topcon DL-502 / 503 Electronic Digital Level" loading="lazy"
+                                            onerror="this.style.display='none'"><span
+                                            class="cat-brand">Topcon</span></a>
+                                    <div class="cat-prod-body">
+                                        <h5><a href="product-details.html">Topcon DL-502 / 503 Electronic Digital
+                                                Level</a></h5>
+                                        <button type="button" class="cat-add"
+                                            data-name="Topcon DL-502 / 503 Electronic Digital Level"><i
+                                                class="fa-solid fa-plus"></i><span>Add to Inquiry</span></button>
+                                    </div>
+                                </article>
                             </div>
-                        </article>
-                            </div>
-                            <div class="col-6 col-xl-4 pl-item" data-name="GNSS Receiver CEE Hydrosystem R12i"
-                                data-brand="CEE Hydrosystem" data-cat="land-survey" data-sub="gnss">
-                                 <article class="cat-prod">
-                            <a class="cat-prod-img" href="product-details.html" aria-label="View product details"><img
-                                    src="https://surveyinstrumentbd.com/wp-content/uploads/2025/10/Untitled-design-25.png"
-                                    alt="Topcon DL-501 Electronic Digital Level" loading="lazy"
-                                    onerror="this.style.display='none'"><span class="cat-brand">Topcon</span></a>
-                            <div class="cat-prod-body">
-                                <h5><a href="product-details.html">Topcon DL-501 Electronic Digital Level</a></h5>
-                                <button type="button" class="cat-add"
-                                    data-name="Topcon DL-501 Electronic Digital Level"><i
-                                        class="fa-solid fa-plus"></i><span>Add to Inquiry</span></button>
-                            </div>
-                        </article>
+
+                            <!-- 12 -->
+                            <div class="col-6 col-xl-4 pl-item" data-name="Topcon DL-501 Electronic Digital Level"
+                                data-brand="Topcon" data-cat="land-survey" data-sub="levels">
+                                <article class="cat-prod">
+                                    <a class="cat-prod-img" href="product-details.html"
+                                        aria-label="View product details"><img
+                                            src="https://surveyinstrumentbd.com/wp-content/uploads/2025/10/Untitled-design-25.png"
+                                            alt="Topcon DL-501 Electronic Digital Level" loading="lazy"
+                                            onerror="this.style.display='none'"><span
+                                            class="cat-brand">Topcon</span></a>
+                                    <div class="cat-prod-body">
+                                        <h5><a href="product-details.html">Topcon DL-501 Electronic Digital Level</a>
+                                        </h5>
+                                        <button type="button" class="cat-add"
+                                            data-name="Topcon DL-501 Electronic Digital Level"><i
+                                                class="fa-solid fa-plus"></i><span>Add to Inquiry</span></button>
+                                    </div>
+                                </article>
                             </div>
 
                         </div>
