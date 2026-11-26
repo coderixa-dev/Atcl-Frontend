@@ -325,65 +325,77 @@
     <!-- ========= Header Section End ========= -->
 
     <main>
-    <section class="auth-section">
-        <div class="container">
-            <div class="auth-card">
+        <section class="auth-section">
+            <div class="container">
+                <div class="auth-card">
 
-                <div class="auth-head">
-                    <div class="auth-icon"><i class="fa-solid fa-user-plus"></i></div>
-                    <h1>Create New Account</h1>
-                    <p>Join ATCL today and manage your inquiries &amp; orders</p>
-                </div>
-
-                <div class="form-msg" id="formMsg">
-                    <i class="fa-solid fa-circle-check me-1"></i> Account created successfully.
-                </div>
-
-                <form id="registerForm" novalidate>
-
-                    <div class="field">
-                        <label for="fullName"><i class="fa-regular fa-user"></i> Full Name <span class="req">*</span></label>
-                        <input type="text" id="fullName" name="fullName" placeholder="Enter your full name" autocomplete="name">
-                        <div class="error">Please enter your full name.</div>
+                    <div class="auth-head">
+                        <div class="auth-icon"><i class="fa-solid fa-user-plus"></i></div>
+                        <h1>Create New Account</h1>
+                        <p>Join ATCL today and manage your inquiries &amp; orders</p>
                     </div>
 
-                    <div class="row-2">
-                        <div class="field">
-                            <label for="email"><i class="fa-regular fa-envelope"></i> Email Address <span class="req">*</span></label>
-                            <input type="email" id="email" name="email" placeholder="Enter your email" autocomplete="email">
-                            <div class="error">Please enter a valid email.</div>
-                        </div>
-                        <div class="field">
-                            <label for="mobile"><i class="fa-solid fa-phone"></i> Mobile Number <span class="req">*</span></label>
-                            <input type="tel" id="mobile" name="mobile" placeholder="Enter your mobile number" autocomplete="tel">
-                            <div class="error">Please enter a valid mobile number.</div>
-                        </div>
+                    <div class="form-msg" id="formMsg">
+                        <i class="fa-solid fa-circle-check me-1"></i> Account created successfully.
                     </div>
 
-                    <div class="field">
-                        <label for="address"><i class="fa-solid fa-location-dot"></i> Address <span class="req">*</span></label>
-                        <textarea id="address" name="address" placeholder="Enter your full address" autocomplete="street-address"></textarea>
-                        <div class="error">Please enter your address.</div>
-                    </div>
+                    <form id="registerForm" novalidate>
 
-                    <div class="row-2">
                         <div class="field">
-                            <label for="password"><i class="fa-solid fa-lock"></i> Password <span class="req">*</span></label>
-                            <input type="password" id="password" name="password" placeholder="Create a password" autocomplete="new-password">
-                            <div class="error">Password must be at least 6 characters.</div>
+                            <label for="fullName"><i class="fa-regular fa-user"></i> Full Name <span
+                                    class="req">*</span></label>
+                            <input type="text" id="fullName" name="fullName" placeholder="Enter your full name"
+                                autocomplete="name">
+                            <div class="error">Please enter your full name.</div>
                         </div>
+
+                        <div class="row-2">
+                            <div class="field">
+                                <label for="email"><i class="fa-regular fa-envelope"></i> Email Address <span
+                                        class="req">*</span></label>
+                                <input type="email" id="email" name="email" placeholder="Enter your email"
+                                    autocomplete="email">
+                                <div class="error">Please enter a valid email.</div>
+                            </div>
+                            <div class="field">
+                                <label for="mobile"><i class="fa-solid fa-phone"></i> Mobile Number <span
+                                        class="req">*</span></label>
+                                <input type="tel" id="mobile" name="mobile" placeholder="Enter your mobile number"
+                                    autocomplete="tel">
+                                <div class="error">Please enter a valid mobile number.</div>
+                            </div>
+                        </div>
+
                         <div class="field">
-                            <label for="confirmPassword"><i class="fa-solid fa-lock-open"></i> Confirm Password <span class="req">*</span></label>
-                            <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Re-enter your password" autocomplete="new-password">
-                            <div class="error">Passwords do not match.</div>
+                            <label for="address"><i class="fa-solid fa-location-dot"></i> Address <span
+                                    class="req">*</span></label>
+                            <textarea id="address" name="address" placeholder="Enter your full address"
+                                autocomplete="street-address"></textarea>
+                            <div class="error">Please enter your address.</div>
                         </div>
-                    </div>
 
-                    <button type="submit" class="btn-primary-c">
-                        <i class="fa-solid fa-user-check"></i> Create Account
-                    </button>
+                        <div class="row-2">
+                            <div class="field">
+                                <label for="password"><i class="fa-solid fa-lock"></i> Password <span
+                                        class="req">*</span></label>
+                                <input type="password" id="password" name="password" placeholder="Create a password"
+                                    autocomplete="new-password">
+                                <div class="error">Password must be at least 6 characters.</div>
+                            </div>
+                            <div class="field">
+                                <label for="confirmPassword"><i class="fa-solid fa-lock-open"></i> Confirm Password
+                                    <span class="req">*</span></label>
+                                <input type="password" id="confirmPassword" name="confirmPassword"
+                                    placeholder="Re-enter your password" autocomplete="new-password">
+                                <div class="error">Passwords do not match.</div>
+                            </div>
+                        </div>
 
-                    <!-- <div class="divider">Or sign up with</div>
+                        <button type="submit" class="btn-primary-c">
+                            <i class="fa-solid fa-user-check"></i> Create Account
+                        </button>
+
+                        <!-- <div class="divider">Or sign up with</div>
 
                     <button type="button" class="btn-google" id="googleBtn">
                         <svg viewBox="0 0 48 48" aria-hidden="true">
@@ -395,16 +407,17 @@
                         Sign up with Google
                     </button> -->
 
-                </form>
+                    </form>
 
-                <div class="auth-foot">
-                    <i class="fa-solid fa-right-to-bracket"></i>Already have an account? <a href="login.html">Login Now</a>
+                    <div class="auth-foot">
+                        <i class="fa-solid fa-right-to-bracket"></i>Already have an account? <a href="login.html">Login
+                            Now</a>
+                    </div>
+
                 </div>
-
             </div>
-        </div>
-    </section>
-</main>
+        </section>
+    </main>
 
     <!-- ========= Footer Section Start ========= -->
     <footer class="footer" id="footer">
