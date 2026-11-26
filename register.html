@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Create New Account | ATCL</title>
+  <link rel="shortcut icon" href="./asset/images/atcl_logo.jpeg" type="image/x-icon">
+
+  <!-- Font Awesome (same file you use on the other pages) -->
+  <link rel="stylesheet" href="asset/css/all.min.css">
+  <!-- Font (falls back to system fonts if offline) -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400;500;600;700&display=swap">
+
+  <style>
+    :root {
+      --primary: #1196cb;
+      --primary-dark: #0d83b4;
+      --text: #111827;
+      --muted: #6b7280;
+      --border: #d6dce3;
+      --danger: #d92d20;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 24px 16px;
+      font-family: "Fira Sans", system-ui, -apple-system, "Segoe UI", Arial, sans-serif;
+      color: var(--text);
+      background: linear-gradient(135deg, #f4f6f8 0%, #e9edf1 100%);
+    }
+
+    .auth-card {
+      width: 100%;
+      max-width: 478px;
+      background: #fff;
+      border-radius: 14px;
+      padding: 22px 22px 18px;
+      box-shadow: 0 10px 30px rgba(17, 24, 39, .08);
+    }
+
+    /* Header */
+    .auth-head { text-align: center; margin-bottom: 18px; }
+
+    .auth-icon {
+      width: 45px;
+      height: 45px;
+      margin: 0 auto 8px;
+      border-radius: 50%;
+      background: var(--primary);
+      color: #fff;
+      display: grid;
+      place-items: center;
+      font-size: 17px;
+      box-shadow: 0 4px 10px rgba(17, 150, 203, .35);
+    }
+
+    .auth-head h1 { margin: 0 0 4px; font-size: 19px; font-weight: 700; }
+    .auth-head p { margin: 0; font-size: 12px; color: var(--muted); }
+
+    /* Form */
+    .row-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+    .field { margin-bottom: 14px; }
+
+    .field label {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      margin-bottom: 7px;
+      font-size: 10.5px;
+      font-weight: 600;
+    }
+
+    .field label i { color: var(--primary); font-size: 10px; }
+    .field label .req { color: var(--danger); margin-left: -4px; }
+
+    .field input,
+    .field textarea {
+      width: 100%;
+      padding: 0 12px;
+      height: 34px;
+      font: inherit;
+      font-size: 12px;
+      color: var(--text);
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: 7px;
+      outline: none;
+      transition: border-color .2s, box-shadow .2s;
+    }
+
+    .field input { height: 34px; }
+
+    .field textarea {
+      height: 64px;
+      padding: 10px 12px;
+      resize: vertical;
+    }
+
+    .field input::placeholder,
+    .field textarea::placeholder { color: #8b94a1; }
+
+    .field input:focus,
+    .field textarea:focus {
+      border-color: var(--primary);
+      box-shadow: 0 0 0 3px rgba(17, 150, 203, .15);
+    }
+
+    .field.invalid input,
+    .field.invalid textarea { border-color: var(--danger); }
+
+    .field .error {
+      display: none;
+      margin-top: 4px;
+      font-size: 10.5px;
+      color: var(--danger);
+    }
+
+    .field.invalid .error { display: block; }
+
+    /* Buttons */
+    .btn-primary-c {
+      width: 100%;
+      height: 36px;
+      margin-top: 4px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      border: 0;
+      border-radius: 7px;
+      font: inherit;
+      font-size: 12px;
+      font-weight: 600;
+      color: #fff;
+      cursor: pointer;
+      background: linear-gradient(90deg, #1aa3d9 0%, var(--primary-dark) 100%);
+      transition: filter .2s, transform .1s;
+    }
+
+    .btn-primary-c:hover { filter: brightness(1.06); }
+    .btn-primary-c:active { transform: translateY(1px); }
+
+    .divider {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin: 14px 0;
+      font-size: 8.5px;
+      font-weight: 600;
+      letter-spacing: .4px;
+      color: #8b94a1;
+      text-transform: uppercase;
+    }
+
+    .divider::before,
+    .divider::after { content: ""; flex: 1; height: 1px; background: var(--border); }
+
+    .btn-google {
+      width: 100%;
+      height: 34px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: 7px;
+      font: inherit;
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--text);
+      cursor: pointer;
+      box-shadow: 0 1px 3px rgba(17, 24, 39, .06);
+      transition: background .2s;
+    }
+
+    .btn-google:hover { background: #f8fafc; }
+    .btn-google svg { width: 15px; height: 15px; }
+
+    .auth-foot {
+      margin-top: 16px;
+      padding-top: 12px;
+      border-top: 1px solid var(--border);
+      text-align: center;
+      font-size: 10.5px;
+      color: var(--muted);
+    }
+
+    .auth-foot i { color: var(--primary); margin-right: 6px; }
+    .auth-foot a { color: var(--primary); font-weight: 600; text-decoration: none; margin-left: 2px; }
+    .auth-foot a:hover { text-decoration: underline; }
+
+    .form-msg {
+      display: none;
+      margin-bottom: 12px;
+      padding: 9px 12px;
+      border-radius: 7px;
+      font-size: 11.5px;
+      background: #e8f6ee;
+      color: #166534;
+    }
+
+    @media (max-width: 520px) {
+      .row-2 { grid-template-columns: 1fr; gap: 0; }
+      .auth-card { padding: 20px 16px 16px; }
+    }
+  </style>
+</head>
+
+<body>
+
+  <main class="auth-card">
+
+    <div class="auth-head">
+      <div class="auth-icon"><i class="fa-solid fa-user-plus"></i></div>
+      <h1>Create New Account</h1>
+      <p>Join us today and start your journey</p>
+    </div>
+
+    <div class="form-msg" id="formMsg"><i class="fa-solid fa-circle-check"></i> Account created successfully.</div>
+
+    <form id="registerForm" novalidate>
+
+      <div class="field">
+        <label for="fullName"><i class="fa-regular fa-user"></i> Full Name<span class="req">*</span></label>
+        <input type="text" id="fullName" name="fullName" placeholder="Enter your full name" autocomplete="name">
+        <div class="error">Please enter your full name.</div>
+      </div>
+
+      <div class="row-2">
+        <div class="field">
+          <label for="email"><i class="fa-regular fa-envelope"></i> Email Address<span class="req">*</span></label>
+          <input type="email" id="email" name="email" placeholder="Enter your email" autocomplete="email">
+          <div class="error">Please enter a valid email.</div>
+        </div>
+        <div class="field">
+          <label for="mobile"><i class="fa-solid fa-phone"></i> Mobile Number<span class="req">*</span></label>
+          <input type="tel" id="mobile" name="mobile" placeholder="Enter your mobile number" autocomplete="tel">
+          <div class="error">Please enter a valid mobile number.</div>
+        </div>
+      </div>
+
+      <div class="field">
+        <label for="address"><i class="fa-solid fa-location-dot"></i> Address<span class="req">*</span></label>
+        <textarea id="address" name="address" placeholder="Enter your full address" autocomplete="street-address"></textarea>
+        <div class="error">Please enter your address.</div>
+      </div>
+
+      <div class="row-2">
+        <div class="field">
+          <label for="password"><i class="fa-solid fa-lock"></i> Password<span class="req">*</span></label>
+          <input type="password" id="password" name="password" placeholder="Create a password" autocomplete="new-password">
+          <div class="error">Password must be at least 6 characters.</div>
+        </div>
+        <div class="field">
+          <label for="confirmPassword"><i class="fa-solid fa-lock-open"></i> Confirm Password<span class="req">*</span></label>
+          <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Re-enter your password" autocomplete="new-password">
+          <div class="error">Passwords do not match.</div>
+        </div>
+      </div>
+
+      <button type="submit" class="btn-primary-c"><i class="fa-solid fa-user-check"></i> Create Account</button>
+
+      <div class="divider">Or sign up with</div>
+
+      <button type="button" class="btn-google" id="googleBtn">
+        <svg viewBox="0 0 48 48" aria-hidden="true">
+          <path fill="#EA4335" d="M24 9.5c3.5 0 6.6 1.2 9.1 3.6l6.8-6.8C35.8 2.4 30.3 0 24 0 14.6 0 6.5 5.4 2.6 13.2l7.9 6.1C12.4 13.6 17.7 9.5 24 9.5z"/>
+          <path fill="#4285F4" d="M46.1 24.5c0-1.6-.1-3.1-.4-4.5H24v9h12.4c-.5 2.9-2.2 5.3-4.6 6.9l7.1 5.5c4.3-4 6.7-9.8 6.7-16.9z"/>
+          <path fill="#FBBC05" d="M10.5 28.7c-.5-1.4-.8-2.9-.8-4.7s.3-3.3.8-4.7l-7.9-6.1C.9 16.5 0 20.1 0 24s.9 7.5 2.6 10.8l7.9-6.1z"/>
+          <path fill="#34A853" d="M24 48c6.5 0 11.9-2.1 15.9-5.8l-7.1-5.5c-2 1.4-4.9 2.3-8.8 2.3-6.3 0-11.6-4.1-13.5-9.8l-7.9 6.1C6.5 42.6 14.6 48 24 48z"/>
+        </svg>
+        Sign up with Google
+      </button>
+
+    </form>
+
+    <div class="auth-foot">
+      <i class="fa-solid fa-right-to-bracket"></i>Already have an account? <a href="login.html">Login Now</a>
+    </div>
+
+  </main>
+
+  <script>
+    (function () {
+      var form = document.getElementById('registerForm');
+      var msg = document.getElementById('formMsg');
+
+      var rules = {
+        fullName: function (v) { return v.length >= 2; },
+        email: function (v) { return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v); },
+        mobile: function (v) { return /^\+?[0-9\s-]{8,16}$/.test(v); },
+        address: function (v) { return v.length >= 5; },
+        password: function (v) { return v.length >= 6; },
+        confirmPassword: function (v) { return v !== '' && v === form.password.value; }
+      };
+
+      function check(name) {
+        var input = form[name];
+        var ok = rules[name](input.value.trim());
+        // password fields: don't trim, compare exactly
+        if (name === 'password') ok = input.value.length >= 6;
+        if (name === 'confirmPassword') ok = input.value !== '' && input.value === form.password.value;
+        input.closest('.field').classList.toggle('invalid', !ok);
+        return ok;
+      }
+
+      form.addEventListener('submit', function (e) {
+        e.preventDefault();
+        msg.style.display = 'none';
+        var valid = true;
+        Object.keys(rules).forEach(function (n) { if (!check(n)) valid = false; });
+        if (!valid) {
+          var first = form.querySelector('.invalid input, .invalid textarea');
+          if (first) first.focus();
+          return;
+        }
+        // TODO: send form data to your backend (Laravel) here
+        form.reset();
+        msg.style.display = 'block';
+      });
+
+      // clear the error while typing
+      form.addEventListener('input', function (e) {
+        var f = e.target.closest('.field');
+        if (f) f.classList.remove('invalid');
+      });
+
+      document.getElementById('googleBtn').addEventListener('click', function () {
+        // TODO: connect Google sign-in here
+        alert('Google sign-up will be connected here.');
+      });
+    })();
+  </script>
+
+</body>
+
+</html>
