@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Edit Profile | ATCL Solutions</title>
+  <link rel="shortcut icon" href="./asset/images/atcl_logo.jpeg" type="image/x-icon">
+
+  <!-- Global CSS Files -->
+  <link rel="stylesheet" href="asset/css/bootstrap.min.css">
+  <link rel="stylesheet" href="asset/css/font.css">
+  <link rel="stylesheet" href="asset/css/all.min.css">
+  <link rel="stylesheet" href="asset/css/style.css">
+</head>
+
+<body class="dash-body">
+
+  <div class="dash-wrapper">
+
+    <!-- Left Sidebar -->
+    <aside class="dash-sidebar" id="dashSidebar">
+      <div class="sidebar-brand">
+        <img src="asset/images/atcl_logo.jpeg" alt="ATCL">
+        <span>ATCL PORTAL</span>
+      </div>
+
+      <div class="sidebar-user">
+        <div class="user-avatar">A</div>
+        <div class="user-meta">
+          <h6>Anik Mondal</h6>
+          <small><i class="fa-regular fa-id-badge me-1"></i>ID: 2611000267</small>
+        </div>
+      </div>
+
+  
+      <div class="sidebar-label">Account Menu</div>
+      <ul class="sidebar-nav">
+        <li><a href="customer-dashboard.html" class="active"><i class="fa-solid fa-chart-pie"></i> Dashboard</a>
+        </li>
+        <li><a href="edit-profile.html"><i class="fa-solid fa-user-pen"></i> Edit Profile</a></li>
+        <li><a href="my-inquiries.html"><i class="fa-solid fa-clipboard-list"></i> My Inquiries</a></li>
+        <li><a href="change-password.html"><i class="fa-solid fa-key"></i> Change Password</a></li>
+        <li class="sidebar-logout"><a href="login.html"><i class="fa-solid fa-right-from-bracket"></i> Log
+            Out</a></li>
+      </ul>
+    </aside>
+
+    <!-- Right Main Panel -->
+    <div class="dash-main">
+
+      <!-- Top Header -->
+      <header class="dash-topbar">
+        <div class="d-flex align-items-center gap-3">
+          <button class="btn btn-light d-lg-none" id="sidebarToggle" aria-label="Toggle Menu">
+            <i class="fa-solid fa-bars"></i>
+          </button>
+          <div class="topbar-title">
+            <h4>Edit Profile</h4>
+            <small>Home / Edit Profile</small>
+          </div>
+        </div>
+
+        <div class="topbar-actions">
+          <a href="index.html" class="btn-return"><i class="fa-solid fa-globe me-1"></i> Return to Website</a>
+          <div class="welcome-pill d-none d-sm-block">Welcome, <strong>Anik Mondal</strong></div>
+        </div>
+      </header>
+
+      <!-- Content Area -->
+      <div class="dash-content">
+
+        <div class="dash-form-card">
+          <div class="dash-form-header">
+            <i class="fa-solid fa-user-gear"></i>
+            <h6>Personal Profile Information</h6>
+          </div>
+
+          <div class="dash-form-body">
+            <!-- Success Alert Message -->
+            <div class="alert alert-success d-none py-2 px-3 mb-3" id="profileAlert" style="font-size: 0.85rem;">
+              <i class="fa-solid fa-circle-check me-1"></i> Your profile information has been updated successfully!
+            </div>
+
+            <form id="editProfileForm" class="needs-validation" novalidate>
+              <div class="row g-4">
+
+                <!-- Full Name -->
+                <div class="col-md-6">
+                  <label for="profName" class="dash-label">Full Name <span>*</span></label>
+                  <input type="text" class="form-control dash-input" id="profName" value="Anik Mondal" required>
+                  <div class="invalid-feedback">Please enter your full name.</div>
+                </div>
+
+                <!-- Email Address -->
+                <div class="col-md-6">
+                  <label for="profEmail" class="dash-label">Email Address <span>*</span></label>
+                  <input type="email" class="form-control dash-input" id="profEmail" value="anik.southasia@gmail.com"
+                    required>
+                  <div class="invalid-feedback">Please enter a valid email address.</div>
+                </div>
+
+                <!-- Primary Mobile Number -->
+                <div class="col-md-6">
+                  <label for="profPhone" class="dash-label">Primary Mobile Number <span>*</span></label>
+                  <input type="tel" class="form-control dash-input" id="profPhone" placeholder="e.g., 01700000000"
+                    required>
+                  <div class="dash-help-text">
+                    <i class="fa-solid fa-circle-info"></i> Used for order notifications and delivery
+                  </div>
+                  <div class="invalid-feedback">Please enter your primary mobile number.</div>
+                </div>
+
+                <!-- Alternate Mobile Number -->
+                <div class="col-md-6">
+                  <label for="profAltPhone" class="dash-label">Alternate Mobile Number</label>
+                  <input type="tel" class="form-control dash-input" id="profAltPhone" placeholder="e.g., 01800000000">
+                  <div class="dash-help-text">
+                    <i class="fa-solid fa-circle-info"></i> Optional secondary contact number
+                  </div>
+                </div>
+
+                <!-- Delivery Address -->
+                <div class="col-12">
+                  <label for="profAddress" class="dash-label">Delivery Address <span>*</span></label>
+                  <textarea class="form-control dash-input" id="profAddress" rows="3"
+                    placeholder="Enter your complete street address, city, and postal code" required></textarea>
+                  <div class="dash-help-text">
+                    <i class="fa-solid fa-circle-info"></i> Standard shipping address for physical deliveries
+                  </div>
+                  <div class="invalid-feedback">Please enter your delivery address.</div>
+                </div>
+
+              </div>
+
+              <!-- Action Buttons -->
+              <div class="dash-form-footer">
+                <button type="submit" class="btn-dash-primary">
+                  <i class="fa-solid fa-floppy-disk"></i> Save Changes
+                </button>
+                <a href="customer-dashboard.html" class="btn-dash-secondary">
+                  <i class="fa-solid fa-arrow-left"></i> Back to Dashboard
+                </a>
+              </div>
+
+            </form>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Global JS Files -->
+  <script src="asset/js/bootstrap.bundle.min.js"></script>
+  <script src="asset/js/script.js"></script>
+</body>
+
+</html>

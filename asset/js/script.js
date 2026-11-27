@@ -978,3 +978,14 @@ if (document.querySelector('.brandSlider')) {
     }
   });
 }
+
+
+
+// Mobile Sidebar Toggle
+const sidebarToggle = document.getElementById('sidebarToggle');
+const dashSidebar = document.getElementById('dashSidebar');
+if (sidebarToggle) {
+  sidebarToggle.addEventListener('click', () => {
+    dashSidebar.classList.toggle('show');
+  });
+}
