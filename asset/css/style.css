@@ -11492,6 +11492,7 @@ News Details Page
     box-shadow: var(--shadow-sm);
     overflow: hidden;
     max-width: 960px;
+    margin: 0px auto;
 }
 
 .dash-form-header {
