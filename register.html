@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atcl Frontend</title>
+    <link rel="shortcut icon" href="./asset/images/atcl_logo.jpeg" type="image/x-icon">
+
+
+
+    <!-- ======== Bootstrap css Link ======== -->
+    <link rel="stylesheet" href="asset/css/bootstrap.min.css">
+
+    <!-- ======== Google Font Link ======== -->
+    <link rel="stylesheet" href="asset/css/font.css">
+
+    <!-- ======== Font Awesome Link ======== -->
+    <link rel="stylesheet" href="asset/css/all.min.css">
+
+    <!-- ========  Swiper Js Link ======== -->
+    <link rel="stylesheet" href="asset/css/swiper-bundle.min.css">
+
+    <!-- ======== Custom css Link (keep LAST so it can override the libraries) ======== -->
+    <link rel="stylesheet" href="asset/css/style.css">
+</head>
+
+<body>
+
+
+    <!-- ========= Header Section Start ========= -->
+
+    <!-- Top Bar -->
+    <div class="top-bar d-none d-lg-block">
+        <div class="container d-flex justify-content-between align-items-center">
+            <div class="d-flex align-items-center gap-4">
+                <a href="tel:01819556755"><i class="fa-solid fa-phone me-2 text-accent"></i>01819556755</a>
+                <a href="mailto:atc@dhaka.net"><i class="fa-solid fa-envelope me-2 text-accent"></i>atc@dhaka.net</a>
+                <span><i class="fa-solid fa-location-dot me-2 text-accent"></i>Dhaka, Bangladesh</span>
+            </div>
+            <div class="social-links social-links-sm">
+                <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Header -->
+    <header class="header" id="header">
+        <nav class="navbar navbar-expand-lg">
+            <div class="container position-relative">
+
+                <!-- Logo (replace with real logo later) -->
+                <a class="logo" href="index.html" aria-label="Home">
+                    <img src="asset/images/atcl_logo.jpeg" alt="">
+                    <span class="logo-text">ATCL</span>
+                </a>
+
+                <!-- Right side icons (always visible) + mobile toggler -->
+                <div class="header-actions d-flex align-items-center gap-2 order-lg-last">
+                    <button class="header-icon-btn" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#headerSearch" aria-expanded="false" aria-controls="headerSearch"
+                        aria-label="Search">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </button>
+
+                    <a href="inquiry.html" class="inquiry-btn" aria-label="Inquiry list">
+                        <i class="fa-solid fa-clipboard-list"></i>
+                        <span class="count" id="inquiryCount">0</span>
+                    </a>
+
+                    <a href="request-quotation.html"
+                        class="btn btn-accent btn-sm-c d-none d-xxl-inline-block ms-2 text-nowrap">
+                        Request a Quote
+                    </a>
+
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainMenu"
+                        aria-controls="mainMenu" aria-expanded="false" aria-label="Toggle navigation">
+                        <i class="fa-solid fa-bars"></i>
+                    </button>
+                </div>
+
+                <!-- Menu -->
+                <div class="collapse navbar-collapse justify-content-center" id="mainMenu">
+                    <ul class="navbar-nav align-items-lg-center">
+
+                        <li class="nav-item">
+                            <a class="nav-link active" href="index.html">Home</a>
+                        </li>
+
+                        <!-- Company dropdown -->
+                        <li class="nav-item dropdown">
+                            <span class="nav-link">Company</span>
+                            <button class="dropdown-caret d-lg-none" type="button" data-bs-toggle="dropdown"
+                                aria-expanded="false" aria-label="Open Company menu"><i
+                                    class="fa-solid fa-chevron-down"></i></button>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="about.html">About Us</a></li>
+
+                                <li><a class="dropdown-item" href="mission-vision.html">Mission &amp; Vision</a></li>
+                            </ul>
+                        </li>
+
+                        <!-- Products mega menu -->
+                        <li class="nav-item dropdown mega">
+                            <a class="nav-link" href="#">Products</a>
+                            <button class="dropdown-caret d-lg-none" type="button" data-bs-toggle="dropdown"
+                                aria-expanded="false" aria-label="Open Products menu"><i
+                                    class="fa-solid fa-chevron-down"></i></button>
+                            <div class="dropdown-menu mega-menu">
+                                <div class="row g-4">
+
+                                    <!-- Column 1 -->
+                                    <div class="col-lg-3">
+
+                                        <!-- Category 1 -->
+                                        <div class="mb-3">
+                                            <div class="d-flex align-items-center mb-1">
+                                                <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=80&auto=format&fit=crop&q=60"
+                                                    alt="Survey" class="rounded me-2"
+                                                    style="width: 38px; height: 38px; object-fit: cover;">
+                                                <a href="category.html"
+                                                    class="fw-bold text-dark text-decoration-none small text-uppercase">ALL
+                                                    SURVEY EQUIPMENT</a>
+                                            </div>
+
+                                        </div>
+
+                                        <!-- Category 2 -->
+                                        <div class="mb-3">
+                                            <div class="d-flex align-items-center mb-1">
+                                                <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=80&auto=format&fit=crop&q=60"
+                                                    alt="Heavy Machinery" class="rounded me-2"
+                                                    style="width: 38px; height: 38px; object-fit: cover;">
+                                                <a href="category.html"
+                                                    class="fw-bold text-dark text-decoration-none small text-uppercase">MECHANICAL
+                                                    & HEAVY
+                                                    MACHINERY</a>
+                                            </div>
+
+                                        </div>
+
+                                        <!-- Category 3 -->
+                                        <div class="mb-3">
+                                            <div class="d-flex align-items-center mb-1">
+                                                <img src="https://images.unsplash.com/photo-1616401784845-180882ba9ba8?w=80&auto=format&fit=crop&q=60"
+                                                    alt="CNC" class="rounded me-2"
+                                                    style="width: 38px; height: 38px; object-fit: cover;">
+                                                <a href="category.html"
+                                                    class="fw-bold text-dark text-decoration-none small text-uppercase">CNC-BASED
+                                                    MACHINERY</a>
+                                            </div>
+
+                                        </div>
+
+                                        <!-- Category 4 -->
+                                        <div class="mb-2">
+                                            <div class="d-flex align-items-center mb-1">
+                                                <img src="https://images.unsplash.com/photo-1509391366360-2e959784a276?w=80&auto=format&fit=crop&q=60"
+                                                    alt="Electrical" class="rounded me-2"
+                                                    style="width: 38px; height: 38px; object-fit: cover;">
+                                                <a href="category.html"
+                                                    class="fw-bold text-dark text-decoration-none small text-uppercase">ELECTRICAL
+                                                    &
+                                                    ELECTRONICS</a>
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+
+                                    <!-- Column 2 -->
+                                    <div class="col-lg-3">
+
+                                        <!-- Category 5 -->
+                                        <div class="mb-3">
+                                            <div class="d-flex align-items-center mb-1">
+                                                <img src="https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=80&auto=format&fit=crop&q=60"
+                                                    alt="AI Robotics" class="rounded me-2"
+                                                    style="width: 38px; height: 38px; object-fit: cover;">
+                                                <a href="category.html"
+                                                    class="fw-bold text-dark text-decoration-none small text-uppercase">AI,
+                                                    IOT & ROBOTICS</a>
+                                            </div>
+
+                                        </div>
+
+                                        <!-- Category 6 -->
+                                        <div class="mb-3">
+                                            <div class="d-flex align-items-center mb-1">
+                                                <img src="https://images.unsplash.com/photo-1508514177221-188b1cf16e9d?w=80&auto=format&fit=crop&q=60"
+                                                    alt="Energy" class="rounded me-2"
+                                                    style="width: 38px; height: 38px; object-fit: cover;">
+                                                <a href="category.html"
+                                                    class="fw-bold text-dark text-decoration-none small text-uppercase">ENERGY
+                                                    & ENVIRONMENTAL</a>
+                                            </div>
+
+                                        </div>
+
+                                        <!-- Category 7 -->
+                                        <div class="mb-3">
+                                            <div class="d-flex align-items-center mb-1">
+                                                <img src="https://images.unsplash.com/photo-1562408590-e32931084e23?w=80&auto=format&fit=crop&q=60"
+                                                    alt="Measurement" class="rounded me-2"
+                                                    style="width: 38px; height: 38px; object-fit: cover;">
+                                                <a href="category.html"
+                                                    class="fw-bold text-dark text-decoration-none small text-uppercase">TEST
+                                                    & MEASUREMENT</a>
+                                            </div>
+
+                                        </div>
+
+                                        <!-- Category 8 -->
+                                        <div class="mb-2">
+                                            <div class="d-flex align-items-center mb-1">
+                                                <img src="https://images.unsplash.com/photo-1533776504084-745b43b9f04b?w=80&auto=format&fit=crop&q=60"
+                                                    alt="Chemical" class="rounded me-2"
+                                                    style="width: 38px; height: 38px; object-fit: cover;">
+                                                <a href="category.html"
+                                                    class="fw-bold text-dark text-decoration-none small text-uppercase">FOOD
+                                                    & CHEMICAL ENG.</a>
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+
+                                    <!-- Column 3 -->
+                                    <div class="col-lg-3">
+
+                                        <!-- Category 9 -->
+                                        <div class="mb-3">
+                                            <div class="d-flex align-items-center mb-1">
+                                                <img src="https://images.unsplash.com/photo-1558244661-d248897f7bc4?w=80&auto=format&fit=crop&q=60"
+                                                    alt="Textile" class="rounded me-2"
+                                                    style="width: 38px; height: 38px; object-fit: cover;">
+                                                <a href="category.html"
+                                                    class="fw-bold text-dark text-decoration-none small text-uppercase">TEXTILE
+                                                    ENGINEERING</a>
+                                            </div>
+
+                                        </div>
+
+                                        <!-- Category 10 -->
+                                        <div class="mb-3">
+                                            <div class="d-flex align-items-center mb-1">
+                                                <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=80&auto=format&fit=crop&q=60"
+                                                    alt="Communication" class="rounded me-2"
+                                                    style="width: 38px; height: 38px; object-fit: cover;">
+                                                <a href="category.html"
+                                                    class="fw-bold text-dark text-decoration-none small text-uppercase">COMMUNICATION
+                                                    ENG.</a>
+                                            </div>
+
+                                        </div>
+
+                                        <!-- Category 11 -->
+                                        <div class="mb-3">
+                                            <div class="d-flex align-items-center mb-1">
+                                                <img src="https://images.unsplash.com/photo-1511919884226-fd3cad34687c?w=80&auto=format&fit=crop&q=60"
+                                                    alt="Automobile" class="rounded me-2"
+                                                    style="width: 38px; height: 38px; object-fit: cover;">
+                                                <a href="category.html"
+                                                    class="fw-bold text-dark text-decoration-none small text-uppercase">AUTOMOBILE
+                                                    ENGINEERING</a>
+                                            </div>
+
+                                        </div>
+
+                                        <!-- Category 12 -->
+                                        <div class="mb-2">
+                                            <div class="d-flex align-items-center mb-1">
+                                                <img src="https://images.unsplash.com/photo-1444703686981-a3abbc4d4fe3?w=80&auto=format&fit=crop&q=60"
+                                                    alt="Aerospace" class="rounded me-2"
+                                                    style="width: 38px; height: 38px; object-fit: cover;">
+                                                <a href="category.html"
+                                                    class="fw-bold text-dark text-decoration-none small text-uppercase">ICT
+                                                    EQUIPMENT</a>
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+
+                                    <div class="col-lg-3 d-none d-lg-block">
+                                        <div class="mega-promo">
+                                            <h6>Can't find a product?</h6>
+                                            <p>Tell us your requirement and we will send a quotation.</p>
+                                            <a href="request-quotation.html" class="btn btn-accent btn-sm-c">Request a
+                                                Quote</a>
+                                        </div>
+
+                                    </div>
+                                </div>
+                        </li>
+
+                        <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+                        <li class="nav-item"><a class="nav-link" href="brands.html">Brands</a></li>
+                        <li class="nav-item"><a class="nav-link" href="news.html">News &amp; Events</a></li>
+                        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+
+                        <!-- Shown only on mobile menu -->
+                        <li class="nav-item d-lg-none mt-3">
+                            <a href="request-quotation.html" class="btn btn-accent w-100">Request a Quote</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Search bar (opens under the header) -->
+        <div class="collapse header-search" id="headerSearch">
+            <div class="container py-3">
+                <form action="products.html" method="get" class="search-box">
+                    <input type="search" name="q" class="form-control" placeholder="Search products by name or code..."
+                        aria-label="Search products">
+                    <button type="submit" aria-label="Search"><i class="fa-solid fa-magnifying-glass"></i></button>
+                </form>
+            </div>
+        </div>
+    </header>
+
+    <!-- ========= Header Section End ========= -->
+
+    <main>
+        <section class="auth-section">
+            <div class="container">
+                <div class="auth-card">
+
+                    <div class="auth-head">
+                        <div class="auth-icon"><i class="fa-solid fa-user-plus"></i></div>
+                        <h1>Create New Account</h1>
+                        <p>Join ATCL today and manage your inquiries &amp; orders</p>
+                    </div>
+
+                    <div class="form-msg" id="formMsg">
+                        <i class="fa-solid fa-circle-check me-1"></i> Account created successfully.
+                    </div>
+
+                    <form id="registerForm" novalidate>
+
+                        <div class="field">
+                            <label for="fullName"><i class="fa-regular fa-user"></i> Full Name <span
+                                    class="req">*</span></label>
+                            <input type="text" id="fullName" name="fullName" placeholder="Enter your full name"
+                                autocomplete="name">
+                            <div class="error">Please enter your full name.</div>
+                        </div>
+
+                        <div class="row-2">
+                            <div class="field">
+                                <label for="email"><i class="fa-regular fa-envelope"></i> Email Address <span
+                                        class="req">*</span></label>
+                                <input type="email" id="email" name="email" placeholder="Enter your email"
+                                    autocomplete="email">
+                                <div class="error">Please enter a valid email.</div>
+                            </div>
+                            <div class="field">
+                                <label for="mobile"><i class="fa-solid fa-phone"></i> Mobile Number <span
+                                        class="req">*</span></label>
+                                <input type="tel" id="mobile" name="mobile" placeholder="Enter your mobile number"
+                                    autocomplete="tel">
+                                <div class="error">Please enter a valid mobile number.</div>
+                            </div>
+                        </div>
+
+                        <div class="field">
+                            <label for="address"><i class="fa-solid fa-location-dot"></i> Address <span
+                                    class="req">*</span></label>
+                            <textarea id="address" name="address" placeholder="Enter your full address"
+                                autocomplete="street-address"></textarea>
+                            <div class="error">Please enter your address.</div>
+                        </div>
+
+                        <div class="row-2">
+                            <div class="field">
+                                <label for="password"><i class="fa-solid fa-lock"></i> Password <span
+                                        class="req">*</span></label>
+                                <input type="password" id="password" name="password" placeholder="Create a password"
+                                    autocomplete="new-password">
+                                <div class="error">Password must be at least 6 characters.</div>
+                            </div>
+                            <div class="field">
+                                <label for="confirmPassword"><i class="fa-solid fa-lock-open"></i> Confirm Password
+                                    <span class="req">*</span></label>
+                                <input type="password" id="confirmPassword" name="confirmPassword"
+                                    placeholder="Re-enter your password" autocomplete="new-password">
+                                <div class="error">Passwords do not match.</div>
+                            </div>
+                        </div>
+
+                        <button type="submit" class="btn-primary-c">
+                            <i class="fa-solid fa-user-check"></i> Create Account
+                        </button>
+
+                        <!-- <div class="divider">Or sign up with</div>
+
+                    <button type="button" class="btn-google" id="googleBtn">
+                        <svg viewBox="0 0 48 48" aria-hidden="true">
+                            <path fill="#EA4335" d="M24 9.5c3.5 0 6.6 1.2 9.1 3.6l6.8-6.8C35.8 2.4 30.3 0 24 0 14.6 0 6.5 5.4 2.6 13.2l7.9 6.1C12.4 13.6 17.7 9.5 24 9.5z" />
+                            <path fill="#4285F4" d="M46.1 24.5c0-1.6-.1-3.1-.4-4.5H24v9h12.4c-.5 2.9-2.2 5.3-4.6 6.9l7.1 5.5c4.3-4 6.7-9.8 6.7-16.9z" />
+                            <path fill="#FBBC05" d="M10.5 28.7c-.5-1.4-.8-2.9-.8-4.7s.3-3.3.8-4.7l-7.9-6.1C.9 16.5 0 20.1 0 24s.9 7.5 2.6 10.8l7.9-6.1z" />
+                            <path fill="#34A853" d="M24 48c6.5 0 11.9-2.1 15.9-5.8l-7.1-5.5c-2 1.4-4.9 2.3-8.8 2.3-6.3 0-11.6-4.1-13.5-9.8l-7.9 6.1C6.5 42.6 14.6 48 24 48z" />
+                        </svg>
+                        Sign up with Google
+                    </button> -->
+
+                    </form>
+
+                    <div class="auth-foot">
+                        <i class="fa-solid fa-right-to-bracket"></i>Already have an account? <a href="login.html">Login
+                            Now</a>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ========= Footer Section Start ========= -->
+    <footer class="footer" id="footer">
+
+        <!-- Main footer -->
+        <div class="container footer-main">
+            <div class="row g-5">
+
+                <!-- Brand -->
+                <div class="col-lg-4 col-md-6">
+
+
+                    <a class="logo" href="index.html" aria-label="Home">
+                        <img src="asset/images/atcl_logo.jpeg" alt="">
+                        <span class="logo-text text-white">ATCL</span>
+                    </a>
+
+                    <p class="footer-about">A trusted solution provider delivering quality products, technical expertise
+                        and
+                        reliable after-sales support to industries across Bangladesh.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                        <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+                        <a href="#" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+                    </div>
+                </div>
+
+                <!-- Quick links -->
+                <div class="col-lg-2 col-md-6 col-sm-6">
+                    <h5 class="footer-title">Quick Links</h5>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+
+                        <li><a href="mission-vision.html">Mission &amp; Vision</a></li>
+                        <li><a href="brands.html">Brands</a></li>
+                        <li><a href="news.html">News &amp; Events</a></li>
+                        <li><a href="careers.html">Careers</a></li>
+                    </ul>
+                </div>
+
+                <!-- Solutions -->
+                <div class="col-lg-3 col-md-6 col-sm-6">
+                    <h5 class="footer-title">Our Solutions</h5>
+                    <ul class="footer-links">
+                        <li><a href="products.html">Analytical</a></li>
+                        <li><a href="products.html">Life Science</a></li>
+                        <li><a href="products.html">Industrial</a></li>
+                        <li><a href="products.html">Textile Testing</a></li>
+                        <li><a href="products.html">Leather Testing</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="request-quotation.html">Request a Quote</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact -->
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="footer-title">Contact Us</h5>
+                    <ul class="footer-contact">
+                        <li>
+                            <span class="fc-icon"><i class="fa-solid fa-location-dot"></i></span>
+                            <span>12-A, 12th Floor, Center Point, Concord Tower, Tejkunipara, Farmgate 1215</span>
+                        </li>
+                        <li>
+                            <span class="fc-icon"><i class="fa-solid fa-phone"></i></span>
+                            <a href="tel:01819556755">01819556755</a>
+                        </li>
+                        <li>
+                            <span class="fc-icon"><i class="fa-solid fa-envelope"></i></span>
+                            <a href="mailto:atc@dhaka.net">atc@dhaka.net</a>
+                        </li>
+                        <li>
+                            <span class="fc-icon"><i class="fa-solid fa-clock"></i></span>
+                            <span>Sun – Thu: 9:00 AM – 6:00 PM</span>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <!-- Bottom bar -->
+            <div class="footer-bottom">
+                <p class="mb-0">&copy; <span id="footerYear">2026</span> ATCL Solutions. All rights reserved.</p>
+                <div class="footer-bottom-links">
+                    <a href="privacy-policy.html">Privacy Policy</a>
+                    <a href="terms.html">Terms &amp; Conditions</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to top -->
+    <button type="button" class="back-to-top" id="backToTop" aria-label="Back to top">
+        <i class="fa-solid fa-arrow-up"></i>
+    </button>
+    <!-- ========= Footer Section End ========= -->
+
+
+    <!-- ======== Bootstrap js Link ======== -->
+    <script src="asset/js/bootstrap.bundle.min.js"></script>
+
+    <!-- ======== Swiper js Link ======== -->
+    <script src="asset/js/swiper-bundle.min.js"></script>
+
+    <!-- ======== Custom js Link ======== -->
+    <script src="asset/js/script.js"></script>
+
+
+
+
+</body>
+
+</html>
