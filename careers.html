@@ -26,27 +26,7 @@
 
 <body>
 
-
-    <!-- ========= Header Section Start ========= -->
-
-    <!-- Top Bar -->
-    <div class="top-bar d-none d-lg-block">
-        <div class="container d-flex justify-content-between align-items-center">
-            <div class="d-flex align-items-center gap-4">
-                <a href="tel:01819556755"><i class="fa-solid fa-phone me-2 text-accent"></i>01819556755</a>
-                <a href="mailto:atc@dhaka.net"><i
-                        class="fa-solid fa-envelope me-2 text-accent"></i>atc@dhaka.net</a>
-                <span><i class="fa-solid fa-location-dot me-2 text-accent"></i>Dhaka, Bangladesh</span>
-            </div>
-            <div class="social-links social-links-sm">
-                <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
-                <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
-                <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
-            </div>
-        </div>
-    </div>
-
- <!-- Main Header -->
+     <!-- Main Header -->
   <header class="header" id="header">
     <nav class="navbar navbar-expand-lg">
       <div class="container position-relative">
@@ -54,7 +34,7 @@
         <!-- Logo (replace with real logo later) -->
         <a class="logo" href="index.html" aria-label="Home">
           <img src="asset/images/atcl_logo.jpeg" alt="">
-          <span class="logo-text">ATCL</span>
+
         </a>
 
         <!-- Right side icons (always visible) + mobile toggler -->
@@ -65,14 +45,18 @@
           </button>
 
           <a href="inquiry.html" class="inquiry-btn" aria-label="Inquiry list">
-            <i class="fa-solid fa-clipboard-list"></i>
-            <span class="count" id="inquiryCount">0</span>
+            <i class="fa fa-shopping-cart"></i> <span class="count" id="inquiryCount">0</span>
+          </a>
+
+          <!-- customer Login -->
+          <a href="login.html" class="inquiry-btn" aria-label="User Account">
+            <i class="fa-solid fa-user-circle" style="font-size: 22px"></i>
           </a>
 
           <a href="request-quotation.html" class="btn btn-accent btn-sm-c d-none d-xxl-inline-block ms-2 text-nowrap">
             Request a Quote
           </a>
-
+          
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainMenu"
             aria-controls="mainMenu" aria-expanded="false" aria-label="Toggle navigation">
             <i class="fa-solid fa-bars"></i>
@@ -89,193 +73,221 @@
 
             <!-- Company dropdown -->
             <li class="nav-item dropdown">
-              <span class="nav-link">Company</span>
+              <span class="nav-link">About Us</span>
               <button class="dropdown-caret d-lg-none" type="button" data-bs-toggle="dropdown" aria-expanded="false"
                 aria-label="Open Company menu"><i class="fa-solid fa-chevron-down"></i></button>
               <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="about.html">About Us</a></li>
-
+                <li><a class="dropdown-item" href="company-profile.html">Company Profile</a></li>
                 <li><a class="dropdown-item" href="mission-vision.html">Mission &amp; Vision</a></li>
+                <li><a class="dropdown-item" href="careers.html">Careers</a></li>
               </ul>
             </li>
 
-            <!-- Products mega menu -->
+            <!-- Products Mega Menu with Interactive Sub-Categories -->
             <li class="nav-item dropdown mega">
-              <a class="nav-link" href="#">Products</a>
-              <button class="dropdown-caret d-lg-none" type="button" data-bs-toggle="dropdown" aria-expanded="false"
-                aria-label="Open Products menu"><i class="fa-solid fa-chevron-down"></i></button>
+              <a class="nav-link" href="#" data-bs-toggle="dropdown" data-bs-auto-close="outside"
+                aria-expanded="false">Products</a>
+              <button class="dropdown-caret d-lg-none" type="button" data-bs-toggle="dropdown"
+                data-bs-auto-close="outside" aria-expanded="false" aria-label="Open Products menu"><i
+                  class="fa-solid fa-chevron-down"></i></button>
               <div class="dropdown-menu mega-menu">
                 <div class="row g-4">
 
                   <!-- Column 1 -->
                   <div class="col-lg-3">
-
-                    <!-- Category 1 -->
-                    <div class="mb-3">
-                      <div class="d-flex align-items-center mb-1">
-                        <img
-                          src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=80&auto=format&fit=crop&q=60"
-                          alt="Survey" class="rounded me-2" style="width: 38px; height: 38px; object-fit: cover;">
-                        <a href="category.html" class="fw-bold text-dark text-decoration-none small text-uppercase">ALL
-                          SURVEY EQUIPMENT</a>
+                    <div class="mega-category-item">
+                      <a href="category.html" class="mega-cat-title">
+                        <span>ALL SURVEY EQUIPMENT</span>
+                        <i class="fa-solid fa-chevron-right cat-arrow"></i>
+                      </a>
+                      <div class="mega-sub-menu">
+                        <a href="category.html">Total Station</a>
+                        <a href="category.html">Auto Level &amp; Theodolite</a>
+                        <a href="category.html">GNSS RTK System</a>
+                        <a href="category.html">Digital Level</a>
+                        <a href="category.html" class="mega-view-all">View All <i
+                            class="fa-solid fa-arrow-right"></i></a>
                       </div>
-                      
                     </div>
 
-                    <!-- Category 2 -->
-                    <div class="mb-3">
-                      <div class="d-flex align-items-center mb-1">
-                        <img
-                          src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=80&auto=format&fit=crop&q=60"
-                          alt="Heavy Machinery" class="rounded me-2"
-                          style="width: 38px; height: 38px; object-fit: cover;">
-                        <a href="category.html"
-                          class="fw-bold text-dark text-decoration-none small text-uppercase">MECHANICAL & HEAVY
-                          MACHINERY</a>
+                    <div class="mega-category-item">
+                      <a href="category.html" class="mega-cat-title">
+                        <span>MECHANICAL &amp; HEAVY MACHINERY</span>
+                        <i class="fa-solid fa-chevron-right cat-arrow"></i>
+                      </a>
+                      <div class="mega-sub-menu">
+                        <a href="category.html">Lathe &amp; Milling Machines</a>
+                        <a href="category.html">Hydraulic Press</a>
+                        <a href="category.html">Material Testing Rigs</a>
+                        <a href="category.html" class="mega-view-all">View All <i
+                            class="fa-solid fa-arrow-right"></i></a>
                       </div>
-                      
                     </div>
 
-                    <!-- Category 3 -->
-                    <div class="mb-3">
-                      <div class="d-flex align-items-center mb-1">
-                        <img
-                          src="https://images.unsplash.com/photo-1616401784845-180882ba9ba8?w=80&auto=format&fit=crop&q=60"
-                          alt="CNC" class="rounded me-2" style="width: 38px; height: 38px; object-fit: cover;">
-                        <a href="category.html"
-                          class="fw-bold text-dark text-decoration-none small text-uppercase">CNC-BASED MACHINERY</a>
+                    <div class="mega-category-item">
+                      <a href="category.html" class="mega-cat-title">
+                        <span>CNC-BASED MACHINERY</span>
+                        <i class="fa-solid fa-chevron-right cat-arrow"></i>
+                      </a>
+                      <div class="mega-sub-menu">
+                        <a href="category.html">CNC Router</a>
+                        <a href="category.html">CNC Laser Cutter</a>
+                        <a href="category.html">CNC Plasma Table</a>
+                        <a href="category.html" class="mega-view-all">View All <i
+                            class="fa-solid fa-arrow-right"></i></a>
                       </div>
-                      
                     </div>
 
-                    <!-- Category 4 -->
-                    <div class="mb-2">
-                      <div class="d-flex align-items-center mb-1">
-                        <img
-                          src="https://images.unsplash.com/photo-1509391366360-2e959784a276?w=80&auto=format&fit=crop&q=60"
-                          alt="Electrical" class="rounded me-2" style="width: 38px; height: 38px; object-fit: cover;">
-                        <a href="category.html"
-                          class="fw-bold text-dark text-decoration-none small text-uppercase">ELECTRICAL &
-                          ELECTRONICS</a>
+                    <div class="mega-category-item">
+                      <a href="category.html" class="mega-cat-title">
+                        <span>ELECTRICAL &amp; ELECTRONICS</span>
+                        <i class="fa-solid fa-chevron-right cat-arrow"></i>
+                      </a>
+                      <div class="mega-sub-menu">
+                        <a href="category.html">Oscilloscopes &amp; DMMs</a>
+                        <a href="category.html">Signal Generators</a>
+                        <a href="category.html">Power Supplies</a>
+                        <a href="category.html" class="mega-view-all">View All <i
+                            class="fa-solid fa-arrow-right"></i></a>
                       </div>
-                     
                     </div>
-
                   </div>
 
                   <!-- Column 2 -->
                   <div class="col-lg-3">
-
-                    <!-- Category 5 -->
-                    <div class="mb-3">
-                      <div class="d-flex align-items-center mb-1">
-                        <img
-                          src="https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=80&auto=format&fit=crop&q=60"
-                          alt="AI Robotics" class="rounded me-2" style="width: 38px; height: 38px; object-fit: cover;">
-                        <a href="category.html" class="fw-bold text-dark text-decoration-none small text-uppercase">AI,
-                          IOT & ROBOTICS</a>
+                    <div class="mega-category-item">
+                      <a href="category.html" class="mega-cat-title">
+                        <span>AI, IOT &amp; ROBOTICS</span>
+                        <i class="fa-solid fa-chevron-right cat-arrow"></i>
+                      </a>
+                      <div class="mega-sub-menu">
+                        <a href="category.html">Robotic Arms</a>
+                        <a href="category.html">IoT Development Kits</a>
+                        <a href="category.html">AI Edge Computers</a>
+                        <a href="category.html" class="mega-view-all">View All <i
+                            class="fa-solid fa-arrow-right"></i></a>
                       </div>
-                      
                     </div>
 
-                    <!-- Category 6 -->
-                    <div class="mb-3">
-                      <div class="d-flex align-items-center mb-1">
-                        <img
-                          src="https://images.unsplash.com/photo-1508514177221-188b1cf16e9d?w=80&auto=format&fit=crop&q=60"
-                          alt="Energy" class="rounded me-2" style="width: 38px; height: 38px; object-fit: cover;">
-                        <a href="category.html"
-                          class="fw-bold text-dark text-decoration-none small text-uppercase">ENERGY & ENVIRONMENTAL</a>
+                    <div class="mega-category-item">
+                      <a href="category.html" class="mega-cat-title">
+                        <span>ENERGY &amp; ENVIRONMENTAL</span>
+                        <i class="fa-solid fa-chevron-right cat-arrow"></i>
+                      </a>
+                      <div class="mega-sub-menu">
+                        <a href="category.html">Solar Testing Kits</a>
+                        <a href="category.html">Air Quality Monitors</a>
+                        <a href="category.html">Water Analysis Meters</a>
+                        <a href="category.html" class="mega-view-all">View All <i
+                            class="fa-solid fa-arrow-right"></i></a>
                       </div>
-                      
                     </div>
 
-                    <!-- Category 7 -->
-                    <div class="mb-3">
-                      <div class="d-flex align-items-center mb-1">
-                        <img
-                          src="https://images.unsplash.com/photo-1562408590-e32931084e23?w=80&auto=format&fit=crop&q=60"
-                          alt="Measurement" class="rounded me-2" style="width: 38px; height: 38px; object-fit: cover;">
-                        <a href="category.html" class="fw-bold text-dark text-decoration-none small text-uppercase">TEST
-                          & MEASUREMENT</a>
+                    <div class="mega-category-item">
+                      <a href="category.html" class="mega-cat-title">
+                        <span>TEST &amp; MEASUREMENT</span>
+                        <i class="fa-solid fa-chevron-right cat-arrow"></i>
+                      </a>
+                      <div class="mega-sub-menu">
+                        <a href="category.html">Multimeters &amp; Testers</a>
+                        <a href="category.html">Thermal Imagers</a>
+                        <a href="category.html">Vibration Analyzers</a>
+                        <a href="category.html" class="mega-view-all">View All <i
+                            class="fa-solid fa-arrow-right"></i></a>
                       </div>
-                     
                     </div>
 
-                    <!-- Category 8 -->
-                    <div class="mb-2">
-                      <div class="d-flex align-items-center mb-1">
-                        <img
-                          src="https://images.unsplash.com/photo-1533776504084-745b43b9f04b?w=80&auto=format&fit=crop&q=60"
-                          alt="Chemical" class="rounded me-2" style="width: 38px; height: 38px; object-fit: cover;">
-                        <a href="category.html" class="fw-bold text-dark text-decoration-none small text-uppercase">FOOD
-                          & CHEMICAL ENG.</a>
+                    <div class="mega-category-item">
+                      <a href="category.html" class="mega-cat-title">
+                        <span>FOOD &amp; CHEMICAL ENG.</span>
+                        <i class="fa-solid fa-chevron-right cat-arrow"></i>
+                      </a>
+                      <div class="mega-sub-menu">
+                        <a href="category.html">Spectrophotometers</a>
+                        <a href="category.html">Refractometers</a>
+                        <a href="category.html">Viscometers</a>
+                        <a href="category.html" class="mega-view-all">View All <i
+                            class="fa-solid fa-arrow-right"></i></a>
                       </div>
-                     
                     </div>
-
                   </div>
 
                   <!-- Column 3 -->
                   <div class="col-lg-3">
-
-                    <!-- Category 9 -->
-                    <div class="mb-3">
-                      <div class="d-flex align-items-center mb-1">
-                        <img
-                          src="https://images.unsplash.com/photo-1558244661-d248897f7bc4?w=80&auto=format&fit=crop&q=60"
-                          alt="Textile" class="rounded me-2" style="width: 38px; height: 38px; object-fit: cover;">
-                        <a href="category.html"
-                          class="fw-bold text-dark text-decoration-none small text-uppercase">TEXTILE ENGINEERING</a>
+                    <div class="mega-category-item">
+                      <a href="category.html" class="mega-cat-title">
+                        <span>TEXTILE ENGINEERING</span>
+                        <i class="fa-solid fa-chevron-right cat-arrow"></i>
+                      </a>
+                      <div class="mega-sub-menu">
+                        <a href="category.html">Yarn Strength Testers</a>
+                        <a href="category.html">Fabric Bursting Testers</a>
+                        <a href="category.html">Crimp Testers</a>
+                        <a href="category.html" class="mega-view-all">View All <i
+                            class="fa-solid fa-arrow-right"></i></a>
                       </div>
-                     
                     </div>
 
-                    <!-- Category 10 -->
-                    <div class="mb-3">
-                      <div class="d-flex align-items-center mb-1">
-                        <img
-                          src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=80&auto=format&fit=crop&q=60"
-                          alt="Communication" class="rounded me-2"
-                          style="width: 38px; height: 38px; object-fit: cover;">
-                        <a href="category.html"
-                          class="fw-bold text-dark text-decoration-none small text-uppercase">COMMUNICATION ENG.</a>
+                    <div class="mega-category-item">
+                      <a href="category.html" class="mega-cat-title">
+                        <span>COMMUNICATION ENG.</span>
+                        <i class="fa-solid fa-chevron-right cat-arrow"></i>
+                      </a>
+                      <div class="mega-sub-menu">
+                        <a href="category.html">Spectrum Analyzers</a>
+                        <a href="category.html">RF Trainers</a>
+                        <a href="category.html">Fiber Optic Splicers</a>
+                        <a href="category.html" class="mega-view-all">View All <i
+                            class="fa-solid fa-arrow-right"></i></a>
                       </div>
-                      
                     </div>
 
-                    <!-- Category 11 -->
-                    <div class="mb-3">
-                      <div class="d-flex align-items-center mb-1">
-                        <img
-                          src="https://images.unsplash.com/photo-1511919884226-fd3cad34687c?w=80&auto=format&fit=crop&q=60"
-                          alt="Automobile" class="rounded me-2" style="width: 38px; height: 38px; object-fit: cover;">
-                        <a href="category.html"
-                          class="fw-bold text-dark text-decoration-none small text-uppercase">AUTOMOBILE ENGINEERING</a>
+                    <div class="mega-category-item">
+                      <a href="category.html" class="mega-cat-title">
+                        <span>AUTOMOBILE ENGINEERING</span>
+                        <i class="fa-solid fa-chevron-right cat-arrow"></i>
+                      </a>
+                      <div class="mega-sub-menu">
+                        <a href="category.html">Engine Analyzers</a>
+                        <a href="category.html">Brake Testers</a>
+                        <a href="category.html">OBD Scanners</a>
+                        <a href="category.html" class="mega-view-all">View All <i
+                            class="fa-solid fa-arrow-right"></i></a>
                       </div>
-                      
                     </div>
 
-                    <!-- Category 12 -->
-                    <div class="mb-2">
-                      <div class="d-flex align-items-center mb-1">
-                        <img
-                          src="https://images.unsplash.com/photo-1444703686981-a3abbc4d4fe3?w=80&auto=format&fit=crop&q=60"
-                          alt="Aerospace" class="rounded me-2" style="width: 38px; height: 38px; object-fit: cover;">
-                        <a href="category.html"
-                          class="fw-bold text-dark text-decoration-none small text-uppercase">ICT EQUIPMENT</a>
+                    <div class="mega-category-item">
+                      <a href="category.html" class="mega-cat-title">
+                        <span>ICT EQUIPMENT</span>
+                        <i class="fa-solid fa-chevron-right cat-arrow"></i>
+                      </a>
+                      <div class="mega-sub-menu">
+                        <a href="category.html">Enterprise Servers</a>
+                        <a href="category.html">Network Switches</a>
+                        <a href="category.html">Racks &amp; Accessories</a>
+                        <a href="category.html" class="mega-view-all">View All <i
+                            class="fa-solid fa-arrow-right"></i></a>
                       </div>
-                      
                     </div>
-
                   </div>
 
-                   <div class="col-lg-3 d-none d-lg-block">
-                    <div class="mega-promo">
-                      <h6>Can't find a product?</h6>
-                      <p>Tell us your requirement and we will send a quotation.</p>
-                      <a href="request-quotation.html" class="btn btn-accent btn-sm-c">Request a Quote</a>
+                  <!-- Column 4: Promo Box -->
+                  <div class="col-lg-3 d-none d-lg-block">
+                    <div class="mega-promo d-flex flex-column justify-content-between">
+                      <div>
+                        <span class="badge bg-white text-dark mb-2 px-2 py-1" style="font-size: 11px;">Custom
+                          Order</span>
+                        <h6>Can't find a product?</h6>
+                        <p>Tell us your requirement and our engineering team will send a tailored quotation within 24
+                          hours.</p>
+                      </div>
+                      <div>
+                        <a href="request-quotation.html" class="btn btn-accent btn-sm-c w-100 mb-2">Request a Quote</a>
+                        <a href="products.html" class="btn btn-outline-light btn-sm-c w-100"
+                          style="border: 1px solid rgba(255,255,255,0.4);">Browse All</a>
+                      </div>
                     </div>
+                  </div>
 
                 </div>
               </div>
@@ -283,7 +295,7 @@
 
             <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
             <li class="nav-item"><a class="nav-link" href="brands.html">Brands</a></li>
-            <li class="nav-item"><a class="nav-link" href="news.html">News &amp; Events</a></li>
+            <!-- <li class="nav-item"><a class="nav-link" href="news.html">News &amp; Events</a></li> -->
             <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
 
             <!-- Shown only on mobile menu -->
@@ -292,6 +304,8 @@
             </li>
           </ul>
         </div>
+
+
       </div>
     </nav>
 
@@ -306,6 +320,23 @@
       </div>
     </div>
   </header>
+
+  <!-- ========= Marquee Notice Bar Start ========= -->
+  <div class="marquee-bar bg-dark text-white py-2 overflow-hidden"
+    style="font-size: 14px; border-bottom: 1px solid rgba(255,255,255,0.1);">
+    <div class="container d-flex align-items-center">
+
+      <marquee behavior="scroll" direction="left" scrollamount="5" onmouseover="this.stop();" onmouseout="this.start();"
+        class="text-light">
+        Welcome to ATCL Solutions! We supply world-class industrial, laboratory, and testing equipment across
+        Bangladesh. | 📞 For urgent queries call us at <a href="tel:01819556755"
+          class="text-warning text-decoration-none fw-bold">01819556755</a> | 🚀 Get your quotations within 24
+        hours of inquiry!
+      </marquee>
+    </div>
+  </div>
+  <!-- ========= Marquee Notice Bar End ========= -->
+
 
   
     <main>
@@ -612,95 +643,157 @@
 
     </main>
 
-    <!-- ========= Footer Section Start ========= -->
-    <footer class="footer" id="footer">
+   <!-- ========= Footer Section Start ========= -->
+  <footer class="footer" id="footer">
 
-        <!-- Main footer -->
-        <div class="container footer-main">
-            <div class="row g-5">
+    <!-- Main footer -->
+    <div class="container footer-main">
 
-                <!-- Brand -->
-                <div class="col-lg-4 col-md-6">
-                    <!-- Logo (replace with real logo later) -->
-                  <a class="logo" href="index.html" aria-label="Home">
-                        <img src="asset/images/atcl_logo.jpeg" alt="">
-                        <span class="logo-text text-white">ATCL</span>
-                    </a>
-                    <p class="footer-about">A trusted solution provider delivering quality products, technical expertise
-                        and
-                        reliable after-sales support to industries across Bangladesh.</p>
-                    <div class="social-links">
-                        <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
-                        <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
-                        <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
-                        <a href="#" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
-                    </div>
-                </div>
 
-                <!-- Quick links -->
-                <div class="col-lg-2 col-md-6 col-sm-6">
-                    <h5 class="footer-title">Quick Links</h5>
-                    <ul class="footer-links">
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="about.html">About Us</a></li>
-                        
-                        <li><a href="mission-vision.html">Mission &amp; Vision</a></li>
-                        <li><a href="brands.html">Brands</a></li>
-                        <li><a href="news.html">News &amp; Events</a></li>
-                        <li><a href="careers.html">Careers</a></li>
-                    </ul>
-                </div>
+      <!-- ========= Payment & Certification Strip Start ========= -->
+      <div class="row card-member align-items-center py-3 pt-0 mb-4"
+        style=" border-bottom: 1px solid rgba(255,255,255,.1);">
 
-                <!-- Solutions -->
-                <div class="col-lg-3 col-md-6 col-sm-6">
-                    <h5 class="footer-title">Our Solutions</h5>
-                    <ul class="footer-links">
-                        <li><a href="products.html">Analytical</a></li>
-                        <li><a href="products.html">Life Science</a></li>
-                        <li><a href="products.html">Industrial</a></li>
-                        <li><a href="products.html">Textile Testing</a></li>
-                        <li><a href="products.html">Leather Testing</a></li>
-                        <li><a href="services.html">Services</a></li>
-                        <li><a href="request-quotation.html">Request a Quote</a></li>
-                    </ul>
-                </div>
-
-                <!-- Contact -->
-                <div class="col-lg-3 col-md-6">
-                    <h5 class="footer-title">Contact Us</h5>
-                    <ul class="footer-contact">
-                        <li>
-                            <span class="fc-icon"><i class="fa-solid fa-location-dot"></i></span>
-                            <span>12-A, 12th Floor, Center Point, Concord Tower, Tejkunipara, Farmgate 1215</span>
-                        </li>
-                        <li>
-                            <span class="fc-icon"><i class="fa-solid fa-phone"></i></span>
-                            <a href="tel:01819556755">01819556755</a>
-                        </li>
-                        <li>
-                            <span class="fc-icon"><i class="fa-solid fa-envelope"></i></span>
-                            <a href="mailto:atc@dhaka.net">atc@dhaka.net</a>
-                        </li>
-                        <li>
-                            <span class="fc-icon"><i class="fa-solid fa-clock"></i></span>
-                            <span>Sun – Thu: 9:00 AM – 6:00 PM</span>
-                        </li>
-                    </ul>
-                </div>
-
-            </div>
-
-            <!-- Bottom bar -->
-            <div class="footer-bottom">
-                <p class="mb-0">&copy; <span id="footerYear">2026</span> ATCL Solutions. All rights reserved.</p>
-                <div class="footer-bottom-links">
-                    <a href="privacy-policy.html">Privacy Policy</a>
-                    <a href="terms.html">Terms &amp; Conditions</a>
-                    <a href="contact.html">Contact</a>
-                </div>
-            </div>
+        <!-- We Accept Section -->
+        <div class="col-lg-7 col-md-12 mb-3 mb-lg-0">
+          <h6 class="text-white mb-2" style="font-size: 16px; font-weight: 600;">We Accept</h6>
+          <div class="cards-area d-flex flex-wrap gap-2 align-items-center">
+            <div title="VISA" style="background:#fff; padding:4px 8px; border-radius:6px;"><img
+                src="asset/images/VISA.png" alt="VISA" style="height: 35px; object-fit: contain;"></div>
+            <div title="MasterCard" style="background:#fff; padding:4px 8px; border-radius:6px;"><img
+                src="asset/images/MasterCard.png" alt="MasterCard" style="height: 35px; object-fit: contain;"></div>
+            <div title="NexusPay" style="background:#fff; padding:4px 8px; border-radius:6px;"><img
+                src="asset/images/NexusPay.png" alt="NexusPay" style="height: 35px; object-fit: contain;"></div>
+            <div title="bKash" style="background:#fff; padding:4px 8px; border-radius:6px;"><img
+                src="asset/images/bKash.png" alt="bKash" style="height: 35px; object-fit: contain;"></div>
+            <div title="Rocket" style="background:#fff; padding:4px 8px; border-radius:6px;"><img
+                src="asset/images/Rocket.png" alt="Rocket" style="height: 35px; object-fit: contain;"></div>
+            <div title="Nagad" style="background:#fff; padding:4px 8px; border-radius:6px;"><img
+                src="asset/images/Nagad.png" alt="Nagad" style="height: 35px; object-fit: contain;"></div>
+            <div title="uPay" style="background:#fff; padding:4px 8px; border-radius:6px;"><img
+                src="asset/images/uPay.png" alt="uPay" style="height: 35px; object-fit: contain;"></div>
+            <div title="CityTouch" style="background:#fff; padding:4px 8px; border-radius:6px;"><img
+                src="asset/images/CityTouch.png" alt="CityTouch" style="height: 35px; object-fit: contain;"></div>
+            <div title="BracBank" style="background:#fff; padding:4px 8px; border-radius:6px;"><img
+                src="asset/images/BracBank.png" alt="BracBank" style="height: 35px; object-fit: contain;"></div>
+            <div title="BankAsia" style="background:#fff; padding:4px 8px; border-radius:6px;"><img
+                src="asset/images/BankAsia.png" alt="BankAsia" style="height: 35px; object-fit: contain;"></div>
+          </div>
         </div>
-    </footer>
+
+        <!-- ISO Certified & Members Of Section -->
+        <div class="col-lg-5 col-md-12">
+          <div class="d-flex justify-content-lg-end justify-content-start align-items-center gap-4 flex-wrap">
+
+            <!-- ISO Certified -->
+            <div class="iso-certified text-center">
+              <h6 class="text-white mb-2" style="font-size: 16px; font-weight: 600;">ISO Certified</h6>
+              <div class="images bg-white p-1 rounded" style="display:inline-block;">
+                <img src="asset/images/ISO.jpeg" alt="ISO 27001:2022" title="ISO 27001:2022 Certified"
+                  style="height: 45px; width: auto; object-fit: contain;">
+              </div>
+            </div>
+
+            <!-- Members Of -->
+            <div class="members text-center">
+              <h6 class="text-white mb-2" style="font-size: 16px; font-weight: 600;">Members Of</h6>
+              <div class="images bg-white p-1 rounded" style="display:inline-block;">
+                <img src="asset/images/member.jpg" alt="BCS" title="BCS"
+                  style="height: 45px; width: auto; object-fit: contain;">
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+      <!-- ========= Payment & Certification Strip End ========= -->
+
+      <div class="row g-5">
+
+        <!-- Brand -->
+        <div class="col-lg-4 col-md-6">
+
+
+          <a class="logo" href="index.html" aria-label="Home">
+            <img src="asset/images/atcl_logo.jpeg" alt="">
+            <span class="logo-text text-white">ATCL</span>
+          </a>
+
+          <p class="footer-about">A trusted solution provider delivering quality products, technical expertise and
+            reliable after-sales support to industries across Bangladesh.</p>
+          <div class="social-links">
+            <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+            <a href="#" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+          </div>
+        </div>
+
+        <!-- Quick links -->
+        <div class="col-lg-2 col-md-6 col-sm-6">
+          <h5 class="footer-title">Quick Links</h5>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+
+            <li><a href="mission-vision.html">Mission &amp; Vision</a></li>
+            <li><a href="brands.html">Brands</a></li>
+            <li><a href="news.html">News &amp; Events</a></li>
+            <li><a href="careers.html">Careers</a></li>
+          </ul>
+        </div>
+
+        <!-- Solutions -->
+        <div class="col-lg-3 col-md-6 col-sm-6">
+          <h5 class="footer-title">Our Solutions</h5>
+          <ul class="footer-links">
+            <li><a href="products.html">Analytical</a></li>
+            <li><a href="products.html">Life Science</a></li>
+            <li><a href="products.html">Industrial</a></li>
+            <li><a href="products.html">Textile Testing</a></li>
+            <li><a href="products.html">Leather Testing</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="request-quotation.html">Request a Quote</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact -->
+        <div class="col-lg-3 col-md-6">
+          <h5 class="footer-title">Contact Us</h5>
+          <ul class="footer-contact">
+            <li>
+              <span class="fc-icon"><i class="fa-solid fa-location-dot"></i></span>
+              <span>12-A, 12th Floor, Center Point, Concord Tower, Tejkunipara, Farmgate 1215</span>
+            </li>
+            <li>
+              <span class="fc-icon"><i class="fa-solid fa-phone"></i></span>
+              <a href="tel:01819556755">01819556755</a>
+            </li>
+            <li>
+              <span class="fc-icon"><i class="fa-solid fa-envelope"></i></span>
+              <a href="mailto:atc@dhaka.net">atc@dhaka.net</a>
+            </li>
+            <li>
+              <span class="fc-icon"><i class="fa-solid fa-clock"></i></span>
+              <span>Sun – Thu: 9:00 AM – 6:00 PM</span>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+
+      <!-- Bottom bar -->
+      <div class="footer-bottom">
+        <p class="mb-0">&copy; <span id="footerYear">2026</span> ATCL Solutions. All rights reserved.</p>
+        <div class="footer-bottom-links">
+          <a href="privacy-policy.html">Privacy Policy</a>
+          <a href="terms.html">Terms &amp; Conditions</a>
+          <a href="contact.html">Contact</a>
+        </div>
+      </div>
+    </div>
+  </footer>
 
     <!-- Back to top -->
     <button type="button" class="back-to-top" id="backToTop" aria-label="Back to top">
