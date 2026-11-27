@@ -922,3 +922,59 @@ if (backToTop) {
     break;
   }
 })();
+
+
+// ====== Mobile Mega Menu Sub-Category Accordion ======
+document.querySelectorAll('.mega-cat-title').forEach(title => {
+  title.addEventListener('click', function (e) {
+    // শুধুমাত্র মোবাইল ও ট্যাবলেট স্ক্রিনে (992px এর নিচে) কাজ করবে
+    if (window.innerWidth < 992) {
+      const parentItem = this.closest('.mega-category-item');
+      const subMenu = parentItem.querySelector('.mega-sub-menu');
+
+      if (subMenu) {
+        e.preventDefault(); // সরাসরি পেজ লোড হওয়া আটকাবে
+
+        // অন্য কোনো ক্যাটাগরি খোলা থাকলে সেটি বন্ধ করে দেবে
+        document.querySelectorAll('.mega-category-item.open').forEach(openItem => {
+          if (openItem !== parentItem) {
+            openItem.classList.remove('open');
+          }
+        });
+
+        // বর্তমান ক্যাটাগরি টগল (খোলা/বন্ধ) করবে
+        parentItem.classList.toggle('open');
+      }
+    }
+  });
+});
+
+
+
+// ====== Home Brand Slider Initialization ======
+if (document.querySelector('.brandSlider')) {
+  new Swiper('.brandSlider', {
+    slidesPerView: 1,
+    spaceBetween: 20,
+    loop: true,
+    speed: 700,
+    autoplay: {
+      delay: 3000,
+      disableOnInteraction: false,
+      pauseOnMouseEnter: true,
+    },
+    navigation: {
+      nextEl: '.brand-next',
+      prevEl: '.brand-prev',
+    },
+    pagination: {
+      el: '.brand-pagination',
+      clickable: true,
+    },
+    breakpoints: {
+      576: { slidesPerView: 2, spaceBetween: 20 },
+      992: { slidesPerView: 3, spaceBetween: 24 },
+      1200: { slidesPerView: 4, spaceBetween: 24 }
+    }
+  });
+}
