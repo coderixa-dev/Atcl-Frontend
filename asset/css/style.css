@@ -1435,7 +1435,7 @@ Style Section (page-specific styles go below)
 
 .mega-promo {
     height: 100%;
-    padding: 1.5rem;
+    padding: 1rem;
     color: var(--white-color);
     background: var(--gradient-primary);
     border-radius: var(--radius-md);
@@ -10678,4 +10678,55 @@ News Details Page
 .btn-success-c:hover {
     background: #15803d;
     color: var(--white-color);
+}
+
+/* =========================================================
+   Mega Menu Sub-category Hover Dropdown
+   ========================================================= */
+
+/* Wrap each category item */
+.mega-category-item {
+    position: relative;
+    margin-bottom: 12px;
+}
+
+/* Sub-categories container (hidden by default) */
+.mega-sub-menu {
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    visibility: hidden;
+    padding-left: 12px;
+    margin-top: 0;
+    transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+    border-left: 2px solid var(--accent-color);
+}
+
+/* Sub-category links */
+.mega-sub-menu a {
+    display: block;
+    padding: 4px 0;
+    font-size: 0.83rem !important;
+    font-weight: 400 !important;
+    color: var(--text-color) !important;
+    text-transform: none !important;
+    transition: var(--transition);
+}
+
+.mega-sub-menu a:hover {
+    color: var(--accent-dark) !important;
+    padding-left: 4px;
+}
+
+/* Reveal sub-menu when hovering over the parent category wrapper */
+.mega-category-item:hover .mega-sub-menu {
+    max-height: 300px; /* Adjust if you have many sub-items */
+    opacity: 1;
+    visibility: visible;
+    margin-top: 6px;
+}
+
+/* Optional: rotate or change color of the caret/icon on hover if you use one */
+.mega-category-item:hover > div a.fw-bold {
+    color: var(--accent-dark) !important;
 }
